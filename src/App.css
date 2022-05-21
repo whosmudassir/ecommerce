@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+.nav-bar-wrapper {
+  position: absolute;
+  top: 0;
+  background-color: black;
+  padding: 0px 30px;
+}
+
+.logo {
+  width: 136px;
+}
+
+.icon {
+  color: white;
+}
+
+.right-content {
+  gap: 20px;
+}

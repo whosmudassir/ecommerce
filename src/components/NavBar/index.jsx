@@ -1,9 +1,9 @@
-import logo from "./logo.svg";
-import "./App.css";
-
-function App() {
+import React from "react";
+import logo from "../../assets/images/msftsrep_logo.jpg";
+const NavBar = () => {
   return (
-    <div className="App">
+    <div>
+      {" "}
       <header className="App-header">
         <div class="nav-bar-wrapper">
           <button class="hamburger-icon">
@@ -12,22 +12,21 @@ function App() {
           </button>
           <div class="left-content">
             <a href="/index.html">
-              {" "}
-              <p class="heading-medium">Name</p>{" "}
+              <img class="logo" src={logo} />
             </a>
           </div>
           <div class="right-content">
             <button class="icon-wrapper">
-              <i class="fa fa-moon icon"></i>
+              <i class="fa-solid fa-bag-shopping icon"></i>
             </button>
             <button class="icon-wrapper">
-              <i class="fa fa-github icon"></i>
+              <i class="fa-solid fa-user icon"></i>
             </button>
           </div>
         </div>
       </header>
     </div>
   );
-}
+};
 
-export default App;
+export default NavBar;
