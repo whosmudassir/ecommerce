@@ -1,7 +1,3 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -46,12 +42,18 @@
 
 .logo {
   width: 136px;
+  height: 58px;
 }
 
 .icon {
   color: white;
+  font-size: 22.5px;
 }
 
 .right-content {
   gap: 20px;
+}
+
+.body-wrapper {
+  margin-top: 70px;
 }
