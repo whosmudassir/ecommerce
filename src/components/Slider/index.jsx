@@ -13,6 +13,25 @@ const Slider = () => {
         <div class="category-divider">
           <div class="categories-wrapper">
             <p>All Categories</p>
+            <p>T-shirts</p>
+            <p>Hoodies</p>
+            <p>Sweatshirts</p>
+            <p>Accessories</p>
+          </div>
+        </div>
+        <div class="category-divider">
+          <div class="categories-wrapper">
+            <p>Sort by</p>
+            <p>Price: High to Low</p>
+            <p>Price: Low to High</p>
+          </div>
+        </div>
+        <div class="category-divider">
+          <div class="categories-wrapper">
+            <p>Brands</p>
+            <p>Cavempt</p>
+            <p>Vetements</p>
+            <p>Vetements</p>
           </div>
         </div>
       </div>
