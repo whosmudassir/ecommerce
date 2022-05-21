@@ -1,0 +1,20 @@
+.nav-bar-wrapper {
+  position: absolute;
+  top: 0;
+  background-color: black;
+  padding: 0px 30px;
+}
+
+.logo {
+  width: 136px;
+  height: 58px;
+}
+
+.icon {
+  color: white;
+  font-size: 22.5px;
+}
+
+.right-content {
+  gap: 20px;
+}
