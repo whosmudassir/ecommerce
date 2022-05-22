@@ -29,9 +29,12 @@ const Slider = () => {
         <div class="category-divider">
           <div class="categories-wrapper">
             <p>Brands</p>
+            <p>Demons</p>
             <p>Cavempt</p>
             <p>Vetements</p>
-            <p>Vetements</p>
+            <p>Pleasures</p>
+            <p>BStroy</p>
+            <p>NumberNine</p>
           </div>
         </div>
       </div>
