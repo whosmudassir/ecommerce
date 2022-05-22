@@ -1,4 +1,19 @@
 .list-box {
-  padding: 0px;
+  padding: 30px;
   height: 90vh;
+}
+
+.filter-heading {
+  font-size: 18px;
+}
+
+.heading-text-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.categories-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
