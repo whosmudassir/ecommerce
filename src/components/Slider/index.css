@@ -1,10 +1,16 @@
 .list-box {
   padding: 30px;
   height: 90vh;
+  background-color: black;
+}
+
+* {
+  color: white;
 }
 
 .filter-heading {
   font-size: 18px;
+  margin-bottom: 8px;
 }
 
 .heading-text-wrapper {

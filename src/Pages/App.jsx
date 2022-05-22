@@ -1,6 +1,6 @@
 import "../../src/App.css";
-import NavBar from "./NavBar/index";
-import Slider from "./Slider/index";
+import NavBar from "../components/NavBar/index";
+import Slider from "../components/Slider/index";
 
 function App() {
   return (

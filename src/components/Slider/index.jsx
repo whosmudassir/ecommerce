@@ -52,19 +52,23 @@ const Slider = () => {
               Demons
             </div>
             <div>
-              <input type="checkbox" name="brand" value="cavempt" /> Cavempt
+              <input type="checkbox" name="brand" value="cavempt" />
+              Cavempt
             </div>
             <div>
-              <input type="checkbox" name="brand" value="vetements" /> Vetements
+              <input type="checkbox" name="brand" value="vetements" />
+              Vetements
             </div>
             <div>
-              <input type="checkbox" name="brand" value="pleasures" /> Pleasures
+              <input type="checkbox" name="brand" value="pleasures" />
+              Pleasures
             </div>
             <div>
-              <input type="checkbox" name="brand" value="bstroy" /> BStroy
+              <input type="checkbox" name="brand" value="bstroy" />
+              BStroy
             </div>
             <div>
-              <input type="checkbox" name="brand" value="numbernine" />{" "}
+              <input type="checkbox" name="brand" value="numbernine" />
               NumberNine
             </div>
           </div>
