@@ -1,0 +1,12 @@
+.product-list-wrapper {
+  background-color: black;
+  padding: 30px 26px;
+  display: flex;
+  height: calc(100vh - 62px);
+  gap: 12px;
+  overflow: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+  flex: 1;
+}

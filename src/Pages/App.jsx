@@ -1,7 +1,7 @@
 import "../../src/App.css";
 import NavBar from "../components/NavBar/index";
 import Slider from "../components/Slider/index";
-import Card from "../components/Card";
+import ProductList from "./ProductList";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <NavBar />
       <div class="body-wrapper">
         <Slider />
-        <Card />
+        <ProductList />
       </div>
     </div>
   );
