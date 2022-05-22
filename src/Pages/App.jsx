@@ -1,6 +1,7 @@
 import "../../src/App.css";
-import NavBar from "./NavBar/index";
-import Slider from "./Slider/index";
+import NavBar from "../components/NavBar/index";
+import Slider from "../components/Slider/index";
+import Card from "../components/Card";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <NavBar />
       <div class="body-wrapper">
         <Slider />
+        <Card />
       </div>
     </div>
   );
