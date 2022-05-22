@@ -1,5 +1,4 @@
-const Card = () => {
-    return (<div> card</div>)
+.card-head,
+.card-body {
+  border-radius: 0;
 }
-
-export default Card
