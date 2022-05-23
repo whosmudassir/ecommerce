@@ -3,10 +3,11 @@
   padding: 30px 26px;
   display: flex;
   height: calc(100vh - 62px);
-  gap: 12px;
+  gap: 32px;
   overflow: auto;
   flex-wrap: wrap;
   justify-content: center;
+  justify-items: left;
   flex-direction: row;
   flex: 1;
 }
