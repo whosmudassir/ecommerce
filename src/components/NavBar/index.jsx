@@ -1,5 +1,7 @@
 import React from "react";
 import logo from "../../assets/images/msftsrep_logo.jpg";
+import { Link } from "react-router-dom";
+
 const NavBar = () => {
   return (
     <div>
@@ -14,15 +16,21 @@ const NavBar = () => {
           </a>
         </div>
         <div class="right-content">
-          <button class="icon-wrapper">
-            <i class="fa-solid fa-user icon"></i>
-          </button>
-          <button class="icon-wrapper">
-            <i class="fa-solid fa-heart icon"></i>
-          </button>
-          <button class="icon-wrapper">
-            <i class="fa-solid fa-bag-shopping icon"></i>
-          </button>
+          <Link to="/user">
+            <button class="icon-wrapper">
+              <i class="fa-solid fa-user icon"></i>
+            </button>
+          </Link>
+          <Link to="/wish-list">
+            <button class="icon-wrapper">
+              <i class="fa-solid fa-heart icon"></i>
+            </button>
+          </Link>
+          <Link to="/cart">
+            <button class="icon-wrapper">
+              <i class="fa-solid fa-bag-shopping icon"></i>
+            </button>
+          </Link>
         </div>
       </div>
     </div>
