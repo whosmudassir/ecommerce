@@ -7,7 +7,6 @@ const NavBar = () => {
     <div>
       <div class="nav-bar-wrapper">
         <button class="hamburger-icon">
-          {" "}
           <i class="fa fa-bars icon" id="render-icon"></i>
         </button>
         <div class="left-content">
