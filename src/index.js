@@ -4,10 +4,23 @@ import "./index.css";
 import App from "./pages/App";
 import reportWebVitals from "./reportWebVitals";
 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Cart from "./pages/Cart";
+import User from "./pages/User";
+import ProductList from "./pages/ProductList";
+import NavBar from "./components/NavBar";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="product-list" element={<ProductList />} />
+        <Route path="cart" element={<Cart />} />
+        <Route path="user" element={<User />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
