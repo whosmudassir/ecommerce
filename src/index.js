@@ -14,11 +14,12 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+      <NavBar />
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="product-list" element={<ProductList />} />
-        <Route path="cart" element={<Cart />} />
-        <Route path="user" element={<User />} />
+        <Route path="/product-list" element={<ProductList />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/user" element={<User />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
