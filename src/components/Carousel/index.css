@@ -1,5 +1,45 @@
 .carousel-wrapper {
   width: 100%;
-  height: 400px;
+  height: 383px;
   background-color: black;
+}
+
+.carousel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.carousel-arrow-left {
+  padding: 10px;
+  position: absolute;
+  background-color: black;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-arrow-right {
+  padding: 10px;
+  position: absolute;
+  background-color: black;
+  height: 100%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* responsive */
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 480px) {
 }
