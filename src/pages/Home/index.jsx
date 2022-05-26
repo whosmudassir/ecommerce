@@ -1,7 +1,12 @@
 import React from "react";
+import Carousel from "../../components/Carousel";
 
 const Home = () => {
-  return <div style={{ color: "red" }}>Home</div>;
+  return (
+    <div class="body-wrapper">
+      <Carousel />
+    </div>
+  );
 };
 
 export default Home;

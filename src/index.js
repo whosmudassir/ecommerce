@@ -9,6 +9,7 @@ import Cart from "./pages/Cart";
 import User from "./pages/User";
 import ProductList from "./pages/ProductList";
 import NavBar from "./components/NavBar";
+import Home from "./pages/Home";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -16,7 +17,7 @@ root.render(
     <BrowserRouter>
       <NavBar />
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route path="/" element={<Home />} />
         <Route path="/product-list" element={<ProductList />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/user" element={<User />} />
