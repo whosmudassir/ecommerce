@@ -18,7 +18,9 @@ const Card = () => {
             <p class="card-price">$2229</p>
           </div>
           <div class="card-btn-wrapper">
-            <button class="primary-btn">Add to bag</button>
+            <button class="primary-btn">
+              <i class="fa fa-plus" id="render-icon icon"></i>
+            </button>
           </div>
         </div>
       </div>
