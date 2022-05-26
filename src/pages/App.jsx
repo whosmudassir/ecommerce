@@ -5,11 +5,20 @@ import ProductList from "./ProductList";
 import Home from "./Home";
 import Cart from "./Cart";
 import User from "./User";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <ProductList />
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/product-list" element={<ProductList />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/user" element={<User />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
