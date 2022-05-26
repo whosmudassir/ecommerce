@@ -10,9 +10,9 @@ const NavBar = () => {
           <i class="fa fa-bars icon" id="render-icon"></i>
         </button>
         <div class="left-content">
-          <a href="/index.html">
+          <Link to="/">
             <img class="logo" src={logo} />
-          </a>
+          </Link>
         </div>
         <div class="right-content">
           <Link to="/user">
