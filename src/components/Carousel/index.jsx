@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./index.css";
-import { carouselData } from "../../data/carouselData";
 import { Link } from "react-router-dom";
 
-const Carousel = () => {
+const Carousel = ({ carouselData }) => {
   const [carouselImgSource, setCarouselImgSource] = useState([]);
   const [currentCarousel, setCurrentCarousel] = useState(0);
 
@@ -18,9 +17,11 @@ const Carousel = () => {
   useEffect(() => {
     // setInterval(() => {
     //   if (currentCarousel != carouselImgSource.length - 1) {
-    //     nextSlide();
+    //     setCurrentCarousel((currentSlide) => {
+    //       return currentSlide + 1;
+    //     });
     //   } else {
-    //     previousSlide();
+    //     setCurrentCarousel(0);
     //   }
     // }, 2000);
   }, []);
@@ -45,6 +46,8 @@ const Carousel = () => {
     }
   };
 
+  console.log("---->", carouselImgSource.length, currentCarousel);
+  console.log("cal", currentCarousel, carouselImgSource.length - 1);
   return (
     <div class="carousel-wrapper">
       <div class="carousel">
