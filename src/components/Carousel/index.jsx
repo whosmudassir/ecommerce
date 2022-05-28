@@ -15,43 +15,57 @@ const Carousel = () => {
     );
   }, []);
 
+  useEffect(() => {
+    // setInterval(() => {
+    //   if (currentCarousel != carouselImgSource.length - 1) {
+    //     nextSlide();
+    //   } else {
+    //     previousSlide();
+    //   }
+    // }, 2000);
+  }, []);
+
   const nextSlide = () => {
-    setCurrentCarousel((currentSlide) => {
-      return currentSlide + 1;
-    });
+    if (currentCarousel != carouselImgSource.length - 1) {
+      setCurrentCarousel((currentSlide) => {
+        return currentSlide + 1;
+      });
+    } else {
+      setCurrentCarousel(0);
+    }
   };
 
   const previousSlide = () => {
-    setCurrentCarousel((currentSlide) => {
-      return currentSlide - 1;
-    });
+    if (currentCarousel != 0) {
+      setCurrentCarousel((currentSlide) => {
+        return currentSlide - 1;
+      });
+    } else {
+      setCurrentCarousel(carouselImgSource.length - 1);
+    }
   };
 
-  console.log("---->", carouselImgSource.length, currentCarousel);
-  console.log("cal", currentCarousel, carouselImgSource.length - 1);
   return (
     <div class="carousel-wrapper">
       <div class="carousel">
-        {currentCarousel != 0 && (
-          <div class="carousel-arrow-left">
-            <button class="icon-wrapper" onClick={previousSlide}>
-              <i class="fa-solid fa-chevron-left icon"></i>
-            </button>
-          </div>
-        )}
+        <div class="carousel-arrow-left">
+          <button class="icon-wrapper" onClick={previousSlide}>
+            <i class="fa-solid fa-chevron-left icon"></i>
+          </button>
+        </div>
+
         <Link to="/">
           <img
             class="responsive-img"
             src={carouselImgSource[currentCarousel]}
           />
         </Link>
-        {currentCarousel != carouselImgSource.length - 1 && (
-          <div class="carousel-arrow-right">
-            <button class="icon-wrapper" onClick={nextSlide}>
-              <i class="fa-solid fa-chevron-right icon"></i>
-            </button>
-          </div>
-        )}
+
+        <div class="carousel-arrow-right">
+          <button class="icon-wrapper" onClick={nextSlide}>
+            <i class="fa-solid fa-chevron-right icon"></i>
+          </button>
+        </div>
       </div>
     </div>
   );
