@@ -14,7 +14,7 @@
 .carousel-arrow-left {
   padding: 10px;
   position: absolute;
-  background-color: black;
+
   height: 100%;
   left: 0;
   top: 0;
@@ -25,13 +25,45 @@
 .carousel-arrow-right {
   padding: 10px;
   position: absolute;
-  background-color: black;
+
   height: 100%;
   height: 100%;
   right: 0;
   top: 0;
   display: flex;
   justify-content: center;
+}
+
+.dot-wrapper {
+  position: absolute;
+  bottom: 8px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dot-active,
+.dot-inactive {
+  border-radius: 50%;
+  height: 8px;
+  width: 8px;
+}
+
+.dot-active {
+  background-color: black;
+}
+
+.dot-inactive {
+  background-color: rgb(212, 212, 212);
+}
+
+.dot {
+  cursor: pointer;
+}
+
+.fa-chevron-right,
+.fa-chevron-left {
+  color: black;
 }
 
 /* responsive */
