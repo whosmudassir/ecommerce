@@ -46,10 +46,14 @@ const Carousel = ({ carouselData }) => {
     }
   };
 
+  const dotSlider = (index) => {
+    setCurrentCarousel(index);
+  };
+
   console.log("---->", carouselImgSource.length, currentCarousel);
   console.log("cal", currentCarousel, carouselImgSource.length - 1);
   return (
-    <div class="carousel-wrapper">
+    <div>
       <div class="carousel">
         <div class="carousel-arrow-left">
           <button class="icon-wrapper" onClick={previousSlide}>
@@ -58,6 +62,7 @@ const Carousel = ({ carouselData }) => {
         </div>
 
         <Link to="/">
+          <div class="current-image" />
           <img
             class="responsive-img"
             src={carouselImgSource[currentCarousel]}
@@ -68,6 +73,21 @@ const Carousel = ({ carouselData }) => {
           <button class="icon-wrapper" onClick={nextSlide}>
             <i class="fa-solid fa-chevron-right icon"></i>
           </button>
+        </div>
+
+        <div class="dot-wrapper">
+          {Array.from({ length: carouselImgSource.length }).map(
+            (dot, index) => (
+              <div class="dot">
+                <div
+                  onClick={() => dotSlider(index)}
+                  class={
+                    currentCarousel == index ? "dot-active" : "dot-inactive"
+                  }
+                />
+              </div>
+            )
+          )}
         </div>
       </div>
     </div>
