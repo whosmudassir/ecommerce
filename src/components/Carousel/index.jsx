@@ -15,16 +15,9 @@ const Carousel = ({ carouselData }) => {
   }, []);
 
   useEffect(() => {
-    // setInterval(() => {
-    //   if (currentCarousel != carouselImgSource.length - 1) {
-    //     setCurrentCarousel((currentSlide) => {
-    //       return currentSlide + 1;
-    //     });
-    //   } else {
-    //     setCurrentCarousel(0);
-    //   }
-    // }, 2000);
-  }, []);
+    const interval = setInterval(nextSlide, 8000);
+    return () => clearInterval(interval);
+  }, [currentCarousel]);
 
   const nextSlide = () => {
     if (currentCarousel != carouselImgSource.length - 1) {
