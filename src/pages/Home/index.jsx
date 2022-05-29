@@ -1,13 +1,14 @@
 import React from "react";
 import Carousel from "../../components/Carousel";
-import { carouselData } from "../../data/carouselData";
+import { carouselClothingData } from "../../data/carouselClothingData";
+import { carouselDiscountData } from "../../data/carouselDiscountData";
 import "./index.css";
 const Home = () => {
   return (
     <div class="body-wrapper">
       <div class="home-page-wrapper">
-        <Carousel carouselData={carouselData} />
-        <Carousel carouselData={carouselData} />
+        <Carousel carouselData={carouselClothingData} />
+        <Carousel carouselData={carouselDiscountData} />
       </div>
     </div>
   );

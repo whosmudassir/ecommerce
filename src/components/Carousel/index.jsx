@@ -14,6 +14,7 @@ const Carousel = ({ carouselData }) => {
     );
   }, []);
 
+  // auto swipe on carousels
   useEffect(() => {
     const interval = setInterval(nextSlide, 8000);
     return () => clearInterval(interval);
@@ -43,8 +44,6 @@ const Carousel = ({ carouselData }) => {
     setCurrentCarousel(index);
   };
 
-  console.log("---->", carouselImgSource.length, currentCarousel);
-  console.log("cal", currentCarousel, carouselImgSource.length - 1);
   return (
     <div>
       <div class="carousel">
