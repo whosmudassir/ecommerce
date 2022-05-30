@@ -1,0 +1,20 @@
+@import url("../../assets/theme/index.css");
+
+.bestsellers-card-wrapper {
+  display: flex;
+  gap: 8px;
+}
+
+.bestsellers-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bestsellers-text {
+  font-size: 32px;
+  font-family: Bold;
+  text-transform: uppercase;
+  margin: 16px 0px;
+}
