@@ -10,9 +10,9 @@ const Home = () => {
     <div class="body-wrapper">
       <div class="home-page-wrapper">
         <Carousel carouselData={carouselClothingData} />
+        <Categories />
         <Carousel carouselData={carouselDiscountData} />
         <BestSellers />
-        <Categories />
       </div>
     </div>
   );
