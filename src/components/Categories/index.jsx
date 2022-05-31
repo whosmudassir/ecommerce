@@ -1,14 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./index.css";
+import { categoriesData } from "../../data/categoriesData";
 
 const Categories = () => {
+  const [displayCategory, setDisplayCategory] = useState([]);
+  useEffect(() => {
+    setDisplayCategory(categoriesData);
+  }, []);
+
+  console.log("cat-->", displayCategory);
+
   return (
-    <div class="category-wrapper">
-      <img
-        class="responsive-img"
-        src="https://i.pinimg.com/564x/67/43/3e/67433e36150113b51814d34a7bc0abfe.jpg"
-      />
-      <div className="category-name">T-shirts</div>
+    <div class="categories-wrapper">
+      {displayCategory.map((category) => (
+        <>
+          <div class="category-wrapper">
+            <div>
+              <img class="responsive-img" src={category.img} />
+            </div>
+            <div className="category-name">{category.text}</div>
+          </div>
+        </>
+      ))}
     </div>
   );
 };

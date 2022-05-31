@@ -7,6 +7,12 @@
   justify-content: center;
 }
 
+.categories-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
 .responsive-img {
   height: 100%;
   width: 100%;
