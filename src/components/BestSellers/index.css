@@ -3,6 +3,8 @@
 .bestsellers-card-wrapper {
   display: flex;
   gap: 8px;
+
+  flex-wrap: wrap;
 }
 
 .bestsellers-wrapper {

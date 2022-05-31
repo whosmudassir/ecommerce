@@ -15,7 +15,7 @@ const Categories = () => {
       {displayCategory.map((category) => (
         <>
           <div class="category-wrapper">
-            <div>
+            <div class="img-wrapper">
               <img class="responsive-img" src={category.img} />
             </div>
             <div className="category-name">{category.text}</div>

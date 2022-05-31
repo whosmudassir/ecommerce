@@ -1,5 +1,5 @@
 .category-wrapper {
-  width: 260px;
+  width: 240px;
   height: 300px;
   background-color: red;
   position: relative;
@@ -11,11 +11,11 @@
   display: flex;
   flex-direction: row;
   gap: 8px;
+  flex-wrap: wrap;
 }
 
-.responsive-img {
-  height: 100%;
-  width: 100%;
+.img-wrapper {
+  overflow: hidden;
 }
 
 .category-name {
