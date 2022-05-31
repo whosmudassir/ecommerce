@@ -4,6 +4,7 @@
 @import url("../src/pages/ProductList/index.css");
 @import url("../src/components/Card/index.css");
 @import url("../src/components/Carousel/index.css");
+@import url("../src/components/Categories/index.css");
 
 .App-logo {
   height: 40vmin;
