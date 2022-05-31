@@ -4,6 +4,7 @@ import { carouselClothingData } from "../../data/carouselClothingData";
 import { carouselDiscountData } from "../../data/carouselDiscountData";
 import BestSellers from "../../components/BestSellers";
 import "./index.css";
+import Categories from "../../components/Categories";
 const Home = () => {
   return (
     <div class="body-wrapper">
@@ -11,6 +12,7 @@ const Home = () => {
         <Carousel carouselData={carouselClothingData} />
         <Carousel carouselData={carouselDiscountData} />
         <BestSellers />
+        <Categories />
       </div>
     </div>
   );
