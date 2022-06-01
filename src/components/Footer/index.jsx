@@ -26,12 +26,26 @@ const Footer = () => {
         <p className="footer-text">Hoodies</p>
         <p className="footer-text">Accessories</p>
       </div>
-      <div className="footer-right-content">
+      <div className="footer-center-content">
         <p className="footer-title-text">Help</p>
         <p className="footer-text">Terms & Conditions</p>
         <p className="footer-text">Privacy Policy</p>
         <p className="footer-text">FAQ</p>
         <p className="footer-text">Contact</p>
+      </div>
+      <div className="footer-right-content">
+        <p className="footer-title-text">Secure Payments</p>
+        <div className="footer-right-content-icons">
+          <i class="fa-solid fa-credit-card icon"></i>
+          <i class="fa-brands fa-cc-visa icon"></i>
+          <i class="fa-brands fa-cc-mastercard icon"></i>
+          <i class="fa-brands fa-google-pay icon"></i>
+          <i class="fa-brands fa-amazon-pay icon"></i>
+        </div>
+
+        <div>
+          <p className="footer-text">© MsftsRep 2022. All rights reserved.</p>
+        </div>
       </div>
     </div>
   );
