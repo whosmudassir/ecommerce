@@ -5,6 +5,8 @@ import { carouselDiscountData } from "../../data/carouselDiscountData";
 import BestSellers from "../../components/BestSellers";
 import "./index.css";
 import Categories from "../../components/Categories";
+import Footer from "../../components/Footer";
+
 const Home = () => {
   return (
     <div class="body-wrapper">
@@ -13,6 +15,7 @@ const Home = () => {
         <Categories />
         <Carousel carouselData={carouselDiscountData} />
         <BestSellers />
+        <Footer />
       </div>
     </div>
   );
