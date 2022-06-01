@@ -1,0 +1,50 @@
+.footer-wrapper {
+  padding: 60px 50px;
+  background-color: black;
+  display: flex;
+  gap: 80px;
+}
+
+.icons-wrapper {
+  display: flex;
+  padding-top: 10px;
+  padding-left: 16px;
+  gap: 20px;
+}
+
+.footer-center-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-right-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-left: 1px solid rgb(77, 77, 77);
+  padding-left: 56px;
+}
+
+.footer-right-content-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.footer-title-text {
+  font-size: 20px;
+  font-family: Bold;
+}
+
+.footer-text {
+  font-size: 14px;
+}
+
+.footer-title-text {
+  color: white;
+}
+
+.footer-text {
+  color: rgb(177, 177, 177);
+}
