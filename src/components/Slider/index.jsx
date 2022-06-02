@@ -14,11 +14,11 @@ const Slider = () => {
           <div class="filter-wrapper">
             <p class="filter-heading">Sort by</p>
             <div class="input-text">
-              <input type="radio" value="high" name="price" />
+              <input id="input-color" type="radio" value="high" name="price" />
               Price: High to Low
             </div>
             <div class="input-text">
-              <input type="radio" value="low" name="price" />
+              <input id="input-color" type="radio" value="low" name="price" />
               Price: Low to High
             </div>
           </div>
@@ -27,19 +27,39 @@ const Slider = () => {
           <div class="filter-wrapper">
             <p class="filter-heading">Categories</p>
             <div class="input-text">
-              <input type="checkbox" name="category" value="tshirts" />
+              <input
+                id="input-color"
+                type="checkbox"
+                name="category"
+                value="tshirts"
+              />
               T-shirts
             </div>
             <div class="input-text">
-              <input type="checkbox" name="category" value="hoodies" />
+              <input
+                type="checkbox"
+                id="input-color"
+                name="category"
+                value="hoodies"
+              />
               Hoodies
             </div>
             <div class="input-text">
-              <input type="checkbox" name="category" value="sweatshirts" />
+              <input
+                type="checkbox"
+                id="input-color"
+                name="category"
+                value="sweatshirts"
+              />
               Sweatshirts
             </div>
             <div class="input-text">
-              <input type="checkbox" name="category" value="accessories" />
+              <input
+                type="checkbox"
+                id="input-color"
+                name="category"
+                value="accessories"
+              />
               Accessories
             </div>
           </div>
@@ -49,27 +69,57 @@ const Slider = () => {
           <div class="filter-wrapper">
             <p class="filter-heading">Brands</p>
             <div class="input-text">
-              <input type="checkbox" name="brand" value="demons" />
+              <input
+                type="checkbox"
+                id="input-color"
+                name="brand"
+                value="demons"
+              />
               Demons
             </div>
             <div class="input-text">
-              <input type="checkbox" name="brand" value="cavempt" />
+              <input
+                type="checkbox"
+                id="input-color"
+                name="brand"
+                value="cavempt"
+              />
               Cavempt
             </div>
             <div class="input-text">
-              <input type="checkbox" name="brand" value="vetements" />
+              <input
+                type="checkbox"
+                id="input-color"
+                name="brand"
+                value="vetements"
+              />
               Vetements
             </div>
             <div class="input-text">
-              <input type="checkbox" name="brand" value="pleasures" />
+              <input
+                type="checkbox"
+                id="input-color"
+                name="brand"
+                value="pleasures"
+              />
               Pleasures
             </div>
             <div class="input-text">
-              <input type="checkbox" name="brand" value="bstroy" />
+              <input
+                type="checkbox"
+                id="input-color"
+                name="brand"
+                value="bstroy"
+              />
               BStroy
             </div>
             <div class="input-text">
-              <input type="checkbox" name="brand" value="numbernine" />
+              <input
+                type="checkbox"
+                id="input-color"
+                name="brand"
+                value="numbernine"
+              />
               NumberNine
             </div>
           </div>
