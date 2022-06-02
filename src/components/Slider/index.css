@@ -28,3 +28,11 @@
   gap: 8px;
   margin: 4px 0px;
 }
+
+input[type="checkbox"]:checked + label::after {
+  background-color: black !important;
+}
+
+#input-color {
+  accent-color: black;
+}
