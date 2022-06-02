@@ -54,7 +54,6 @@ const Carousel = ({ carouselData }) => {
         </div>
 
         <Link to="/">
-          <div class="current-image" />
           <img
             class="responsive-img"
             src={carouselImgSource[currentCarousel]}

@@ -6,7 +6,5 @@
   height: calc(100vh - 62px);
   flex-wrap: wrap;
   justify-content: center;
-  justify-items: left;
   flex-direction: row;
-  flex: 1;
 }
