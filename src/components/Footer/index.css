@@ -61,3 +61,21 @@
 .footer-text {
   color: rgb(177, 177, 177);
 }
+
+/* responsive */
+@media (max-width: 1024px) {
+  .footer-wrapper {
+    padding: 40px 0px;
+    gap: 50px;
+  }
+
+  .footer-right-content {
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 480px) {
+}

@@ -9,26 +9,25 @@
   display: flex;
   justify-content: center;
   height: 100%;
+  width: 100%;
 }
 
 .carousel-arrow-left {
-  padding: 10px;
   position: absolute;
 
   height: 100%;
-  left: 0;
+  left: 20px;
   top: 0;
   display: flex;
   justify-content: center;
 }
 
 .carousel-arrow-right {
-  padding: 10px;
   position: absolute;
 
   height: 100%;
   height: 100%;
-  right: 0;
+  right: 20px;
   top: 0;
   display: flex;
   justify-content: center;
