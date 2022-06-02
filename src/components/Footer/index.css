@@ -3,6 +3,7 @@
   background-color: black;
   display: flex;
   gap: 80px;
+  width: 100%;
 }
 
 .icons-wrapper {
@@ -66,7 +67,7 @@
 @media (max-width: 1024px) {
   .footer-wrapper {
     padding: 40px 0px;
-    gap: 50px;
+    gap: 30px;
   }
 
   .footer-right-content {

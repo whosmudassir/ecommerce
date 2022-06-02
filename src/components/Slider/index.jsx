@@ -11,7 +11,7 @@ const Slider = () => {
           </div>
         </div>
         <div class="category-divider">
-          <div class="categories-wrapper">
+          <div class="filter-wrapper">
             <p class="filter-heading">Sort by</p>
             <div class="input-text">
               <input type="radio" value="high" name="price" />
@@ -24,7 +24,7 @@ const Slider = () => {
           </div>
         </div>
         <div class="category-divider">
-          <div class="categories-wrapper">
+          <div class="filter-wrapper">
             <p class="filter-heading">Categories</p>
             <div class="input-text">
               <input type="checkbox" name="category" value="tshirts" />
@@ -46,7 +46,7 @@ const Slider = () => {
         </div>
 
         <div class="category-divider">
-          <div class="categories-wrapper">
+          <div class="filter-wrapper">
             <p class="filter-heading">Brands</p>
             <div class="input-text">
               <input type="checkbox" name="brand" value="demons" />

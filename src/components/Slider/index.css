@@ -1,13 +1,13 @@
 .list-box {
   padding: 30px;
   height: calc(100vh - 62px);
-  background-color: black;
+  background-color: white;
 }
 
 .filter-heading {
   font-size: 18px;
   margin-bottom: 8px;
-  color: white;
+  color: black;
 }
 
 .heading-text-wrapper {
@@ -15,14 +15,14 @@
   justify-content: space-between;
 }
 
-.categories-wrapper {
+.filter-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .input-text {
-  color: white;
+  color: black;
   display: flex;
   align-items: center;
   gap: 8px;
