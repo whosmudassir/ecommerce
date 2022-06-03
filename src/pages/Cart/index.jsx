@@ -10,7 +10,13 @@ const Cart = () => {
         </div>
         <div className="order-status-parent-box">
           <div className="order-status-child-box active">
-            <p className="order-status-child-title">Shopping Cart</p>
+            <p className="order-status-child-title">
+              <i
+                class="fa-regular fa-circle-check"
+                style={{ color: "black" }}
+              ></i>
+              Shopping Cart
+            </p>
             <p className="order-status-child-body">View your items</p>
           </div>
           <div className="order-status-child-box">
