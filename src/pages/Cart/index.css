@@ -1,0 +1,11 @@
+@import url("../../assets/theme/index.css");
+
+.cart-wrapper {
+  padding: 40px 60px;
+}
+
+.cart-heading {
+  font-family: Bold;
+  font-size: 38px;
+  color: #484f56;
+}
