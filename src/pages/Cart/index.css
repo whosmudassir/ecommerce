@@ -11,20 +11,3 @@
   font-size: 38px;
   color: #484f56;
 }
-
-.order-status-parent-box {
-  display: flex;
-  flex-direction: row;
-}
-
-.fa-circle-check {
-  font-size: 16px;
-}
-
-.order-status-child-box {
-  border-bottom: 3px solid black;
-  display: flex;
-  flex: 1;
-  padding: 20px 10px;
-  flex-direction: column;
-}
