@@ -2,6 +2,7 @@ import React from "react";
 import "./index.css";
 import OrderStatusBar from "../../components/OrderStatusBar";
 import CartProductTitle from "../../components/CartProductTitle";
+import CartProductItem from "../../components/CartProductItem";
 
 const Cart = () => {
   return (
@@ -12,6 +13,7 @@ const Cart = () => {
         </div>
         <OrderStatusBar />
         <CartProductTitle />
+        <CartProductItem /> <CartProductItem /> <CartProductItem />
       </div>
     </div>
   );
