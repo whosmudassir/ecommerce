@@ -2,6 +2,8 @@
 
 .cart-wrapper {
   padding: 40px 60px;
+  height: 100%;
+  width: 100%;
 }
 
 .cart-heading {

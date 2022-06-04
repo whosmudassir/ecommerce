@@ -1,0 +1,36 @@
+@import url("../../assets/theme/index.css");
+
+.order-status-parent-box {
+  display: flex;
+  flex-direction: row;
+}
+
+.fa-circle-check {
+  font-size: 16px;
+  padding-right: 8px;
+}
+
+.order-status-child-box {
+  border-bottom: 3px solid #adb5bd;
+
+  display: flex;
+  flex: 1;
+  padding: 20px 10px 20px 0px;
+  flex-direction: column;
+}
+
+.order-status-child-title {
+  font-size: 16px;
+  font-family: Regular;
+
+  color: #353b41;
+  text-transform: uppercase;
+}
+
+.order-status-child-body {
+  font-size: 12px;
+  font-family: Regular;
+  padding-top: 8px;
+  color: #353b41;
+  text-transform: uppercase;
+}
