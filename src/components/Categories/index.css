@@ -1,7 +1,7 @@
 .category-wrapper {
   width: 240px;
   height: 300px;
-  background-color: red;
+
   position: relative;
   display: flex;
   justify-content: center;
