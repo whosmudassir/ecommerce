@@ -1,6 +1,7 @@
 import React from "react";
 import "./index.css";
 import OrderStatusBar from "../../components/OrderStatusBar";
+import CartProductTitle from "../../components/CartProductTitle";
 
 const Cart = () => {
   return (
@@ -10,6 +11,7 @@ const Cart = () => {
           <p className="cart-heading">Cart</p>
         </div>
         <OrderStatusBar />
+        <CartProductTitle />
       </div>
     </div>
   );
