@@ -4,7 +4,7 @@ const OrderStatusBar = () => {
   return (
     <div>
       <div className="order-status-parent-box">
-        <div className="order-status-child-box active">
+        <div className="order-status-child-box first-status-child active-status">
           <p className="order-status-child-title">
             <i
               class="fa-regular fa-circle-check"
