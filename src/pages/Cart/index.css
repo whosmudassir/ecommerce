@@ -11,3 +11,10 @@
   font-size: 38px;
   color: #484f56;
 }
+
+/* responsive */
+@media (max-width: 1024px) {
+  .cart-wrapper {
+    padding: 20px 30px;
+  }
+}
