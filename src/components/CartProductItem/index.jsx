@@ -13,21 +13,21 @@ const CartProductItem = () => {
               alt=""
             />
           </div>
-          <div className="cart-product-item-child-img-text">
+          <div className="cart-product-item-child-img-text remove-btn-wrapper">
             <p className="cart-product-item-child-item">Product Name - Size</p>
             <p className="cart-product-item-child-item remove-btn">Remove</p>
           </div>
         </div>
         <div className="cart-product-item-child-box cart-product-item-child-img-text">
-          <p className="cart-product-item-child-item">Price</p>
+          <p className="cart-product-item-title">Price</p>
           <p className="cart-product-item-child-item">100</p>
         </div>
         <div className="cart-product-item-child-box cart-product-item-child-img-text">
-          <p className="cart-product-item-child-item">Quantity</p>
+          <p className="cart-product-item-title">Quantity</p>
           <p className="cart-product-item-child-item">Quantity box</p>
         </div>
         <div className="cart-product-item-child-box cart-product-item-child-img-text">
-          <p className="cart-product-item-child-item">Subtotal</p>
+          <p className="cart-product-item-title">Subtotal</p>
           <p className="cart-product-item-child-item">6376</p>
         </div>
       </div>
