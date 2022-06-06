@@ -1,4 +1,5 @@
 import React from "react";
+import QuantitySelector from "../QuantitySelector";
 import "./index.css";
 
 const CartProductItem = () => {
@@ -24,7 +25,7 @@ const CartProductItem = () => {
         </div>
         <div className="cart-product-item-child-box cart-product-item-child-img-text">
           <p className="cart-product-item-title">Quantity</p>
-          <p className="cart-product-item-child-item">Quantity box</p>
+          <QuantitySelector />
         </div>
         <div className="cart-product-item-child-box cart-product-item-child-img-text">
           <p className="cart-product-item-title">Subtotal</p>
