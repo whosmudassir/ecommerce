@@ -3,6 +3,7 @@ import "./index.css";
 import OrderStatusBar from "../../components/OrderStatusBar";
 import CartProductTitle from "../../components/CartProductTitle";
 import CartProductItem from "../../components/CartProductItem";
+import CouponCodeInput from "../../components/CouponCodeInput";
 
 const Cart = () => {
   return (
@@ -14,6 +15,7 @@ const Cart = () => {
         <OrderStatusBar />
         <CartProductTitle />
         <CartProductItem /> <CartProductItem /> <CartProductItem />
+        <CouponCodeInput />
       </div>
     </div>
   );
