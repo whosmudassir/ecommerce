@@ -4,6 +4,7 @@ import OrderStatusBar from "../../components/OrderStatusBar";
 import CartProductTitle from "../../components/CartProductTitle";
 import CartProductItem from "../../components/CartProductItem";
 import CouponCodeInput from "../../components/CouponCodeInput";
+import CartTotal from "../../components/CartTotal";
 
 const Cart = () => {
   return (
@@ -16,6 +17,7 @@ const Cart = () => {
         <CartProductTitle />
         <CartProductItem /> <CartProductItem /> <CartProductItem />
         <CouponCodeInput />
+        <CartTotal />
       </div>
     </div>
   );
