@@ -1,0 +1,18 @@
+.outlined-input {
+  border-radius: 0px !important;
+}
+
+.coupon-code-input-wrapper {
+  margin-top: 18px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.coupon-btn {
+  background-color: rgb(105, 105, 105) !important;
+}
+
+.coupon-btn:hover {
+  background-color: rgb(34, 34, 34) !important;
+}
