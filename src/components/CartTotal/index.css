@@ -1,0 +1,13 @@
+.cart-total-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-top: 20px;
+  width: 250px;
+}
+
+.cart-total-items {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
