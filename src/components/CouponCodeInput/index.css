@@ -9,6 +9,10 @@
   gap: 8px;
 }
 
+.coupon-input {
+  min-width: 0 !important;
+}
+
 .coupon-btn {
   background-color: rgb(105, 105, 105) !important;
 }
