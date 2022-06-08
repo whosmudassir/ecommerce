@@ -10,8 +10,6 @@
   flex-direction: row;
   width: 50%;
   align-self: flex-end;
-  /* vertical-align: inherit; */
-  /* flex: 1; */
   border: 1px solid grey;
   padding: 12px;
   justify-content: space-between;
