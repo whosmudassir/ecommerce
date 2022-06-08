@@ -1,4 +1,5 @@
 import React from "react";
+import CheckoutButton from "../CheckoutButton";
 import "./index.css";
 
 const CartTotal = () => {

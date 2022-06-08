@@ -1,0 +1,21 @@
+.checkout-btn-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 20px;
+  flex: 1;
+  width: 100%;
+}
+
+.checkout-btn-item {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+/* responsive */
+@media (max-width: 1024px) {
+  .checkout-btn-item {
+    width: 100%;
+  }
+}
