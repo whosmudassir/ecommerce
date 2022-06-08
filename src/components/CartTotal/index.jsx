@@ -5,7 +5,7 @@ const CartTotal = () => {
   return (
     <div className="cart-total-wrapper">
       <div className="cart-total-items-wrapper">
-        <div>
+        <div className="cart-total-items">
           <p>Cart Totals</p>
         </div>
         <div className="cart-total-items">
