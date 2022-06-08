@@ -32,7 +32,6 @@ const CartTotal = () => {
           <p>Total</p>
           <p>3312</p>
         </div>
-        <div className="cart-total-items"></div>
       </div>
     </div>
   );
