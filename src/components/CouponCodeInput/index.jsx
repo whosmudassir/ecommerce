@@ -7,7 +7,7 @@ const CouponCodeInput = () => {
       <input
         class="outlined-input coupon-input"
         type="text"
-        placeholder="Coupon Code"
+        placeholder="Coupon code"
       />
       <button class="primary-btn coupon-btn"> Apply </button>
     </div>

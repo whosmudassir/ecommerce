@@ -12,14 +12,18 @@
 .coupon-input {
   min-width: 0 !important;
   width: 41.8%;
+  padding: 10px 13px !important;
 }
 
 .coupon-btn {
-  background-color: rgb(105, 105, 105) !important;
+  background-color: #383838 !important;
+  padding: 10px 20px !important;
+  font-family: Regular;
+  border-radius: 2px;
 }
 
 .coupon-btn:hover {
-  background-color: rgb(34, 34, 34) !important;
+  background-color: black !important;
 }
 
 /* responsive */

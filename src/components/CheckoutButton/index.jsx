@@ -5,7 +5,7 @@ const CheckoutButton = () => {
   return (
     <div className="checkout-btn-wrapper">
       <div className="checkout-btn-item">
-        <button class="primary-btn"> Proceed to checkout </button>
+        <button class="primary-btn checkout-btn"> Proceed to checkout </button>
       </div>
     </div>
   );
