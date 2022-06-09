@@ -7,31 +7,31 @@ const CartTotal = () => {
     <div className="cart-total-wrapper">
       <div className="cart-total-items-wrapper">
         <div className="cart-total-items">
-          <p>Cart Totals</p>
+          <p class="cart-total-text">Cart Totals</p>
         </div>
         <div className="cart-total-items">
-          <p>SubTotal</p>
-          <p>444</p>
+          <p class="cart-total-item-main-text">SubTotal</p>
+          <p class="cart-total-item-text">444</p>
         </div>
         <div className="cart-total-items">
-          <p>Discount</p>
-          <p>566</p>
+          <p class="cart-total-item-main-text">Discount</p>
+          <p class="cart-total-item-text">566</p>
         </div>
         <div className="cart-total-items">
-          <p>Shipping</p>
-          <p>99</p>
+          <p class="cart-total-item-main-text">Shipping</p>
+          <p class="cart-total-item-text">99</p>
         </div>
         <div className="cart-total-items">
-          <p>SGST</p>
-          <p>12</p>
+          <p class="cart-total-item-main-text">SGST</p>
+          <p class="cart-total-item-text">12</p>
         </div>
         <div className="cart-total-items">
-          <p>CGST</p>
-          <p>12</p>
+          <p class="cart-total-item-main-text">CGST</p>
+          <p class="cart-total-item-text">12</p>
         </div>
         <div className="cart-total-items">
-          <p>Total</p>
-          <p>3312</p>
+          <p class="cart-total-item-main-text">Total</p>
+          <p class="cart-total-item-main-text">3312</p>
         </div>
       </div>
     </div>
