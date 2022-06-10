@@ -28,8 +28,13 @@ const ShippingInfoForm = () => {
         </div>
         <p>PIN CODE / ZIP</p>
         <div>
-          <input class="outlined-input" type="text" placeholder="" />
+          <input
+            class="outlined-input"
+            type="text"
+            autocomplete="postal-code"
+          />
         </div>
+
         <p>PHONE</p>
         <div>
           <input
@@ -40,7 +45,7 @@ const ShippingInfoForm = () => {
         </div>
         <p>EMAIL</p>
         <div>
-          <input class="outlined-input" type="text" placeholder="" />
+          <input class="outlined-input" type="text" autoComplete="email" />
         </div>
       </div>
     </div>
