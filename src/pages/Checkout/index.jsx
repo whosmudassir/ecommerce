@@ -6,6 +6,7 @@ import CartProductItem from "../../components/CartProductItem";
 import CouponCodeInput from "../../components/CouponCodeInput";
 import CartTotal from "../../components/CartTotal";
 import CheckoutButton from "../../components/CheckoutButton";
+import ShippingInfoForm from "../../components/ShippingInfoForm";
 
 const Checkout = () => {
   return (
@@ -15,7 +16,7 @@ const Checkout = () => {
           <p className="cart-heading">Checkout</p>
         </div>
         <OrderStatusBar cart={true} checkout={true} confirmation={false} />
-
+        <ShippingInfoForm />
         <CartTotal />
       </div>
     </div>
