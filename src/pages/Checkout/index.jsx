@@ -7,22 +7,19 @@ import CouponCodeInput from "../../components/CouponCodeInput";
 import CartTotal from "../../components/CartTotal";
 import CheckoutButton from "../../components/CheckoutButton";
 
-const Cart = () => {
+const Checkout = () => {
   return (
     <div class="body-wrapper">
       <div className="cart-wrapper">
         <div>
-          <p className="cart-heading">Cart</p>
+          <p className="cart-heading">Checkout</p>
         </div>
-        <OrderStatusBar cart={true} checkout={false} confirmation={false} />
-        <CartProductTitle />
-        <CartProductItem /> <CartProductItem /> <CartProductItem />
-        <CouponCodeInput />
+        <OrderStatusBar cart={true} checkout={true} confirmation={false} />
+
         <CartTotal />
-        <CheckoutButton />
       </div>
     </div>
   );
 };
 
-export default Cart;
+export default Checkout;
