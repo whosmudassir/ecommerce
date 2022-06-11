@@ -11,7 +11,7 @@
 
 .coupon-input {
   min-width: 0 !important;
-  width: 41.8%;
+  width: 40.6%;
   padding: 10px 13px !important;
 }
 
@@ -29,6 +29,6 @@
 /* responsive */
 @media (max-width: 1024px) {
   .coupon-input {
-    width: 91%;
+    width: 88.8%;
   }
 }
