@@ -1,5 +1,7 @@
 import React from "react";
 import "./index.css";
+import { Link } from "react-router-dom";
+
 const OrderStatusBar = ({ cart, checkout, confirmation }) => {
   return (
     <div>
@@ -9,30 +11,34 @@ const OrderStatusBar = ({ cart, checkout, confirmation }) => {
             cart && "active-status"
           } `}
         >
-          <p className="order-status-child-title">
-            {cart && (
-              <i
-                class="fa-regular fa-circle-check"
-                style={{ color: "black" }}
-              ></i>
-            )}
-            Shopping Cart
-          </p>
-          <p className="order-status-child-body">View your items</p>
+          <Link to={"/cart"}>
+            <p className="order-status-child-title">
+              {cart && (
+                <i
+                  class="fa-regular fa-circle-check"
+                  style={{ color: "black" }}
+                ></i>
+              )}
+              Shopping Cart
+            </p>
+            <p className="order-status-child-body">View your items</p>
+          </Link>
         </div>
         <div
           className={`order-status-child-box + ${checkout && "active-status"} `}
         >
-          <p className="order-status-child-title">
-            {checkout && (
-              <i
-                class="fa-regular fa-circle-check"
-                style={{ color: "black" }}
-              ></i>
-            )}
-            Shipping and Checkout
-          </p>
-          <p className="order-status-child-body">Enter your details</p>
+          <Link to={"/checkout"}>
+            <p className="order-status-child-title">
+              {checkout && (
+                <i
+                  class="fa-regular fa-circle-check"
+                  style={{ color: "black" }}
+                ></i>
+              )}
+              Shipping and Checkout
+            </p>
+            <p className="order-status-child-body">Enter your details</p>
+          </Link>
         </div>
         <div
           className={`order-status-child-box + ${
