@@ -1,4 +1,6 @@
 import React from "react";
+import CheckoutButton from "../CheckoutButton";
+import PlaceOrderButton from "../PlaceOrderButton";
 import "./index.css";
 
 const OrderInfo = () => {
@@ -33,6 +35,7 @@ const OrderInfo = () => {
           <p class="order-info-item-main-text">3312</p>
         </div>
       </div>
+      <PlaceOrderButton />
     </div>
   );
 };

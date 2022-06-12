@@ -29,6 +29,12 @@
   border: 0.2px solid rgb(54, 54, 54) !important;
 }
 
+.outlined-input::placeholder {
+  font-size: 14px;
+  color: rgb(156, 156, 156);
+  font-family: Regular;
+}
+
 .shipping-info-headings-text {
   font-family: Regular;
   text-transform: capitalize;
