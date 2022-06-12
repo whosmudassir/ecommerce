@@ -5,3 +5,11 @@
   flex: 1;
   /* justify-content: space-between; */
 }
+
+/* responsive */
+@media (max-width: 1024px) {
+  .checkout-info-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}

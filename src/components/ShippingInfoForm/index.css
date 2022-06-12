@@ -1,7 +1,53 @@
+@import url("../../assets/theme/index.css");
+
 .shipping-info-form-wrapper {
   display: flex;
   gap: 8px;
   flex-direction: column;
   padding-top: 20px;
   width: 60%;
+}
+
+.shipping-info-item-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.shipping-info-two-item-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.shipping-info-input {
+  width: 75%;
+}
+
+.outlined-input:focus,
+.shipping-info-input:focus {
+  border-radius: 0px !important;
+  outline: none;
+  border: 0.2px solid rgb(54, 54, 54) !important;
+}
+
+.shipping-info-headings-text {
+  font-family: Regular;
+  text-transform: capitalize;
+  font-size: 14px;
+  padding-top: 6px;
+}
+
+/* responsive */
+@media (max-width: 1024px) {
+  .shipping-info-form-wrapper {
+    width: 100%;
+  }
+  .shipping-info-input {
+    width: 100%;
+  }
+
+  .shipping-info-two-item-wrapper,
+  .shipping-info-item-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
 }
