@@ -1,4 +1,7 @@
 .shipping-info-form-wrapper {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
   padding-top: 20px;
   width: 60%;
 }
