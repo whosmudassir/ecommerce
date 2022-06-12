@@ -1,11 +1,12 @@
 import React from "react";
 import CartTotal from "../CartTotal";
+import "./index.css";
 
 const ShippingInfoForm = () => {
   return (
     <div className="shipping-info-form-wrapper">
       <div>
-        <p>BILLING & SHIPPING </p>
+        <p className="order-info-text">Billing & shipping</p>
         <div>
           <input class="outlined-input" type="text" placeholder="First name" />
           <input class="outlined-input" type="text" placeholder="Last name" />

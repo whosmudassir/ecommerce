@@ -1,12 +1,8 @@
 import React from "react";
 import "./index.css";
 import OrderStatusBar from "../../components/OrderStatusBar";
-import CartProductTitle from "../../components/CartProductTitle";
-import CartProductItem from "../../components/CartProductItem";
-import CouponCodeInput from "../../components/CouponCodeInput";
-import CartTotal from "../../components/CartTotal";
-import CheckoutButton from "../../components/CheckoutButton";
 import ShippingInfoForm from "../../components/ShippingInfoForm";
+import OrderInfo from "../../components/OrderInfo";
 
 const Checkout = () => {
   return (
@@ -16,8 +12,10 @@ const Checkout = () => {
           <p className="cart-heading">Checkout</p>
         </div>
         <OrderStatusBar cart={true} checkout={true} confirmation={false} />
-        <ShippingInfoForm />
-        <CartTotal />
+        <div className="checkout-info-wrapper">
+          <ShippingInfoForm />
+          <OrderInfo />
+        </div>
       </div>
     </div>
   );
