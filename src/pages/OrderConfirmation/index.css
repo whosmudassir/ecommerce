@@ -6,20 +6,17 @@
   justify-content: center;
   align-items: center;
   padding: 30px;
+  gap: 10px;
 }
 
 .congrats-heading-text {
-  font-size: 32px;
+  font-size: 38px;
   font-family: Bold;
   color: #484f56;
 }
 
-.congrats-body-text {
-  font-family: Regular;
-  font-size: 16px;
-}
-
+.congrats-body-text,
 .order-id-text {
   font-family: Regular;
-  font-size: 14px;
+  font-size: 16px;
 }
