@@ -1,11 +1,6 @@
 import React from "react";
 import "./index.css";
 import OrderStatusBar from "../../components/OrderStatusBar";
-import CartProductTitle from "../../components/CartProductTitle";
-import CartProductItem from "../../components/CartProductItem";
-import CouponCodeInput from "../../components/CouponCodeInput";
-import CartTotal from "../../components/CartTotal";
-import CheckoutButton from "../../components/CheckoutButton";
 
 const OrderConfirmation = () => {
   return (
@@ -15,6 +10,11 @@ const OrderConfirmation = () => {
           <p className="cart-heading">Order Confirmation</p>
         </div>
         <OrderStatusBar cart={true} checkout={true} confirmation={true} />
+        <div className="order-confirmation-wrapper">
+          <p className="congrats-heading-text"> Congratulations </p>
+          <p className="congrats-body-text"> Your order has been placed </p>
+          <p className="order-id-text"> Order ID : </p>
+        </div>
       </div>
     </div>
   );

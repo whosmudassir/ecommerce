@@ -1,0 +1,25 @@
+@import url("../../assets/theme/index.css");
+
+.order-confirmation-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.congrats-heading-text {
+  font-size: 32px;
+  font-family: Bold;
+  color: #484f56;
+}
+
+.congrats-body-text {
+  font-family: Regular;
+  font-size: 16px;
+}
+
+.order-id-text {
+  font-family: Regular;
+  font-size: 14px;
+}
