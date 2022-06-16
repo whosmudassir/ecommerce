@@ -1,0 +1,24 @@
+@import url("../../assets/theme/index.css");
+
+.empty-cart-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  margin-top: 50px;
+  padding: 30px;
+  background-color: #f9fafb;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.empty-cart-text {
+  font-family: Regular;
+  font-size: 16px;
+  color: #484f56;
+}
+
+.fa-ban {
+  color: #d4d4d4;
+  font-size: 24px;
+}
