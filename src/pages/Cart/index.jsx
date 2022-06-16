@@ -7,28 +7,35 @@ import CouponCodeInput from "../../components/CouponCodeInput";
 import CartTotal from "../../components/CartTotal";
 import CheckoutButton from "../../components/CheckoutButton";
 import EmptyCart from "../../components/EmptyCart";
-
+import Footer from "../../components/Footer/index";
 const Cart = () => {
   return (
-    <div class="body-wrapper">
-      <div className="cart-wrapper">
-        <div>
-          <p className="cart-heading">Cart</p>
+    <>
+      <div class="body-wrapper">
+        <div className="cart-wrapper">
+          <div>
+            <p className="cart-heading">Cart</p>
+          </div>
+          {false ? (
+            <>
+              <OrderStatusBar
+                cart={true}
+                checkout={false}
+                confirmation={false}
+              />
+              <CartProductTitle />
+              <CartProductItem /> <CartProductItem /> <CartProductItem />
+              <CouponCodeInput />
+              <CartTotal />
+              <CheckoutButton />
+            </>
+          ) : (
+            <EmptyCart />
+          )}
         </div>
-        {false ? (
-          <>
-            <OrderStatusBar cart={true} checkout={false} confirmation={false} />
-            <CartProductTitle />
-            <CartProductItem /> <CartProductItem /> <CartProductItem />
-            <CouponCodeInput />
-            <CartTotal />
-            <CheckoutButton />
-          </>
-        ) : (
-          <EmptyCart />
-        )}
       </div>
-    </div>
+      <Footer />
+    </>
   );
 };
 
