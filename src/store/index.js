@@ -1,3 +1,6 @@
 import create from "zustand";
 
-const store = (set) => ({});
+const store = create((set) => ({
+  cart: [],
+  addToCart: (item) => set((state) => [item, ...state.cart]),
+}));
