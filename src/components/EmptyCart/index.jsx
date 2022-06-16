@@ -1,13 +1,21 @@
 import React from "react";
 import "./index.css";
+import { Link } from "react-router-dom";
 
 const EmptyCart = () => {
   return (
-    <div className="empty-cart-wrapper">
-      <i class="fa-solid fa-ban"></i>
+    <>
+      <div className="empty-cart-wrapper">
+        <i class="fa-solid fa-ban"></i>
 
-      <p className="empty-cart-text">Your cart is currently empty</p>
-    </div>
+        <p className="empty-cart-text">Your cart is currently empty</p>
+      </div>
+      <div>
+        <Link to="/shop">
+          <button class="primary-btn checkout-btn">Return to shop </button>
+        </Link>
+      </div>
+    </>
   );
 };
 
