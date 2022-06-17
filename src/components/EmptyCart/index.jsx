@@ -12,7 +12,7 @@ const EmptyCart = () => {
       </div>
       <div>
         <Link to="/shop">
-          <button class="primary-btn checkout-btn">Return to shop </button>
+          <button class="primary-btn empty-cart-btn">Return to shop </button>
         </Link>
       </div>
     </>

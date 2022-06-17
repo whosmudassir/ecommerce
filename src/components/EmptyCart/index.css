@@ -4,12 +4,13 @@
   display: flex;
   flex-direction: row;
   flex: 1;
-  margin-top: 50px;
+  margin-top: 40px;
   padding: 30px;
   background-color: #f9fafb;
   display: flex;
   align-items: center;
   gap: 18px;
+  margin-bottom: 35px;
 }
 
 .empty-cart-text {
@@ -21,4 +22,25 @@
 .fa-ban {
   color: #d4d4d4;
   font-size: 24px;
+}
+
+.empty-cart-btn {
+  background-color: #f1f1f1 !important;
+  padding: 10px 20px !important;
+  font-family: Regular;
+  text-transform: uppercase;
+  border-radius: 2px !important;
+  color: #353b41 !important;
+  font-size: 12px !important;
+}
+
+.empty-cart-btn:hover {
+  background-color: black !important;
+}
+
+/* responsive */
+@media (max-width: 1024px) {
+  .empty-cart-wrapper {
+    margin-bottom: 26px;
+  }
 }
