@@ -6,7 +6,7 @@ import CartProductItem from "../../components/CartProductItem";
 import CouponCodeInput from "../../components/CouponCodeInput";
 import CartTotal from "../../components/CartTotal";
 import CheckoutButton from "../../components/CheckoutButton";
-import EmptyCart from "../../components/EmptyCart";
+import EmptyCart from "../EmptyCart";
 import Footer from "../../components/Footer/index";
 const Cart = () => {
   return (
