@@ -2,15 +2,16 @@ import React from "react";
 import "./index.css";
 import { Link } from "react-router-dom";
 
-const EmptyCart = () => {
+const EmptyWishList = () => {
   return (
     <>
       <div className="empty-cart-wrapper">
-        <i class="fa-solid fa-bag-shopping empty-cart"></i>
+        <i class="fa-regular fa-heart  empty-cart"></i>
 
-        <p className="empty-cart-heading">Cart is empty.</p>
+        <p className="empty-cart-heading">Wishlist is empty.</p>
         <p className="empty-cart-body">
-          You don't have any products added in your cart
+          You don't have any products added in your cart. Search and save items
+          to your liking!
         </p>
         <div>
           <Link to="/shop">
@@ -22,4 +23,4 @@ const EmptyCart = () => {
   );
 };
 
-export default EmptyCart;
+export default EmptyWishList;
