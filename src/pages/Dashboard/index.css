@@ -8,4 +8,14 @@
 .dashboard-wrapper {
   display: flex;
   flex-direction: row;
+  flex: 1;
+}
+
+.dashboard-sidebar-wrapper {
+  background-color: rgb(112, 112, 112);
+}
+
+.dashboard-body-wrapper {
+  background-color: rgb(197, 197, 197);
+  flex: 1;
 }
