@@ -7,7 +7,6 @@ const EmptyScreenTemplate = ({ icon, headingText, bodyText }) => {
     <>
       <div className="empty-screen-wrapper">
         <i class={`${icon} empty-screen`}></i>
-
         <p className="empty-screen-heading">{headingText}</p>
         <p className="empty-screen-body">{bodyText}</p>
         <div>
