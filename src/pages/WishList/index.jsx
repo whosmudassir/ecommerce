@@ -1,5 +1,5 @@
 import React from "react";
-import EmptyWishList from "../EmptyWishList";
+import EmptyWishList from "../../components/EmptyWishList";
 import Footer from "../../components/Footer/index";
 
 const WishList = () => {
