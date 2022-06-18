@@ -2,7 +2,7 @@
 
 .cart-wrapper {
   padding: 40px 60px;
-  height: calc(100vh - 62px);
+  height: 100%;
   width: 100%;
 }
 
