@@ -2,4 +2,10 @@
   font-family: Bold;
   font-size: 38px;
   color: #484f56;
+  margin-bottom: 40px;
+}
+
+.dashboard-wrapper {
+  display: flex;
+  flex-direction: row;
 }

@@ -1,0 +1,13 @@
+@import url("../../assets/theme/index.css");
+
+.dashboard-sidebar-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.dashboard-sidebar-text-items {
+  font-size: 14px;
+  font-family: Regular;
+  text-transform: uppercase;
+}

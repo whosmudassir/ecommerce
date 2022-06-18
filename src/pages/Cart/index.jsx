@@ -13,7 +13,7 @@ const Cart = () => {
     <>
       <div class="body-wrapper">
         <div className="cart-wrapper">
-          {false ? (
+          {true ? (
             <>
               <div>
                 <p className="cart-heading">Cart</p>

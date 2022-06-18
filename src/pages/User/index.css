@@ -1,0 +1,5 @@
+.user-content-wrapper {
+  padding: 40px 60px;
+  height: calc(100vh - 62px);
+  width: 100%;
+}
