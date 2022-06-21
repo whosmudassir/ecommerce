@@ -15,7 +15,6 @@ const Dashboard = () => {
           <DashboardSideBar />{" "}
         </div>
         <div className="dashboard-body-wrapper">
-          {" "}
           <DashboardBody />
         </div>
       </div>

@@ -1,5 +1,7 @@
 .dashboard-content-wrapper {
   display: flex;
+  padding: 0px 60px;
+  margin: 0;
 
   flex-direction: column;
 }
