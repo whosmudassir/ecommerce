@@ -1,5 +1,5 @@
 import React from "react";
-import CartTotal from "../CartTotal";
+import CartTotal from "../../Cart/CartTotal";
 import "./index.css";
 
 const ShippingInfoForm = () => {

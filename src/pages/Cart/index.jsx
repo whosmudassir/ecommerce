@@ -1,11 +1,11 @@
 import React from "react";
 import "./index.css";
-import OrderStatusBar from "../../components/OrderStatusBar";
-import CartProductTitle from "../../components/CartProductTitle";
-import CartProductItem from "../../components/CartProductItem";
+import OrderStatusBar from "../../components/Checkout/OrderStatusBar";
+import CartProductTitle from "../../components/Cart/CartProductTitle";
+import CartProductItem from "../../components/Cart/CartProductItem";
 import CouponCodeInput from "../../components/CouponCodeInput";
-import CartTotal from "../../components/CartTotal";
-import CheckoutButton from "../../components/CheckoutButton";
+import CartTotal from "../../components/Cart/CartTotal";
+import CheckoutButton from "../../components/Cart/CheckoutButton";
 import EmptyCart from "../../components/EmptyCart";
 import Footer from "../../components/Footer/index";
 const Cart = () => {

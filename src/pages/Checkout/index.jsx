@@ -1,8 +1,8 @@
 import React from "react";
 import "./index.css";
-import OrderStatusBar from "../../components/OrderStatusBar";
-import ShippingInfoForm from "../../components/ShippingInfoForm";
-import OrderInfo from "../../components/OrderInfo";
+import OrderStatusBar from "../../components/Checkout/OrderStatusBar";
+import ShippingInfoForm from "../../components/Checkout/ShippingInfoForm";
+import OrderInfo from "../../components/Checkout/OrderInfo";
 
 const Checkout = () => {
   return (

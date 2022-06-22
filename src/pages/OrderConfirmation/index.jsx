@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.css";
-import OrderStatusBar from "../../components/OrderStatusBar";
+import OrderStatusBar from "../../components/Checkout/OrderStatusBar";
 
 const OrderConfirmation = () => {
   return (

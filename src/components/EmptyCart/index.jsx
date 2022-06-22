@@ -1,5 +1,5 @@
 import React from "react";
-import EmptyScreenTemplate from "../../components/EmptyScreenTemplate";
+import EmptyScreenTemplate from "../common/EmptyScreenTemplate";
 
 const EmptyCart = () => {
   return (
