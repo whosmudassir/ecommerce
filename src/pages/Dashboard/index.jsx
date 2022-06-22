@@ -1,6 +1,6 @@
 import React from "react";
-import DashboardBody from "../../components/DashboardBody";
-import DashboardSideBar from "../../components/DashboardSideBar";
+import DashboardBody from "../../components/UserDashboard/DashboardBody";
+import DashboardSideBar from "../../components/UserDashboard/DashboardSideBar";
 import "./index.css";
 
 const Dashboard = () => {
