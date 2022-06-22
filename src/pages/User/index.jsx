@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "../../components/Footer";
-import LoginForm from "../../components/LoginForm";
-import RegisterForm from "../../components/RegisterForm";
+import LoginForm from "../../components/Forms/LoginForm";
+import RegisterForm from "../../components/Forms/RegisterForm";
 import Dashboard from "../Dashboard";
 import "./index.css";
 const User = () => {
