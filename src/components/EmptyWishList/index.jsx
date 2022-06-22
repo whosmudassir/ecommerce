@@ -1,5 +1,5 @@
 import React from "react";
-import EmptyScreenTemplate from "../../components/EmptyScreenTemplate";
+import EmptyScreenTemplate from "../../components/common/EmptyScreenTemplate";
 
 const EmptyWishList = () => {
   return (

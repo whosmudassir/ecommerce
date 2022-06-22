@@ -1,5 +1,4 @@
 import React from "react";
-import CheckoutButton from "../CheckoutButton";
 import PlaceOrderButton from "../PlaceOrderButton";
 import "./index.css";
 
