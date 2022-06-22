@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../../components/Card";
+import Card from "../../components/common/Card";
 import Slider from "../../components/Slider";
 
 const ProductList = () => {
