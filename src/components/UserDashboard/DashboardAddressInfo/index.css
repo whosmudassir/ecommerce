@@ -1,0 +1,14 @@
+@import url("../../../assets/theme/index.css");
+
+.dashboard-address-latest-text {
+  color: #484f56;
+  font-size: 16px;
+  font-family: Regular;
+  margin-bottom: 20px;
+}
+
+.dashboard-address-title {
+  color: #484f56;
+  font-size: 24px;
+  font-family: Bold;
+}
