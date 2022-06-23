@@ -1,7 +1,12 @@
 .dashboard-content-wrapper {
   display: flex;
-  padding: 0px 60px;
+  padding-left: 160px;
   margin: 0;
-
   flex-direction: column;
+}
+
+.dashboard-user-address-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
 }

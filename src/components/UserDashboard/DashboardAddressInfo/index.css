@@ -11,4 +11,27 @@
   color: #484f56;
   font-size: 24px;
   font-family: Bold;
+  margin-bottom: 22px;
+}
+
+.link-button {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid grey;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.link-button:hover {
+  cursor: pointer;
+  border-bottom: 3px solid grey;
+  margin-bottom: 5px;
+}
+
+.dashboard-address-text {
+  font-family: Regular;
+  font-size: 16px;
+  font-style: italic;
+  color: #484f56;
+  line-height: 24px;
 }
