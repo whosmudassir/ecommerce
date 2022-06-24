@@ -1,3 +1,5 @@
+@import url("../../../assets/theme/index.css");
+
 .dashboard-single-coupon {
   display: flex;
   justify-content: space-between;
@@ -13,4 +15,12 @@
 
 .fa-copy {
   color: #484f56;
+}
+
+.tippy-copy {
+  background-color: #484f56;
+  color: white;
+  padding: 4px 6px;
+  border-radius: 2px;
+  font-family: Regular;
 }
