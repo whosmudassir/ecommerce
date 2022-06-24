@@ -12,7 +12,9 @@ const DashboardAddressInfo = () => {
         <DashboardUserAddress />
         <DashboardUserAddress />
       </div>
-      <button>Add new address</button>
+      <div className="add-address-btn-wrapper">
+        <button className="primary-btn add-address-btn">Add new address</button>
+      </div>
     </div>
   );
 };

@@ -14,24 +14,21 @@
   margin-bottom: 22px;
 }
 
-.link-button {
-  background-color: transparent;
-  border: none;
-  border-bottom: 1px solid grey;
-  font-size: 16px;
-  margin-bottom: 8px;
+.add-address-btn-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  margin: 40px 0px;
 }
 
-.link-button:hover {
-  cursor: pointer;
-  border-bottom: 3px solid grey;
-  margin-bottom: 5px;
-}
-
-.dashboard-address-text {
+.add-address-btn {
+  background-color: #212529 !important;
+  padding: 16px 20px !important;
   font-family: Regular;
-  font-size: 16px;
-  font-style: italic;
-  color: #484f56;
-  line-height: 24px;
+  text-transform: uppercase;
+  border-radius: 2px !important;
+  width: 229px;
+}
+
+.add-address-btn:hover {
+  background-color: black !important;
 }
