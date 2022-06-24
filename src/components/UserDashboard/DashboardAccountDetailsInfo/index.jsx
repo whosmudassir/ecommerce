@@ -5,7 +5,9 @@ const DashboardAccountDetailsInfo = () => {
   return (
     <div>
       <div className="shipping-info-form-wrapper account-detail-wrapper">
-        <p className="shipping-info-headings-text">First Name</p>
+        <p className="shipping-info-headings-text password-change-title">
+          First Name
+        </p>
         <div className="shipping-info-item-wrapper">
           <input
             class="outlined-input shipping-info-input"
@@ -13,7 +15,9 @@ const DashboardAccountDetailsInfo = () => {
             autoComplete="street-address"
           />
         </div>
-        <p className="shipping-info-headings-text">Last Name</p>
+        <p className="shipping-info-headings-text password-change-title">
+          Last Name
+        </p>
         <div className="shipping-info-item-wrapper">
           <input
             class="outlined-input  shipping-info-input"
@@ -21,7 +25,9 @@ const DashboardAccountDetailsInfo = () => {
             autoComplete="address-level2"
           />
         </div>
-        <p className="shipping-info-headings-text">Email</p>
+        <p className="shipping-info-headings-text password-change-title">
+          Email
+        </p>
         <div className="shipping-info-item-wrapper">
           <input
             class="outlined-input shipping-info-input"
@@ -30,7 +36,7 @@ const DashboardAccountDetailsInfo = () => {
           />
         </div>
 
-        <p>Password change</p>
+        <p className="password-change-heading">Password change</p>
         <p className="shipping-info-headings-text password-change-title">
           CURRENT PASSWORD (LEAVE BLANK TO LEAVE UNCHANGED)
         </p>

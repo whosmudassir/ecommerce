@@ -1,10 +1,23 @@
+@import url("../../../assets/theme/index.css");
+
 .account-detail-wrapper {
   padding-top: 0px;
   width: 80%;
 }
 
 .password-change-title {
-  font-size: 11px;
+  font-size: 12px;
+  font-family: Bold;
+  color: #6d757e;
+  text-transform: uppercase;
+}
+
+.password-change-heading {
+  color: #484f56;
+  font-size: 14px;
+  font-family: Bold;
+  text-transform: uppercase;
+  margin-top: 14px;
 }
 
 .account-details-btn {
