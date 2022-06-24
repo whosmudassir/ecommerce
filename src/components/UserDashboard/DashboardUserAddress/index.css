@@ -1,2 +1,33 @@
+@import url("../../../assets/theme/index.css");
+
 .dashboard-user-address-solo-wrapper {
+}
+
+.dashboard-user-solo-address {
+  margin-bottom: 6px;
+}
+
+.link-button {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1.5px solid grey;
+  font-size: 16px;
+}
+
+.link-button:hover {
+  cursor: pointer;
+  border-bottom-color: black;
+}
+
+.dashboard-address-text {
+  font-family: Regular;
+  font-size: 16px;
+  font-style: italic;
+  color: #484f56;
+  line-height: 24px;
+}
+
+.dasdhboard-user-btn-wrapper {
+  display: flex;
+  gap: 12px;
 }
