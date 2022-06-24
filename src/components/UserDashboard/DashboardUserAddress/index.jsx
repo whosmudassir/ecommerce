@@ -14,7 +14,7 @@ const DashboardUserAddress = () => {
       </div>
       <div className="dasdhboard-user-btn-wrapper">
         <button className="link-button">Edit</button>
-        <button className="link-button">Delete</button>
+        <button className="link-button">Remove</button>
       </div>
     </div>
   );
