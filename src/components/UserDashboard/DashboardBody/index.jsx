@@ -4,6 +4,7 @@ import DashboardOrderInfo from "../DashboardOrderInfo";
 import DashboardAddressInfo from "../DashboardAddressInfo";
 import "./index.css";
 import DashboardCouponInfo from "../DashboardCouponInfo";
+import DashboardAccountDetailsInfo from "../DashboardAccountDetailsInfo";
 
 const DashboardBody = () => {
   return (
@@ -11,7 +12,8 @@ const DashboardBody = () => {
       {/* <DashboardInfo /> */}
       {/* <DashboardOrderInfo /> */}
       {/* <DashboardAddressInfo /> */}
-      <DashboardCouponInfo />
+      {/* <DashboardCouponInfo /> */}
+      <DashboardAccountDetailsInfo />
     </div>
   );
 };
