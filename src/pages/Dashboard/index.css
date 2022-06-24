@@ -12,12 +12,18 @@
 }
 
 .dashboard-sidebar-wrapper {
-  /* background-color: rgb(112, 112, 112); */
 }
 
 .dashboard-body-wrapper {
-  /* background-color: rgb(197, 197, 197); */
   flex: 1;
   display: flex;
   flex-direction: column;
+}
+
+/* responsive */
+@media (max-width: 1024px) {
+  .dashboard-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
 }
