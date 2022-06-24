@@ -18,10 +18,9 @@
 }
 
 .tippy-copy {
-  background-color: #484f56;
-  color: white;
-  padding: 4px 6px;
-  border-radius: 2px;
-  font-family: Regular;
-  font-size: 13px;
+  color: white !important;
+  padding: 0px !important;
+
+  font-family: Regular !important;
+  font-size: 13px !important;
 }

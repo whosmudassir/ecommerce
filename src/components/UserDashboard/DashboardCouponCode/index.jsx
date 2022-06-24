@@ -2,8 +2,11 @@ import React from "react";
 import "./index.css";
 import Tippy from "@tippyjs/react";
 
+import "tippy.js/dist/tippy.css";
 const DashboardCouponCode = () => {
-  const copyToClipboard = () => {};
+  const copyToClipboard = (couponCode) => {
+    navigator.clipboard.writeText(couponCode);
+  };
 
   return (
     <div>
@@ -11,16 +14,18 @@ const DashboardCouponCode = () => {
         <p className="dashboard-coupon-name">20% off on first purchase</p>
         <div className="dashboard-coupon-code-wrapper">
           <p className="dashboard-coupon-code">IMBROKEAF</p>
-          <Tippy content="copy" arrow={true} className="tippy-copy">
+          <div>
             <button
               class="icon-wrapper"
               onClick={() => {
-                copyToClipboard();
+                copyToClipboard("IMBROKEAF");
               }}
             >
-              <i class="fa-solid fa-copy icon"></i>
+              <Tippy content={"copy"} className="tippy-copy">
+                <i class="fa-solid fa-copy icon"></i>
+              </Tippy>
             </button>
-          </Tippy>
+          </div>
         </div>
       </div>
     </div>
