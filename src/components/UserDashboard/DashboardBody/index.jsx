@@ -11,9 +11,9 @@ const DashboardBody = () => {
     <div className="dashboard-content-wrapper">
       {/* <DashboardInfo /> */}
       {/* <DashboardOrderInfo /> */}
-      {/* <DashboardAddressInfo /> */}
+      <DashboardAddressInfo />
       {/* <DashboardCouponInfo /> */}
-      <DashboardAccountDetailsInfo />
+      {/* <DashboardAccountDetailsInfo /> */}
     </div>
   );
 };
