@@ -1,0 +1,16 @@
+.dashboard-single-coupon {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f9fafb;
+  padding: 20px;
+}
+
+.dashboard-coupon-code-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.fa-copy {
+  color: #484f56;
+}
