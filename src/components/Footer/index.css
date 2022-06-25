@@ -68,15 +68,10 @@
   .footer-wrapper {
     padding: 40px 0px;
     gap: 30px;
+    flex-direction: column;
   }
 
   .footer-right-content {
     padding-left: 10px;
   }
-}
-
-@media (max-width: 768px) {
-}
-
-@media (max-width: 480px) {
 }

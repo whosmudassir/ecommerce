@@ -7,7 +7,7 @@ import CouponCodeInput from "../../components/CouponCodeInput";
 import CartTotal from "../../components/Cart/CartTotal";
 import CheckoutButton from "../../components/Cart/CheckoutButton";
 import EmptyCart from "../../components/EmptyCart";
-import Footer from "../../components/Footer/index";
+
 const Cart = () => {
   return (
     <>
@@ -34,7 +34,6 @@ const Cart = () => {
           )}
         </div>
       </div>
-      <Footer />
     </>
   );
 };
