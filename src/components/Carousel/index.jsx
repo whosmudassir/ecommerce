@@ -52,14 +52,14 @@ const Carousel = ({ carouselData }) => {
             <i class="fa-solid fa-chevron-left icon"></i>
           </button>
         </div>
-
-        <Link to="/">
-          <img
-            class="responsive-img"
-            src={carouselImgSource[currentCarousel]}
-          />
-        </Link>
-
+        <div className="carousel-img-wrapper">
+          <Link to="/">
+            <img
+              class="responsive-img"
+              src={carouselImgSource[currentCarousel]}
+            />
+          </Link>
+        </div>
         <div class="carousel-arrow-right">
           <button class="icon-wrapper" onClick={nextSlide}>
             <i class="fa-solid fa-chevron-right icon"></i>
