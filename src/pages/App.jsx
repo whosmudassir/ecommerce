@@ -1,6 +1,7 @@
 import "../../src/App.css";
 import NavBar from "../components/NavBar/index";
 import Slider from "../components/Slider/index";
+import Footer from "../components/Footer/index";
 import ProductList from "./ProductList";
 import Home from "./Home";
 import Cart from "./Cart";
@@ -24,6 +25,7 @@ function App() {
           <Route path="/order-confirmation" element={<OrderConfirmation />} />
           <Route path="/user" element={<User />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );

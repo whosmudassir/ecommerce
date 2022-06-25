@@ -8,7 +8,7 @@
 .dashboard-wrapper {
   display: flex;
   flex-direction: row;
-  height: calc(100vh - 62px);
+  height: 100%;
   flex: 1;
 }
 

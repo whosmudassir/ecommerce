@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "../../components/Footer";
 import LoginForm from "../../components/Forms/LoginForm";
 import RegisterForm from "../../components/Forms/RegisterForm";
 import Dashboard from "../Dashboard";
@@ -21,7 +20,6 @@ const User = () => {
           )}
         </div>
       </div>
-      <Footer />
     </>
   );
 };
