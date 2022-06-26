@@ -17,17 +17,17 @@ const NavBar = () => {
         <div class="right-content">
           <Link to="/user">
             <button class="icon-wrapper">
-              <i class="fa-solid fa-user icon"></i>
+              <i class="fa-solid fa-user nav-icon"></i>
             </button>
           </Link>
           <Link to="/wish-list">
             <button class="icon-wrapper">
-              <i class="fa-solid fa-heart icon"></i>
+              <i class="fa-solid fa-heart nav-icon"></i>
             </button>
           </Link>
           <Link to="/cart">
             <button class="icon-wrapper">
-              <i class="fa-solid fa-bag-shopping icon"></i>
+              <i class="fa-solid fa-bag-shopping nav-icon"></i>
             </button>
           </Link>
         </div>
