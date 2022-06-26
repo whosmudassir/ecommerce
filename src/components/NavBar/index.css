@@ -12,9 +12,16 @@
   height: 58px;
 }
 
-.icon {
+.nav-icon {
   color: white;
   font-size: 22.5px;
+  transition: 0.7s;
+  transition-timing-function: ease-in-out;
+}
+
+.nav-icon:hover {
+  font-size: 20px;
+  color: rgb(226, 226, 226);
 }
 
 .right-content {
