@@ -11,3 +11,11 @@
   flex-direction: row;
   flex: 1;
 }
+
+/* responsive */
+@media (max-width: 1024px) {
+  .product-list-wrapper {
+    padding: 10px;
+    gap: 10px;
+  }
+}
