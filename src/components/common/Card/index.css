@@ -31,3 +31,10 @@
   color: white;
   border-radius: 4px;
 }
+
+/* responsive */
+@media (max-width: 1024px) {
+  .card-wrapper {
+    width: 144px;
+  }
+}
