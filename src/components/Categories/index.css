@@ -35,3 +35,10 @@
     height: 175px;
   }
 }
+
+@media (max-width: 368px) {
+  .category-wrapper {
+    width: 140px;
+    height: 135px;
+  }
+}
