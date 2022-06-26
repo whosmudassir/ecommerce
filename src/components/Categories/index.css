@@ -1,3 +1,4 @@
+@import url("../../assets/theme/index.css");
 .category-wrapper {
   width: 240px;
   height: 300px;
@@ -12,6 +13,7 @@
   flex-direction: row;
   gap: 8px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .img-wrapper {
@@ -21,6 +23,15 @@
 .category-name {
   position: absolute;
   bottom: 20px;
-  background-color: rgba(173, 173, 173, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 5px 10px;
+  font-family: Regular;
+  font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+  .category-wrapper {
+    width: 180px;
+    height: 175px;
+  }
 }

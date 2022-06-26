@@ -6,9 +6,9 @@ const NavBar = () => {
   return (
     <div>
       <div class="nav-bar-wrapper">
-        <button class="hamburger-icon">
+        {/* <button class="hamburger-icon">
           <i class="fa fa-bars icon" id="render-icon"></i>
-        </button>
+        </button> */}
         <div class="left-content">
           <Link to="/">
             <img class="logo" src={logo} alt={logo} />
