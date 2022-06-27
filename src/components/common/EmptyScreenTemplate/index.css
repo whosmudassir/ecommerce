@@ -7,9 +7,10 @@
   margin-top: 40px;
   padding: 30px;
   justify-content: center;
+  align-items: center;
   display: flex;
   align-items: center;
-  /* gap: 18px; */
+
   margin-bottom: 35px;
   text-align: center;
 }
