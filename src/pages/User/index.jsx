@@ -1,7 +1,6 @@
 import React from "react";
-import LoginForm from "../../components/Forms/LoginForm";
-import RegisterForm from "../../components/Forms/RegisterForm";
 import Dashboard from "../Dashboard";
+import Login from "../Login";
 import "./index.css";
 const User = () => {
   return (
@@ -10,8 +9,7 @@ const User = () => {
         <div className="user-content-wrapper">
           {true ? (
             <div className="login-wrapper">
-              <LoginForm />
-              <RegisterForm />
+              <Login />
             </div>
           ) : (
             <>

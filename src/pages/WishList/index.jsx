@@ -1,5 +1,6 @@
 import React from "react";
 import EmptyWishList from "../../components/EmptyWishList";
+import "./index.css";
 
 const WishList = () => {
   return (
@@ -12,9 +13,9 @@ const WishList = () => {
             </div>
           </>
         ) : (
-          <>
+          <div className="empty-wishlist-wrapper">
             <EmptyWishList />
-          </>
+          </div>
         )}
       </div>
     </div>

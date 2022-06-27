@@ -4,6 +4,11 @@
   width: 100%;
 }
 
+/* .login-wrapper {
+  display: flex;
+  align-items: center;
+} */
+
 /* responsive */
 @media (max-width: 1024px) {
   .user-content-wrapper {
