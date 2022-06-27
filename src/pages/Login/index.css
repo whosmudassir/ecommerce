@@ -1,0 +1,25 @@
+@import url("../../assets/theme/index.css");
+
+.login-btn-wrapper {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.login-btn {
+  background-color: #f1f1f1 !important;
+  padding: 14px 20px !important;
+  font-family: Regular;
+  text-transform: uppercase;
+  border-radius: 2px !important;
+  color: #353b41 !important;
+  font-size: 13px !important;
+  width: 156px;
+}
+
+.login-btn:hover {
+  background-color: #e9e9e9 !important;
+  color: #353b41 !important;
+}

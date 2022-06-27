@@ -15,6 +15,10 @@ const NavBar = () => {
           </Link>
         </div>
         <div class="right-content">
+          <button class="icon-wrapper">
+            {" "}
+            <i class="fa-solid fa-magnifying-glass nav-icon"></i>
+          </button>
           <Link to="/user">
             <button class="icon-wrapper">
               <i class="fa-solid fa-user nav-icon"></i>
