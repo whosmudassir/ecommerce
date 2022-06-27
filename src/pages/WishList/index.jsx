@@ -1,21 +1,28 @@
 import React from "react";
 import EmptyWishList from "../../components/EmptyWishList";
 import "./index.css";
+import NotLoggedinTemplate from "../../components/NotLoggedinTemplate";
 
 const WishList = () => {
+  const isLoggedin = false;
+  const wishListCount = 0;
   return (
     <div class="body-wrapper">
       <div className="cart-wrapper">
-        {false ? (
+        {isLoggedin ? (
           <>
-            <div>
-              <p className="cart-heading">Your Wishlist</p>
-            </div>
+            {wishListCount.length > 0 ? (
+              <div>
+                <p className="cart-heading">Your Wishlist</p>
+              </div>
+            ) : (
+              <div className="empty-wishlist-wrapper">
+                <EmptyWishList />
+              </div>
+            )}
           </>
         ) : (
-          <div className="empty-wishlist-wrapper">
-            <EmptyWishList />
-          </div>
+          <NotLoggedinTemplate screenName={"wishlist"} />
         )}
       </div>
     </div>

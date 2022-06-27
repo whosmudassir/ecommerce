@@ -7,30 +7,39 @@ import CouponCodeInput from "../../components/CouponCodeInput";
 import CartTotal from "../../components/Cart/CartTotal";
 import CheckoutButton from "../../components/Cart/CheckoutButton";
 import EmptyCart from "../../components/EmptyCart";
+import NotLoggedinTemplate from "../../components/NotLoggedinTemplate";
 
 const Cart = () => {
+  const isLoggedin = true;
+  const cartCount = 0;
   return (
     <>
       <div class="body-wrapper">
         <div className="cart-wrapper">
-          {true ? (
+          {isLoggedin ? (
             <>
-              <div>
-                <p className="cart-heading">Cart</p>
-              </div>
-              <OrderStatusBar
-                cart={true}
-                checkout={false}
-                confirmation={false}
-              />
-              <CartProductTitle />
-              <CartProductItem /> <CartProductItem /> <CartProductItem />
-              <CouponCodeInput />
-              <CartTotal />
-              <CheckoutButton />
+              {false ? (
+                <>
+                  <div>
+                    <p className="cart-heading">Cart</p>
+                  </div>
+                  <OrderStatusBar
+                    cart={true}
+                    checkout={false}
+                    confirmation={false}
+                  />
+                  <CartProductTitle />
+                  <CartProductItem /> <CartProductItem /> <CartProductItem />
+                  <CouponCodeInput />
+                  <CartTotal />
+                  <CheckoutButton />
+                </>
+              ) : (
+                <EmptyCart />
+              )}
             </>
           ) : (
-            <EmptyCart />
+            <NotLoggedinTemplate screenName={"cart"} />
           )}
         </div>
       </div>
