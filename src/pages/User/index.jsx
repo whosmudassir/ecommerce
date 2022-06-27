@@ -8,11 +8,11 @@ const User = () => {
     <>
       <div class="body-wrapper">
         <div className="user-content-wrapper">
-          {false ? (
-            <>
+          {true ? (
+            <div className="login-wrapper">
               <LoginForm />
               <RegisterForm />
-            </>
+            </div>
           ) : (
             <>
               <Dashboard />

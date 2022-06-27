@@ -1,8 +1,9 @@
 .user-content-wrapper {
   padding: 40px 60px;
-  height: 100%;
+  height: 100vh;
   width: 100%;
 }
+
 /* responsive */
 @media (max-width: 1024px) {
   .user-content-wrapper {
