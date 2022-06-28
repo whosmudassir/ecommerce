@@ -26,3 +26,12 @@
 .right-content {
   gap: 20px;
 }
+
+.badge-wrapper {
+  padding: 0;
+}
+
+.notification {
+  right: -1em;
+  top: -0.5em;
+}
