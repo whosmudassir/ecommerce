@@ -19,20 +19,28 @@ const NavBar = () => {
             {" "}
             <i class="fa-solid fa-magnifying-glass nav-icon"></i>
           </button>
-          <Link to="/user">
-            <button class="icon-wrapper">
+
+          <button class="icon-wrapper">
+            <Link to="/user">
               <i class="fa-solid fa-user nav-icon"></i>
-            </button>
-          </Link>
-          <Link to="/wish-list">
-            <button class="icon-wrapper">
+            </Link>
+          </button>
+
+          <button class="icon-wrapper">
+            <Link to="/wish-list">
               <i class="fa-solid fa-heart nav-icon"></i>
-            </button>
-          </Link>
+            </Link>
+          </button>
+
           <Link to="/cart">
-            <button class="icon-wrapper">
-              <i class="fa-solid fa-bag-shopping nav-icon"></i>
-            </button>
+            <div class="badge-wrapper">
+              <button class="icon-wrapper">
+                <i class="fa-solid fa-bag-shopping nav-icon"></i>
+              </button>
+              <div class="notification">
+                <p class="notification-text">1</p>
+              </div>
+            </div>
           </Link>
         </div>
       </div>
