@@ -2,6 +2,13 @@
 
 .card-wrapper {
   cursor: pointer;
+  transition: 0.2s;
+  transition-timing-function: linear;
+  background-color: white;
+}
+
+.card-wrapper:hover .card-body {
+  transform: translate(0, -10px);
 }
 
 .card-head {
@@ -12,6 +19,8 @@
 .card-body {
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
+  transition: 0.2s;
+  transition-timing-function: linear;
 }
 
 .card-head {
@@ -24,7 +33,7 @@
 }
 
 .card-body {
-  background-color: burlywood;
+  background-color: white;
 }
 
 .card-heart-icon {
@@ -37,9 +46,9 @@
   right: 16px;
 }
 
-.card-body:hover {
+/* .card-body:hover {
   transform: translate(0, -10px);
-}
+} */
 
 .card-wrapper {
   height: 310px;
