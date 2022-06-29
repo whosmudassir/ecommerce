@@ -7,10 +7,13 @@ const Card = () => {
         <div class="card-head">
           <img
             class="card-img"
-            src="https://i.pinimg.com/564x/8d/57/dc/8d57dc0c845f12a012d5b0e39803d8c6.jpg"
+            src="https://i.pinimg.com/564x/83/af/62/83af629c800acaa786e55fefd44bdefb.jpg"
             alt=""
           />
-          <div class="card-banner">ON SALE</div>
+
+          <button class="icon-wrapper">
+            <i class="fa-regular fa-heart card-heart-icon"></i>
+          </button>
         </div>
         <div class="card-body">
           <div class="card-info">
