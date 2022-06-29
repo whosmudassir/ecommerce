@@ -1,6 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Card = () => {
+  const [heartIcon, setHeartIcon] = useState("regular");
+
+  const addToWishlist = () => {
+    if (heartIcon == "regular") {
+      setHeartIcon("solid");
+    } else {
+      setHeartIcon("regular");
+    }
+  };
+
   return (
     <div>
       <div class="card-wrapper">
@@ -11,8 +21,13 @@ const Card = () => {
             alt=""
           />
 
-          <button class="icon-wrapper">
-            <i class="fa-regular fa-heart card-heart-icon"></i>
+          <button
+            class="icon-wrapper"
+            onClick={() => {
+              addToWishlist();
+            }}
+          >
+            <i class={`fa-${heartIcon} fa-heart card-heart-icon`}></i>
           </button>
         </div>
         <div class="card-body">
