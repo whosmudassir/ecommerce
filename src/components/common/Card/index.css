@@ -4,7 +4,11 @@
   cursor: pointer;
   transition: 0.2s;
   transition-timing-function: linear;
-  background-color: white;
+  background-color: #f9fafb;
+}
+
+.card-img {
+  max-width: none;
 }
 
 .card-wrapper:hover .card-body {
@@ -33,7 +37,7 @@
 }
 
 .card-body {
-  background-color: white;
+  background-color: #f9fafb;
 }
 
 .card-heart-icon {
@@ -68,8 +72,20 @@
 }
 
 /* responsive */
-@media (max-width: 1024px) {
+@media (max-width: 374px) {
   .card-wrapper {
     width: 144px;
+  }
+}
+
+@media (max-width: 475px) {
+  .card-wrapper {
+    width: 198px;
+  }
+}
+
+@media (max-width: 428px) {
+  .card-wrapper {
+    width: 178px;
   }
 }
