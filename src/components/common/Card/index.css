@@ -72,11 +72,6 @@
 }
 
 /* responsive */
-@media (max-width: 374px) {
-  .card-wrapper {
-    width: 144px;
-  }
-}
 
 @media (max-width: 475px) {
   .card-wrapper {
@@ -87,5 +82,17 @@
 @media (max-width: 428px) {
   .card-wrapper {
     width: 178px;
+  }
+}
+
+@media (max-width: 387px) {
+  .card-wrapper {
+    width: 164px;
+  }
+}
+
+@media (max-width: 361px) {
+  .card-wrapper {
+    width: 144px;
   }
 }
