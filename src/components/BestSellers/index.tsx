@@ -7,9 +7,9 @@ const BestSellers = () => {
     <div className="bestsellers-wrapper">
       <p className="bestsellers-text">Best Sellers</p>
       <div className="bestsellers-card-wrapper">
+        {/* <Card />
         <Card />
-        <Card />
-        <Card />
+        <Card /> */}
       </div>
     </div>
   );

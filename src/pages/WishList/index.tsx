@@ -5,9 +5,9 @@ import NotLoggedinTemplate from "../../components/NotLoggedinTemplate";
 
 const WishList = () => {
   const isLoggedin = false;
-  const wishListCount = 0;
+  const wishListCount = [0];
   return (
-    <div class="body-wrapper">
+    <div className="body-wrapper">
       <div className="cart-wrapper">
         {isLoggedin ? (
           <>

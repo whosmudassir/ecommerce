@@ -11,13 +11,13 @@ const Login = () => {
       </div>
       <div className="login-btn-wrapper">
         <div>
-          <button class="primary-btn login-btn">Login as guest</button>
+          <button className="primary-btn login-btn">Login as guest</button>
         </div>{" "}
         <div>
-          <button class="primary-btn login-btn">Sign up</button>
+          <button className="primary-btn login-btn">Sign up</button>
         </div>
         <div>
-          <button class="primary-btn login-btn">Login</button>
+          <button className="primary-btn login-btn">Login</button>
         </div>
       </div>
     </div>

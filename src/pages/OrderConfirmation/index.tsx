@@ -4,7 +4,7 @@ import OrderStatusBar from "../../components/Checkout/OrderStatusBar";
 
 const OrderConfirmation = () => {
   return (
-    <div class="body-wrapper">
+    <div className="body-wrapper">
       <div className="cart-wrapper">
         <div>
           <p className="cart-heading">Order Confirmation</p>

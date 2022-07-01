@@ -8,8 +8,8 @@ import Categories from "../../components/Categories";
 
 const Home = () => {
   return (
-    <div class="body-wrapper">
-      <div class="home-page-wrapper">
+    <div className="body-wrapper">
+      <div className="home-page-wrapper">
         <Carousel carouselData={carouselClothingData} />
         <Categories />
         <Carousel carouselData={carouselDiscountData} />

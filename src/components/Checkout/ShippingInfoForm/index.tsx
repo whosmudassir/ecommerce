@@ -8,13 +8,13 @@ const ShippingInfoForm = () => {
       <p className="order-info-text">Billing & shipping</p>
       <div className="shipping-info-two-item-wrapper">
         <input
-          class="outlined-input"
+          className="outlined-input"
           type="text"
           placeholder="First name"
           autoComplete="cc-given-name"
         />
         <input
-          class="outlined-input"
+          className="outlined-input"
           type="text"
           placeholder="Last name"
           autoComplete="cc-family-name"
@@ -23,7 +23,7 @@ const ShippingInfoForm = () => {
       <p className="shipping-info-headings-text">Street address</p>
       <div className="shipping-info-item-wrapper">
         <input
-          class="outlined-input shipping-info-input"
+          className="outlined-input shipping-info-input"
           type="text"
           placeholder="House number and street name"
           autoComplete="street-address"
@@ -32,7 +32,7 @@ const ShippingInfoForm = () => {
       <p className="shipping-info-headings-text">City / town</p>
       <div className="shipping-info-item-wrapper">
         <input
-          class="outlined-input  shipping-info-input"
+          className="outlined-input  shipping-info-input"
           type="text"
           autoComplete="address-level2"
         />
@@ -41,7 +41,7 @@ const ShippingInfoForm = () => {
       <p className="shipping-info-headings-text">Pin code / zip</p>
       <div className="shipping-info-item-wrapper">
         <input
-          class="outlined-input  shipping-info-input"
+          className="outlined-input  shipping-info-input"
           type="text"
           autocomplete="postal-code"
         />
@@ -50,7 +50,7 @@ const ShippingInfoForm = () => {
       <p className="shipping-info-headings-text">Phone</p>
       <div className="shipping-info-item-wrapper">
         <input
-          class="outlined-input  shipping-info-input"
+          className="outlined-input  shipping-info-input"
           type="text"
           placeholder="Enter 10 digit phone number"
         />
@@ -58,7 +58,7 @@ const ShippingInfoForm = () => {
       <p className="shipping-info-headings-text">Email</p>
       <div className="shipping-info-item-wrapper">
         <input
-          class="outlined-input  shipping-info-input"
+          className="outlined-input  shipping-info-input"
           type="text"
           autoComplete="email"
         />

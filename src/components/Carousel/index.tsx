@@ -46,33 +46,33 @@ const Carousel = ({ carouselData }) => {
 
   return (
     <div>
-      <div class="carousel">
-        <div class="carousel-arrow-left">
-          <button class="icon-wrapper" onClick={previousSlide}>
-            <i class="fa-solid fa-chevron-left icon"></i>
+      <div className="carousel">
+        <div className="carousel-arrow-left">
+          <button className="icon-wrapper" onClick={previousSlide}>
+            <i className="fa-solid fa-chevron-left icon"></i>
           </button>
         </div>
         <div className="carousel-img-wrapper">
           <Link to="/">
             <img
-              class="responsive-img"
+              className="responsive-img"
               src={carouselImgSource[currentCarousel]}
             />
           </Link>
         </div>
-        <div class="carousel-arrow-right">
-          <button class="icon-wrapper" onClick={nextSlide}>
-            <i class="fa-solid fa-chevron-right icon"></i>
+        <div className="carousel-arrow-right">
+          <button className="icon-wrapper" onClick={nextSlide}>
+            <i className="fa-solid fa-chevron-right icon"></i>
           </button>
         </div>
 
-        <div class="dot-wrapper">
+        <div className="dot-wrapper">
           {Array.from({ length: carouselImgSource.length }).map(
             (dot, index) => (
-              <div class="dot">
+              <div className="dot">
                 <div
                   onClick={() => dotSlider(index)}
-                  class={
+                  className={
                     currentCarousel == index ? "dot-active" : "dot-inactive"
                   }
                 />

@@ -16,13 +16,13 @@ const DashboardCouponCode = () => {
           <p className="dashboard-coupon-code">IMBROKEAF</p>
           <div>
             <button
-              class="icon-wrapper"
+              className="icon-wrapper"
               onClick={() => {
                 copyToClipboard("IMBROKEAF");
               }}
             >
               <Tippy content={"copy"} className="tippy-copy">
-                <i class="fa-solid fa-copy icon"></i>
+                <i className="fa-solid fa-copy icon"></i>
               </Tippy>
             </button>
           </div>

@@ -14,7 +14,7 @@ const Cart = () => {
   const cartCount = 0;
   return (
     <>
-      <div class="body-wrapper">
+      <div className="body-wrapper">
         <div className="cart-wrapper">
           {isLoggedin ? (
             <>
