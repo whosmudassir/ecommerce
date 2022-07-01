@@ -8,7 +8,9 @@
 }
 
 .card-img {
-  max-width: none;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
 }
 
 .card-wrapper:hover .card-body {
@@ -28,7 +30,9 @@
 }
 
 .card-head {
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 .card-head,

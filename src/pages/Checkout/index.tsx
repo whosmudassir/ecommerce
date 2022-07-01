@@ -6,7 +6,7 @@ import OrderInfo from "../../components/Checkout/OrderInfo";
 
 const Checkout = () => {
   return (
-    <div class="body-wrapper">
+    <div className="body-wrapper">
       <div className="cart-wrapper">
         <div>
           <p className="cart-heading">Checkout</p>

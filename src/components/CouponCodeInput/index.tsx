@@ -5,11 +5,11 @@ const CouponCodeInput = () => {
   return (
     <div className="coupon-code-input-wrapper">
       <input
-        class="outlined-input coupon-input"
+        className="outlined-input coupon-input"
         type="text"
         placeholder="Coupon code"
       />
-      <button class="primary-btn coupon-btn"> Apply </button>
+      <button className="primary-btn coupon-btn"> Apply </button>
     </div>
   );
 };

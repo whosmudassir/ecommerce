@@ -10,7 +10,7 @@ const DashboardAccountDetailsInfo = () => {
         </p>
         <div className="shipping-info-item-wrapper">
           <input
-            class="outlined-input shipping-info-input"
+            className="outlined-input shipping-info-input"
             type="text"
             autoComplete="street-address"
           />
@@ -20,7 +20,7 @@ const DashboardAccountDetailsInfo = () => {
         </p>
         <div className="shipping-info-item-wrapper">
           <input
-            class="outlined-input  shipping-info-input"
+            className="outlined-input  shipping-info-input"
             type="text"
             autoComplete="address-level2"
           />
@@ -30,7 +30,7 @@ const DashboardAccountDetailsInfo = () => {
         </p>
         <div className="shipping-info-item-wrapper">
           <input
-            class="outlined-input shipping-info-input"
+            className="outlined-input shipping-info-input"
             type="text"
             autoComplete="street-address"
           />
@@ -42,7 +42,7 @@ const DashboardAccountDetailsInfo = () => {
         </p>
         <div className="shipping-info-item-wrapper">
           <input
-            class="outlined-input shipping-info-input"
+            className="outlined-input shipping-info-input"
             type="text"
             autoComplete="street-address"
           />
@@ -52,7 +52,7 @@ const DashboardAccountDetailsInfo = () => {
         </p>
         <div className="shipping-info-item-wrapper">
           <input
-            class="outlined-input  shipping-info-input"
+            className="outlined-input  shipping-info-input"
             type="text"
             autoComplete="address-level2"
           />
@@ -62,7 +62,7 @@ const DashboardAccountDetailsInfo = () => {
         </p>
         <div className="shipping-info-item-wrapper">
           <input
-            class="outlined-input shipping-info-input"
+            className="outlined-input shipping-info-input"
             type="text"
             autoComplete="street-address"
           />

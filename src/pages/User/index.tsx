@@ -5,7 +5,7 @@ import "./index.css";
 const User = () => {
   return (
     <>
-      <div class="body-wrapper">
+      <div className="body-wrapper">
         <div className="user-content-wrapper">
           {true ? (
             <div className="login-wrapper">

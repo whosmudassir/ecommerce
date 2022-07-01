@@ -7,7 +7,9 @@ const CheckoutButton = () => {
     <div className="checkout-btn-wrapper">
       <div className="checkout-btn-item">
         <Link to="/checkout">
-          <button class="primary-btn checkout-btn">Proceed to checkout </button>
+          <button className="primary-btn checkout-btn">
+            Proceed to checkout{" "}
+          </button>
         </Link>
       </div>
     </div>

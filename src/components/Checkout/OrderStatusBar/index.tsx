@@ -15,7 +15,7 @@ const OrderStatusBar = ({ cart, checkout, confirmation }) => {
             <p className="order-status-child-title">
               {cart && (
                 <i
-                  class="fa-regular fa-circle-check"
+                  className="fa-regular fa-circle-check"
                   style={{ color: "black" }}
                 ></i>
               )}
@@ -31,7 +31,7 @@ const OrderStatusBar = ({ cart, checkout, confirmation }) => {
             <p className="order-status-child-title">
               {checkout && (
                 <i
-                  class="fa-regular fa-circle-check"
+                  className="fa-regular fa-circle-check"
                   style={{ color: "black" }}
                 ></i>
               )}
@@ -48,7 +48,7 @@ const OrderStatusBar = ({ cart, checkout, confirmation }) => {
           <p className="order-status-child-title">
             {confirmation && (
               <i
-                class="fa-regular fa-circle-check"
+                className="fa-regular fa-circle-check"
                 style={{ color: "black" }}
               ></i>
             )}

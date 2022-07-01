@@ -3,30 +3,30 @@ import React from "react";
 const Slider = () => {
   return (
     <div>
-      <div id="trigger-slider" class="list-box-close list-box">
-        <div class="category-divider">
-          <div class="heading-text-wrapper">
-            <p class="filter-heading">Filters</p>
-            <p class="filter-heading">Clear</p>
+      <div id="trigger-slider" className="list-box-close list-box">
+        <div className="category-divider">
+          <div className="heading-text-wrapper">
+            <p className="filter-heading">Filters</p>
+            <p className="filter-heading">Clear</p>
           </div>
         </div>
-        <div class="category-divider">
-          <div class="filter-wrapper">
-            <p class="filter-heading">Sort by</p>
-            <div class="input-text">
+        <div className="category-divider">
+          <div className="filter-wrapper">
+            <p className="filter-heading">Sort by</p>
+            <div className="input-text">
               <input id="input-color" type="radio" value="high" name="price" />
               Price: High to Low
             </div>
-            <div class="input-text">
+            <div className="input-text">
               <input id="input-color" type="radio" value="low" name="price" />
               Price: Low to High
             </div>
           </div>
         </div>
-        <div class="category-divider">
-          <div class="filter-wrapper">
-            <p class="filter-heading">Categories</p>
-            <div class="input-text">
+        <div className="category-divider">
+          <div className="filter-wrapper">
+            <p className="filter-heading">Categories</p>
+            <div className="input-text">
               <input
                 id="input-color"
                 type="checkbox"
@@ -35,7 +35,7 @@ const Slider = () => {
               />
               T-shirts
             </div>
-            <div class="input-text">
+            <div className="input-text">
               <input
                 type="checkbox"
                 id="input-color"
@@ -44,7 +44,7 @@ const Slider = () => {
               />
               Hoodies
             </div>
-            <div class="input-text">
+            <div className="input-text">
               <input
                 type="checkbox"
                 id="input-color"
@@ -53,7 +53,7 @@ const Slider = () => {
               />
               Sweatshirts
             </div>
-            <div class="input-text">
+            <div className="input-text">
               <input
                 type="checkbox"
                 id="input-color"
@@ -65,10 +65,10 @@ const Slider = () => {
           </div>
         </div>
 
-        <div class="category-divider">
-          <div class="filter-wrapper">
-            <p class="filter-heading">Brands</p>
-            <div class="input-text">
+        <div className="category-divider">
+          <div className="filter-wrapper">
+            <p className="filter-heading">Brands</p>
+            <div className="input-text">
               <input
                 type="checkbox"
                 id="input-color"
@@ -77,7 +77,7 @@ const Slider = () => {
               />
               Demons
             </div>
-            <div class="input-text">
+            <div className="input-text">
               <input
                 type="checkbox"
                 id="input-color"
@@ -86,7 +86,7 @@ const Slider = () => {
               />
               Cavempt
             </div>
-            <div class="input-text">
+            <div className="input-text">
               <input
                 type="checkbox"
                 id="input-color"
@@ -95,7 +95,7 @@ const Slider = () => {
               />
               Vetements
             </div>
-            <div class="input-text">
+            <div className="input-text">
               <input
                 type="checkbox"
                 id="input-color"
@@ -104,7 +104,7 @@ const Slider = () => {
               />
               Pleasures
             </div>
-            <div class="input-text">
+            <div className="input-text">
               <input
                 type="checkbox"
                 id="input-color"
@@ -113,7 +113,7 @@ const Slider = () => {
               />
               BStroy
             </div>
-            <div class="input-text">
+            <div className="input-text">
               <input
                 type="checkbox"
                 id="input-color"

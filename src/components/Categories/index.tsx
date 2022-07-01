@@ -11,12 +11,12 @@ const Categories = () => {
   console.log("cat-->", displayCategory);
 
   return (
-    <div class="categories-wrapper">
+    <div className="categories-wrapper">
       {displayCategory.map((category) => (
         <>
-          <div class="category-wrapper">
-            <div class="img-wrapper">
-              <img class="responsive-img" src={category.img} />
+          <div className="category-wrapper">
+            <div className="img-wrapper">
+              <img className="responsive-img" src={category.img} />
             </div>
             <div className="category-name">{category.text}</div>
           </div>
