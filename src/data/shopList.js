@@ -182,11 +182,11 @@ export const shopList = [
   {
     id: 21,
     brandName: "gasi",
-    name: "square aqua shades",
+    name: "forest green shades",
     price: 1499,
     category: "accessories",
     imageUrl:
-      "https://i.pinimg.com/564x/88/b9/94/88b99451973a01cde566cb837cd4664c.jpg",
+      "https://i.pinimg.com/564x/c8/70/6b/c8706bf515d7146ade7ccfe0f024e083.jpg",
   },
   {
     id: 22,
@@ -196,6 +196,51 @@ export const shopList = [
     category: "accessories",
     imageUrl:
       "https://i.pinimg.com/564x/58/e3/26/58e326ef35e5f1dad29081b8323fbbd3.jpg",
+  },
+  {
+    id: 23,
+    brandName: "gasi",
+    name: "banana yellow shades",
+    price: 2429,
+    category: "accessories",
+    imageUrl:
+      "https://i.pinimg.com/564x/6c/20/80/6c2080de466d29f311b9f82924174cdf.jpg",
+  },
+  {
+    id: 24,
+    brandName: "gasi",
+    name: "darkest black shades",
+    price: 1499,
+    category: "accessories",
+    imageUrl:
+      "https://i.pinimg.com/564x/b1/e1/31/b1e131b9d16f92be3f8a7ac6c9c5eea1.jpg",
+  },
+  {
+    id: 25,
+    brandName: "gasi",
+    name: "ocean blue shades",
+    price: 2499,
+    category: "accessories",
+    imageUrl:
+      "https://i.pinimg.com/564x/49/73/a9/4973a9950ccef0ebb940a4992c178fbb.jpg",
+  },
+  {
+    id: 25,
+    brandName: "gasi",
+    name: "boxy black red shades",
+    price: 4299,
+    category: "accessories",
+    imageUrl:
+      "https://i.pinimg.com/564x/bd/3b/20/bd3b206cc705658299c0fa8a992c070e.jpg",
+  },
+  {
+    id: 25,
+    brandName: "gasi",
+    name: "pearl white shades",
+    price: 1299,
+    category: "accessories",
+    imageUrl:
+      "https://i.pinimg.com/564x/1a/42/30/1a42308ce5c5433535916ee1a9ea7678.jpg",
   },
 ];
 
