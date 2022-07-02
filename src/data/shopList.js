@@ -2,7 +2,7 @@ export const shopList = [
   {
     id: 1,
     brandName: "demons",
-    name: "white astro tee",
+    name: "astro white tee",
     price: 859,
     category: "t-shirts",
     imageUrl:
@@ -11,7 +11,7 @@ export const shopList = [
   {
     id: 2,
     brandName: "demons",
-    name: "cgi blue oversized hoodie",
+    name: "cgi oversized blue hoodie",
     price: 2999,
     category: "hoodies",
     imageUrl:
@@ -38,7 +38,7 @@ export const shopList = [
   {
     id: 5,
     brandName: "cavempt",
-    name: "grey oversized hoodie",
+    name: "oversized grey hoodie",
     price: 4599,
     category: "hoodies",
     imageUrl:
@@ -56,7 +56,7 @@ export const shopList = [
   {
     id: 7,
     brandName: "vetements",
-    name: "olive oversized hoodie",
+    name: "oversized olive hoodie",
     price: 8299,
     category: "hoodies",
     imageUrl:
@@ -65,7 +65,7 @@ export const shopList = [
   {
     id: 8,
     brandName: "vetements",
-    name: "green bones tee",
+    name: "bones green tee",
     price: 2199,
     category: "t-shirts",
     imageUrl:
@@ -74,38 +74,128 @@ export const shopList = [
   {
     id: 9,
     brandName: "vetements",
-    name: "black ghost tee",
-    price: 299,
-    category: "t-shirts",
+    name: "skull white hoodie",
+    price: 2999,
+    category: "hoodies",
     imageUrl:
-      "https://i.pinimg.com/564x/fb/3e/19/fb3e1922b7b8b46fd13ed6633715b7f5.jpg",
+      "https://i.pinimg.com/564x/32/6d/17/326d171f50d3c093b12d40a5c08841aa.jpg",
   },
   {
     id: 10,
     brandName: "pleasures",
-    name: "purple good to die tee",
+    name: "nothing white hoodie",
     price: 449,
-    category: "t-shirts",
+    category: "hoodies",
     imageUrl:
-      "https://i.pinimg.com/564x/ad/ce/e1/adcee17703197fc3117e4240db483db8.jpg",
+      "https://i.pinimg.com/564x/96/8f/af/968faf7589d67eff9679f7476fd324ab.jpg",
   },
   {
     id: 11,
     brandName: "pleasures",
-    name: "white lightning logo tee",
+    name: "smiths white logo tee",
     price: 669,
     category: "t-shirts",
     imageUrl:
-      "https://i.pinimg.com/564x/8f/41/e3/8f41e30119a03a17af729e263b5a5004.jpg",
+      "https://i.pinimg.com/564x/33/df/b7/33dfb78e6b968bd93b4a717e57c64da5.jpg",
   },
   {
     id: 12,
     brandName: "pleasures",
-    name: "navy collar sweatshirt",
+    name: "striped black sweatshirt",
     price: 999,
     category: "sweatshirts",
     imageUrl:
-      "https://i.pinimg.com/564x/76/bd/fc/76bdfc81dc747eced5d36014c80794b3.jpg",
+      "https://i.pinimg.com/564x/50/af/91/50af91494b40afd79763e75c4861b08d.jpg",
+  },
+  {
+    id: 13,
+    brandName: "bstroy",
+    name: "avirex white hoodie",
+    price: 3199,
+    category: "hoodies",
+    imageUrl:
+      "https://i.pinimg.com/564x/38/b8/55/38b85516d02054a89fbf6732a8e843ce.jpg",
+  },
+  {
+    id: 14,
+    brandName: "bstroy",
+    name: "polarized pink sweatshirt",
+    price: 4999,
+    category: "sweatshirts",
+    imageUrl:
+      "https://i.pinimg.com/564x/53/90/1b/53901bf4e5eeb191f512be35203029d5.jpg",
+  },
+  {
+    id: 15,
+    brandName: "bstroy",
+    name: "no rage black hoodie",
+    price: 8199,
+    category: "hoodies",
+    imageUrl:
+      "https://i.pinimg.com/564x/9b/19/38/9b1938a7d8f847ac5df75534b427ada4.jpg",
+  },
+  {
+    id: 16,
+    brandName: "numbernine",
+    name: "bain black hoodie",
+    price: 6499,
+    category: "hoodies",
+    imageUrl:
+      "https://i.pinimg.com/564x/6c/5b/23/6c5b23d187901e77ac504e08db49faa9.jpg",
+  },
+  {
+    id: 17,
+    brandName: "numbernine",
+    name: "oversized brown hoodie",
+    price: 2999,
+    category: "hoodies",
+    imageUrl:
+      "https://i.pinimg.com/564x/20/52/a1/2052a10de5134e86470913c3b6361639.jpg",
+  },
+  {
+    id: 18,
+    brandName: "numbernine",
+    name: "los angles black hoodie",
+    price: 8849,
+    category: "hoodies",
+    imageUrl:
+      "https://i.pinimg.com/564x/f2/1a/43/f21a43c5890866b7bf1af29153e16b91.jpg",
+  },
+  {
+    id: 19,
+    brandName: "gasi",
+    name: "mini white  shades",
+    price: 799,
+    category: "accessories",
+    imageUrl:
+      "https://i.pinimg.com/564x/73/53/75/7353750b949a617a634112fdc1bc85cb.jpg",
+  },
+  {
+    id: 20,
+    brandName: "gasi",
+    name: "square olive shades",
+    price: 999,
+    category: "accessories",
+    imageUrl:
+      "https://i.pinimg.com/564x/08/1b/ee/081bee98ab74945921faf2b9730a5bd7.jpg",
+  },
+  {
+    id: 21,
+    brandName: "gasi",
+    name: "square aqua shades",
+    price: 1499,
+    category: "accessories",
+    imageUrl:
+      "https://i.pinimg.com/564x/88/b9/94/88b99451973a01cde566cb837cd4664c.jpg",
+  },
+  {
+    id: 22,
+    brandName: "gasi",
+    name: "nirvana round shades",
+    price: 849,
+    category: "accessories",
+    imageUrl:
+      "https://i.pinimg.com/564x/58/e3/26/58e326ef35e5f1dad29081b8323fbbd3.jpg",
   },
 ];
 
