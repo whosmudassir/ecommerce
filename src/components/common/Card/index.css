@@ -44,15 +44,32 @@
   background-color: #f9fafb;
 }
 
+.card-heart-btn-wrapper {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.card-info {
+  position: relative;
+}
+
 .card-heart-icon {
-  padding: 0;
+  /* padding: 0;
   margin: 0;
   font-size: 22px;
-  position: absolute;
-  top: 12px;
-  color: rgb(233, 233, 233);
-  right: 16px;
+
+
+  color: rgb(0, 0, 0);
+  
+  transition: 0.2s;
+  transition-timing-function: linear; */
 }
+
+/* .icon-wrapper::after .card-heart-icon {
+  color: rgb(54, 54, 54) !important;
+  font-size: 20px;
+} */
 
 /* .card-body:hover {
   transform: translate(0, -10px);

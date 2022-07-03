@@ -225,7 +225,7 @@ export const shopList = [
       "https://i.pinimg.com/564x/49/73/a9/4973a9950ccef0ebb940a4992c178fbb.jpg",
   },
   {
-    id: 25,
+    id: 26,
     brandName: "gasi",
     name: "boxy black red shades",
     price: 4299,
@@ -234,7 +234,7 @@ export const shopList = [
       "https://i.pinimg.com/564x/bd/3b/20/bd3b206cc705658299c0fa8a992c070e.jpg",
   },
   {
-    id: 25,
+    id: 27,
     brandName: "gasi",
     name: "pearl white shades",
     price: 1299,
@@ -243,12 +243,3 @@ export const shopList = [
       "https://i.pinimg.com/564x/1a/42/30/1a42308ce5c5433535916ee1a9ea7678.jpg",
   },
 ];
-
-// {
-//     'id':2,
-//     'brandName':'',
-//     'name':'',
-//     'price':,
-//     'category':'',
-//     'imageUrl':'',
-// }
