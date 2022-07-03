@@ -17,6 +17,15 @@
   transform: translate(0, -10px);
 }
 
+.card-brand-name {
+  text-transform: capitalize;
+  color: #818181;
+  font-size: 14px;
+  font-family: Medium;
+  padding: 6px 0px 4px 0px;
+  letter-spacing: 1.2px;
+}
+
 .card-head {
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
@@ -82,8 +91,12 @@
 
 .card-name,
 .card-price {
-  color: black;
+  color: #484f56;
   font-family: Regular;
+  font-size: 16px;
+  text-transform: capitalize;
+  padding-bottom: 6px;
+  letter-spacing: 0.5px;
 }
 
 .primary-btn {

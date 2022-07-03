@@ -35,8 +35,9 @@ const Card = ({
         </div>
         <div className="card-body">
           <div className="card-info">
+            <p className="card-brand-name">{brandName}</p>
             <p className="card-name"> {name} </p>
-            <p className="card-price">${price}</p>
+            <p className="card-price">₹{price}</p>
           </div>
           <div className="card-btn-wrapper">
             <button
