@@ -3,7 +3,8 @@
   padding: 30px 26px;
   display: flex;
   height: calc(100vh - 62px);
-  gap: 32px;
+  gap: 50px 10px;
+
   overflow: auto;
   flex-wrap: wrap;
   justify-content: center;
@@ -16,6 +17,6 @@
 @media (max-width: 1024px) {
   .product-list-wrapper {
     padding: 10px;
-    gap: 10px;
+    gap: 50px 10px;
   }
 }
