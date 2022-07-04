@@ -40,6 +40,9 @@ const Card = ({
             <p className="card-price">₹{price}</p>
           </div>
           <div className="card-btn-wrapper">
+            <button className="icon-wrapper" onClick={() => {}}>
+              <i className="fa-solid fa-plus "></i>
+            </button>
             <button
               className="icon-wrapper"
               onClick={() => {
