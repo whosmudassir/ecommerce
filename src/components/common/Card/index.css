@@ -36,6 +36,7 @@
   border-bottom-right-radius: 6px;
   transition: 0.2s;
   transition-timing-function: linear;
+  justify-content: flex-start;
 }
 
 .card-head {
@@ -51,6 +52,7 @@
 
 .card-body {
   background-color: #f9fafb;
+  position: relative;
 }
 
 .card-heart-btn-wrapper {
@@ -59,20 +61,22 @@
   bottom: 10px;
 }
 
-.card-info {
+/* .card-info {
   position: relative;
-}
+} */
 
 .card-heart-icon {
-  /* padding: 0;
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  padding: 0;
   margin: 0;
-  font-size: 22px;
-
+  font-size: 20px;
 
   color: rgb(0, 0, 0);
-  
+
   transition: 0.2s;
-  transition-timing-function: linear; */
+  transition-timing-function: linear;
 }
 
 /* .icon-wrapper::after .card-heart-icon {
@@ -89,6 +93,10 @@
   width: 222px;
 }
 
+.card-body {
+  height: 117px;
+}
+
 .card-name,
 .card-price {
   color: #484f56;
@@ -97,6 +105,7 @@
   text-transform: capitalize;
   padding-bottom: 6px;
   letter-spacing: 0.5px;
+  line-height: 20px;
 }
 
 .primary-btn {
