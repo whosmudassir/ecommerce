@@ -32,6 +32,14 @@ const Card = ({
       <div className="card-wrapper">
         <div className="card-head">
           <img className="card-img" src={imageUrl} alt="" />
+          <button
+            className="icon-wrapper"
+            onClick={() => {
+              addToWishlist();
+            }}
+          >
+            <i className={`fa-${heartIcon} fa-heart card-heart-icon`}></i>
+          </button>
         </div>
         <div className="card-body">
           <div className="card-info">
@@ -40,16 +48,8 @@ const Card = ({
             <p className="card-price">₹{price}</p>
           </div>
           <div className="card-btn-wrapper">
-            <button className="icon-wrapper" onClick={() => {}}>
-              <i className="fa-solid fa-plus "></i>
-            </button>
-            <button
-              className="icon-wrapper"
-              onClick={() => {
-                addToWishlist();
-              }}
-            >
-              <i className={`fa-${heartIcon} fa-heart card-heart-icon`}></i>
+            <button className="primary-btn card-plus-icon" onClick={() => {}}>
+              Add
             </button>
           </div>
         </div>
