@@ -7,6 +7,20 @@
   background-color: #f9fafb;
 }
 
+.card-heart-icon {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+
+  color: rgb(255, 255, 255);
+
+  transition: 0.2s;
+  transition-timing-function: linear;
+}
+
 .card-img {
   min-width: 100%;
   min-height: 100%;
@@ -27,36 +41,27 @@
 }
 
 .card-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
 }
 
 .card-body {
+  background-color: #f9fafb;
+  position: relative;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
   transition: 0.2s;
   transition-timing-function: linear;
   justify-content: flex-start;
-}
-
-.card-head {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-.card-head,
-.card-body {
-  background-color: white;
-}
-
-.card-body {
-  background-color: #f9fafb;
-  position: relative;
+  padding: 8px 14px;
 }
 
 .card-heart-btn-wrapper {
-  position: absolute;
+  /* position: absolute; */
   right: 10px;
   bottom: 10px;
 }
@@ -65,18 +70,19 @@
   position: relative;
 } */
 
-.card-heart-icon {
+.card-plus-icon {
   position: absolute;
   bottom: 14px;
   right: 14px;
-  padding: 0;
-  margin: 0;
-  font-size: 20px;
-
-  color: rgb(0, 0, 0);
-
-  transition: 0.2s;
+  background-color: rgb(0, 0, 0);
+  font-family: Medium;
+  letter-spacing: 1px !important;
+  transition: 0.6s !important;
   transition-timing-function: linear;
+}
+
+.card-plus-icon:hover {
+  background-color: rgb(68, 68, 68);
 }
 
 /* .icon-wrapper::after .card-heart-icon {
@@ -97,8 +103,7 @@
   height: 117px;
 }
 
-.card-name,
-.card-price {
+.card-name {
   color: #484f56;
   font-family: Regular;
   font-size: 16px;
@@ -108,6 +113,12 @@
   line-height: 20px;
 }
 
+.card-price {
+  font-family: Bold;
+  color: #484f56;
+  font-size: 16px;
+}
+
 .primary-btn {
   background-color: black;
   color: white;
@@ -115,6 +126,14 @@
 }
 
 /* responsive */
+
+/* responsive */
+@media (max-width: 1024px) {
+  .card-name,
+  .card-price {
+    font-size: 14px;
+  }
+}
 
 @media (max-width: 475px) {
   .card-wrapper {
