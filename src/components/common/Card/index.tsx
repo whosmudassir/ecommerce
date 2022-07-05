@@ -45,8 +45,8 @@ const Card = ({
           <div className="card-info">
             <p className="card-brand-name">{brandName}</p>
             <p className="card-name"> {name} </p>
-            <p className="card-price">₹{price}</p>
           </div>
+          <p className="card-price">₹{price}</p>
           <div className="card-btn-wrapper">
             <button className="primary-btn card-plus-icon" onClick={() => {}}>
               Add
