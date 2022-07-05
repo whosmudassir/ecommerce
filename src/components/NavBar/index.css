@@ -35,3 +35,28 @@
   right: -1em;
   top: -0.5em;
 }
+
+/* responsive */
+@media (max-width: 1024px) {
+  .nav-bar-wrapper {
+    padding: 0px 30px;
+  }
+
+  .logo {
+    width: 116px;
+    height: 58px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-bar-wrapper {
+    padding: 0px 0px;
+  }
+  .right-content {
+    padding-right: 25px;
+  }
+  .left-content {
+    margin: 0px !important;
+    padding-left: 8px;
+  }
+}
