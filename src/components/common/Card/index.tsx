@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import AddToCartPopup from "./AddToCartPopup";
+import QuickAddButton from "./QuickAddButton";
 
 interface ICardProps {
   id: number;
@@ -47,10 +49,9 @@ const Card = ({
             <p className="card-name"> {name} </p>
           </div>
           <p className="card-price">₹{price}</p>
+
           <div className="card-btn-wrapper">
-            <button className="primary-btn card-plus-icon" onClick={() => {}}>
-              Add
-            </button>
+            <QuickAddButton />
           </div>
         </div>
       </div>

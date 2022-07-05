@@ -1,0 +1,14 @@
+.quick-add-btn-wrapper {
+  position: relative;
+  bottom: 0;
+}
+
+.add-to-cart-popup-wrapper {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background-color: black;
+  width: 250px;
+  height: 100px;
+  z-index: 100;
+}
