@@ -9,6 +9,8 @@ interface ICardProps {
   price: number;
   category: string;
   imageUrl: string;
+  showSizebar: () => void;
+  isExpanded: any;
 }
 
 const Card = ({
@@ -18,6 +20,8 @@ const Card = ({
   price,
   category,
   imageUrl,
+  showSizeBar,
+  isExpanded,
 }: ICardProps) => {
   const [heartIcon, setHeartIcon] = useState("regular");
 
@@ -36,7 +40,7 @@ const Card = ({
   return (
     <div>
       <div className="card-wrapper">
-        {!visible && (
+        {isExpanded !== id && (
           <div
             className="card-head"
             // style={{
@@ -60,31 +64,25 @@ const Card = ({
             </>
           </div>
         )}
-        <div className="card-body">
+        <div
+          className="card-body"
+          style={{ borderRadius: isExpanded == id && "6px 6px 0px 0px" }}
+        >
           <div className="card-info">
             <p className="card-brand-name">{brandName}</p>
             <p className="card-name"> {name} </p>
           </div>
-          {visible && (
+          {isExpanded == id && (
             <div className="card-sizes-wrapper">
               <AddToCartPopup />
             </div>
           )}
-          {/* <p className="card-price">₹{price}</p>
 
-          <div className="card-btn-wrapper">
-            <button
-              className="primary-btn card-plus-icon"
-              onClick={visible ? hide : show}
-            >
-              Add
-            </button>
-          </div> */}
           <div className="card-footer">
             <p className="">₹{price}</p>
 
             <div className="card-btn-wrapper">
-              <button className="primary-btn " onClick={visible ? hide : show}>
+              <button className="primary-btn " onClick={showSizeBar}>
                 Add
               </button>
             </div>
