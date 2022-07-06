@@ -4,6 +4,10 @@
   flex-wrap: wrap; */
 }
 
+.sizes-text {
+  padding-bottom: 10px;
+}
+
 .donate-now label,
 .donate-now input {
   text-align: center;
@@ -13,7 +17,7 @@
   align-items: center;
 
   border: 1px solid #ccc;
-  padding: 0;
+  padding: 6px;
   cursor: pointer;
 }
 

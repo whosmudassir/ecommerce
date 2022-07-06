@@ -5,7 +5,7 @@ const AddToCartPopup = () => {
   return (
     <>
       <div>
-        <p>Sizes</p>
+        <p className="sizes-text">Sizes</p>
 
         <form>
           <div className="add-to-cart-popup-size-wrapper">

@@ -71,7 +71,7 @@
 }
 
 .card-sizes-wrapper {
-  padding: 20px 0px;
+  padding-bottom: 10px;
   display: flex;
   flex: 1;
   transition: 0.2s;

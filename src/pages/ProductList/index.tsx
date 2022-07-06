@@ -11,6 +11,13 @@ const ProductList = () => {
     setCardInfo(shopList);
   }, []);
 
+  // to display sizes
+  const [isExpanded, setIsExpanded] = useState(null);
+
+  const showSizeBar = (id) => (isExpanded) => {
+    // if expanded, set id to open/expand, close it otherwise
+    setIsExpanded(isExpanded ? id : false);
+  };
   return (
     <div className="body-wrapper">
       <Slider />
@@ -24,6 +31,8 @@ const ProductList = () => {
               price={item.price}
               category={item.category}
               imageUrl={item.imageUrl}
+              showSizeBar={showSizeBar(item.id)}
+              isExpanded={isExpanded}
             />
           </div>
         ))}
