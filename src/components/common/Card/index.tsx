@@ -29,29 +29,65 @@ const Card = ({
     }
   };
 
+  const [visible, setVisible] = useState(false);
+  const show = () => setVisible(true);
+  const hide = () => setVisible(false);
+
   return (
     <div>
       <div className="card-wrapper">
-        <div className="card-head">
-          <img className="card-img" src={imageUrl} alt="" />
-          <button
-            className="icon-wrapper"
-            onClick={() => {
-              addToWishlist();
-            }}
+        {!visible && (
+          <div
+            className="card-head"
+            // style={{
+            //   background: "rgba(0,0,0,.3)",
+
+            //   opacity: visible ? "0" : "1",
+            //   transition: "all .2s",
+            //   visibility: visible ? "hidden" : "visible",
+            // }}
           >
-            <i className={`fa-${heartIcon} fa-heart card-heart-icon`}></i>
-          </button>
-        </div>
+            <>
+              <img className="card-img" src={imageUrl} alt="" />
+              <button
+                className="icon-wrapper"
+                onClick={() => {
+                  addToWishlist();
+                }}
+              >
+                <i className={`fa-${heartIcon} fa-heart card-heart-icon`}></i>
+              </button>
+            </>
+          </div>
+        )}
         <div className="card-body">
           <div className="card-info">
             <p className="card-brand-name">{brandName}</p>
             <p className="card-name"> {name} </p>
           </div>
-          <p className="card-price">₹{price}</p>
+          {visible && (
+            <div className="card-sizes-wrapper">
+              <AddToCartPopup />
+            </div>
+          )}
+          {/* <p className="card-price">₹{price}</p>
 
           <div className="card-btn-wrapper">
-            <QuickAddButton />
+            <button
+              className="primary-btn card-plus-icon"
+              onClick={visible ? hide : show}
+            >
+              Add
+            </button>
+          </div> */}
+          <div className="card-footer">
+            <p className="">₹{price}</p>
+
+            <div className="card-btn-wrapper">
+              <button className="primary-btn " onClick={visible ? hide : show}>
+                Add
+              </button>
+            </div>
           </div>
         </div>
       </div>

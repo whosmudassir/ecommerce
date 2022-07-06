@@ -11,7 +11,7 @@ export const shopList = [
   {
     id: 2,
     brandName: "demons",
-    name: "cgi oversized blue hoodie",
+    name: "cgi blue hoodie",
     price: 2999,
     category: "hoodies",
     imageUrl:
