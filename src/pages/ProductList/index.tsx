@@ -12,11 +12,11 @@ const ProductList = () => {
   }, []);
 
   // to display sizes
-  const [isExpanded, setIsExpanded] = useState(null);
+  const [isExpandedCardId, setIsExpandedCardId] = useState<any>(null);
 
-  const showSizeBar = (id) => (isExpanded) => {
+  const showSizeBar = (id) => (isExpandedCardId) => {
     // if expanded, set id to open/expand, close it otherwise
-    setIsExpanded(isExpanded ? id : false);
+    setIsExpandedCardId(isExpandedCardId ? id : null);
   };
   return (
     <div className="body-wrapper">
@@ -32,7 +32,8 @@ const ProductList = () => {
               category={item.category}
               imageUrl={item.imageUrl}
               showSizeBar={showSizeBar(item.id)}
-              isExpanded={isExpanded}
+              isExpandedCardId={isExpandedCardId}
+              setIsExpandedCardId={setIsExpandedCardId}
             />
           </div>
         ))}

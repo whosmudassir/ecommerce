@@ -70,6 +70,16 @@
   bottom: 10px;
 }
 
+.card-close-btn-wrapper {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+}
+
+.card-close-btn-icon {
+  font-size: 18px;
+}
+
 .card-sizes-wrapper {
   padding-bottom: 10px;
   display: flex;

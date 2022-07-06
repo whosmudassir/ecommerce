@@ -10,7 +10,8 @@ interface ICardProps {
   category: string;
   imageUrl: string;
   showSizebar: () => void;
-  isExpanded: any;
+  isExpandedCardId: any;
+  setIsExpandedCardId: any;
 }
 
 const Card = ({
@@ -21,7 +22,8 @@ const Card = ({
   category,
   imageUrl,
   showSizeBar,
-  isExpanded,
+  isExpandedCardId,
+  setIsExpandedCardId,
 }: ICardProps) => {
   const [heartIcon, setHeartIcon] = useState("regular");
 
@@ -40,7 +42,7 @@ const Card = ({
   return (
     <div>
       <div className="card-wrapper">
-        {isExpanded !== id && (
+        {isExpandedCardId !== id && (
           <div
             className="card-head"
             // style={{
@@ -66,13 +68,26 @@ const Card = ({
         )}
         <div
           className="card-body"
-          style={{ borderRadius: isExpanded == id && "6px 6px 0px 0px" }}
+          style={{
+            //@ts-ignore
+            borderRadius: isExpandedCardId == id && "6px 6px 0px 0px",
+          }}
         >
           <div className="card-info">
-            <p className="card-brand-name">{brandName}</p>
+            <div className="card-close-btn-wrapper">
+              <p className="card-brand-name">{brandName}</p>{" "}
+              {isExpandedCardId == id && (
+                <button
+                  className="icon-wrapper "
+                  onClick={() => setIsExpandedCardId(null)}
+                >
+                  <i className="fa-solid fa-xmark card-close-btn-icon"></i>
+                </button>
+              )}
+            </div>
             <p className="card-name"> {name} </p>
           </div>
-          {isExpanded == id && (
+          {isExpandedCardId == id && (
             <div className="card-sizes-wrapper">
               <AddToCartPopup />
             </div>
