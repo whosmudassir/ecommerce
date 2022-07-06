@@ -10,10 +10,6 @@ const AddToCartPopup = () => {
         <form>
           <div className="add-to-cart-popup-size-wrapper">
             <div className="donate-now">
-              <input type="radio" id="aXS" name="size" />
-              <label for="aXS" id="aXS">
-                XS
-              </label>
               <input type="radio" id="aS" name="size" />
               <label for="aS" id="aS">
                 S
@@ -29,6 +25,10 @@ const AddToCartPopup = () => {
               <input type="radio" id="aXL" name="size" />
               <label for="aXL" id="aXL">
                 XL
+              </label>
+              <input type="radio" id="aXXL" name="size" />
+              <label for="aXS" id="aXXL">
+                XXL
               </label>
             </div>
           </div>
