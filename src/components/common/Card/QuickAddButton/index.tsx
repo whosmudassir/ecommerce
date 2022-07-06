@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import "../index.css";
+import "./index.css";
 import AddToCartPopup from "../AddToCartPopup";
 
 const QuickAddButton = () => {

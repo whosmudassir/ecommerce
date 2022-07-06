@@ -5,6 +5,7 @@
   transition: 0.2s;
   transition-timing-function: linear;
   background-color: #f9fafb;
+  position: relative;
 }
 
 .card-heart-icon {
@@ -47,17 +48,20 @@
   overflow: hidden;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
+  transition: 0.2s;
+  transition-timing-function: linear;
 }
 
 .card-body {
   background-color: #f9fafb;
+  /* background-color: red; */
   position: relative;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
   transition: 0.2s;
   transition-timing-function: linear;
   justify-content: flex-start;
-  padding: 8px 14px;
+  padding: 14px;
 }
 
 .card-heart-btn-wrapper {
@@ -66,9 +70,20 @@
   bottom: 10px;
 }
 
-/* .card-info {
-  position: relative;
-} */
+.card-sizes-wrapper {
+  padding: 20px 0px;
+  display: flex;
+  flex: 1;
+  transition: 0.2s;
+  transition-timing-function: linear;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
 .card-plus-icon {
   position: absolute;
@@ -79,6 +94,11 @@
   letter-spacing: 1px !important;
   transition: 0.6s !important;
   transition-timing-function: linear;
+}
+
+.card-footer-wrapper {
+  position: absolute;
+  bottom: 0;
 }
 
 .card-plus-icon:hover {

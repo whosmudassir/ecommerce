@@ -9,25 +9,27 @@ const AddToCartPopup = () => {
 
         <form>
           <div className="add-to-cart-popup-size-wrapper">
-            <div className="radiobtn">
-              <input type="radio" id="huey" name="drone" value="huey" checked />
-              <label for="huey">XS</label>
-            </div>
-            <div className="radiobtn">
-              <input type="radio" id="huey" name="drone" value="huey" checked />
-              <label for="huey">S</label>
-            </div>
-            <div className="radiobtn">
-              <input type="radio" id="huey" name="drone" value="huey" checked />
-              <label for="huey">M</label>
-            </div>
-            <div className="radiobtn">
-              <input type="radio" id="huey" name="drone" value="huey" checked />
-              <label for="huey">L</label>
-            </div>
-            <div className="radiobtn">
-              <input type="radio" id="huey" name="drone" value="huey" checked />
-              <label for="huey">XL</label>
+            <div className="donate-now">
+              <input type="radio" id="aXS" name="size" />
+              <label for="aXS" id="aXS">
+                XS
+              </label>
+              <input type="radio" id="aS" name="size" />
+              <label for="aS" id="aS">
+                S
+              </label>
+              <input type="radio" id="aM" name="size" />
+              <label for="aM" id="aM">
+                M
+              </label>
+              <input type="radio" id="aL" name="size" />
+              <label for="aL" id="aL">
+                L
+              </label>
+              <input type="radio" id="aXL" name="size" />
+              <label for="aXL" id="aXL">
+                XL
+              </label>
             </div>
           </div>
         </form>
