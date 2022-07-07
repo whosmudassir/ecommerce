@@ -1,38 +1,29 @@
 import React, { useState } from "react";
 import "./index.css";
 
+const SizeSelector = ({ size }) => {
+  return (
+    <form>
+      <div className="add-to-cart-popup-size-wrapper">
+        <div className="donate-now">
+          <input type="radio" id={size} name="size" />
+          <label for={size} id={size}>
+            {size}
+          </label>
+        </div>
+      </div>
+    </form>
+  );
+};
+
 const AddToCartPopup = () => {
+  const availableSizes = ["S", "M", "L", "XL", "XXL"];
   return (
     <>
       <div>
         <p className="sizes-text">Sizes</p>
 
-        <form>
-          <div className="add-to-cart-popup-size-wrapper">
-            <div className="donate-now">
-              <input type="radio" id="aS" name="size" />
-              <label for="aS" id="aS">
-                S
-              </label>
-              <input type="radio" id="aM" name="size" />
-              <label for="aM" id="aM">
-                M
-              </label>
-              <input type="radio" id="aL" name="size" />
-              <label for="aL" id="aL">
-                L
-              </label>
-              <input type="radio" id="aXL" name="size" />
-              <label for="aXL" id="aXL">
-                XL
-              </label>
-              <input type="radio" id="aXXL" name="size" />
-              <label for="aXS" id="aXXL">
-                XXL
-              </label>
-            </div>
-          </div>
-        </form>
+        {availableSizes.map((size) => SizeSelector({ size }))}
       </div>
     </>
   );

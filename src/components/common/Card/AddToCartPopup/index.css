@@ -18,6 +18,7 @@
 
   border: 1px solid #ccc;
   padding: 6px;
+  margin: 0;
   cursor: pointer;
 }
 
@@ -30,5 +31,6 @@
 }
 
 .donate-now input[type="radio"]:checked + label {
-  background: yellow;
+  background: rgb(0, 0, 0);
+  color: white;
 }
