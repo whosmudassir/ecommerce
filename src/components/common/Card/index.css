@@ -163,6 +163,19 @@
   cursor: not-allowed !important;
 }
 
+.circle-plus-icon {
+  font-size: 28px;
+}
+
+.btn-active {
+  padding: 8px 12px !important;
+  font-family: Medium;
+}
+
+.btn-active:hover {
+  background-color: #333333 !important;
+}
+
 /* responsive */
 @media (max-width: 1024px) {
   .card-name {
