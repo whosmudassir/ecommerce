@@ -101,7 +101,7 @@ const Card = ({
                 <>
                   <button
                     className={` ${
-                      true
+                      false
                         ? "primary-btn btn-active"
                         : "secondary-btn btn-inactive"
                     }`}
@@ -112,12 +112,11 @@ const Card = ({
                 </>
               ) : (
                 <>
-                  {" "}
                   <button
-                    className="primary-btn  btn-active"
+                    className="icon-wrapper icon circle-plus-icon"
                     onClick={showSizeBar}
                   >
-                    Add
+                    <i className="fa-solid fa-circle-plus"></i>
                   </button>
                 </>
               )}
