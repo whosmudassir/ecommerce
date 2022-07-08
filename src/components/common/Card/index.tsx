@@ -97,9 +97,30 @@ const Card = ({
             <p className="">₹{price}</p>
 
             <div className="card-btn-wrapper">
-              <button className="primary-btn " onClick={showSizeBar}>
-                Add
-              </button>
+              {isExpandedCardId == id ? (
+                <>
+                  <button
+                    className={` ${
+                      true
+                        ? "primary-btn btn-active"
+                        : "secondary-btn btn-inactive"
+                    }`}
+                    onClick={showSizeBar}
+                  >
+                    Add to bag
+                  </button>
+                </>
+              ) : (
+                <>
+                  {" "}
+                  <button
+                    className="primary-btn  btn-active"
+                    onClick={showSizeBar}
+                  >
+                    Add
+                  </button>
+                </>
+              )}
             </div>
           </div>
         </div>
