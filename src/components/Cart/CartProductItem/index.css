@@ -29,6 +29,7 @@
   width: 90px;
   height: 130px;
   overflow: hidden;
+  object-fit: cover;
 }
 
 .cart-product-item-child-img-text {

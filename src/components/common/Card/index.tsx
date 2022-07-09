@@ -38,6 +38,17 @@ const Card = ({
   const addToCart = useStore((state) => state.addToCart);
   const addItemToCart = (item) => {
     addToCart(item);
+    setIsExpandedCardId(null);
+  };
+
+  //
+  const item = {
+    id: id,
+    brandName: brandName,
+    name: name,
+    price: price,
+    category: category,
+    imageUrl: imageUrl,
   };
 
   return (
@@ -98,9 +109,7 @@ const Card = ({
                         ? "primary-btn btn-active"
                         : "secondary-btn btn-inactive"
                     }`}
-                    onClick={() =>
-                      addItemToCart({ id: id, name: name, imageUrl: imageUrl })
-                    }
+                    onClick={() => addItemToCart(item)}
                   >
                     Add to bag
                   </button>

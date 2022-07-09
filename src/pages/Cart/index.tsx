@@ -8,17 +8,19 @@ import CartTotal from "../../components/Cart/CartTotal";
 import CheckoutButton from "../../components/Cart/CheckoutButton";
 import EmptyCart from "../../components/EmptyCart";
 import NotLoggedinTemplate from "../../components/NotLoggedinTemplate";
+import useStore from "../../store";
 
 const Cart = () => {
+  const itemsInCart = useStore((state) => state.cart);
   const isLoggedin = true;
-  const cartCount = 0;
+
   return (
     <>
       <div className="body-wrapper">
         <div className="cart-wrapper">
           {isLoggedin ? (
             <>
-              {false ? (
+              {itemsInCart.length > 0 ? (
                 <>
                   <div>
                     <p className="cart-heading">Cart</p>
@@ -29,7 +31,19 @@ const Cart = () => {
                     confirmation={false}
                   />
                   <CartProductTitle />
-                  <CartProductItem /> <CartProductItem /> <CartProductItem />
+                  {itemsInCart.map((item) => (
+                    <>
+                      <CartProductItem
+                        id={item.id}
+                        brandName={item.brandName}
+                        name={item.name}
+                        size={item.size}
+                        price={item.price}
+                        imageUrl={item.imageUrl}
+                      />
+                    </>
+                  ))}
+
                   <CouponCodeInput />
                   <CartTotal />
                   <CheckoutButton />
