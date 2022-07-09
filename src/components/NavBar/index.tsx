@@ -5,7 +5,7 @@ import useStore from "../../store/";
 
 const NavBar = () => {
   const itemsInCart = useStore((state) => state.cart);
-
+  console.log(itemsInCart);
   return (
     <div>
       <div className="nav-bar-wrapper">

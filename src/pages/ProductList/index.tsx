@@ -4,6 +4,7 @@ import Slider from "../../components/Slider";
 import { shopList } from "../../data/shopList";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import useStore from "../../store";
 
 const ProductList = () => {
   const [cardInfo, setCardInfo] = useState<any>([]);
@@ -11,15 +12,17 @@ const ProductList = () => {
     setCardInfo(shopList);
   }, []);
 
-  // to display sizes
-  const [isExpandedCardId, setIsExpandedCardId] = useState<any>(null);
+  // to display sizes inside card
+  const [isExpandedCardId, setIsExpandedCardId] = useState(null);
 
-  const showSizeBar = (id) => (isExpandedCardId) => {
-    // if expanded, set id to open/expand, close it otherwise
-    setIsExpandedCardId(isExpandedCardId ? id : null);
+  const showSizeBar = (id) => {
+    console.log("4444444");
+    setIsExpandedCardId(id);
   };
+
   return (
     <div className="body-wrapper">
+      {console.log("-->product lisrpage")}
       <Slider />
       <div className="product-list-wrapper">
         {cardInfo.map((item) => (
@@ -31,7 +34,7 @@ const ProductList = () => {
               price={item.price}
               category={item.category}
               imageUrl={item.imageUrl}
-              showSizeBar={showSizeBar(item.id)}
+              showSizeBar={showSizeBar}
               isExpandedCardId={isExpandedCardId}
               setIsExpandedCardId={setIsExpandedCardId}
             />

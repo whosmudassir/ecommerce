@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import AddToCartPopup from "./AddToCartPopup";
-import QuickAddButton from "./QuickAddButton";
-
+import useStore from "../../../store";
 interface ICardProps {
   id: number;
   brandName: string;
@@ -9,7 +8,7 @@ interface ICardProps {
   price: number;
   category: string;
   imageUrl: string;
-  showSizebar: () => void;
+  showSizeBar: () => void;
   isExpandedCardId: any;
   setIsExpandedCardId: any;
 }
@@ -35,24 +34,18 @@ const Card = ({
     }
   };
 
-  const [visible, setVisible] = useState(false);
-  const show = () => setVisible(true);
-  const hide = () => setVisible(false);
+  //add item to cart
+  const addToCart = useStore((state) => state.addToCart);
+  const addItemToCart = (item) => {
+    addToCart(item);
+  };
 
   return (
     <div>
+      {console.log("-->card page")}
       <div className="card-wrapper">
         {isExpandedCardId !== id && (
-          <div
-            className="card-head"
-            // style={{
-            //   background: "rgba(0,0,0,.3)",
-
-            //   opacity: visible ? "0" : "1",
-            //   transition: "all .2s",
-            //   visibility: visible ? "hidden" : "visible",
-            // }}
-          >
+          <div className="card-head">
             <>
               <img className="card-img" src={imageUrl} alt="" />
               <button
@@ -101,11 +94,13 @@ const Card = ({
                 <>
                   <button
                     className={` ${
-                      false
+                      true
                         ? "primary-btn btn-active"
                         : "secondary-btn btn-inactive"
                     }`}
-                    onClick={showSizeBar}
+                    onClick={() =>
+                      addItemToCart({ id: id, name: name, imageUrl: imageUrl })
+                    }
                   >
                     Add to bag
                   </button>
@@ -114,7 +109,7 @@ const Card = ({
                 <>
                   <button
                     className="icon-wrapper icon circle-plus-icon"
-                    onClick={showSizeBar}
+                    onClick={() => showSizeBar(id)}
                   >
                     <i className="fa-solid fa-circle-plus"></i>
                   </button>
