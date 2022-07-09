@@ -2,7 +2,23 @@ import React from "react";
 import QuantitySelector from "../../common/QuantitySelector";
 import "./index.css";
 
-const CartProductItem = ({ id, brandName, name, price, size, imageUrl }) => {
+interface ICartProductItemProps {
+  id: number;
+  brandName: string;
+  name: string;
+  price: number;
+  size: string;
+  imageUrl: string;
+}
+
+const CartProductItem = ({
+  id,
+  brandName,
+  name,
+  price,
+  size,
+  imageUrl,
+}: ICartProductItemProps) => {
   return (
     <div>
       <div className="cart-product-item-parent-box">

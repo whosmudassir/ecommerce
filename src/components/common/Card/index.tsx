@@ -8,7 +8,7 @@ interface ICardProps {
   price: number;
   category: string;
   imageUrl: string;
-  showSizeBar: () => void;
+  showSizeBar: any;
   isExpandedCardId: any;
   setIsExpandedCardId: any;
 }
@@ -35,6 +35,7 @@ const Card = ({
   };
 
   //add item to cart
+  //@ts-ignore
   const addToCart = useStore((state) => state.addToCart);
   const addItemToCart = (item) => {
     addToCart(item);
