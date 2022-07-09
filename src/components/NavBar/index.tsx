@@ -1,8 +1,11 @@
 import React from "react";
 import logo from "../../assets/images/logo.jpg";
 import { Link, Outlet } from "react-router-dom";
+import useStore from "../../store/";
 
 const NavBar = () => {
+  const itemsInCart = useStore((state) => state.cart);
+
   return (
     <div>
       <div className="nav-bar-wrapper">
@@ -37,9 +40,11 @@ const NavBar = () => {
               <button className="icon-wrapper">
                 <i className="fa-solid fa-bag-shopping nav-icon"></i>
               </button>
-              <div className="notification">
-                <p className="notification-text">1</p>
-              </div>
+              {itemsInCart.length > 0 && (
+                <div className="notification">
+                  <p className="notification-text">{itemsInCart.length}</p>
+                </div>
+              )}
             </div>
           </Link>
         </div>
