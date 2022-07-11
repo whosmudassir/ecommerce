@@ -1,10 +1,10 @@
 import React from "react";
 import logo from "../../assets/images/logo.jpg";
 import { Link, Outlet } from "react-router-dom";
-import useStore from "../../store/";
+import cartStore from "../../store/";
 
 const NavBar = () => {
-  const itemsInCart = useStore((state) => state.cart);
+  const itemsInCart = cartStore((state) => state.cart);
   console.log(itemsInCart);
   return (
     <div>

@@ -8,10 +8,10 @@ import CartTotal from "../../components/Cart/CartTotal";
 import CheckoutButton from "../../components/Cart/CheckoutButton";
 import EmptyCart from "../../components/EmptyCart";
 import NotLoggedinTemplate from "../../components/NotLoggedinTemplate";
-import useStore from "../../store";
+import cartStore from "../../store";
 
 const Cart = () => {
-  const itemsInCart = useStore((state) => state.cart);
+  const itemsInCart = cartStore((state) => state.cart);
   const isLoggedin = true;
 
   return (
