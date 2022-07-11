@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import AddToCartPopup from "./AddToCartPopup";
-import useStore from "../../../store";
+import cartStore from "../../../store";
 interface ICardProps {
   id: number;
   brandName: string;
@@ -36,7 +36,7 @@ const Card = ({
 
   //add item to cart
   //@ts-ignore
-  const addToCart = useStore((state) => state.addToCart);
+  const addToCart = cartStore((state) => state.addToCart);
   const addItemToCart = (item) => {
     addToCart(item);
     setIsExpandedCardId(null);

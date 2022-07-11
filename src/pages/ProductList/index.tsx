@@ -4,7 +4,7 @@ import Slider from "../../components/Slider";
 import { shopList } from "../../data/shopList";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import useStore from "../../store";
+import cartStore from "../../store";
 
 const ProductList = () => {
   const [cardInfo, setCardInfo] = useState<any>([]);
