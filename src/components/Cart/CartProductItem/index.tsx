@@ -1,6 +1,7 @@
 import React from "react";
 import QuantitySelector from "../../common/QuantitySelector";
 import "./index.css";
+import { cartStore } from "../../../store";
 
 interface ICartProductItemProps {
   id: number;
@@ -19,6 +20,13 @@ const CartProductItem = ({
   size,
   imageUrl,
 }: ICartProductItemProps) => {
+  //add item to cart
+  //@ts-ignore
+  const removeFromCart = cartStore((state) => state.removeFromCart);
+
+  const removeItem = (id) => {
+    removeFromCart(id);
+  };
   return (
     <div>
       <div className="cart-product-item-parent-box">
@@ -34,7 +42,12 @@ const CartProductItem = ({
             <p className="cart-product-item-child-item">
               {name} - {size}
             </p>
-            <p className="cart-product-item-child-item remove-btn">Remove</p>
+            <button
+              onClick={() => removeItem(id)}
+              className="cart-product-item-child-item remove-btn"
+            >
+              Remove
+            </button>
           </div>
         </div>
         <div className="cart-product-item-child-box cart-product-item-child-img-text">
