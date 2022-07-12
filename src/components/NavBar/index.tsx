@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../../assets/images/logo.jpg";
 import { Link, Outlet } from "react-router-dom";
-import cartStore from "../../store/";
+import { cartStore } from "../../store/";
 
 const NavBar = () => {
   const itemsInCart = cartStore((state) => state.cart);
