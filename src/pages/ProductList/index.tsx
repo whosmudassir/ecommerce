@@ -5,6 +5,7 @@ import { shopList } from "../../data/shopList";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { cartStore } from "../../store";
+import SuccessAlert from "../../components/Alerts/SuccessAlert";
 
 const ProductList = () => {
   const [cardInfo, setCardInfo] = useState<any>([]);
@@ -25,6 +26,7 @@ const ProductList = () => {
       {console.log("-->product lisrpage")}
       <Slider />
       <div className="product-list-wrapper">
+        <SuccessAlert />
         {cardInfo.map((item) => (
           <div key={item.id}>
             <Card
