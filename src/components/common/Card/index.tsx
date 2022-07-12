@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import AddToCartPopup from "./AddToCartPopup";
-import cartStore from "../../../store";
+import { cartStore } from "../../../store";
 interface ICardProps {
   id: number;
   brandName: string;
@@ -48,6 +48,7 @@ const Card = ({
     brandName: brandName,
     name: name,
     price: price,
+
     category: category,
     imageUrl: imageUrl,
   };

@@ -8,7 +8,7 @@ import CartTotal from "../../components/Cart/CartTotal";
 import CheckoutButton from "../../components/Cart/CheckoutButton";
 import EmptyCart from "../../components/EmptyCart";
 import NotLoggedinTemplate from "../../components/NotLoggedinTemplate";
-import cartStore from "../../store";
+import { cartStore } from "../../store";
 
 const Cart = () => {
   const itemsInCart = cartStore((state) => state.cart);

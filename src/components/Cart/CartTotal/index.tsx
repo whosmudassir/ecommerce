@@ -1,7 +1,7 @@
 import React from "react";
 import CheckoutButton from "../CheckoutButton";
 import "./index.css";
-import cartStore from "../../../store";
+import { cartStore } from "../../../store";
 
 const CartTotal = () => {
   const itemsInCart = cartStore((state) => state.cart);

@@ -1,8 +1,12 @@
 import create from "zustand";
 
-const cartStore = create((set) => ({
+export const cartStore = create((set) => ({
   cart: [],
   addToCart: (item) => set((state) => ({ cart: [item, ...state.cart] })),
+  // removeFromCart:(id)=>set((state)=>)
 }));
 
-export default cartStore;
+export const selectedSizeStore = create((set) => ({
+  size: [],
+  selectSize: (item) => set((state) => ({ size: [item, ...state.size] })),
+}));
