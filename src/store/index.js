@@ -18,5 +18,6 @@ export const selectedSizeStore = create((set) => ({
 
 export const isAlertVisible = create((set) => ({
   alert: false,
-  setAlert: () => set((state) => ({ alert: !state.alert })),
+  showAlert: () => set((state) => ({ alert: true })),
+  hideAlert: () => set((state) => ({ alert: false })),
 }));
