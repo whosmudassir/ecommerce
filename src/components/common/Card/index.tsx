@@ -26,6 +26,18 @@ const Card = ({
   setIsExpandedCardId,
 }: ICardProps) => {
   const [heartIcon, setHeartIcon] = useState("regular");
+  const addToCart = cartStore((state) => state.addToCart);
+  const showAlert = isAlertVisible((state) => state.showAlert);
+  const hideAlert = isAlertVisible((state) => state.hideAlert);
+  const item = {
+    id: id,
+    brandName: brandName,
+    name: name,
+    price: price,
+
+    category: category,
+    imageUrl: imageUrl,
+  };
 
   const addToWishlist = () => {
     if (heartIcon == "regular") {
@@ -35,25 +47,19 @@ const Card = ({
     }
   };
 
+  const hideSuccessAlert = () => {
+    setTimeout(() => {
+      hideAlert();
+    }, 2000);
+  };
+
   //add item to cart
-  //@ts-ignore
-  const addToCart = cartStore((state) => state.addToCart);
-  const setAlert = isAlertVisible((state) => state.setAlert);
+
   const addItemToCart = (item) => {
     addToCart(item);
     setIsExpandedCardId(null);
-    setAlert();
-  };
-
-  //
-  const item = {
-    id: id,
-    brandName: brandName,
-    name: name,
-    price: price,
-
-    category: category,
-    imageUrl: imageUrl,
+    showAlert();
+    hideSuccessAlert();
   };
 
   return (
