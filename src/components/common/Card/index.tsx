@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import AddToCartPopup from "./AddToCartPopup";
 import { cartStore } from "../../../store";
+import { isAlertVisible } from "../../../store";
 interface ICardProps {
   id: number;
   brandName: string;
@@ -37,9 +38,11 @@ const Card = ({
   //add item to cart
   //@ts-ignore
   const addToCart = cartStore((state) => state.addToCart);
+  const setAlert = isAlertVisible((state) => state.setAlert);
   const addItemToCart = (item) => {
     addToCart(item);
     setIsExpandedCardId(null);
+    setAlert();
   };
 
   //

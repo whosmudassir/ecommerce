@@ -15,3 +15,8 @@ export const selectedSizeStore = create((set) => ({
   size: [],
   selectSize: (item) => set((state) => ({ size: [item, ...state.size] })),
 }));
+
+export const isAlertVisible = create((set) => ({
+  alert: false,
+  setAlert: () => set((state) => ({ alert: !state.alert })),
+}));
