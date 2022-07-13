@@ -7,7 +7,8 @@ const SuccessAlert = () => {
   return (
     <div className={`success-alert-wrapper ${alert && "alert-visible"}`}>
       <div className="success-alert">
-        <i className="fa-solid fa-circle-check"></i>Item added to your cart
+        <i className="fa-solid fa-circle-check success-alert-icon"></i>Item
+        added to your bag
       </div>
     </div>
   );

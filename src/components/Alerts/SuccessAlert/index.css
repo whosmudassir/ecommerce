@@ -1,3 +1,5 @@
+@import url("../../../assets/theme/index.css");
+
 .success-alert-wrapper {
   position: absolute;
   z-index: 10;
@@ -8,4 +10,17 @@
 
 .alert-visible {
   transform: translate(0, 200px);
+}
+
+.success-alert {
+  font-size: 16px !important;
+  font-family: Regular !important;
+  letter-spacing: 0.5px;
+  text-align: center;
+  /* line-height: 0; */
+  align-items: center !important;
+}
+
+.success-alert-icon {
+  font-size: 20px !important;
 }
