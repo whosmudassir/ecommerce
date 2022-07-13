@@ -1,5 +1,11 @@
 .success-alert-wrapper {
   position: absolute;
   z-index: 10;
-  top: 100px;
+  top: -100px;
+  transition: 0.3s;
+  transition-timing-function: linear;
+}
+
+.alert-visible {
+  transform: translate(0, 200px);
 }
