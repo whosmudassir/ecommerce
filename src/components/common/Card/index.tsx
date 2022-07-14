@@ -3,7 +3,7 @@ import AddToCartPopup from "./AddToCartPopup";
 import { cartStore } from "../../../store";
 import { isAlertVisible } from "../../../store";
 import { setExpandedCard } from "../../../store";
-
+import { wishlistStore } from "../../../store";
 interface ICardProps {
   id: number;
   brandName: string;
@@ -29,6 +29,8 @@ const Card = ({
   const hideAlert = isAlertVisible((state) => state.hideAlert);
   const expandedCardId = setExpandedCard((state) => state.expandedCardId);
   const setExpandedCardId = setExpandedCard((state) => state.setExpandedCardId);
+  const addToWishlist = wishlistStore((state) => state.addToWishlist);
+  const removeFromWishlist = wishlistStore((state) => state.removeFromWishlist);
   //states
   const [selectedSize, setSelectedSize] = useState("");
 
@@ -42,11 +44,13 @@ const Card = ({
     imageUrl: imageUrl,
   };
 
-  const addToWishlist = () => {
+  const addItemToWishlist = (item) => {
     if (heartIcon == "regular") {
       setHeartIcon("solid");
+      addToWishlist(item);
     } else {
       setHeartIcon("regular");
+      removeFromWishlist(item.id);
     }
   };
 
@@ -81,7 +85,7 @@ const Card = ({
               <button
                 className="icon-wrapper"
                 onClick={() => {
-                  addToWishlist();
+                  addItemToWishlist(item);
                 }}
               >
                 <i className={`fa-${heartIcon} fa-heart card-heart-icon`}></i>
