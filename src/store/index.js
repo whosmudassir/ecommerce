@@ -21,3 +21,20 @@ export const isAlertVisible = create((set) => ({
   showAlert: () => set((state) => ({ alert: true })),
   hideAlert: () => set((state) => ({ alert: false })),
 }));
+
+export const wishlistStore = create((set) => ({
+  wishlist: [],
+  addToWishlist: (item) =>
+    set((state) => ({ wishlist: [item, ...state.wishlist] })),
+  removeFromWishlist: (id) =>
+    set((state) => ({
+      wishlist: state.wishlist.filter((cartItem) => {
+        return cartItem.id !== id;
+      }),
+    })),
+}));
+
+export const setExpandedCard = create((set) => ({
+  expandedCardId: "",
+  setExpandedCardId: (id) => set((state) => ({ expandedCardId: id })),
+}));
