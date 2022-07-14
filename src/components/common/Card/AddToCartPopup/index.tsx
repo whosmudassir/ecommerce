@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import "./index.css";
+import { sizeStore } from "../../../../store/index.js";
 
-const AddToCartPopup = () => {
-  const [selectedSize, setSelectedSize] = useState("");
+interface IAddToCartPopup {
+  setSelectedSize: any;
+}
+
+const AddToCartPopup = ({ setSelectedSize }: IAddToCartPopup) => {
   const onSizeChange = (e) => {
     console.log(e.target.value);
     setSelectedSize(e.target.value);
