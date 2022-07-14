@@ -155,7 +155,7 @@ export const shopList = [
   {
     id: 18,
     brandName: "numbernine",
-    name: "los angles black hoodie",
+    name: "palm angels hoodie",
     price: 8849,
     category: "hoodies",
     imageUrl:

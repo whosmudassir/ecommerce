@@ -10,9 +10,9 @@ interface ICardProps {
   price: number;
   category: string;
   imageUrl: string;
-  showSizeBar: any;
-  isExpandedCardId: any;
-  setIsExpandedCardId: any;
+  showSizeBar?: any;
+  isExpandedCardId?: any;
+  setIsExpandedCardId?: any;
 }
 
 const Card = ({
