@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import AddToCartPopup from "./AddToCartPopup";
 import { cartStore } from "../../../store";
 import { isAlertVisible } from "../../../store";
-
+import { setExpandedCard } from "../../../store";
+import { wishlistStore } from "../../../store";
 interface ICardProps {
   id: number;
   brandName: string;
@@ -10,9 +11,6 @@ interface ICardProps {
   price: number;
   category: string;
   imageUrl: string;
-  showSizeBar?: any;
-  isExpandedCardId?: any;
-  setIsExpandedCardId?: any;
 }
 
 const Card = ({
@@ -22,9 +20,6 @@ const Card = ({
   price,
   category,
   imageUrl,
-  showSizeBar,
-  isExpandedCardId,
-  setIsExpandedCardId,
 }: ICardProps) => {
   //icon
   const [heartIcon, setHeartIcon] = useState("regular");
@@ -32,6 +27,10 @@ const Card = ({
   const addToCart = cartStore((state) => state.addToCart);
   const showAlert = isAlertVisible((state) => state.showAlert);
   const hideAlert = isAlertVisible((state) => state.hideAlert);
+  const expandedCardId = setExpandedCard((state) => state.expandedCardId);
+  const setExpandedCardId = setExpandedCard((state) => state.setExpandedCardId);
+  const addToWishlist = wishlistStore((state) => state.addToWishlist);
+  const removeFromWishlist = wishlistStore((state) => state.removeFromWishlist);
   //states
   const [selectedSize, setSelectedSize] = useState("");
 
@@ -45,11 +44,13 @@ const Card = ({
     imageUrl: imageUrl,
   };
 
-  const addToWishlist = () => {
+  const addItemToWishlist = (item) => {
     if (heartIcon == "regular") {
       setHeartIcon("solid");
+      addToWishlist(item);
     } else {
       setHeartIcon("regular");
+      removeFromWishlist(item.id);
     }
   };
 
@@ -62,7 +63,7 @@ const Card = ({
   //on add item to cart
   const addItemToCart = (item) => {
     addToCart(item);
-    setIsExpandedCardId(null);
+    setExpandedCardId(null);
     showAlert();
     hideSuccessAlert();
     setSelectedSize("");
@@ -70,22 +71,21 @@ const Card = ({
 
   //on close quick view
   const closeQuickView = () => {
-    setIsExpandedCardId(null);
+    setExpandedCardId(null);
     setSelectedSize("");
   };
 
   return (
     <div>
-      {console.log("-->card page")}
       <div className="card-wrapper">
-        {isExpandedCardId !== id && (
+        {expandedCardId !== id && (
           <div className="card-head">
             <>
               <img className="card-img" src={imageUrl} alt="" />
               <button
                 className="icon-wrapper"
                 onClick={() => {
-                  addToWishlist();
+                  addItemToWishlist(item);
                 }}
               >
                 <i className={`fa-${heartIcon} fa-heart card-heart-icon`}></i>
@@ -97,13 +97,13 @@ const Card = ({
           className="card-body"
           style={{
             //@ts-ignore
-            borderRadius: isExpandedCardId == id && "6px 6px 0px 0px",
+            borderRadius: expandedCardId == id && "6px 6px 0px 0px",
           }}
         >
           <div className="card-info">
             <div className="card-close-btn-wrapper">
               <p className="card-brand-name">{brandName}</p>{" "}
-              {isExpandedCardId == id && (
+              {expandedCardId == id && (
                 <button className="icon-wrapper " onClick={closeQuickView}>
                   <i className="fa-solid fa-xmark card-close-btn-icon"></i>
                 </button>
@@ -111,7 +111,7 @@ const Card = ({
             </div>
             <p className="card-name"> {name} </p>
           </div>
-          {isExpandedCardId == id && (
+          {expandedCardId == id && (
             <div className="card-sizes-wrapper">
               <AddToCartPopup setSelectedSize={setSelectedSize} />
             </div>
@@ -121,7 +121,7 @@ const Card = ({
             <p className="">₹{price}</p>
 
             <div className="card-btn-wrapper">
-              {isExpandedCardId == id ? (
+              {expandedCardId == id ? (
                 <>
                   <button
                     className={` ${
@@ -138,7 +138,7 @@ const Card = ({
                 <>
                   <button
                     className="icon-wrapper icon circle-plus-icon"
-                    onClick={() => showSizeBar(id)}
+                    onClick={() => setExpandedCardId(id)}
                   >
                     <i className="fa-solid fa-circle-plus"></i>
                   </button>

@@ -7,3 +7,15 @@
   align-self: center;
   width: 100%;
 }
+
+.wishlist-wrapper {
+  background-color: white;
+  padding: 30px 26px;
+  display: flex;
+  gap: 50px 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-items: left;
+  flex-direction: row;
+  flex: 1;
+}
