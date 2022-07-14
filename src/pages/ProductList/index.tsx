@@ -17,13 +17,11 @@ const ProductList = () => {
   const [isExpandedCardId, setIsExpandedCardId] = useState(null);
 
   const showSizeBar = (id) => {
-    console.log("4444444");
     setIsExpandedCardId(id);
   };
 
   return (
     <div className="body-wrapper">
-      {console.log("-->product lisrpage")}
       <Slider />
       <div className="product-list-wrapper">
         <SuccessAlert />

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import AddToCartPopup from "./AddToCartPopup";
 import { cartStore } from "../../../store";
 import { isAlertVisible } from "../../../store";
+
 interface ICardProps {
   id: number;
   brandName: string;
@@ -9,9 +10,9 @@ interface ICardProps {
   price: number;
   category: string;
   imageUrl: string;
-  showSizeBar: any;
-  isExpandedCardId: any;
-  setIsExpandedCardId: any;
+  showSizeBar?: any;
+  isExpandedCardId?: any;
+  setIsExpandedCardId?: any;
 }
 
 const Card = ({
@@ -25,16 +26,21 @@ const Card = ({
   isExpandedCardId,
   setIsExpandedCardId,
 }: ICardProps) => {
+  //icon
   const [heartIcon, setHeartIcon] = useState("regular");
+  //store
   const addToCart = cartStore((state) => state.addToCart);
   const showAlert = isAlertVisible((state) => state.showAlert);
   const hideAlert = isAlertVisible((state) => state.hideAlert);
+  //states
+  const [selectedSize, setSelectedSize] = useState("");
+
   const item = {
     id: id,
     brandName: brandName,
     name: name,
     price: price,
-
+    size: selectedSize,
     category: category,
     imageUrl: imageUrl,
   };
@@ -53,13 +59,19 @@ const Card = ({
     }, 2000);
   };
 
-  //add item to cart
-
+  //on add item to cart
   const addItemToCart = (item) => {
     addToCart(item);
     setIsExpandedCardId(null);
     showAlert();
     hideSuccessAlert();
+    setSelectedSize("");
+  };
+
+  //on close quick view
+  const closeQuickView = () => {
+    setIsExpandedCardId(null);
+    setSelectedSize("");
   };
 
   return (
@@ -92,10 +104,7 @@ const Card = ({
             <div className="card-close-btn-wrapper">
               <p className="card-brand-name">{brandName}</p>{" "}
               {isExpandedCardId == id && (
-                <button
-                  className="icon-wrapper "
-                  onClick={() => setIsExpandedCardId(null)}
-                >
+                <button className="icon-wrapper " onClick={closeQuickView}>
                   <i className="fa-solid fa-xmark card-close-btn-icon"></i>
                 </button>
               )}
@@ -104,7 +113,7 @@ const Card = ({
           </div>
           {isExpandedCardId == id && (
             <div className="card-sizes-wrapper">
-              <AddToCartPopup />
+              <AddToCartPopup setSelectedSize={setSelectedSize} />
             </div>
           )}
 
@@ -116,7 +125,7 @@ const Card = ({
                 <>
                   <button
                     className={` ${
-                      true
+                      selectedSize.length !== 0
                         ? "primary-btn btn-active"
                         : "secondary-btn btn-inactive"
                     }`}
