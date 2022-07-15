@@ -161,6 +161,8 @@
   border-color: #b4b4b4;
   color: #b4b4b4;
   cursor: not-allowed !important;
+  font-family: Medium;
+  padding-bottom: 8px;
 }
 
 .circle-plus-icon {
@@ -168,8 +170,9 @@
 }
 
 .btn-active {
-  padding: 8px 12px !important;
+  padding: 10px !important;
   font-family: Medium;
+  padding-bottom: 8px !important;
 }
 
 .btn-active:hover {
