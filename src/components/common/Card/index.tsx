@@ -131,7 +131,7 @@ const Card = ({
                     }`}
                     onClick={() => addItemToCart(item)}
                   >
-                    Add to bag
+                    Add
                   </button>
                 </>
               ) : (
