@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import AddToCartPopup from "./AddToCartPopup";
 import { cartStore } from "../../../store";
 import { isAlertVisible } from "../../../store";
@@ -33,6 +33,7 @@ const Card = ({
   const addToWishlist = wishlistStore((state) => state.addToWishlist);
   const removeFromWishlist = wishlistStore((state) => state.removeFromWishlist);
   const setAlertText = alertTextStore((state) => state.setAlertText);
+  const wishlist = wishlistStore((state) => state.wishlist);
   //states
   const [selectedSize, setSelectedSize] = useState("");
 
@@ -81,6 +82,19 @@ const Card = ({
     setExpandedCardId(null);
     setSelectedSize("");
   };
+
+  //filter wishlisted item
+  const filterWishlistedItems = () => {
+    wishlist.map((item) => {
+      if (item.id == id) {
+        setHeartIcon("solid");
+      }
+    });
+  };
+
+  useEffect(() => {
+    filterWishlistedItems();
+  }, []);
 
   return (
     <div>
