@@ -22,6 +22,11 @@ export const isAlertVisible = create((set) => ({
   hideAlert: () => set((state) => ({ alert: false })),
 }));
 
+export const alertTextStore = create((set) => ({
+  alertText: "",
+  setAlertText: (text) => set((state) => ({ alertText: text })),
+}));
+
 export const wishlistStore = create((set) => ({
   wishlist: [],
   addToWishlist: (item) =>

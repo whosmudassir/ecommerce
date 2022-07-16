@@ -4,6 +4,7 @@ import { cartStore } from "../../../store";
 import { isAlertVisible } from "../../../store";
 import { setExpandedCard } from "../../../store";
 import { wishlistStore } from "../../../store";
+import { alertTextStore } from "../../../store";
 interface ICardProps {
   id: number;
   brandName: string;
@@ -31,6 +32,7 @@ const Card = ({
   const setExpandedCardId = setExpandedCard((state) => state.setExpandedCardId);
   const addToWishlist = wishlistStore((state) => state.addToWishlist);
   const removeFromWishlist = wishlistStore((state) => state.removeFromWishlist);
+  const setAlertText = alertTextStore((state) => state.setAlertText);
   //states
   const [selectedSize, setSelectedSize] = useState("");
 
@@ -44,10 +46,14 @@ const Card = ({
     imageUrl: imageUrl,
   };
 
+  //on add to wishlist
   const addItemToWishlist = (item) => {
     if (heartIcon == "regular") {
       setHeartIcon("solid");
       addToWishlist(item);
+      setAlertText("Item added to wishlist");
+      showAlert();
+      hideSuccessAlert();
     } else {
       setHeartIcon("regular");
       removeFromWishlist(item.id);
@@ -60,10 +66,11 @@ const Card = ({
     }, 2000);
   };
 
-  //on add item to cart
+  //on add to cart
   const addItemToCart = (item) => {
     addToCart(item);
     setExpandedCardId(null);
+    setAlertText("Item added to your bag");
     showAlert();
     hideSuccessAlert();
     setSelectedSize("");
