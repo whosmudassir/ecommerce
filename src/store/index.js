@@ -27,6 +27,7 @@ export const alertTextStore = create((set) => ({
   setAlertText: (text) => set((state) => ({ alertText: text })),
 }));
 
+//backend user specific store
 export const wishlistStore = create((set) => ({
   wishlist: [],
   addToWishlist: (item) =>
