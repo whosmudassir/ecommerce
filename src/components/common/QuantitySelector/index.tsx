@@ -1,15 +1,24 @@
 import React, { useState } from "react";
 import "./index.css";
+interface IQuantitySelectorProps {
+  onIncreaseBtn: () => void;
+  onDecreaseBtn: () => void;
+}
 
-const QuantitySelector = () => {
+const QuantitySelector = ({
+  onIncreaseBtn,
+  onDecreaseBtn,
+}: IQuantitySelectorProps) => {
   const [quantity, setQuantity] = useState(1);
   const increaseQuantity = () => {
     setQuantity((prevQuantity) => prevQuantity + 1);
+    onIncreaseBtn();
   };
 
   const decreaseQuantity = () => {
     if (quantity > 1) {
-      return setQuantity((prevQuantity) => prevQuantity - 1);
+      setQuantity((prevQuantity) => prevQuantity - 1);
+      onDecreaseBtn();
     }
   };
 

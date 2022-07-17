@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import QuantitySelector from "../../common/QuantitySelector";
 import "./index.css";
 import { cartStore } from "../../../store";
@@ -23,6 +23,14 @@ const CartProductItem = ({
   //add item to cart
   //@ts-ignore
   const removeFromCart = cartStore((state) => state.removeFromCart);
+  const [itemSubTotal, setItemSubTotal] = useState(price);
+  const onQuantityIncrease = () => {
+    setItemSubTotal((prevTotal) => prevTotal + price);
+  };
+
+  const onQuantityDecrease = () => {
+    setItemSubTotal((prevTotal) => prevTotal - price);
+  };
 
   const removeItem = (id) => {
     removeFromCart(id);
@@ -56,11 +64,14 @@ const CartProductItem = ({
         </div>
         <div className="cart-product-item-child-box cart-product-item-child-img-text">
           <p className="cart-product-item-title">Quantity</p>
-          <QuantitySelector />
+          <QuantitySelector
+            onIncreaseBtn={onQuantityIncrease}
+            onDecreaseBtn={onQuantityDecrease}
+          />
         </div>
         <div className="cart-product-item-child-box cart-product-item-child-img-text">
           <p className="cart-product-item-title">Subtotal</p>
-          <p className="cart-product-item-child-item">6376</p>
+          <p className="cart-product-item-child-item">{itemSubTotal}</p>
         </div>
       </div>
     </div>
