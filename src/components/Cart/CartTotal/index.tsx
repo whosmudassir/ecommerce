@@ -2,8 +2,10 @@ import React from "react";
 import CheckoutButton from "../CheckoutButton";
 import "./index.css";
 import { cartStore } from "../../../store";
+import { cartGrandTotalStore } from "../../../store";
 
 const CartTotal = () => {
+  const cartGrandTotal = cartGrandTotalStore((state) => state.cartGrandTotal);
   const itemsInCart = cartStore((state) => state.cart);
   return (
     <div className="cart-total-wrapper">
@@ -13,7 +15,7 @@ const CartTotal = () => {
         </div>
         <div className="cart-total-items">
           <p className="cart-total-item-main-text">SubTotal</p>
-          <p className="cart-total-item-text">444</p>
+          <p className="cart-total-item-text">{cartGrandTotal}</p>
         </div>
         <div className="cart-total-items">
           <p className="cart-total-item-main-text">Discount</p>

@@ -1,5 +1,6 @@
 import create from "zustand";
 
+//backend to store user data of previous order
 export const cartStore = create((set) => ({
   cart: [],
   addToCart: (item) => set((state) => ({ cart: [item, ...state.cart] })),
@@ -11,11 +12,13 @@ export const cartStore = create((set) => ({
     })),
 }));
 
+//size selection
 export const selectedSizeStore = create((set) => ({
   size: [],
   selectSize: (item) => set((state) => ({ size: [item, ...state.size] })),
 }));
 
+//alert component trigger
 export const isAlertVisible = create((set) => ({
   alert: false,
   showAlert: () => set((state) => ({ alert: true })),
@@ -40,7 +43,18 @@ export const wishlistStore = create((set) => ({
     })),
 }));
 
+//card expanded id
 export const setExpandedCard = create((set) => ({
   expandedCardId: "",
   setExpandedCardId: (id) => set((state) => ({ expandedCardId: id })),
+}));
+
+//card grand total
+export const cartGrandTotalStore = create((set) => ({
+  cartGrandTotal: 0,
+  setCartGrandTotal: (price) => set((state) => ({ cartGrandTotal: price })),
+  increaseCartGrandTotal: (price) =>
+    set((state) => ({ cartGrandTotal: state.cartGrandTotal + price })),
+  decreaseCartGrandTotal: (price) =>
+    set((state) => ({ cartGrandTotal: state.cartGrandTotal - price })),
 }));

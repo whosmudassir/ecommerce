@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import QuantitySelector from "../../common/QuantitySelector";
 import "./index.css";
-import { cartStore } from "../../../store";
+import { cartStore, cartGrandTotalStore } from "../../../store";
 
 interface ICartProductItemProps {
   id: number;
@@ -23,20 +23,42 @@ const CartProductItem = ({
   //add item to cart
   //@ts-ignore
   const removeFromCart = cartStore((state) => state.removeFromCart);
+
+  const cartGrandTotal = cartGrandTotalStore((state) => state.cartGrandTotal);
+
+  const setCartGrandTotal = cartGrandTotalStore(
+    (state) => state.setCartGrandTotal
+  );
+  const increaseCartGrandTotal = cartGrandTotalStore(
+    (state) => state.increaseCartGrandTotal
+  );
+  const decreaseCartGrandTotal = cartGrandTotalStore(
+    (state) => state.decreaseCartGrandTotal
+  );
+
   const [itemSubTotal, setItemSubTotal] = useState(price);
+
   const onQuantityIncrease = () => {
     setItemSubTotal((prevTotal) => prevTotal + price);
+    increaseCartGrandTotal(price);
   };
 
   const onQuantityDecrease = () => {
     setItemSubTotal((prevTotal) => prevTotal - price);
+    decreaseCartGrandTotal(price);
   };
 
   const removeItem = (id) => {
     removeFromCart(id);
   };
+
+  useEffect(() => {
+    setCartGrandTotal(itemSubTotal);
+  }, []);
+
   return (
     <div>
+      {console.log("-->sub", itemSubTotal, cartGrandTotal)}
       <div className="cart-product-item-parent-box">
         <div className="cart-product-item-child-box">
           <div>
