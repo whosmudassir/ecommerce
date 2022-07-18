@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./index.css";
 import OrderStatusBar from "../../components/Checkout/OrderStatusBar";
 import CartProductTitle from "../../components/Cart/CartProductTitle";
@@ -8,14 +8,35 @@ import CartTotal from "../../components/Cart/CartTotal";
 import CheckoutButton from "../../components/Cart/CheckoutButton";
 import EmptyCart from "../../components/EmptyCart";
 import NotLoggedinTemplate from "../../components/NotLoggedinTemplate";
-import { cartStore } from "../../store";
+import { cartStore, cartGrandTotalStore } from "../../store";
 
 const Cart = () => {
-  const itemsInCart = cartStore((state) => state.cart);
   const isLoggedin = true;
+
+  //store
+  const itemsInCart = cartStore((state) => state.cart);
+  const setCartGrandTotal = cartGrandTotalStore(
+    (state) => state.setCartGrandTotal
+  );
+
+  const calculateGrandTotal = () => {
+    const grandTotal = itemsInCart
+      .map((item) => {
+        return item.price;
+      })
+      .reduce((prev, curr) => {
+        return prev + curr;
+      });
+    setCartGrandTotal(grandTotal);
+  };
+
+  useEffect(() => {
+    calculateGrandTotal();
+  }, []);
 
   return (
     <>
+      {console.log("---------->>>>>> cart entry")}
       <div className="body-wrapper">
         <div className="cart-wrapper">
           {isLoggedin ? (

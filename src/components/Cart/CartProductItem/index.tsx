@@ -52,10 +52,6 @@ const CartProductItem = ({
     removeFromCart(id);
   };
 
-  useEffect(() => {
-    setCartGrandTotal(itemSubTotal);
-  }, []);
-
   return (
     <div>
       {console.log("-->sub", itemSubTotal, cartGrandTotal)}
