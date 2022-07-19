@@ -31,12 +31,11 @@ const Cart = () => {
   };
 
   useEffect(() => {
-    calculateGrandTotal();
+    itemsInCart.length > 0 && calculateGrandTotal();
   }, []);
 
   return (
     <>
-      {console.log("---------->>>>>> cart entry")}
       <div className="body-wrapper">
         <div className="cart-wrapper">
           {isLoggedin ? (
