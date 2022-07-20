@@ -10,6 +10,7 @@ import Checkout from "./Checkout";
 import OrderConfirmation from "./OrderConfirmation";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import WishList from "./WishList";
+import ProductDetail from "./ProductDetail";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/order-confirmation" element={<OrderConfirmation />} />
           <Route path="/user" element={<User />} />
+          <Route path="/shop/:shopitem" element={<ProductDetail />} />
         </Routes>
         <Footer />
       </BrowserRouter>

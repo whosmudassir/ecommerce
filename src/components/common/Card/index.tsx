@@ -5,6 +5,7 @@ import { isAlertVisible } from "../../../store";
 import { setExpandedCard } from "../../../store";
 import { wishlistStore } from "../../../store";
 import { alertTextStore } from "../../../store";
+import { Link, useParams } from "react-router-dom";
 interface ICardProps {
   id: number;
   brandName: string;
@@ -36,6 +37,9 @@ const Card = ({
   const wishlist = wishlistStore((state) => state.wishlist);
   //states
   const [selectedSize, setSelectedSize] = useState("");
+
+  //route
+  const { shopitem } = useParams();
 
   const item = {
     id: id,
@@ -98,77 +102,79 @@ const Card = ({
 
   return (
     <div>
-      <div className="card-wrapper">
-        {expandedCardId !== id && (
-          <div className="card-head">
-            <>
-              <img className="card-img" src={imageUrl} alt="" />
-              <button
-                className="icon-wrapper"
-                onClick={() => {
-                  addItemToWishlist(item);
-                }}
-              >
-                <i className={`fa-${heartIcon} fa-heart card-heart-icon`}></i>
-              </button>
-            </>
-          </div>
-        )}
-        <div
-          className="card-body"
-          style={{
-            //@ts-ignore
-            borderRadius: expandedCardId == id && "6px 6px 0px 0px",
-          }}
-        >
-          <div className="card-info">
-            <div className="card-close-btn-wrapper">
-              <p className="card-brand-name">{brandName}</p>{" "}
-              {expandedCardId == id && (
-                <button className="icon-wrapper " onClick={closeQuickView}>
-                  <i className="fa-solid fa-xmark card-close-btn-icon"></i>
+      <Link to={`/shop/${name}`}>
+        <div className="card-wrapper">
+          {expandedCardId !== id && (
+            <div className="card-head">
+              <>
+                <img className="card-img" src={imageUrl} alt="" />
+                <button
+                  className="icon-wrapper"
+                  onClick={() => {
+                    addItemToWishlist(item);
+                  }}
+                >
+                  <i className={`fa-${heartIcon} fa-heart card-heart-icon`}></i>
                 </button>
-              )}
-            </div>
-            <p className="card-name"> {name} </p>
-          </div>
-          {expandedCardId == id && (
-            <div className="card-sizes-wrapper">
-              <AddToCartPopup setSelectedSize={setSelectedSize} />
+              </>
             </div>
           )}
-
-          <div className="card-footer">
-            <p className="">₹{price}</p>
-
-            <div className="card-btn-wrapper">
-              {expandedCardId == id ? (
-                <>
-                  <button
-                    className={` ${
-                      selectedSize.length !== 0
-                        ? "primary-btn btn-active"
-                        : "secondary-btn btn-inactive"
-                    }`}
-                    onClick={() => addItemToCart(item)}
-                  >
-                    Add
+          <div
+            className="card-body"
+            style={{
+              //@ts-ignore
+              borderRadius: expandedCardId == id && "6px 6px 0px 0px",
+            }}
+          >
+            <div className="card-info">
+              <div className="card-close-btn-wrapper">
+                <p className="card-brand-name">{brandName}</p>{" "}
+                {expandedCardId == id && (
+                  <button className="icon-wrapper " onClick={closeQuickView}>
+                    <i className="fa-solid fa-xmark card-close-btn-icon"></i>
                   </button>
-                </>
-              ) : (
-                <>
-                  <button
-                    className="icon-wrapper icon circle-plus-icon"
-                    onClick={() => setExpandedCardId(id)}
-                  >
-                    <i className="fa-solid fa-circle-plus"></i>
-                  </button>
-                </>
-              )}
+                )}
+              </div>
+              <p className="card-name"> {name} </p>
+            </div>
+            {expandedCardId == id && (
+              <div className="card-sizes-wrapper">
+                <AddToCartPopup setSelectedSize={setSelectedSize} />
+              </div>
+            )}
+
+            <div className="card-footer">
+              <p className="">₹{price}</p>
+
+              <div className="card-btn-wrapper">
+                {expandedCardId == id ? (
+                  <>
+                    <button
+                      className={` ${
+                        selectedSize.length !== 0
+                          ? "primary-btn btn-active"
+                          : "secondary-btn btn-inactive"
+                      }`}
+                      onClick={() => addItemToCart(item)}
+                    >
+                      Add
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <button
+                      className="icon-wrapper icon circle-plus-icon"
+                      onClick={() => setExpandedCardId(id)}
+                    >
+                      <i className="fa-solid fa-circle-plus"></i>
+                    </button>
+                  </>
+                )}
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </Link>
     </div>
   );
 };
