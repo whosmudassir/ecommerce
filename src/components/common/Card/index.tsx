@@ -104,21 +104,22 @@ const Card = ({
     <div>
       <div className="card-wrapper">
         {expandedCardId !== id && (
-          <Link to={`/shop/${name}`}>
-            <div className="card-head">
-              <>
-                <img className="card-img" src={imageUrl} alt="" />
-                <button
-                  className="icon-wrapper"
-                  onClick={() => {
-                    addItemToWishlist(item);
-                  }}
-                >
-                  <i className={`fa-${heartIcon} fa-heart card-heart-icon`}></i>
-                </button>
-              </>
-            </div>
-          </Link>
+          <div className="card-head">
+            <>
+              <Link to={`/shop/${name}`}>
+                {" "}
+                <img className="card-img" src={imageUrl} alt="" />{" "}
+              </Link>
+              <button
+                className="icon-wrapper"
+                onClick={() => {
+                  addItemToWishlist(item);
+                }}
+              >
+                <i className={`fa-${heartIcon} fa-heart card-heart-icon`}></i>
+              </button>
+            </>
+          </div>
         )}
         <div
           className="card-body"
