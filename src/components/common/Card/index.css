@@ -1,7 +1,6 @@
 @import url("../../../assets/theme/index.css");
 
 .card-wrapper {
-  cursor: pointer;
   transition: 0.2s;
   transition-timing-function: linear;
   background-color: #f9fafb;
