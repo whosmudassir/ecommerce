@@ -5,7 +5,7 @@ import { isAlertVisible } from "../../../store";
 import { setExpandedCard } from "../../../store";
 import { wishlistStore } from "../../../store";
 import { alertTextStore } from "../../../store";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 interface ICardProps {
   id: number;
   brandName: string;
@@ -37,9 +37,6 @@ const Card = ({
   const wishlist = wishlistStore((state) => state.wishlist);
   //states
   const [selectedSize, setSelectedSize] = useState("");
-
-  //route
-  const { shopitem } = useParams();
 
   const item = {
     id: id,
