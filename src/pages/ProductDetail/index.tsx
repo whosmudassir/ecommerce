@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import SingleProductDetail from "../../components/SingleProductDetail";
 import { shopList } from "../../data/shopList";
 import { useParams } from "react-router-dom";
+import "./index.css";
 
 const ProductDetail = () => {
   const { shopitem } = useParams();
@@ -10,22 +11,20 @@ const ProductDetail = () => {
   useEffect(() => {
     const filteredItem = shopList.find((item) => item.name == shopitem);
     setItemDetail(filteredItem);
-  }, [shopitem]);
+  }, []);
 
   return (
     <div className="body-wrapper">
-      {itemDetail.map((item) => (
-        <div key={item.id}>
-          <SingleProductDetail
-            id={item.id}
-            brandName={item.brandName}
-            name={item.name}
-            price={item.price}
-            category={item.category}
-            imageUrl={item.imageUrl}
-          />
-        </div>
-      ))}
+      <div className="product-detail-wrapper">
+        <SingleProductDetail
+          id={itemDetail.id}
+          brandName={itemDetail.brandName}
+          name={itemDetail.name}
+          price={itemDetail.price}
+          category={itemDetail.category}
+          imageUrl={itemDetail.imageUrl}
+        />
+      </div>
     </div>
   );
 };

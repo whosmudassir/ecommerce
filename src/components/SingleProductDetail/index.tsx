@@ -15,7 +15,7 @@ const SingleProductDetail = ({
   category,
   imageUrl,
 }: ISingleProductDetail) => {
-  return <div>SingleProductDetail</div>;
+  return <div>SingleProductDetail {name}</div>;
 };
 
 export default SingleProductDetail;
