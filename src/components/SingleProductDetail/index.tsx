@@ -1,5 +1,6 @@
 import React from "react";
 import Breadcrumb from "../common/Breadcrumb";
+import SingleProductBody from "./SingleProductBody";
 interface ISingleProductDetail {
   id: number;
   brandName: string;
@@ -19,6 +20,14 @@ const SingleProductDetail = ({
   return (
     <div>
       <Breadcrumb />
+      <SingleProductBody
+        id={id}
+        brandName={brandName}
+        name={name}
+        price={price}
+        category={category}
+        imageUrl={imageUrl}
+      />
     </div>
   );
 };
