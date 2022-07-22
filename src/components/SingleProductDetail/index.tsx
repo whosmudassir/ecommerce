@@ -1,4 +1,5 @@
 import React from "react";
+import Breadcrumb from "../common/Breadcrumb";
 interface ISingleProductDetail {
   id: number;
   brandName: string;
@@ -15,7 +16,11 @@ const SingleProductDetail = ({
   category,
   imageUrl,
 }: ISingleProductDetail) => {
-  return <div>SingleProductDetail {name}</div>;
+  return (
+    <div>
+      <Breadcrumb />
+    </div>
+  );
 };
 
 export default SingleProductDetail;

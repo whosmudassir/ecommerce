@@ -1,0 +1,15 @@
+@import url("../../../assets/theme/index.css");
+
+.breadcrumb-wrapper {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.breadcrumb-text {
+  color: #6d757e;
+  font-size: 16px;
+  font-family: Medium;
+  text-transform: capitalize;
+}
