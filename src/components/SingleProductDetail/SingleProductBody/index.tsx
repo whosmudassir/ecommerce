@@ -1,4 +1,5 @@
 import React from "react";
+import AddToBagButton from "../../common/AddToBagButton";
 import SizeSelectorHorizontal from "../../common/SizeSelectorHorizontal";
 
 import "./index.css";
@@ -28,6 +29,7 @@ const SingleProductBody = ({
         <p>{price}</p>
         <p>Tax and Duties not included</p>
         <SizeSelectorHorizontal />
+        <AddToBagButton />
       </div>
     </div>
   );
