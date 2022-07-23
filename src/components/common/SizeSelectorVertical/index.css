@@ -1,0 +1,35 @@
+.sizes-text {
+  padding-bottom: 10px;
+}
+
+.size-selector-vertical label,
+.size-selector-vertical input {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-family: Medium;
+  font-size: 14px;
+  letter-spacing: 0.8px;
+  color: #616972;
+  border: 1px solid #ccc;
+  padding: 9px 5px 7px 5px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.size-selector-vertical input[type="radio"] {
+  display: none;
+}
+
+.size-selector-vertical label:hover {
+  background: #ddd;
+}
+
+.size-selector-vertical input[type="radio"]:checked + label {
+  background: rgb(0, 0, 0);
+  color: white;
+  border: 1px solid rgb(0, 0, 0);
+}
