@@ -1,4 +1,6 @@
 import React from "react";
+import SizeSelectorHorizontal from "../../common/SizeSelectorHorizontal";
+
 import "./index.css";
 interface ISingleProductBody {
   id: number;
@@ -25,6 +27,7 @@ const SingleProductBody = ({
         <p>{name}</p>
         <p>{price}</p>
         <p>Tax and Duties not included</p>
+        <SizeSelectorHorizontal />
       </div>
     </div>
   );

@@ -11,3 +11,16 @@
   width: 100%;
   gap: 100px;
 }
+
+/* responsive */
+@media (max-width: 1024px) {
+  /* .single-product-body-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  } */
+  .product-detail-img {
+    width: 280px;
+    height: 280px;
+  }
+}
