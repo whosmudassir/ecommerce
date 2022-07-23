@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./index.css";
 interface ISingleProductBody {
   id: number;
   brandName: string;
@@ -18,8 +18,14 @@ const SingleProductBody = ({
   imageUrl,
 }: ISingleProductBody) => {
   return (
-    <div>
-      <img className="card-img" src={imageUrl} alt="" />
+    <div className="single-product-body-wrapper">
+      <img className="product-detail-img " src={imageUrl} alt="" />
+      <div>
+        <p>{brandName}</p>
+        <p>{name}</p>
+        <p>{price}</p>
+        <p>Tax and Duties not included</p>
+      </div>
     </div>
   );
 };

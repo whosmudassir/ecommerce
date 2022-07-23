@@ -54,7 +54,6 @@ const CartProductItem = ({
 
   return (
     <div>
-      {console.log("-->sub", itemSubTotal, cartGrandTotal)}
       <div className="cart-product-item-parent-box">
         <div className="cart-product-item-child-box">
           <div>

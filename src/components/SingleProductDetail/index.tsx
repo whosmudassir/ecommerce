@@ -1,6 +1,8 @@
 import React from "react";
 import Breadcrumb from "../common/Breadcrumb";
+import ProductDeliveryReturnInfo from "../common/ProductDeliveryReturnInfo";
 import SingleProductBody from "./SingleProductBody";
+import "./index.css";
 interface ISingleProductDetail {
   id: number;
   brandName: string;
@@ -18,7 +20,7 @@ const SingleProductDetail = ({
   imageUrl,
 }: ISingleProductDetail) => {
   return (
-    <div>
+    <div className="single-product-detail-wrapper">
       <Breadcrumb />
       <SingleProductBody
         id={id}
@@ -28,6 +30,7 @@ const SingleProductDetail = ({
         category={category}
         imageUrl={imageUrl}
       />
+      <ProductDeliveryReturnInfo />
     </div>
   );
 };

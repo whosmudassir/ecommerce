@@ -1,0 +1,13 @@
+.product-detail-img {
+  width: 480px;
+  height: 480px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.single-product-body-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 100px;
+}
