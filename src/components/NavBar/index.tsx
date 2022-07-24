@@ -22,7 +22,6 @@ const NavBar = () => {
             {" "}
             <i className="fa-solid fa-magnifying-glass nav-icon"></i>
           </button>
-
           <button className="icon-wrapper">
             <Link to="/user">
               <i className="fa-solid fa-user nav-icon"></i>
