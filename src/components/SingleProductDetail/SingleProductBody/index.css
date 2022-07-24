@@ -12,6 +12,10 @@
   gap: 100px;
 }
 
+.product-detail-heart-icon {
+  color: black;
+}
+
 /* responsive */
 @media (max-width: 1024px) {
   /* .single-product-body-wrapper {

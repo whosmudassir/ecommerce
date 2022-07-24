@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import AddToBagButton from "../../common/AddToBagButton";
 import SizeSelectorHorizontal from "../../common/SizeSelectorHorizontal";
-import { alertTextStore, isAlertVisible, cartStore } from "../../../store";
+import {
+  alertTextStore,
+  isAlertVisible,
+  cartStore,
+  wishlistStore,
+} from "../../../store";
 import "./index.css";
 
 interface ISingleProductBody {
@@ -26,9 +31,12 @@ const SingleProductBody = ({
   const setAlertText = alertTextStore((state) => state.setAlertText);
   const showAlert = isAlertVisible((state) => state.showAlert);
   const hideAlert = isAlertVisible((state) => state.hideAlert);
+  const addToWishlist = wishlistStore((state) => state.addToWishlist);
+  const removeFromWishlist = wishlistStore((state) => state.removeFromWishlist);
 
   //state
   const [selectedSize, setSelectedSize] = useState("");
+  const [heartIcon, setHeartIcon] = useState("regular");
 
   //product detail item
   const item = {
@@ -57,6 +65,20 @@ const SingleProductBody = ({
     setSelectedSize("");
   };
 
+  //on add to wishlist
+  const addItemToWishlist = (item) => {
+    if (heartIcon == "regular") {
+      setHeartIcon("solid");
+      addToWishlist(item);
+      setAlertText("Item added to wishlist");
+      showAlert();
+      hideSuccessAlert();
+    } else {
+      setHeartIcon("regular");
+      removeFromWishlist(item.id);
+    }
+  };
+
   return (
     <div className="single-product-body-wrapper">
       <img className="product-detail-img " src={imageUrl} alt="" />
@@ -70,6 +92,14 @@ const SingleProductBody = ({
           selectedSize={selectedSize}
           addItemToCart={addItemToCart}
         />
+        <button
+          className="icon-wrapper"
+          onClick={() => {
+            addItemToWishlist(item);
+          }}
+        >
+          <i className={`fa-regular fa-heart`}></i>
+        </button>
       </div>
     </div>
   );
