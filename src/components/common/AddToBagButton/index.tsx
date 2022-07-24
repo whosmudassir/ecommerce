@@ -1,11 +1,16 @@
 import React from "react";
 
-const AddToBagButton = () => {
+interface IAddToBagButtonProps {
+  selectedSize: string;
+}
+const AddToBagButton = ({ selectedSize }: IAddToBagButtonProps) => {
   return (
     <div>
       <button
         className={` ${
-          false ? "primary-btn btn-active" : "secondary-btn btn-inactive"
+          selectedSize.length !== 0
+            ? "primary-btn btn-active"
+            : "secondary-btn btn-inactive"
         }`}
         // onClick={() => addItemToCart(item)}
       >
