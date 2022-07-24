@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import AddToBagButton from "../../common/AddToBagButton";
 import SizeSelectorHorizontal from "../../common/SizeSelectorHorizontal";
 
@@ -20,6 +20,7 @@ const SingleProductBody = ({
   category,
   imageUrl,
 }: ISingleProductBody) => {
+  const [selectedSize, setSelectedSize] = useState("");
   return (
     <div className="single-product-body-wrapper">
       <img className="product-detail-img " src={imageUrl} alt="" />
@@ -28,8 +29,8 @@ const SingleProductBody = ({
         <p>{name}</p>
         <p>{price}</p>
         <p>Tax and Duties not included</p>
-        <SizeSelectorHorizontal />
-        <AddToBagButton />
+        <SizeSelectorHorizontal setSelectedSize={setSelectedSize} />
+        <AddToBagButton selectedSize={selectedSize} />
       </div>
     </div>
   );

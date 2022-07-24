@@ -3,6 +3,7 @@ import SingleProductDetail from "../../components/SingleProductDetail";
 import { shopList } from "../../data/shopList";
 import { useParams } from "react-router-dom";
 import "./index.css";
+import SuccessAlert from "../../components/Alerts/SuccessAlert";
 
 const ProductDetail = () => {
   const { shopitem } = useParams();
@@ -16,6 +17,7 @@ const ProductDetail = () => {
   return (
     <div className="body-wrapper">
       <div className="product-detail-wrapper">
+        <SuccessAlert />
         <SingleProductDetail
           id={itemDetail.id}
           brandName={itemDetail.brandName}

@@ -154,7 +154,7 @@
 .primary-btn {
   background-color: black;
   color: white;
-  border-radius: 4px;
+  border-radius: 0px;
 }
 
 .btn-inactive {
@@ -162,6 +162,7 @@
   color: #b4b4b4;
   cursor: not-allowed !important;
   font-family: Medium;
+  border-radius: 0px;
   padding-bottom: 8px;
 }
 
