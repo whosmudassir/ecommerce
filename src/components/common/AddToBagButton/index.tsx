@@ -2,8 +2,12 @@ import React from "react";
 
 interface IAddToBagButtonProps {
   selectedSize: string;
+  addItemToCart: () => void;
 }
-const AddToBagButton = ({ selectedSize }: IAddToBagButtonProps) => {
+const AddToBagButton = ({
+  selectedSize,
+  addItemToCart,
+}: IAddToBagButtonProps) => {
   return (
     <div>
       <button
@@ -12,7 +16,7 @@ const AddToBagButton = ({ selectedSize }: IAddToBagButtonProps) => {
             ? "primary-btn btn-active"
             : "secondary-btn btn-inactive"
         }`}
-        // onClick={() => addItemToCart(item)}
+        onClick={() => addItemToCart()}
       >
         Add to bag
       </button>

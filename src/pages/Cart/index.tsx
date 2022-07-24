@@ -38,6 +38,7 @@ const Cart = () => {
     <>
       <div className="body-wrapper">
         <div className="cart-wrapper">
+          {console.log(":::cart items", itemsInCart)}
           {isLoggedin ? (
             <>
               {itemsInCart.length > 0 ? (
