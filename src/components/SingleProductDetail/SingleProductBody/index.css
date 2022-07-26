@@ -50,6 +50,12 @@
   margin-bottom: 20px;
 }
 
+.btn-heart-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 /* responsive */
 @media (max-width: 1024px) {
   /* .single-product-body-wrapper {
