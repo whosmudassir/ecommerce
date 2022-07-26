@@ -16,7 +16,7 @@ const SizeSelectorHorizontal = ({
       <form>
         <div className="add-to-cart-popup-size-wrapper">
           <div className="size-selector-horizontal">
-            <p>Size</p>
+            <p className="size-text-horizontal">Size</p>
             <input
               type="radio"
               id="aS"

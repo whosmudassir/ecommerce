@@ -1,5 +1,16 @@
+@import url("../../../assets/theme/index.css");
+
 .sizes-text {
   padding-bottom: 10px;
+}
+
+.size-text-horizontal {
+  font-size: 15px;
+  margin-right: 12px;
+  font-family: Regular;
+  color: #2b2c31;
+  display: flex;
+  align-items: center;
 }
 
 .size-selector-horizontal {
