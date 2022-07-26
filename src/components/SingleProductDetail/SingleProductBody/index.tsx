@@ -88,18 +88,20 @@ const SingleProductBody = ({
         <p className="price-text">{price}</p>
         <p className="tax-text">Tax and Duties not included</p>
         <SizeSelectorHorizontal setSelectedSize={setSelectedSize} />
-        <AddToBagButton
-          selectedSize={selectedSize}
-          addItemToCart={addItemToCart}
-        />
-        <button
-          className="icon-wrapper"
-          onClick={() => {
-            addItemToWishlist(item);
-          }}
-        >
-          <i className={`fa-regular fa-heart`}></i>
-        </button>
+        <div className="btn-heart-wrapper">
+          <AddToBagButton
+            selectedSize={selectedSize}
+            addItemToCart={addItemToCart}
+          />
+          <button
+            className="icon-wrapper"
+            onClick={() => {
+              addItemToWishlist(item);
+            }}
+          >
+            <i className={`fa-regular fa-heart`}></i>
+          </button>
+        </div>
       </div>
     </div>
   );

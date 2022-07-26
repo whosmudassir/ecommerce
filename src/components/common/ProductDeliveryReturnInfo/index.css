@@ -1,3 +1,24 @@
+@import url("../../../assets/theme/index.css");
+
 .fa-dolly {
-  color: black;
+  color: #323232;
+  padding-right: 12px;
+}
+
+.product-delivery-wrapper {
+  padding: 40px 0px;
+}
+
+.delivery-info-title {
+  font-family: Medium;
+  color: #323232;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.delivery-info-body {
+  font-family: Regular;
+  color: #323232;
+  font-size: 14px;
+  margin-bottom: 20px;
 }
