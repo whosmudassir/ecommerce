@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./index.css";
 interface IAddToBagButtonProps {
   selectedSize: string;
   addItemToCart: () => void;
@@ -9,7 +9,7 @@ const AddToBagButton = ({
   addItemToCart,
 }: IAddToBagButtonProps) => {
   return (
-    <div>
+    <div className="add-to-bag-button-wrapper">
       <button
         className={` ${
           selectedSize.length !== 0

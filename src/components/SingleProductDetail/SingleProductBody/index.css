@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  gap: 230px;
+  gap: 220px;
 }
 
 .product-detail-heart-icon {
@@ -41,11 +41,13 @@
 .price-text {
   font-size: 22px;
   color: #737680;
+  margin-bottom: 8px;
 }
 
 .tax-text {
   font-size: 12px;
   color: #737680;
+  margin-bottom: 20px;
 }
 
 /* responsive */
