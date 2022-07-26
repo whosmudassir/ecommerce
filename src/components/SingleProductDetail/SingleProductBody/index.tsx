@@ -83,10 +83,10 @@ const SingleProductBody = ({
     <div className="single-product-body-wrapper">
       <img className="product-detail-img " src={imageUrl} alt="" />
       <div>
-        <p>{brandName}</p>
-        <p>{name}</p>
-        <p>{price}</p>
-        <p>Tax and Duties not included</p>
+        <p className="brand-name-text">{brandName}</p>
+        <p className="name-text">{name}</p>
+        <p className="price-text">{price}</p>
+        <p className="tax-text">Tax and Duties not included</p>
         <SizeSelectorHorizontal setSelectedSize={setSelectedSize} />
         <AddToBagButton
           selectedSize={selectedSize}

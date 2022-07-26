@@ -12,7 +12,10 @@ const ProductDeliveryReturnInfo = () => {
         Holidays.
       </p>
       <p>Returns & Exchange</p>
-      <p></p>
+      <p>
+        All sales are final. We does not accept requests for cancellation of
+        orders or the return of items.
+      </p>
     </div>
   );
 };
