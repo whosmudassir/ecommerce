@@ -1,3 +1,5 @@
+@import url("../../../assets/theme/index.css");
+
 .product-detail-img {
   width: 480px;
   height: 480px;
@@ -9,11 +11,41 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  gap: 100px;
+  gap: 230px;
 }
 
 .product-detail-heart-icon {
   color: black;
+}
+
+.brand-name-text,
+.name-text,
+.price-text,
+.tax-text {
+  font-family: Regular;
+  margin-bottom: 12px;
+}
+
+.brand-name-text {
+  font-family: Bold;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #5d5d5d;
+}
+
+.name-text {
+  font-size: 22px;
+  text-transform: capitalize;
+}
+
+.price-text {
+  font-size: 22px;
+  color: #737680;
+}
+
+.tax-text {
+  font-size: 12px;
+  color: #737680;
 }
 
 /* responsive */
