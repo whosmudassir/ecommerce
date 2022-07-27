@@ -1,3 +1,10 @@
 .add-to-bag-button-wrapper {
   margin-top: 14px;
 }
+
+.horizontal-btn {
+  padding: 4px;
+  padding-right: 88px;
+  font-size: 14px;
+  text-transform: uppercase;
+}

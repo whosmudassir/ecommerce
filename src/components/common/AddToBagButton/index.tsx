@@ -18,7 +18,7 @@ const AddToBagButton = ({
         }`}
         onClick={() => addItemToCart()}
       >
-        Add to bag
+        <p className="horizontal-btn"> Add to bag</p>
       </button>
     </div>
   );
