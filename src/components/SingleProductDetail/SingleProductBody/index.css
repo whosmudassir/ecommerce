@@ -14,6 +14,16 @@
   gap: 220px;
 }
 
+.horizontal-icon {
+  color: #5d5d5d;
+}
+
+.horizontal-heart {
+  font-size: 20px;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
 .product-detail-heart-icon {
   color: black;
 }

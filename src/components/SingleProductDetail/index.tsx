@@ -21,6 +21,7 @@ const SingleProductDetail = ({
 }: ISingleProductDetail) => {
   return (
     <div className="single-product-detail-wrapper">
+      <Breadcrumb />
       <SingleProductBody
         id={id}
         brandName={brandName}

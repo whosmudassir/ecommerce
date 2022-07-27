@@ -66,7 +66,7 @@ const SingleProductBody = ({
   };
 
   //on add to wishlist
-  const addItemToWishlist = (item) => {
+  const addItemToWishlist = () => {
     if (heartIcon == "regular") {
       setHeartIcon("solid");
       addToWishlist(item);
@@ -94,12 +94,12 @@ const SingleProductBody = ({
             addItemToCart={addItemToCart}
           />
           <button
-            className="icon-wrapper"
+            className="icon-wrapper horizontal-icon"
             onClick={() => {
-              addItemToWishlist(item);
+              addItemToWishlist();
             }}
           >
-            <i className={`fa-regular fa-heart`}></i>
+            <i className={`fa-${heartIcon} fa-heart horizontal-heart`}></i>
           </button>
         </div>
       </div>
