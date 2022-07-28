@@ -85,7 +85,7 @@ const SingleProductBody = ({
       <div>
         <p className="brand-name-text">{brandName}</p>
         <p className="name-text">{name}</p>
-        <p className="price-text">{price}</p>
+        <p className="price-text">₹ {price}</p>
         <p className="tax-text">Tax and Duties not included</p>
         <SizeSelectorHorizontal setSelectedSize={setSelectedSize} />
         <div className="btn-heart-wrapper">
