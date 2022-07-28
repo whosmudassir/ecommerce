@@ -1,7 +1,7 @@
 @import url("../../../assets/theme/index.css");
 
 .fa-dolly {
-  color: #323232;
+  color: #484f56;
   padding-right: 12px;
 }
 
@@ -11,14 +11,16 @@
 
 .delivery-info-title {
   font-family: Medium;
-  color: #323232;
+  color: #484f56;
   margin-bottom: 10px;
   font-size: 16px;
+  letter-spacing: 0.5px;
 }
 
 .delivery-info-body {
   font-family: Regular;
-  color: #323232;
+  color: #484f56;
   font-size: 14px;
+  letter-spacing: 0.5px;
   margin-bottom: 20px;
 }

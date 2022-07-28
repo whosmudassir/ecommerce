@@ -79,6 +79,34 @@ const SingleProductBody = ({
     }
   };
 
+  //product info text
+  const productInfoText = [
+    {
+      title: "Composition",
+      info: "100% premium cotton",
+    },
+    {
+      title: "GSM",
+      info: "180",
+    },
+    {
+      title: "Country of production",
+      info: "India",
+    },
+    {
+      title: "Wash care",
+      info: "Machine wash cold with similar colors",
+    },
+    {
+      title: "Sizing",
+      info: "Oversized",
+    },
+    {
+      title: "Estimated order processing time",
+      info: "48 hours",
+    },
+  ];
+
   return (
     <div className="single-product-body-wrapper">
       <img className="product-detail-img " src={imageUrl} alt="" />
@@ -101,6 +129,14 @@ const SingleProductBody = ({
           >
             <i className={`fa-${heartIcon} fa-heart horizontal-heart`}></i>
           </button>
+        </div>
+        <div className="product-info-wrapper">
+          {productInfoText.map((item) => (
+            <p className="product-info-text">
+              <span className="product-info-title">{item.title}</span>:{" "}
+              {item.info}
+            </p>
+          ))}
         </div>
       </div>
     </div>
