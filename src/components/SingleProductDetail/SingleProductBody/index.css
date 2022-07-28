@@ -67,6 +67,22 @@
   align-items: center;
 }
 
+.product-info-wrapper {
+  padding-top: 26px;
+}
+
+.product-info-text {
+  font-family: Regular;
+  padding-bottom: 8px;
+  color: #484f56;
+  letter-spacing: 0.5px;
+}
+
+.product-info-title {
+  /* color: #323232; */
+  font-family: Medium;
+}
+
 /* responsive */
 @media (max-width: 1024px) {
   /* .single-product-body-wrapper {
