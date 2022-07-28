@@ -4,4 +4,5 @@
   height: calc(100vh - 62px);
   overflow: auto;
   width: 100%;
+  justify-content: center;
 }
