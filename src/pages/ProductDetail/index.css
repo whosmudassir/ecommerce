@@ -6,3 +6,10 @@
   width: 100%;
   justify-content: center;
 }
+
+/* responsive */
+@media (max-width: 1024px) {
+  .product-detail-wrapper {
+    padding: 20px 30px;
+  }
+}
