@@ -1,3 +1,5 @@
+@import url("../../../assets/theme/index.css");
+
 .cart-product-item-parent-box {
   display: flex;
 
@@ -45,9 +47,19 @@
   flex-direction: column;
   justify-content: center;
   justify-items: center;
+  font-family: Regular;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  color: #484f56;
 }
 .cart-product-item-title {
   display: none;
+}
+
+.remove-btn-text {
+  background: none;
+  background-color: transparent;
+  border: none;
 }
 
 /* .cart-product-item-child-item:nth-child(1) {
@@ -74,6 +86,7 @@
     flex-direction: column;
     justify-content: center;
   }
+
   .cart-product-item-child-box:nth-child(3) {
     padding: 10px;
   }

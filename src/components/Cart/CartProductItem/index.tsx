@@ -65,11 +65,11 @@ const CartProductItem = ({
           </div>
           <div className="cart-product-item-child-img-text remove-btn-wrapper">
             <p className="cart-product-item-child-item">
-              {name} - {size}
+              {name} : {size}
             </p>
             <button
               onClick={() => removeItem(id)}
-              className="cart-product-item-child-item remove-btn"
+              className="cart-product-item-child-item remove-btn-text footer-text"
             >
               Remove
             </button>
