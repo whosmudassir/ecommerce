@@ -20,18 +20,19 @@
 .cart-total-text {
   font-family: Bold;
   font-size: 22px;
+  color: #484f56;
 }
 
 .cart-total-item-text {
   font-family: Regular;
   font-size: 14px;
-  color: #4a4f56;
+  color: #484f56;
 }
 
 .cart-total-item-main-text {
   font-family: Bold;
   font-size: 15px;
-  color: #4a4f56;
+  color: #484f56;
 }
 
 /* responsive */

@@ -1,6 +1,14 @@
+@import url("../../../assets/theme/index.css");
+
 .quantity-wrapper {
   display: flex;
   gap: 14px;
   border: 1px solid rgba(87, 87, 87, 0.4);
   padding: 8px;
+}
+
+.quantity-number {
+  font-family: Regular;
+  color: #484f56;
+  padding: 0px;
 }
