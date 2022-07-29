@@ -2,3 +2,16 @@
   width: 100%;
   padding: 0px 30px;
 }
+
+/* responsive */
+@media (max-width: 768px) {
+  .single-product-detail-wrapper {
+    padding: 0px 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  .single-product-detail-wrapper {
+    padding: 0px;
+  }
+}

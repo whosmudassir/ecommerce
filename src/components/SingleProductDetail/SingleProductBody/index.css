@@ -84,14 +84,25 @@
 }
 
 /* responsive */
-@media (max-width: 1024px) {
-  /* .single-product-body-wrapper {
+@media (max-width: 768px) {
+  .single-product-body-wrapper {
+    gap: 40px;
+  }
+  .product-detail-img {
+    width: 480px;
+    height: 480px;
+  }
+}
+
+@media (max-width: 450px) {
+  .single-product-body-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-  } */
+    gap: 40px;
+    padding: 0px;
+  }
   .product-detail-img {
-    width: 280px;
-    height: 280px;
+    width: 320px;
+    height: 320px;
   }
 }
