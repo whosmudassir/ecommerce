@@ -39,17 +39,18 @@ const CartProductItem = ({
   const [itemSubTotal, setItemSubTotal] = useState(price);
 
   const onQuantityIncrease = () => {
-    setItemSubTotal((prevTotal) => prevTotal + price);
+    setItemSubTotal(itemSubTotal + price);
     increaseCartGrandTotal(price);
   };
 
   const onQuantityDecrease = () => {
-    setItemSubTotal((prevTotal) => prevTotal - price);
+    setItemSubTotal(itemSubTotal - price);
     decreaseCartGrandTotal(price);
   };
 
   const removeItem = (id) => {
     removeFromCart(id);
+    decreaseCartGrandTotal(itemSubTotal);
   };
 
   return (
