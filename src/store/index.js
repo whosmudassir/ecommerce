@@ -58,3 +58,9 @@ export const cartGrandTotalStore = create((set) => ({
   decreaseCartGrandTotal: (price) =>
     set((state) => ({ cartGrandTotal: state.cartGrandTotal - price })),
 }));
+
+//final cart price with taxes
+export const totalWithTaxesStore = create((set) => ({
+  totalWithTaxes: 0,
+  setTotalWithTaxes: (price) => set((state) => ({ totalWithTaxes: price })),
+}));
