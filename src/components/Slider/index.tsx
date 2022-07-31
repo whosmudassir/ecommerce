@@ -1,6 +1,6 @@
 import React from "react";
 
-const Slider = () => {
+const Slider = ({ highToLowSort, lowToHighSort }) => {
   return (
     <div>
       <div id="trigger-slider" className="list-box-close list-box">
@@ -14,11 +14,27 @@ const Slider = () => {
           <div className="filter-wrapper">
             <p className="filter-heading">Sort by</p>
             <div className="input-text">
-              <input id="input-color" type="radio" value="high" name="price" />
+              <input
+                id="input-color"
+                type="radio"
+                value="high"
+                name="price"
+                onChange={() => {
+                  highToLowSort();
+                }}
+              />
               Price: High to Low
             </div>
             <div className="input-text">
-              <input id="input-color" type="radio" value="low" name="price" />
+              <input
+                id="input-color"
+                type="radio"
+                value="low"
+                name="price"
+                onChange={() => {
+                  lowToHighSort();
+                }}
+              />
               Price: Low to High
             </div>
           </div>

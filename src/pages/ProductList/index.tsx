@@ -9,13 +9,31 @@ import SuccessAlert from "../../components/Alerts/SuccessAlert";
 
 const ProductList = () => {
   const [cardInfo, setCardInfo] = useState<any>([]);
+
+  //sorting
+  const lowToHighSort = () => {
+    const sortedList = shopList.sort((firstItem, secondItem) => {
+      return firstItem.price - secondItem.price;
+    });
+    console.log(":::low clicked");
+    setCardInfo(sortedList);
+  };
+
+  const highToLowSort = () => {
+    const sortedList = shopList.sort((firstItem, secondItem) => {
+      return secondItem.price - firstItem.price;
+    });
+    console.log(":::hight clicked");
+    setCardInfo(sortedList);
+    console.log(":::hight clicked");
+  };
+
   useEffect(() => {
     setCardInfo(shopList);
   }, []);
-
   return (
     <div className="body-wrapper">
-      <Slider />
+      <Slider highToLowSort={highToLowSort} lowToHighSort={lowToHighSort} />
       <div className="product-list-wrapper">
         <SuccessAlert />
         {cardInfo.map((item) => (
