@@ -14,7 +14,8 @@ const ProductList = () => {
 
   //sorting
   const lowToHighSort = () => {
-    const sortedList = cardInfo.sort((firstItem, secondItem) => {
+    let sortedList = cardInfo;
+    sortedList.sort((firstItem, secondItem) => {
       return firstItem.price - secondItem.price;
     });
     setIsSorted(!isSorted);
@@ -23,7 +24,6 @@ const ProductList = () => {
 
   const highToLowSort = () => {
     let sortedList = cardInfo;
-
     sortedList.sort((firstItem, secondItem) => {
       return secondItem.price - firstItem.price;
     });
@@ -31,13 +31,22 @@ const ProductList = () => {
     setCardInfo(sortedList);
   };
 
+  //clear filters
+  const clearFilters = () => {
+    setIsSorted(!isSorted);
+    setCardInfo(shopList);
+  };
+
   useEffect(() => {}, [isSorted]);
 
   return (
     <div className="body-wrapper">
-      <Slider highToLowSort={highToLowSort} lowToHighSort={lowToHighSort} />
+      <Slider
+        highToLowSort={highToLowSort}
+        lowToHighSort={lowToHighSort}
+        clearFilters={clearFilters}
+      />
       <div className="product-list-wrapper">
-        {console.log(":::cardInfo", cardInfo)}
         <SuccessAlert />
         {cardInfo.map((item) => (
           <div key={item.id}>

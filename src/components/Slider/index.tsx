@@ -1,13 +1,19 @@
 import React from "react";
 
-const Slider = ({ highToLowSort, lowToHighSort }) => {
+const Slider = ({ highToLowSort, lowToHighSort, clearFilters }) => {
   return (
     <div>
       <div id="trigger-slider" className="list-box-close list-box">
         <div className="category-divider">
           <div className="heading-text-wrapper">
             <p className="filter-heading">Filters</p>
-            <p className="filter-heading">Clear</p>
+            <button
+              onClick={() => {
+                clearFilters();
+              }}
+            >
+              <p className="filter-heading">Clear</p>
+            </button>
           </div>
         </div>
         <div className="category-divider">
