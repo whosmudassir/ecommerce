@@ -8,33 +8,36 @@ import { cartStore } from "../../store";
 import SuccessAlert from "../../components/Alerts/SuccessAlert";
 
 const ProductList = () => {
-  const [cardInfo, setCardInfo] = useState<any>([]);
+  const [cardInfo, setCardInfo] = useState<any>(shopList);
+
+  const [isSorted, setIsSorted] = useState<any>(false);
 
   //sorting
   const lowToHighSort = () => {
-    const sortedList = shopList.sort((firstItem, secondItem) => {
+    const sortedList = cardInfo.sort((firstItem, secondItem) => {
       return firstItem.price - secondItem.price;
     });
-    console.log(":::low clicked");
+    setIsSorted(!isSorted);
     setCardInfo(sortedList);
   };
 
   const highToLowSort = () => {
-    const sortedList = shopList.sort((firstItem, secondItem) => {
+    let sortedList = cardInfo;
+
+    sortedList.sort((firstItem, secondItem) => {
       return secondItem.price - firstItem.price;
     });
-    console.log(":::hight clicked");
+    setIsSorted(!isSorted);
     setCardInfo(sortedList);
-    console.log(":::hight clicked");
   };
 
-  useEffect(() => {
-    setCardInfo(shopList);
-  }, []);
+  useEffect(() => {}, [isSorted]);
+
   return (
     <div className="body-wrapper">
       <Slider highToLowSort={highToLowSort} lowToHighSort={lowToHighSort} />
       <div className="product-list-wrapper">
+        {console.log(":::cardInfo", cardInfo)}
         <SuccessAlert />
         {cardInfo.map((item) => (
           <div key={item.id}>
