@@ -64,3 +64,9 @@ export const totalWithTaxesStore = create((set) => ({
   totalWithTaxes: 0,
   setTotalWithTaxes: (price) => set((state) => ({ totalWithTaxes: price })),
 }));
+
+//cardinfo
+export const productListStore = create((set) => ({
+  productList: [],
+  addToProductList: (item) => set((state) => ({ productList: item })),
+}));
