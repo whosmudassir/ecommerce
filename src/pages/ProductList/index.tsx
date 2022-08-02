@@ -8,37 +8,33 @@ import { cartStore } from "../../store";
 import SuccessAlert from "../../components/Alerts/SuccessAlert";
 
 const ProductList = () => {
+  const originalCopy = [...shopList];
   const [cardInfo, setCardInfo] = useState<any>(shopList);
-
+  const [sortOrder, setSortOrder] = useState(null);
   const [isSorted, setIsSorted] = useState<any>(false);
 
   //sorting
   const lowToHighSort = () => {
-    let sortedList = cardInfo;
-    sortedList.sort((firstItem, secondItem) => {
-      return firstItem.price - secondItem.price;
-    });
+    setSortOrder("low");
     setIsSorted(!isSorted);
-    setCardInfo(sortedList);
   };
 
   const highToLowSort = () => {
-    let sortedList = cardInfo;
-    sortedList.sort((firstItem, secondItem) => {
-      return secondItem.price - firstItem.price;
-    });
+    setSortOrder("high");
     setIsSorted(!isSorted);
-    setCardInfo(sortedList);
   };
 
   //clear filters
   const clearFilters = () => {
-    setIsSorted(!isSorted);
-    setCardInfo(shopList);
+    setSortOrder(null);
+    setCardInfo(originalCopy);
   };
 
-  useEffect(() => {}, [isSorted]);
+  useEffect(() => {
+    console.log("::::re render");
+  }, [isSorted]);
 
+  console.log(":::::card info", cardInfo);
   return (
     <div className="body-wrapper">
       <Slider
@@ -48,18 +44,28 @@ const ProductList = () => {
       />
       <div className="product-list-wrapper">
         <SuccessAlert />
-        {cardInfo.map((item) => (
-          <div key={item.id}>
-            <Card
-              id={item.id}
-              brandName={item.brandName}
-              name={item.name}
-              price={item.price}
-              category={item.category}
-              imageUrl={item.imageUrl}
-            />
-          </div>
-        ))}
+        {cardInfo
+          .sort((firstItem, secondItem) => {
+            if (sortOrder == "high") {
+              return secondItem.price - firstItem.price;
+            } else if (sortOrder == "low") {
+              return firstItem.price - secondItem.price;
+            } else {
+              return null;
+            }
+          })
+          .map((item) => (
+            <div key={item.id}>
+              <Card
+                id={item.id}
+                brandName={item.brandName}
+                name={item.name}
+                price={item.price}
+                category={item.category}
+                imageUrl={item.imageUrl}
+              />
+            </div>
+          ))}
       </div>
     </div>
   );
