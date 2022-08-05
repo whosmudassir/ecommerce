@@ -27,12 +27,7 @@ const ProductList = () => {
   //clear filters
   const clearFilters = () => {
     setSortOrder(null);
-    setCardInfo(originalCopy);
   };
-
-  useEffect(() => {
-    console.log("::::re render");
-  }, [isSorted]);
 
   useEffect(() => {
     setCardInfo(originalCopy);
