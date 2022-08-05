@@ -34,6 +34,10 @@ const ProductList = () => {
     console.log("::::re render");
   }, [isSorted]);
 
+  useEffect(() => {
+    setCardInfo(originalCopy);
+  }, [clearFilters]);
+
   console.log(":::::card info", cardInfo);
   return (
     <div className="body-wrapper">
