@@ -11,17 +11,17 @@ const ProductList = () => {
   const originalCopy = [...shopList];
   const [cardInfo, setCardInfo] = useState<any>(shopList);
   const [sortOrder, setSortOrder] = useState(null);
-  const [isSorted, setIsSorted] = useState<any>(false);
+  const [radioIsActive, setRadioIsActive] = useState<any>("");
 
   //sorting
-  const lowToHighSort = () => {
+  const lowToHighSort = (e) => {
     setSortOrder("low");
-    setIsSorted(!isSorted);
+    setRadioIsActive("low");
   };
 
-  const highToLowSort = () => {
+  const highToLowSort = (e) => {
+    setRadioIsActive("high");
     setSortOrder("high");
-    setIsSorted(!isSorted);
   };
 
   //clear filters
@@ -31,6 +31,7 @@ const ProductList = () => {
 
   useEffect(() => {
     setCardInfo(originalCopy);
+    setRadioIsActive("");
   }, [clearFilters]);
 
   console.log(":::::card info", cardInfo);
@@ -40,6 +41,7 @@ const ProductList = () => {
         highToLowSort={highToLowSort}
         lowToHighSort={lowToHighSort}
         clearFilters={clearFilters}
+        radioIsActive={radioIsActive}
       />
       <div className="product-list-wrapper">
         <SuccessAlert />
