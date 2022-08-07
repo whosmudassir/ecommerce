@@ -1,6 +1,11 @@
 import React from "react";
 
-const Slider = ({ highToLowSort, lowToHighSort, clearFilters }) => {
+const Slider = ({
+  highToLowSort,
+  lowToHighSort,
+  clearFilters,
+  radioIsActive,
+}) => {
   return (
     <div>
       <div id="trigger-slider" className="list-box-close list-box">
@@ -25,8 +30,9 @@ const Slider = ({ highToLowSort, lowToHighSort, clearFilters }) => {
                 type="radio"
                 value="high"
                 name="price"
-                onChange={() => {
-                  highToLowSort();
+                checked={radioIsActive == "high"}
+                onChange={(e) => {
+                  highToLowSort(e);
                 }}
               />
               Price: High to Low
@@ -37,8 +43,9 @@ const Slider = ({ highToLowSort, lowToHighSort, clearFilters }) => {
                 type="radio"
                 value="low"
                 name="price"
-                onChange={() => {
-                  lowToHighSort();
+                checked={radioIsActive == "low"}
+                onChange={(e) => {
+                  lowToHighSort(e);
                 }}
               />
               Price: Low to High
