@@ -11,28 +11,52 @@ const ProductList = () => {
   const originalCopy = [...shopList];
   const [cardInfo, setCardInfo] = useState<any>(shopList);
   const [sortOrder, setSortOrder] = useState(null);
-  const [radioIsActive, setRadioIsActive] = useState<any>("");
+  const [radioIsActive, setRadioIsActive] = useState<any>(false);
+  const [priceOption, setPriceOption] = useState<any>(false);
+
+  const sortItems = () => {
+    const results = [...shopList];
+
+    results.sort((firstItem, secondItem) => {
+      if (sortOrder == "high") {
+        return secondItem.price - firstItem.price;
+      } else if (sortOrder == "low") {
+        return firstItem.price - secondItem.price;
+      }
+    });
+    setCardInfo(results);
+  };
+
+  useEffect(() => {
+    if (sortOrder == "unsort") {
+      setCardInfo(shopList);
+    } else if (sortOrder == "high" || "low") {
+      sortItems();
+    }
+  }, [sortOrder]);
 
   //sorting
   const lowToHighSort = (e) => {
     setSortOrder("low");
-    setRadioIsActive("low");
+
+    setRadioIsActive(!radioIsActive);
   };
 
   const highToLowSort = (e) => {
-    setRadioIsActive("high");
     setSortOrder("high");
+
+    setRadioIsActive(!radioIsActive);
   };
 
   //clear filters
   const clearFilters = () => {
-    setSortOrder(null);
+    setSortOrder("unsort");
   };
 
-  useEffect(() => {
-    setCardInfo(originalCopy);
-    setRadioIsActive("");
-  }, [clearFilters]);
+  // useEffect(() => {
+  //   // setCardInfo(originalCopy);
+  //   // setRadioIsActive(false);
+  // }, [clearFilters]);
 
   console.log(":::::card info", cardInfo);
   return (
@@ -45,28 +69,18 @@ const ProductList = () => {
       />
       <div className="product-list-wrapper">
         <SuccessAlert />
-        {cardInfo
-          .sort((firstItem, secondItem) => {
-            if (sortOrder == "high") {
-              return secondItem.price - firstItem.price;
-            } else if (sortOrder == "low") {
-              return firstItem.price - secondItem.price;
-            } else {
-              return null;
-            }
-          })
-          .map((item) => (
-            <div key={item.id}>
-              <Card
-                id={item.id}
-                brandName={item.brandName}
-                name={item.name}
-                price={item.price}
-                category={item.category}
-                imageUrl={item.imageUrl}
-              />
-            </div>
-          ))}
+        {cardInfo.map((item) => (
+          <div key={item.id}>
+            <Card
+              id={item.id}
+              brandName={item.brandName}
+              name={item.name}
+              price={item.price}
+              category={item.category}
+              imageUrl={item.imageUrl}
+            />
+          </div>
+        ))}
       </div>
     </div>
   );

@@ -29,10 +29,10 @@ const Slider = ({
                 id="input-color"
                 type="radio"
                 value="high"
-                name="price"
-                checked={radioIsActive == "high"}
-                onChange={(e) => {
-                  highToLowSort(e);
+                name="price-high"
+                // checked={radioIsActive}
+                onChange={() => {
+                  highToLowSort();
                 }}
               />
               Price: High to Low
@@ -42,10 +42,10 @@ const Slider = ({
                 id="input-color"
                 type="radio"
                 value="low"
-                name="price"
-                checked={radioIsActive == "low"}
-                onChange={(e) => {
-                  lowToHighSort(e);
+                name="price-low"
+                // checked={radioIsActive}
+                onChange={() => {
+                  lowToHighSort();
                 }}
               />
               Price: Low to High
