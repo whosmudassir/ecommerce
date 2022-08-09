@@ -11,16 +11,17 @@ const ProductList = () => {
   const originalCopy = [...shopList];
   const [cardInfo, setCardInfo] = useState<any>(shopList);
   const [sortOrder, setSortOrder] = useState(null);
-  const [radioIsActive, setRadioIsActive] = useState<any>(false);
-  const [priceOption, setPriceOption] = useState<any>(false);
+  const [radioValue, setRadioValue] = useState<any>();
 
   const sortItems = () => {
     const results = [...shopList];
 
     results.sort((firstItem, secondItem) => {
       if (sortOrder == "high") {
+        setRadioValue("high");
         return secondItem.price - firstItem.price;
       } else if (sortOrder == "low") {
+        setRadioValue("low");
         return firstItem.price - secondItem.price;
       }
     });
@@ -29,6 +30,7 @@ const ProductList = () => {
 
   useEffect(() => {
     if (sortOrder == "unsort") {
+      setRadioValue("");
       setCardInfo(shopList);
     } else if (sortOrder == "high" || "low") {
       sortItems();
@@ -38,12 +40,12 @@ const ProductList = () => {
   //sorting
   const lowToHighSort = (e) => {
     setSortOrder("low");
-    setRadioIsActive(!radioIsActive);
+    // setRadioIsActive(!radioIsActive);
   };
 
   const highToLowSort = (e) => {
     setSortOrder("high");
-    setRadioIsActive(!radioIsActive);
+    // setRadioIsActive(!radioIsActive);
   };
 
   //clear filters
@@ -52,13 +54,14 @@ const ProductList = () => {
   };
 
   console.log(":::::card info", cardInfo);
+
   return (
     <div className="body-wrapper">
       <Slider
         highToLowSort={highToLowSort}
         lowToHighSort={lowToHighSort}
         clearFilters={clearFilters}
-        radioIsActive={radioIsActive}
+        radioValue={radioValue}
       />
       <div className="product-list-wrapper">
         <SuccessAlert />

@@ -1,11 +1,6 @@
 import React from "react";
 
-const Slider = ({
-  highToLowSort,
-  lowToHighSort,
-  clearFilters,
-  radioIsActive,
-}) => {
+const Slider = ({ highToLowSort, lowToHighSort, clearFilters, radioValue }) => {
   return (
     <div>
       {/* <form> */}
@@ -29,9 +24,9 @@ const Slider = ({
               <input
                 id="input-color"
                 type="radio"
-                value="high"
+                value={radioValue}
                 name="price"
-                // checked={radioIsActive}
+                checked={"high" == radioValue}
                 onChange={() => {
                   highToLowSort();
                 }}
@@ -42,9 +37,9 @@ const Slider = ({
               <input
                 id="input-color"
                 type="radio"
-                value="low"
+                value={radioValue}
                 name="price"
-                // checked={radioIsActive}
+                checked={"low" == radioValue}
                 onChange={() => {
                   lowToHighSort();
                 }}
