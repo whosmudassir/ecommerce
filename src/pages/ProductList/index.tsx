@@ -8,14 +8,12 @@ import { cartStore } from "../../store";
 import SuccessAlert from "../../components/Alerts/SuccessAlert";
 
 const ProductList = () => {
-  const originalCopy = [...shopList];
   const [cardInfo, setCardInfo] = useState<any>(shopList);
   const [sortOrder, setSortOrder] = useState(null);
   const [radioValue, setRadioValue] = useState<any>();
 
   const sortItems = () => {
     const results = [...shopList];
-
     results.sort((firstItem, secondItem) => {
       if (sortOrder == "high") {
         setRadioValue("high");
@@ -38,14 +36,12 @@ const ProductList = () => {
   }, [sortOrder]);
 
   //sorting
-  const lowToHighSort = (e) => {
+  const lowToHighSort = () => {
     setSortOrder("low");
-    // setRadioIsActive(!radioIsActive);
   };
 
-  const highToLowSort = (e) => {
+  const highToLowSort = () => {
     setSortOrder("high");
-    // setRadioIsActive(!radioIsActive);
   };
 
   //clear filters

@@ -22,20 +22,8 @@ const Slider = ({ highToLowSort, lowToHighSort, clearFilters, radioValue }) => {
             <p className="filter-heading">Sort by</p>
             <div className="input-text">
               <input
-                id="input-color"
-                type="radio"
-                value={radioValue}
-                name="price"
-                checked={"high" == radioValue}
-                onChange={() => {
-                  highToLowSort();
-                }}
-              />
-              Price: High to Low
-            </div>
-            <div className="input-text">
-              <input
-                id="input-color"
+                id="lth"
+                className="input-color"
                 type="radio"
                 value={radioValue}
                 name="price"
@@ -44,7 +32,25 @@ const Slider = ({ highToLowSort, lowToHighSort, clearFilters, radioValue }) => {
                   lowToHighSort();
                 }}
               />
-              Price: Low to High
+              <label for="lth" className="label-text">
+                Price: Low to High
+              </label>
+            </div>
+            <div className="input-text">
+              <input
+                id="htl"
+                className="input-color"
+                type="radio"
+                value={radioValue}
+                name="price"
+                checked={"high" == radioValue}
+                onChange={() => {
+                  highToLowSort();
+                }}
+              />
+              <label for="htl" className="label-text">
+                Price: High to Low
+              </label>
             </div>
           </div>
         </div>
