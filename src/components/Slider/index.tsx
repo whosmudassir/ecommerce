@@ -8,6 +8,7 @@ const Slider = ({
 }) => {
   return (
     <div>
+      {/* <form> */}
       <div id="trigger-slider" className="list-box-close list-box">
         <div className="category-divider">
           <div className="heading-text-wrapper">
@@ -29,7 +30,7 @@ const Slider = ({
                 id="input-color"
                 type="radio"
                 value="high"
-                name="price-high"
+                name="price"
                 // checked={radioIsActive}
                 onChange={() => {
                   highToLowSort();
@@ -42,7 +43,7 @@ const Slider = ({
                 id="input-color"
                 type="radio"
                 value="low"
-                name="price-low"
+                name="price"
                 // checked={radioIsActive}
                 onChange={() => {
                   lowToHighSort();
@@ -154,6 +155,7 @@ const Slider = ({
           </div>
         </div>
       </div>
+      {/* </form> */}
     </div>
   );
 };
