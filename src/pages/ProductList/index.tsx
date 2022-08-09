@@ -38,13 +38,11 @@ const ProductList = () => {
   //sorting
   const lowToHighSort = (e) => {
     setSortOrder("low");
-
     setRadioIsActive(!radioIsActive);
   };
 
   const highToLowSort = (e) => {
     setSortOrder("high");
-
     setRadioIsActive(!radioIsActive);
   };
 
@@ -52,11 +50,6 @@ const ProductList = () => {
   const clearFilters = () => {
     setSortOrder("unsort");
   };
-
-  // useEffect(() => {
-  //   // setCardInfo(originalCopy);
-  //   // setRadioIsActive(false);
-  // }, [clearFilters]);
 
   console.log(":::::card info", cardInfo);
   return (
