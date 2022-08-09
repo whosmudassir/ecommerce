@@ -33,6 +33,10 @@ input[type="checkbox"]:checked + label::after {
   background-color: black !important;
 }
 
-#input-color {
+.input-color {
   accent-color: black;
+}
+
+.label-text {
+  cursor: pointer;
 }
