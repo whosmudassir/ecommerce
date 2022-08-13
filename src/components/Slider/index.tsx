@@ -120,6 +120,7 @@ const Slider = ({
                 id="input-color"
                 name="brand"
                 value="demons"
+                onChange={() => onSetFilterItem("demons")}
               />
               Demons
             </div>
@@ -129,6 +130,7 @@ const Slider = ({
                 id="input-color"
                 name="brand"
                 value="cavempt"
+                onChange={() => onSetFilterItem("cavempt")}
               />
               Cavempt
             </div>
@@ -138,6 +140,7 @@ const Slider = ({
                 id="input-color"
                 name="brand"
                 value="vetements"
+                onChange={() => onSetFilterItem("vetements")}
               />
               Vetements
             </div>
@@ -147,6 +150,7 @@ const Slider = ({
                 id="input-color"
                 name="brand"
                 value="pleasures"
+                onChange={() => onSetFilterItem("pleasures")}
               />
               Pleasures
             </div>
@@ -156,6 +160,7 @@ const Slider = ({
                 id="input-color"
                 name="brand"
                 value="bstroy"
+                onChange={() => onSetFilterItem("bstroy")}
               />
               BStroy
             </div>
@@ -165,6 +170,7 @@ const Slider = ({
                 id="input-color"
                 name="brand"
                 value="numbernine"
+                onChange={() => onSetFilterItem("numbernine")}
               />
               NumberNine
             </div>
