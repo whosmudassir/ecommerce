@@ -31,7 +31,11 @@ const ProductList = () => {
   const addFilters = () => {
     const results = [...shopList];
     const filteredResults = results.filter((item) => {
-      if (filterItem.includes(item.category)) {
+      console.log(":::includ", filterItem.includes(item.category));
+      if (
+        filterItem.includes(item.category) ||
+        filterItem.includes(item.brandName)
+      ) {
         return item;
       }
     });
