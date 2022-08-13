@@ -2,7 +2,6 @@ import React from "react";
 import Card from "../../components/common/Card/index";
 import Slider from "../../components/Slider";
 import { shopList } from "../../data/shopList";
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { cartStore } from "../../store";
 import SuccessAlert from "../../components/Alerts/SuccessAlert";
@@ -11,7 +10,9 @@ const ProductList = () => {
   const [cardInfo, setCardInfo] = useState<any>(shopList);
   const [sortOrder, setSortOrder] = useState(null);
   const [radioValue, setRadioValue] = useState<any>();
+  const [filterItem, setFilterItem] = useState([]);
 
+  //sorting func
   const sortItems = () => {
     const results = [...shopList];
     results.sort((firstItem, secondItem) => {
@@ -26,6 +27,18 @@ const ProductList = () => {
     setCardInfo(results);
   };
 
+  //filter func
+  const addFilters = () => {
+    const results = [...shopList];
+    const filteredResults = results.filter((item) => {
+      if (filterItem.includes(item.category)) {
+        return item;
+      }
+    });
+    setCardInfo(filteredResults);
+    console.log("::filter func::", filteredResults);
+  };
+
   useEffect(() => {
     if (sortOrder == "unsort") {
       setRadioValue("");
@@ -34,6 +47,12 @@ const ProductList = () => {
       sortItems();
     }
   }, [sortOrder]);
+
+  useEffect(() => {
+    if (filterItem.length > 0) {
+      addFilters();
+    }
+  }, [filterItem]);
 
   //sorting
   const lowToHighSort = () => {
@@ -58,6 +77,8 @@ const ProductList = () => {
         lowToHighSort={lowToHighSort}
         clearFilters={clearFilters}
         radioValue={radioValue}
+        filterItem={filterItem}
+        setFilterItem={setFilterItem}
       />
       <div className="product-list-wrapper">
         <SuccessAlert />
