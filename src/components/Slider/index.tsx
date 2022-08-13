@@ -1,6 +1,16 @@
 import React from "react";
 
-const Slider = ({ highToLowSort, lowToHighSort, clearFilters, radioValue }) => {
+const Slider = ({
+  highToLowSort,
+  lowToHighSort,
+  clearFilters,
+  radioValue,
+  filterItem,
+  setFilterItem,
+}) => {
+  const onSetFilterItem = (item) => {
+    setFilterItem([...filterItem, item]);
+  };
   return (
     <div>
       {/* <form> */}
@@ -63,6 +73,8 @@ const Slider = ({ highToLowSort, lowToHighSort, clearFilters, radioValue }) => {
                 type="checkbox"
                 name="category"
                 value="tshirts"
+                onChange={() => onSetFilterItem("t-shirts")}
+                // checked={todo.completed}
               />
               T-shirts
             </div>
@@ -72,6 +84,7 @@ const Slider = ({ highToLowSort, lowToHighSort, clearFilters, radioValue }) => {
                 id="input-color"
                 name="category"
                 value="hoodies"
+                onChange={() => onSetFilterItem("hoodies")}
               />
               Hoodies
             </div>
@@ -81,6 +94,7 @@ const Slider = ({ highToLowSort, lowToHighSort, clearFilters, radioValue }) => {
                 id="input-color"
                 name="category"
                 value="sweatshirts"
+                onChange={() => onSetFilterItem("sweatshirts")}
               />
               Sweatshirts
             </div>
@@ -90,6 +104,7 @@ const Slider = ({ highToLowSort, lowToHighSort, clearFilters, radioValue }) => {
                 id="input-color"
                 name="category"
                 value="accessories"
+                onChange={() => onSetFilterItem("accessories")}
               />
               Accessories
             </div>
