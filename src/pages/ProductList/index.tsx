@@ -32,18 +32,27 @@ const ProductList = () => {
     let results = [...shopList];
     let filteredCategoryResults;
     if (selectedCategoryItem) {
-      filteredCategoryResults = results.filter((item) => {
-        if (selectedCategoryItem.includes(item.category)) {
-          return item;
-        }
-      });
+      if (selectedBrandItem.length > 0) {
+        const categoryWBrand = cardInfo.filter((item) => {
+          if (selectedBrandItem.includes(item.brandName)) {
+            return item;
+          }
+        });
+        setCardInfo(categoryWBrand);
+      } else {
+        filteredCategoryResults = results.filter((item) => {
+          if (selectedCategoryItem.includes(item.category)) {
+            return item;
+          }
+        });
+        setCardInfo(filteredCategoryResults);
+      }
     }
 
     let filteredBrandResults;
     if (selectedBrandItem) {
     }
 
-    setCardInfo(filteredCategoryResults);
     console.log("::filter func::", filteredCategoryResults);
   };
 
