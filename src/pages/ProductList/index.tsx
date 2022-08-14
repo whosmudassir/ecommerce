@@ -51,21 +51,12 @@ const ProductList = () => {
 
     let filteredBrandResults;
     if (selectedBrandItem) {
-      if (selectedCategoryItem.length > 0) {
-        const brandWCategory = cardInfo.filter((item) => {
-          if (selectedCategoryItem.includes(item.category)) {
-            return item;
-          }
-        });
-        setCardInfo(brandWCategory);
-      } else {
-        filteredBrandResults = results.filter((item) => {
-          if (selectedBrandItem.includes(item.brandName)) {
-            return item;
-          }
-        });
-        setCardInfo(filteredBrandResults);
-      }
+      filteredBrandResults = results.filter((item) => {
+        if (selectedBrandItem.includes(item.brandName)) {
+          return item;
+        }
+      });
+      setCardInfo(filteredBrandResults);
     }
 
     console.log("::filter func::", filteredCategoryResults);

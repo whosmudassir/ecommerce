@@ -76,44 +76,52 @@ const Slider = ({
             <p className="filter-heading">Categories</p>
             <div className="input-text">
               <input
-                id="input-color"
+                id="tshirts"
                 type="checkbox"
                 name="category"
                 value="tshirts"
                 onChange={() => onSelectedCategoryItem("t-shirts")}
                 // checked={todo.completed}
               />
-              T-shirts
+              <label for="tshirts" className="label-text">
+                T-shirts
+              </label>
             </div>
             <div className="input-text">
               <input
                 type="checkbox"
-                id="input-color"
+                id="hoodies"
                 name="category"
                 value="hoodies"
                 onChange={() => onSelectedCategoryItem("hoodies")}
               />
-              Hoodies
+              <label for="hoodies" className="label-text">
+                Hoodies
+              </label>
             </div>
             <div className="input-text">
               <input
                 type="checkbox"
-                id="input-color"
+                id="sweatshirts"
                 name="category"
                 value="sweatshirts"
                 onChange={() => onSelectedCategoryItem("sweatshirts")}
               />
-              Sweatshirts
+              <label for="sweatshirts" className="label-text">
+                Sweatshirts
+              </label>
             </div>
             <div className="input-text">
               <input
                 type="checkbox"
-                id="input-color"
+                id="accessories"
                 name="category"
                 value="accessories"
                 onChange={() => onSelectedCategoryItem("accessories")}
               />
-              Accessories
+              <label for="accessories" className="label-text">
+                Accessories
+              </label>
             </div>
           </div>
         </div>
@@ -124,62 +132,74 @@ const Slider = ({
             <div className="input-text">
               <input
                 type="checkbox"
-                id="input-color"
+                id="demons"
                 name="brand"
                 value="demons"
                 onChange={() => onSelectedBrandItem("demons")}
               />
-              Demons
+              <label for="demons" className="label-text">
+                Demons
+              </label>
             </div>
             <div className="input-text">
               <input
                 type="checkbox"
-                id="input-color"
+                id="cavempt"
                 name="brand"
                 value="cavempt"
                 onChange={() => onSelectedBrandItem("cavempt")}
               />
-              Cavempt
+              <label for="cavempt" className="label-text">
+                Cavempt
+              </label>
             </div>
             <div className="input-text">
               <input
                 type="checkbox"
-                id="input-color"
+                id="vetements"
                 name="brand"
                 value="vetements"
                 onChange={() => onSelectedBrandItem("vetements")}
               />
-              Vetements
+              <label for="vetements" className="label-text">
+                Vetements
+              </label>
             </div>
             <div className="input-text">
               <input
                 type="checkbox"
-                id="input-color"
+                id="pleasures"
                 name="brand"
                 value="pleasures"
                 onChange={() => onSelectedBrandItem("pleasures")}
               />
-              Pleasures
+              <label for="pleasures" className="label-text">
+                Pleasures
+              </label>
             </div>
             <div className="input-text">
               <input
                 type="checkbox"
-                id="input-color"
+                id="bstroy"
                 name="brand"
                 value="bstroy"
                 onChange={() => onSelectedBrandItem("bstroy")}
               />
-              BStroy
+              <label for="bstroy" className="label-text">
+                BStroy
+              </label>
             </div>
             <div className="input-text">
               <input
                 type="checkbox"
-                id="input-color"
+                id="numbernine"
                 name="brand"
                 value="numbernine"
                 onChange={() => onSelectedBrandItem("numbernine")}
               />
-              NumberNine
+              <label for="numbernine" className="label-text">
+                NumberNine
+              </label>
             </div>
           </div>
         </div>
