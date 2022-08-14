@@ -5,12 +5,19 @@ const Slider = ({
   lowToHighSort,
   clearFilters,
   radioValue,
-  filterItem,
-  setFilterItem,
+  selectedCategoryItem,
+  setSelectedCategoryItem,
+  selectedBrandItem,
+  setSelectedBrandItem,
 }) => {
-  const onSetFilterItem = (item) => {
-    setFilterItem([...filterItem, item]);
+  const onSelectedCategoryItem = (item) => {
+    setSelectedCategoryItem([...selectedCategoryItem, item]);
   };
+
+  const onSelectedBrandItem = (item) => {
+    setSelectedBrandItem([...selectedBrandItem, item]);
+  };
+
   return (
     <div>
       {/* <form> */}
@@ -73,7 +80,7 @@ const Slider = ({
                 type="checkbox"
                 name="category"
                 value="tshirts"
-                onChange={() => onSetFilterItem("t-shirts")}
+                onChange={() => onSelectedCategoryItem("t-shirts")}
                 // checked={todo.completed}
               />
               T-shirts
@@ -84,7 +91,7 @@ const Slider = ({
                 id="input-color"
                 name="category"
                 value="hoodies"
-                onChange={() => onSetFilterItem("hoodies")}
+                onChange={() => onSelectedCategoryItem("hoodies")}
               />
               Hoodies
             </div>
@@ -94,7 +101,7 @@ const Slider = ({
                 id="input-color"
                 name="category"
                 value="sweatshirts"
-                onChange={() => onSetFilterItem("sweatshirts")}
+                onChange={() => onSelectedCategoryItem("sweatshirts")}
               />
               Sweatshirts
             </div>
@@ -104,7 +111,7 @@ const Slider = ({
                 id="input-color"
                 name="category"
                 value="accessories"
-                onChange={() => onSetFilterItem("accessories")}
+                onChange={() => onSelectedCategoryItem("accessories")}
               />
               Accessories
             </div>
@@ -120,7 +127,7 @@ const Slider = ({
                 id="input-color"
                 name="brand"
                 value="demons"
-                onChange={() => onSetFilterItem("demons")}
+                onChange={() => onSelectedBrandItem("demons")}
               />
               Demons
             </div>
@@ -130,7 +137,7 @@ const Slider = ({
                 id="input-color"
                 name="brand"
                 value="cavempt"
-                onChange={() => onSetFilterItem("cavempt")}
+                onChange={() => onSelectedBrandItem("cavempt")}
               />
               Cavempt
             </div>
@@ -140,7 +147,7 @@ const Slider = ({
                 id="input-color"
                 name="brand"
                 value="vetements"
-                onChange={() => onSetFilterItem("vetements")}
+                onChange={() => onSelectedBrandItem("vetements")}
               />
               Vetements
             </div>
@@ -150,7 +157,7 @@ const Slider = ({
                 id="input-color"
                 name="brand"
                 value="pleasures"
-                onChange={() => onSetFilterItem("pleasures")}
+                onChange={() => onSelectedBrandItem("pleasures")}
               />
               Pleasures
             </div>
@@ -160,7 +167,7 @@ const Slider = ({
                 id="input-color"
                 name="brand"
                 value="bstroy"
-                onChange={() => onSetFilterItem("bstroy")}
+                onChange={() => onSelectedBrandItem("bstroy")}
               />
               BStroy
             </div>
@@ -170,7 +177,7 @@ const Slider = ({
                 id="input-color"
                 name="brand"
                 value="numbernine"
-                onChange={() => onSetFilterItem("numbernine")}
+                onChange={() => onSelectedBrandItem("numbernine")}
               />
               NumberNine
             </div>

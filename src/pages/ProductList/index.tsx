@@ -10,8 +10,8 @@ const ProductList = () => {
   const [cardInfo, setCardInfo] = useState<any>(shopList);
   const [sortOrder, setSortOrder] = useState(null);
   const [radioValue, setRadioValue] = useState<any>();
-  const [filterItem, setFilterItem] = useState([]);
-
+  const [selectedCategoryItem, setSelectedCategoryItem] = useState([]);
+  const [selectedBrandItem, setSelectedBrandItem] = useState([]);
   //sorting func
   const sortItems = () => {
     const results = [...shopList];
@@ -29,18 +29,22 @@ const ProductList = () => {
 
   //filter func
   const addFilters = () => {
-    const results = [...shopList];
-    const filteredResults = results.filter((item) => {
-      console.log(":::includ", filterItem.includes(item.category));
-      if (
-        filterItem.includes(item.category) ||
-        filterItem.includes(item.brandName)
-      ) {
-        return item;
-      }
-    });
-    setCardInfo(filteredResults);
-    console.log("::filter func::", filteredResults);
+    let results = [...shopList];
+    let filteredCategoryResults;
+    if (selectedCategoryItem) {
+      filteredCategoryResults = results.filter((item) => {
+        if (selectedCategoryItem.includes(item.category)) {
+          return item;
+        }
+      });
+    }
+
+    let filteredBrandResults;
+    if (selectedBrandItem) {
+    }
+
+    setCardInfo(filteredCategoryResults);
+    console.log("::filter func::", filteredCategoryResults);
   };
 
   useEffect(() => {
@@ -53,10 +57,10 @@ const ProductList = () => {
   }, [sortOrder]);
 
   useEffect(() => {
-    if (filterItem.length > 0) {
+    if (selectedCategoryItem.length > 0 || selectedBrandItem.length > 0) {
       addFilters();
     }
-  }, [filterItem]);
+  }, [selectedCategoryItem, selectedBrandItem]);
 
   //sorting
   const lowToHighSort = () => {
@@ -81,8 +85,10 @@ const ProductList = () => {
         lowToHighSort={lowToHighSort}
         clearFilters={clearFilters}
         radioValue={radioValue}
-        filterItem={filterItem}
-        setFilterItem={setFilterItem}
+        selectedCategoryItem={selectedCategoryItem}
+        setSelectedCategoryItem={setSelectedCategoryItem}
+        selectedBrandItem={selectedBrandItem}
+        setSelectedBrandItem={setSelectedBrandItem}
       />
       <div className="product-list-wrapper">
         <SuccessAlert />
