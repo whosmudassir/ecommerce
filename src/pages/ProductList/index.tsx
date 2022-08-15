@@ -78,7 +78,8 @@ const ProductList = () => {
   useEffect(() => {
     if (selectedCategoryItem.length > 0) {
       addCategoryFilters();
-    } else if (selectedBrandItem.length > 0) {
+    }
+    if (selectedBrandItem.length > 0) {
       addBrandFilters();
     }
   }, [selectedCategoryItem, selectedBrandItem]);
