@@ -28,27 +28,33 @@ const ProductList = () => {
   };
 
   //filter func
-  const addFilters = () => {
+  const addCategoryFilters = () => {
     let results = [...shopList];
     let filteredCategoryResults;
     if (selectedCategoryItem) {
-      if (selectedBrandItem.length > 0) {
-        const categoryWBrand = cardInfo.filter((item) => {
-          if (selectedBrandItem.includes(item.brandName)) {
-            return item;
-          }
-        });
-        setCardInfo(categoryWBrand);
-      } else {
-        filteredCategoryResults = results.filter((item) => {
-          if (selectedCategoryItem.includes(item.category)) {
-            return item;
-          }
-        });
-        setCardInfo(filteredCategoryResults);
-      }
+      console.log("::cat--", selectedCategoryItem);
+      // if (selectedBrandItem.length > 0) {
+      //   const categoryWBrand = cardInfo.filter((item) => {
+      //     if (selectedBrandItem.includes(item.brandName)) {
+      //       return item;
+      //     }
+      //   });
+      //   setCardInfo(categoryWBrand);
+      // } else {
+      filteredCategoryResults = results.filter((item) => {
+        if (selectedCategoryItem.includes(item.category)) {
+          return item;
+        }
+      });
+      setCardInfo(filteredCategoryResults);
+      // }
     }
 
+    console.log("::filter func::", filteredCategoryResults);
+  };
+
+  const addBrandFilters = () => {
+    let results = [...shopList];
     let filteredBrandResults;
     if (selectedBrandItem) {
       filteredBrandResults = results.filter((item) => {
@@ -58,8 +64,6 @@ const ProductList = () => {
       });
       setCardInfo(filteredBrandResults);
     }
-
-    console.log("::filter func::", filteredCategoryResults);
   };
 
   useEffect(() => {
@@ -72,8 +76,10 @@ const ProductList = () => {
   }, [sortOrder]);
 
   useEffect(() => {
-    if (selectedCategoryItem.length > 0 || selectedBrandItem.length > 0) {
-      addFilters();
+    if (selectedCategoryItem.length > 0) {
+      addCategoryFilters();
+    } else if (selectedBrandItem.length > 0) {
+      addBrandFilters();
     }
   }, [selectedCategoryItem, selectedBrandItem]);
 
