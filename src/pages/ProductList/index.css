@@ -2,7 +2,7 @@
   background-color: white;
   padding: 30px 26px;
   display: flex;
-  height: calc(100vh - 62px);
+  /* height: calc(100vh - 62px); */
   gap: 50px 10px;
 
   overflow: auto;

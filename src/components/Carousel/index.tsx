@@ -16,7 +16,7 @@ const Carousel = ({ carouselData }) => {
 
   // auto swipe on carousels
   useEffect(() => {
-    const interval = setInterval(nextSlide, 8000);
+    const interval = setInterval(nextSlide, 4000);
     return () => clearInterval(interval);
   }, [currentCarousel]);
 

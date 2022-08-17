@@ -9,4 +9,5 @@
 .body-wrapper {
   margin-top: 60px;
   display: flex;
+  min-height: 100vh;
 }

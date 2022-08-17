@@ -2,8 +2,8 @@
 
 .bestsellers-card-wrapper {
   display: flex;
-  gap: 8px;
-
+  gap: 10px;
+  margin-bottom: 60px;
   flex-wrap: wrap;
 }
 
