@@ -2,6 +2,7 @@
   padding: 30px;
   height: calc(100vh - 62px);
   background-color: white;
+  border: none;
 }
 
 .filter-heading {
