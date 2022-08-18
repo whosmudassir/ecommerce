@@ -33,7 +33,7 @@
 
 .card-brand-name {
   text-transform: capitalize;
-  color: #818181;
+  color: #737680;
   font-size: 14px;
   font-family: Medium;
   padding: 6px 0px 4px 0px;
@@ -134,7 +134,7 @@
 }
 
 .card-name {
-  color: #484f56;
+  color: #000000;
   font-family: Regular;
   font-size: 16px;
   text-transform: capitalize;
@@ -144,10 +144,8 @@
 }
 
 .card-price {
-  position: absolute;
-  bottom: 23px;
-  font-family: Bold;
-  color: #484f56;
+  font-family: Regular;
+  color: #737680;
   font-size: 16px;
 }
 

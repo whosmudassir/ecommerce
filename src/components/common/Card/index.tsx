@@ -146,7 +146,7 @@ const Card = ({
           )}
 
           <div className="card-footer">
-            <p className="">₹{price}</p>
+            <p className="card-price">₹{price}</p>
 
             <div className="card-btn-wrapper">
               {expandedCardId == id ? (
