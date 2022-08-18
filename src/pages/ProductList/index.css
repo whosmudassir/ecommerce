@@ -1,11 +1,11 @@
 .product-list-wrapper {
   background-color: white;
-  padding: 30px 26px;
+  margin: 30px 26px;
   display: flex;
   /* height: calc(100vh - 62px); */
   gap: 50px 10px;
 
-  overflow: auto;
+  /* overflow: auto; */
   flex-wrap: wrap;
   justify-content: center;
   justify-items: left;
