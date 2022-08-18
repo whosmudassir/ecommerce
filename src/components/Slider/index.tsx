@@ -26,6 +26,7 @@ const Slider = ({
           <div className="heading-text-wrapper">
             <p className="filter-heading">Filters</p>
             <button
+              className="link-btn-text footer-text"
               onClick={() => {
                 clearFilters();
               }}

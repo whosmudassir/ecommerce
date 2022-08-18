@@ -53,7 +53,7 @@ const Carousel = ({ carouselData }) => {
           </button>
         </div>
         <div className="carousel-img-wrapper">
-          <Link to="/">
+          <Link to="/shop">
             <img
               className="responsive-img"
               src={carouselImgSource[currentCarousel]}
