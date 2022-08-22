@@ -34,7 +34,7 @@ const PlaceOrderButton = () => {
       key: "rzp_test_SP206ka3zuV4SX",
       amount: "222",
       currency: "INR",
-      name: "Essence",
+      name: "MsftsRep",
       description: "Thank you for shopping with us",
       handler: async function (response) {
         const orderId = "122";
@@ -48,7 +48,7 @@ const PlaceOrderButton = () => {
         };
 
         const { data, status } = await addOrderService(orderData, "sdsds");
-
+        console.log("::::status", status);
         if (status === 201) {
           // setSelectedCoupon({});
           // dispatchOrder({ type: "GET_ORDERS", payload: data.order });
@@ -58,12 +58,13 @@ const PlaceOrderButton = () => {
 
       prefill: {
         name: "mudassir",
-        email: "sadsa@sd.co",
-        contact: "93225088143",
+        email: "pay@msftsrep.shop",
+        contact: "9999999999",
       },
     };
 
     const paymentObject = new window.Razorpay(options);
+    console.log(":::payment obj", paymentObject);
     paymentObject.open();
   };
 
