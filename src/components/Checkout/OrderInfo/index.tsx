@@ -50,7 +50,7 @@ const OrderInfo = () => {
           <p className="order-info-item-main-text">{finalTotal}</p>
         </div>
       </div>
-      <PlaceOrderButton />
+      <PlaceOrderButton finalTotal={finalTotal} />
     </div>
   );
 };
