@@ -16,6 +16,7 @@
 .shipping-info-two-item-wrapper {
   display: flex;
   gap: 10px;
+  padding-top: 6px;
 }
 
 .shipping-info-input {
@@ -36,10 +37,17 @@
 }
 
 .shipping-info-headings-text {
-  font-family: Regular;
+  font-family: Medium;
   text-transform: capitalize;
   font-size: 14px;
-  padding-top: 6px;
+  padding: 10px 0px 6px 0px;
+  letter-spacing: 0.5px;
+}
+
+.form-text-error {
+  font-size: 13px;
+  font-family: Regular;
+  color: #cc0000;
 }
 
 /* responsive */

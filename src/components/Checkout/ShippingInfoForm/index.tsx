@@ -56,6 +56,8 @@ const ShippingInfoForm = () => {
     }
     if (!values.email) {
       errors.email = "Email is required!";
+    } else if (!regex.test(values.email)) {
+      errors.email = "Incorrect email format!";
     }
     return errors;
   };
@@ -65,8 +67,8 @@ const ShippingInfoForm = () => {
       <form onSubmit={handleSubmit}>
         <div>
           <p className="order-info-text">Billing & shipping</p>
-          <p>{formErrors.firstName}</p>
-          <p>{formErrors.lastName}</p>
+          <p className="form-text-error">{formErrors.firstName}</p>
+          <p className="form-text-error">{formErrors.lastName}</p>
           <div className="shipping-info-two-item-wrapper">
             <input
               className="outlined-input"
@@ -88,7 +90,7 @@ const ShippingInfoForm = () => {
             />
           </div>
           <p className="shipping-info-headings-text">Street address</p>
-          <p>{formErrors.address}</p>
+          <p className="form-text-error">{formErrors.address}</p>
           <div className="shipping-info-item-wrapper">
             <input
               className="outlined-input shipping-info-input"
@@ -101,7 +103,7 @@ const ShippingInfoForm = () => {
             />
           </div>
           <p className="shipping-info-headings-text">City / town</p>
-          <p>{formErrors.city}</p>
+          <p className="form-text-error">{formErrors.city}</p>
           <div className="shipping-info-item-wrapper">
             <input
               className="outlined-input  shipping-info-input"
@@ -114,7 +116,7 @@ const ShippingInfoForm = () => {
           </div>
 
           <p className="shipping-info-headings-text">Pin code / zip</p>
-          <p>{formErrors.pinCode}</p>
+          <p className="form-text-error">{formErrors.pinCode}</p>
           <div className="shipping-info-item-wrapper">
             <input
               className="outlined-input  shipping-info-input"
@@ -127,7 +129,7 @@ const ShippingInfoForm = () => {
           </div>
 
           <p className="shipping-info-headings-text">Phone</p>
-          <p>{formErrors.phone}</p>
+          <p className="form-text-error">{formErrors.phone}</p>
           <div className="shipping-info-item-wrapper">
             <input
               className="outlined-input  shipping-info-input"
@@ -139,7 +141,7 @@ const ShippingInfoForm = () => {
             />
           </div>
           <p className="shipping-info-headings-text">Email</p>
-          <p>{formErrors.email}</p>
+          <p className="form-text-error">{formErrors.email}</p>
           <div className="shipping-info-item-wrapper">
             <input
               className="outlined-input  shipping-info-input"
