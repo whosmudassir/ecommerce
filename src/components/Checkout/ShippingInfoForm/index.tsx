@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import CartTotal from "../../Cart/CartTotal";
 import "./index.css";
+import { addressFormStore } from "../../../store";
 
 const ShippingInfoForm = () => {
+  const setFormValues = addressFormStore((state) => state.setFormValues);
+  const formValues = addressFormStore((state) => state.formValues);
   const initialState = {
     firstName: "",
     lastName: "",
@@ -20,6 +23,7 @@ const ShippingInfoForm = () => {
     setFormValue({ ...formValue, [name]: value });
   };
 
+  console.log("::::::::::formsssss", formValues);
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormErrors(validate(formValue));
@@ -30,6 +34,7 @@ const ShippingInfoForm = () => {
     console.log(":::errors", formErrors);
     if (Object.keys(formErrors).length === 0) {
       console.log("::::useeffect", formValue);
+      setFormValues(formValue);
     }
   }, [formErrors]);
 
@@ -64,7 +69,7 @@ const ShippingInfoForm = () => {
 
   return (
     <div className="shipping-info-form-wrapper">
-      <form onSubmit={handleSubmit}>
+      <form>
         <div>
           <p className="order-info-text">Billing & shipping</p>
           <p className="form-text-error">{formErrors.firstName}</p>
@@ -152,9 +157,9 @@ const ShippingInfoForm = () => {
               autoComplete="email"
             />
           </div>
-          <button type="submit">Submit</button>
         </div>
       </form>
+      <button onClick={handleSubmit}>Submit</button>
     </div>
   );
 };
