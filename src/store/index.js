@@ -70,3 +70,15 @@ export const productListStore = create((set) => ({
   productList: [],
   addToProductList: (item) => set((state) => ({ productList: item })),
 }));
+
+//address form validation
+export const addressFormStore = create((set) => ({
+  formValues: {},
+  submitIsTriggered: false,
+  setFormValues: (formValue) =>
+    set((state) => ({ formValues: { ...formValue } })),
+  setSubmitIsTriggered: () =>
+    set((state) => ({
+      submitIsTriggered: true,
+    })),
+}));
