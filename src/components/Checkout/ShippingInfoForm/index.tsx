@@ -3,7 +3,7 @@ import CartTotal from "../../Cart/CartTotal";
 import "./index.css";
 import { addressFormStore } from "../../../store";
 import PlaceOrderButton from "../PlaceOrderButton";
-
+import { useNavigate } from "react-router-dom";
 const ShippingInfoForm = () => {
   const setFormValues = addressFormStore((state) => state.setFormValues);
   const formValues = addressFormStore((state) => state.formValues);
@@ -18,6 +18,8 @@ const ShippingInfoForm = () => {
   };
   const [formValue, setFormValue] = useState(initialState);
   const [formErrors, setFormErrors] = useState({});
+  const [isOrderPlaced, setIsOrderPlaced] = useState(false);
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -34,7 +36,19 @@ const ShippingInfoForm = () => {
     if (Object.keys(formErrors).length === 0) {
       setFormValues(formValue);
     }
+    if (
+      Object.keys(formErrors).length === 0 &&
+      formValue.firstName.length > 0
+    ) {
+      setIsOrderPlaced(true);
+    }
   }, [formErrors]);
+
+  useEffect(() => {
+    if (isOrderPlaced) {
+      navigate("/order-confirmation");
+    }
+  }, [isOrderPlaced]);
 
   const validate = (values) => {
     const errors = {};
