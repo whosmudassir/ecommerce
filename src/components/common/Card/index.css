@@ -187,27 +187,29 @@
 
 @media (max-width: 475px) {
   .card-wrapper {
-    width: 198px;
+    width: 164px;
   }
   .card-price {
     font-size: 14px;
   }
 }
 
-@media (max-width: 428px) {
+@media (max-width: 409px) {
+  .card-wrapper {
+    width: 144px;
+  }
+}
+
+/* @media (max-width: 428px) {
   .card-wrapper {
     width: 178px;
   }
 }
 
-@media (max-width: 387px) {
-  .card-wrapper {
-    width: 164px;
-  }
-}
+
 
 @media (max-width: 361px) {
   .card-wrapper {
     width: 144px;
   }
-}
+} */
