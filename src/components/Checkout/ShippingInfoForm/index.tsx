@@ -32,7 +32,6 @@ const ShippingInfoForm = () => {
   };
 
   useEffect(() => {
-    console.log(":::errors", formErrors);
     if (Object.keys(formErrors).length === 0) {
       setFormValues(formValue);
     }

@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from "react";
 import "./index.css";
 import { categoriesData } from "../../data/categoriesData";
+import { Link, useNavigate } from "react-router-dom";
 
 const Categories = () => {
   const [displayCategory, setDisplayCategory] = useState([]);
+  const navigate = useNavigate();
   useEffect(() => {
     setDisplayCategory(categoriesData);
   }, []);
 
-  console.log("cat-->", displayCategory);
+  const handleClick = () => {
+    navigate("/shop");
+  };
 
   return (
     <div className="categories-wrapper">
@@ -16,9 +20,14 @@ const Categories = () => {
         <>
           <div className="category-wrapper">
             <div className="img-wrapper">
-              <img className="responsive-img" src={category.img} />
+              <Link to="/shop">
+                <img className="responsive-img" src={category.img} />
+              </Link>
             </div>
-            <div className="category-name">{category.text}</div>
+
+            <div className="category-name" onClick={handleClick}>
+              {category.text}
+            </div>
           </div>
         </>
       ))}
