@@ -5,6 +5,7 @@
   gap: 8px;
   flex-direction: column;
   padding-top: 20px;
+  padding-left: 40px;
   width: 60%;
 }
 
@@ -54,6 +55,7 @@
 @media (max-width: 1024px) {
   .shipping-info-form-wrapper {
     width: 100%;
+    padding-left: 0px;
   }
   .shipping-info-input {
     width: 100%;
