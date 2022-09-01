@@ -5,6 +5,7 @@
   gap: 10px;
   margin-bottom: 60px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .bestsellers-wrapper {
@@ -19,4 +20,11 @@
   font-family: Bold;
   text-transform: uppercase;
   margin: 16px 0px;
+}
+
+/* responsive */
+@media (max-width: 1024px) {
+  .bestsellers-card-wrapper {
+    row-gap: 50px;
+  }
 }
