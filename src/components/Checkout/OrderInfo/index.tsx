@@ -1,5 +1,5 @@
 import React from "react";
-import PlaceOrderButton from "../PlaceOrderButton";
+// import PlaceOrderButton from "../PlaceOrderButton";
 import "./index.css";
 import { cartGrandTotalStore } from "../../../store";
 
@@ -50,7 +50,7 @@ const OrderInfo = () => {
           <p className="order-info-item-main-text">{finalTotal}</p>
         </div>
       </div>
-      <PlaceOrderButton finalTotal={finalTotal} />
+      {/* <PlaceOrderButton finalTotal={finalTotal} /> */}
     </div>
   );
 };

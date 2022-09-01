@@ -13,8 +13,8 @@ const Checkout = () => {
         </div>
         <OrderStatusBar cart={true} checkout={true} confirmation={false} />
         <div className="checkout-info-wrapper">
-          <ShippingInfoForm />
           <OrderInfo />
+          <ShippingInfoForm />
         </div>
       </div>
     </div>
