@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import CartTotal from "../../Cart/CartTotal";
 import "./index.css";
 import { addressFormStore } from "../../../store";
+import PlaceOrderButton from "../PlaceOrderButton";
 
 const ShippingInfoForm = () => {
   const setFormValues = addressFormStore((state) => state.setFormValues);
@@ -23,17 +24,14 @@ const ShippingInfoForm = () => {
     setFormValue({ ...formValue, [name]: value });
   };
 
-  console.log("::::::::::formsssss", formValues);
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormErrors(validate(formValue));
-    console.log(":::submited");
   };
 
   useEffect(() => {
     console.log(":::errors", formErrors);
     if (Object.keys(formErrors).length === 0) {
-      console.log("::::useeffect", formValue);
       setFormValues(formValue);
     }
   }, [formErrors]);
@@ -159,7 +157,8 @@ const ShippingInfoForm = () => {
           </div>
         </div>
       </form>
-      <button onClick={handleSubmit}>Submit</button>
+      <PlaceOrderButton handleOnClick={handleSubmit} />
+      {/* <button onClick={handleSubmit}>Submit</button> */}
     </div>
   );
 };

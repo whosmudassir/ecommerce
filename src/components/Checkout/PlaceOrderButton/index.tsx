@@ -3,93 +3,94 @@ import "./index.css";
 import { Link } from "react-router-dom";
 import { addOrderService } from "../../../services/addOrderServices";
 import { useNavigate } from "react-router-dom";
-const PlaceOrderButton = ({ finalTotal }) => {
+const PlaceOrderButton = ({ handleOnClick }) => {
   const navigate = useNavigate();
-  const loadScript = async (url) => {
-    return new Promise((resolve) => {
-      const script = document.createElement("script");
-      script.src = url;
 
-      script.onload = () => {
-        resolve(true);
-      };
+  // const loadScript = async (url) => {
+  //   return new Promise((resolve) => {
+  //     const script = document.createElement("script");
+  //     script.src = url;
 
-      script.onerror = () => {
-        resolve(false);
-      };
-      document.body.appendChild(script);
-    });
-  };
+  //     script.onload = () => {
+  //       resolve(true);
+  //     };
 
-  const displayRazorpay = async () => {
-    const res = await loadScript(
-      "https://checkout.razorpay.com/v1/checkout.js"
-    );
+  //     script.onerror = () => {
+  //       resolve(false);
+  //     };
+  //     document.body.appendChild(script);
+  //   });
+  // };
 
-    if (!res) {
-      return console.log("error");
-    }
+  // const displayRazorpay = async () => {
+  //   const res = await loadScript(
+  //     "https://checkout.razorpay.com/v1/checkout.js"
+  //   );
 
-    // const options = {
-    //   key: "rzp_test_SP206ka3zuV4SX",
-    //   amount: finalTotal * 100,
-    //   currency: "INR",
-    //   name: "MsftsRep",
-    //   description: "Thank you for shopping with us",
+  //   if (!res) {
+  //     return console.log("error");
+  //   }
 
-    //   handler: function () {
-    //     console.log("::entered");
-    //     const orderId = "122";
+  //   // const options = {
+  //   //   key: "rzp_test_SP206ka3zuV4SX",
+  //   //   amount: finalTotal * 100,
+  //   //   currency: "INR",
+  //   //   name: "MsftsRep",
+  //   //   description: "Thank you for shopping with us",
 
-    //     const orderData = {
-    //       products: "products",
-    //       amount: finalTotal * 100,
-    //       // paymentId: response.razorpay_payment_id,
-    //       orderId,
-    //       delivery: "address",
-    //     };
+  //   //   handler: function () {
+  //   //     console.log("::entered");
+  //   //     const orderId = "122";
 
-    //     // const { data, status } = await addOrderService(orderData, "sdsds");
-    //     console.log("::::status", status);
-    //     if (true) {
-    //       // setSelectedCoupon({});
-    //       // dispatchOrder({ type: "GET_ORDERS", payload: data.order });
-    //       navigate("/order-confirmation");
-    //     }
-    //   },
+  //   //     const orderData = {
+  //   //       products: "products",
+  //   //       amount: finalTotal * 100,
+  //   //       // paymentId: response.razorpay_payment_id,
+  //   //       orderId,
+  //   //       delivery: "address",
+  //   //     };
 
-    //   prefill: {
-    //     name: "mudassir",
-    //     email: "pay@msftsrep.shop",
-    //     contact: "9999999999",
-    //   },
-    // };
-    var options = {
-      key: "rzp_test_SP206ka3zuV4SX",
-      amount: finalTotal * 100,
-      currency: "INR",
-      name: "MsftsRep",
-      description: "Thank you for shopping with us",
+  //   //     // const { data, status } = await addOrderService(orderData, "sdsds");
+  //   //     console.log("::::status", status);
+  //   //     if (true) {
+  //   //       // setSelectedCoupon({});
+  //   //       // dispatchOrder({ type: "GET_ORDERS", payload: data.order });
+  //   //       navigate("/order-confirmation");
+  //   //     }
+  //   //   },
 
-      // image: "https://example.com/your_logo",
-      order_id: "order_IluGWxBm9U8zJ8", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-      callback_url: "https://eneqd3r9zrjok.x.pipedream.net/",
-      prefill: {
-        name: "Gaurav Kumar",
-        email: "gaurav.kumar@example.com",
-        contact: "9999999999",
-      },
-      notes: {
-        address: "Razorpay Corporate Office",
-      },
-      theme: {
-        color: "#3399cc",
-      },
-    };
+  //   //   prefill: {
+  //   //     name: "mudassir",
+  //   //     email: "pay@msftsrep.shop",
+  //   //     contact: "9999999999",
+  //   //   },
+  //   // };
+  //   var options = {
+  //     key: "rzp_test_SP206ka3zuV4SX",
+  //     amount: finalTotal * 100,
+  //     currency: "INR",
+  //     name: "MsftsRep",
+  //     description: "Thank you for shopping with us",
 
-    const paymentObject = new Razorpay(options);
-    paymentObject.open();
-  };
+  //     // image: "https://example.com/your_logo",
+  //     order_id: "order_IluGWxBm9U8zJ8", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+  //     callback_url: "https://eneqd3r9zrjok.x.pipedream.net/",
+  //     prefill: {
+  //       name: "Gaurav Kumar",
+  //       email: "gaurav.kumar@example.com",
+  //       contact: "9999999999",
+  //     },
+  //     notes: {
+  //       address: "Razorpay Corporate Office",
+  //     },
+  //     theme: {
+  //       color: "#3399cc",
+  //     },
+  //   };
+
+  //   const paymentObject = new Razorpay(options);
+  //   paymentObject.open();
+  // };
 
   return (
     <div className="place-order-btn-wrapper">
@@ -97,7 +98,7 @@ const PlaceOrderButton = ({ finalTotal }) => {
         <Link to="">
           <button
             className="primary-btn place-order-btn"
-            onClick={displayRazorpay}
+            onClick={handleOnClick}
           >
             Place Order
           </button>
