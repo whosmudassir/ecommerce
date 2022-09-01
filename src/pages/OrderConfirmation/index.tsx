@@ -4,6 +4,12 @@ import OrderStatusBar from "../../components/Checkout/OrderStatusBar";
 import { addressFormStore } from "../../store";
 const OrderConfirmation = () => {
   const formValues = addressFormStore((state) => state.formValues);
+  const randstr = (prefix) => {
+    return Math.random()
+      .toString(36)
+      .replace("0.", prefix || "");
+  };
+
   return (
     <div className="body-wrapper">
       <div className="cart-wrapper">
@@ -16,7 +22,7 @@ const OrderConfirmation = () => {
             🎉 Congratulations {formValues.firstName} !
           </p>
           <p className="congrats-body-text"> Your order has been placed </p>
-          <p className="order-id-text"> Order ID : </p>
+          <p className="order-id-text"> Order ID : {randstr("msftsRep")} </p>
         </div>
       </div>
     </div>

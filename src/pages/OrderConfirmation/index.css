@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
   padding: 30px;
+  padding-top: 60px;
   gap: 10px;
 }
 
@@ -19,4 +20,14 @@
 .order-id-text {
   font-family: Regular;
   font-size: 16px;
+}
+
+/* responsive */
+@media (max-width: 1024px) {
+  .congrats-heading-text {
+    font-size: 28px;
+    font-family: Bold;
+    color: #484f56;
+    text-align: center;
+  }
 }
