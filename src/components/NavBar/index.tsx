@@ -5,7 +5,7 @@ import { cartStore } from "../../store/";
 
 const NavBar = () => {
   const itemsInCart = cartStore((state) => state.cart);
-  console.log(itemsInCart);
+
   return (
     <div>
       <div className="nav-bar-wrapper">

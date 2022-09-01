@@ -32,7 +32,6 @@ const ProductList = () => {
     let results = [...shopList];
     let filteredCategoryResults;
     if (selectedCategoryItem) {
-      console.log("::cat--", selectedCategoryItem);
       // if (selectedBrandItem.length > 0) {
       //   const categoryWBrand = cardInfo.filter((item) => {
       //     if (selectedBrandItem.includes(item.brandName)) {
@@ -49,8 +48,6 @@ const ProductList = () => {
       setCardInfo(filteredCategoryResults);
       // }
     }
-
-    console.log("::filter func::", filteredCategoryResults);
   };
 
   const addBrandFilters = () => {
@@ -97,8 +94,6 @@ const ProductList = () => {
   const clearFilters = () => {
     setSortOrder("unsort");
   };
-
-  console.log(":::::card info", cardInfo);
 
   return (
     <div className="body-wrapper">
