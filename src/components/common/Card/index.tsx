@@ -54,7 +54,7 @@ const Card = ({
 
   //on add to wishlist
   const addItemToWishlist = (item: any) => {
-    if (heartIcon == "regular") {
+    if (heartIcon === "regular") {
       setHeartIcon("solid");
       addToWishlist(item);
       setAlertText("Item added to wishlist");
@@ -90,8 +90,8 @@ const Card = ({
 
   //filter wishlisted item
   const filterWishlistedItems = () => {
-    wishlist.map((item: any) => {
-      if (item.id == id) {
+    wishlist.forEach((item: any) => {
+      if (item.id === id) {
         setHeartIcon("solid");
       }
     });
@@ -99,7 +99,7 @@ const Card = ({
 
   useEffect(() => {
     filterWishlistedItems();
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div>
@@ -123,7 +123,7 @@ const Card = ({
           className="card-body"
           style={{
             //@ts-ignore
-            borderRadius: expandedCardId == id && "6px 6px 0px 0px",
+            borderRadius: expandedCardId === id && "6px 6px 0px 0px",
           }}
         >
           <div className="card-info">
@@ -132,7 +132,7 @@ const Card = ({
                 {" "}
                 <p className="card-brand-name">{brandName}</p>
               </Link>
-              {expandedCardId == id && (
+              {expandedCardId === id && (
                 <button className="icon-wrapper " onClick={closeQuickView}>
                   <i className="fa-solid fa-xmark card-close-btn-icon"></i>
                 </button>
@@ -143,7 +143,7 @@ const Card = ({
               <p className="card-name"> {name} </p>
             </Link>
           </div>
-          {expandedCardId == id && (
+          {expandedCardId === id && (
             <div className="card-sizes-wrapper">
               <AddToCartPopup setSelectedSize={setSelectedSize} />
             </div>
@@ -153,7 +153,7 @@ const Card = ({
             <p className="card-price">₹{price}</p>
 
             <div className="card-btn-wrapper">
-              {expandedCardId == id ? (
+              {expandedCardId === id ? (
                 <>
                   <button
                     className={` ${

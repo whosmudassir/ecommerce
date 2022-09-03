@@ -16,6 +16,7 @@ const NavBar = () => {
             <img
               className="logo"
               src={require("../../assets/images/logo.jpg")}
+              alt="logo"
             />
           </Link>
         </div>

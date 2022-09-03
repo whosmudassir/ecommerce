@@ -10,9 +10,9 @@ const ProductDetail = () => {
   //setting up single product
   const [itemDetail, setItemDetail] = useState<any>([]);
   useEffect(() => {
-    const filteredItem = shopList.find((item) => item.name == shopitem);
+    const filteredItem = shopList.find((item) => item.name === shopitem);
     setItemDetail(filteredItem);
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className="body-wrapper">

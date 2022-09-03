@@ -12,16 +12,16 @@ const Carousel = ({ carouselData }: any) => {
         return carousel.img;
       })
     );
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   // auto swipe on carousels
   useEffect(() => {
     const interval = setInterval(nextSlide, 4000);
     return () => clearInterval(interval);
-  }, [currentCarousel]);
+  }, [currentCarousel]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const nextSlide = () => {
-    if (currentCarousel != carouselImgSource.length - 1) {
+    if (currentCarousel !== carouselImgSource.length - 1) {
       setCurrentCarousel((currentSlide) => {
         return currentSlide + 1;
       });
@@ -31,7 +31,7 @@ const Carousel = ({ carouselData }: any) => {
   };
 
   const previousSlide = () => {
-    if (currentCarousel != 0) {
+    if (currentCarousel !== 0) {
       setCurrentCarousel((currentSlide) => {
         return currentSlide - 1;
       });
@@ -57,6 +57,7 @@ const Carousel = ({ carouselData }: any) => {
             <img
               className="responsive-img"
               src={carouselImgSource[currentCarousel]}
+              alt="logo"
             />
           </Link>
         </div>
@@ -73,7 +74,7 @@ const Carousel = ({ carouselData }: any) => {
                 <div
                   onClick={() => dotSlider(index)}
                   className={
-                    currentCarousel == index ? "dot-active" : "dot-inactive"
+                    currentCarousel === index ? "dot-active" : "dot-inactive"
                   }
                 />
               </div>

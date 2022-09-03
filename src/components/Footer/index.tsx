@@ -7,7 +7,11 @@ const Footer = () => {
     <div className="footer-wrapper">
       <div className="footer-section-one">
         <div className="footer-left-content">
-          <img className="logo" src={require("../../assets/images/logo.jpg")} />
+          <img
+            className="logo"
+            src={require("../../assets/images/logo.jpg")}
+            alt="logo"
+          />
           <div className="icons-wrapper">
             <button className="icon-wrapper">
               <i className="fa-brands fa-github icon"></i>
@@ -46,7 +50,11 @@ const Footer = () => {
       </div>
       <div className="footer-right-content">
         <div className="built-by-text">
-          <a href="https://whosmudassir.netlify.app/" target="_blank">
+          <a
+            href="https://whosmudassir.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <p className="footer-text">
               Built with{" "}
               <i className="fa fa-heart" style={{ color: "red" }}></i> by

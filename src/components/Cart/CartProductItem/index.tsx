@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import QuantitySelector from "../../common/QuantitySelector";
 import "./index.css";
 import { cartStore, cartGrandTotalStore } from "../../../store";
@@ -23,12 +23,6 @@ const CartProductItem = ({
   //add item to cart
   //@ts-ignore
   const removeFromCart = cartStore((state) => state.removeFromCart);
-
-  const cartGrandTotal = cartGrandTotalStore((state) => state.cartGrandTotal);
-
-  const setCartGrandTotal = cartGrandTotalStore(
-    (state) => state.setCartGrandTotal
-  );
   const increaseCartGrandTotal = cartGrandTotalStore(
     (state) => state.increaseCartGrandTotal
   );

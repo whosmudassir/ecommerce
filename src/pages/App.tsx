@@ -1,6 +1,5 @@
 import "../../src/App.css";
 import NavBar from "../components/NavBar/index";
-import Slider from "../components/Slider/index";
 import Footer from "../components/Footer/index";
 import ProductList from "./ProductList";
 import Home from "./Home";

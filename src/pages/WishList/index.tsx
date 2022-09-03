@@ -6,7 +6,7 @@ import { wishlistStore } from "../../store";
 import Card from "../../components/common/Card";
 
 const WishList = () => {
-  const isLoggedin = false;
+  // const isLoggedin = false;
 
   const wishlist = wishlistStore((state) => state.wishlist);
 

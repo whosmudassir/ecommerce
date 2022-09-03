@@ -29,10 +29,10 @@ const OrderInfo = () => {
             {Number(cartGrandTotal).toFixed(2)}
           </p>
         </div>
-        <div className="order-info-items">
+        {/* <div className="order-info-items">
           <p className="order-info-item-main-text">Discount</p>
           <p className="order-info-item-text">566</p>
-        </div>
+        </div> */}
         <div className="order-info-items">
           <p className="order-info-item-main-text">Shipping</p>
           <p className="order-info-item-text">{calcShipping}</p>

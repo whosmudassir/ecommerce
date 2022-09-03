@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
-import CartTotal from "../../Cart/CartTotal";
 import "./index.css";
 import { addressFormStore } from "../../../store";
 import PlaceOrderButton from "../PlaceOrderButton";
 import { useNavigate } from "react-router-dom";
 const ShippingInfoForm = () => {
   const setFormValues = addressFormStore<any>((state) => state.setFormValues);
-  const formValues = addressFormStore((state) => state.formValues);
   const initialState = {
     firstName: "",
     lastName: "",
@@ -41,13 +39,13 @@ const ShippingInfoForm = () => {
     ) {
       setIsOrderPlaced(true);
     }
-  }, [formErrors]);
+  }, [formErrors]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     if (isOrderPlaced) {
       navigate("/order-confirmation");
     }
-  }, [isOrderPlaced]);
+  }, [isOrderPlaced]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const validate = (values: any) => {
     const errors: any = {};
