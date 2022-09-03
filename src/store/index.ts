@@ -2,68 +2,68 @@ import create from "zustand";
 
 interface IIsAlertVisible {
   alert: boolean;
-  showAlert: () => void;
-  hideAlert: () => void;
+  showAlert: any;
+  hideAlert: any;
 }
 
 interface IAlertTextStore {
   alertText: string;
-  setAlertText: () => void;
+  setAlertText: any;
 }
 
 interface ICartStore {
   cart: any;
-  addToCart: () => void;
-  removeFromCart: () => void;
+  addToCart: any;
+  removeFromCart: any;
 }
 
 interface ISelectedSizeStore {
   size: any;
-  selectSize: () => void;
+  selectSize: any;
 }
 
 interface IWishlistStore {
   wishlist: any;
-  addToWishlist: () => void;
-  removeFromWishlist: () => void;
+  addToWishlist: any;
+  removeFromWishlist: any;
 }
 
 interface ISetExpandedCard {
   expandedCardId: string;
-  setExpandedCardId: () => void;
+  setExpandedCardId: any;
 }
 
 interface ICartGrandTotalStore {
   cartGrandTotal: any;
-  setCartGrandTotal: () => void;
-  increaseCartGrandTotal: () => void;
-  decreaseCartGrandTotal: () => void;
+  setCartGrandTotal: any;
+  increaseCartGrandTotal: any;
+  decreaseCartGrandTotal: any;
 }
 
 interface ITotalWithTaxesStore {
   totalWithTaxes: any;
-  setTotalWithTaxes: () => void;
+  setTotalWithTaxes: any;
 }
 
 interface IProductListStore {
   productList: any;
-  addToProductList: () => void;
+  addToProductList: any;
 }
 
 interface IAddressFormStore {
   formValues: any;
   submitIsTriggered: any;
-  setFormValues: () => void;
-  setSubmitIsTriggered: () => void;
+  setFormValues: any;
+  setSubmitIsTriggered: any;
 }
 
 //backend to store user data of previous order
 export const cartStore = create<ICartStore>((set) => ({
   cart: [],
-  addToCart: (item) => set((state) => ({ cart: [item, ...state.cart] })),
-  removeFromCart: (id) =>
+  addToCart: (item: any) => set((state) => ({ cart: [item, ...state.cart] })),
+  removeFromCart: (id: any) =>
     set((state) => ({
-      cart: state.cart.filter((cartItem) => {
+      cart: state.cart.filter((cartItem: any) => {
         return cartItem.id !== id;
       }),
     })),
@@ -72,7 +72,7 @@ export const cartStore = create<ICartStore>((set) => ({
 //size selection
 export const selectedSizeStore = create<ISelectedSizeStore>((set) => ({
   size: [],
-  selectSize: (item) => set((state) => ({ size: [item, ...state.size] })),
+  selectSize: (item: any) => set((state) => ({ size: [item, ...state.size] })),
 }));
 
 //alert component trigger
@@ -84,17 +84,17 @@ export const isAlertVisible = create<IIsAlertVisible>((set) => ({
 
 export const alertTextStore = create<IAlertTextStore>((set) => ({
   alertText: "",
-  setAlertText: (text) => set((state) => ({ alertText: text })),
+  setAlertText: (text: any) => set((state) => ({ alertText: text })),
 }));
 
 //backend user specific store
 export const wishlistStore = create<IWishlistStore>((set) => ({
   wishlist: [],
-  addToWishlist: (item) =>
+  addToWishlist: (item: any) =>
     set((state) => ({ wishlist: [item, ...state.wishlist] })),
-  removeFromWishlist: (id) =>
+  removeFromWishlist: (id: any) =>
     set((state) => ({
-      wishlist: state.wishlist.filter((cartItem) => {
+      wishlist: state.wishlist.filter((cartItem: any) => {
         return cartItem.id !== id;
       }),
     })),
@@ -103,36 +103,38 @@ export const wishlistStore = create<IWishlistStore>((set) => ({
 //card expanded id
 export const setExpandedCard = create<ISetExpandedCard>((set) => ({
   expandedCardId: "",
-  setExpandedCardId: (id) => set((state) => ({ expandedCardId: id })),
+  setExpandedCardId: (id: any) => set((state) => ({ expandedCardId: id })),
 }));
 
 //card grand total
 export const cartGrandTotalStore = create<ICartGrandTotalStore>((set) => ({
   cartGrandTotal: 0,
-  setCartGrandTotal: (price) => set((state) => ({ cartGrandTotal: price })),
-  increaseCartGrandTotal: (price) =>
+  setCartGrandTotal: (price: any) =>
+    set((state) => ({ cartGrandTotal: price })),
+  increaseCartGrandTotal: (price: any) =>
     set((state) => ({ cartGrandTotal: state.cartGrandTotal + price })),
-  decreaseCartGrandTotal: (price) =>
+  decreaseCartGrandTotal: (price: any) =>
     set((state) => ({ cartGrandTotal: state.cartGrandTotal - price })),
 }));
 
 //final cart price with taxes
 export const totalWithTaxesStore = create<ITotalWithTaxesStore>((set) => ({
   totalWithTaxes: 0,
-  setTotalWithTaxes: (price) => set((state) => ({ totalWithTaxes: price })),
+  setTotalWithTaxes: (price: any) =>
+    set((state) => ({ totalWithTaxes: price })),
 }));
 
 //cardinfo
 export const productListStore = create<IProductListStore>((set) => ({
   productList: [],
-  addToProductList: (item) => set((state) => ({ productList: item })),
+  addToProductList: (item: any) => set((state) => ({ productList: item })),
 }));
 
 //address form validation
 export const addressFormStore = create<IAddressFormStore>((set) => ({
   formValues: {},
   submitIsTriggered: false,
-  setFormValues: (formValue) =>
+  setFormValues: (formValue: any) =>
     set((state) => ({ formValues: { ...formValue } })),
   setSubmitIsTriggered: () =>
     set((state) => ({

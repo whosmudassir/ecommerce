@@ -14,17 +14,17 @@ const Cart = () => {
   const isLoggedin = true;
 
   //store
-  const itemsInCart = cartStore((state) => state.cart);
-  const setCartGrandTotal = cartGrandTotalStore(
+  const itemsInCart = cartStore<any>((state) => state.cart);
+  const setCartGrandTotal = cartGrandTotalStore<any>(
     (state) => state.setCartGrandTotal
   );
 
   const calculateGrandTotal = () => {
     const grandTotal = itemsInCart
-      .map((item) => {
+      .map((item: any) => {
         return item.price;
       })
-      .reduce((prev, curr) => {
+      .reduce((prev: any, curr: any) => {
         return prev + curr;
       });
     setCartGrandTotal(grandTotal);
@@ -51,7 +51,7 @@ const Cart = () => {
                     confirmation={false}
                   />
                   <CartProductTitle />
-                  {itemsInCart.map((item) => (
+                  {itemsInCart.map((item: any) => (
                     <>
                       <CartProductItem
                         id={item.id}

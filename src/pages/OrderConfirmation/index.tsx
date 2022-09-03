@@ -4,7 +4,7 @@ import OrderStatusBar from "../../components/Checkout/OrderStatusBar";
 import { addressFormStore } from "../../store";
 const OrderConfirmation = () => {
   const formValues = addressFormStore((state) => state.formValues);
-  const randstr = (prefix) => {
+  const randstr = (prefix: any) => {
     return Math.random()
       .toString(36)
       .replace("0.", prefix || "");

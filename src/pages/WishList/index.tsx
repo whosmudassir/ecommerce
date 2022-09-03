@@ -19,7 +19,7 @@ const WishList = () => {
               <div>
                 <p className="cart-heading">Your Wishlist</p>
                 <div className="wishlist-wrapper">
-                  {wishlist.map((item) => (
+                  {wishlist.map((item: any) => (
                     <div key={item.id}>
                       <Card
                         id={item.id}

@@ -8,13 +8,14 @@ import SuccessAlert from "../../components/Alerts/SuccessAlert";
 
 const ProductList = () => {
   const [cardInfo, setCardInfo] = useState<any>(shopList);
-  const [sortOrder, setSortOrder] = useState(null);
+  const [sortOrder, setSortOrder] = useState<any>(null);
   const [radioValue, setRadioValue] = useState<any>();
-  const [selectedCategoryItem, setSelectedCategoryItem] = useState([]);
-  const [selectedBrandItem, setSelectedBrandItem] = useState([]);
+  const [selectedCategoryItem, setSelectedCategoryItem] = useState<any>([]);
+  const [selectedBrandItem, setSelectedBrandItem] = useState<any>([]);
   //sorting func
   const sortItems = () => {
     const results = [...shopList];
+    //@ts-ignore
     results.sort((firstItem, secondItem) => {
       if (sortOrder == "high") {
         setRadioValue("high");
@@ -109,7 +110,7 @@ const ProductList = () => {
       />
       <div className="product-list-wrapper">
         <SuccessAlert />
-        {cardInfo.map((item) => (
+        {cardInfo.map((item: any) => (
           <div key={item.id}>
             <Card
               id={item.id}

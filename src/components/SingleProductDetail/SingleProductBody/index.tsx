@@ -27,16 +27,18 @@ const SingleProductBody = ({
   imageUrl,
 }: ISingleProductBody) => {
   //store
-  const addToCart = cartStore((state) => state.addToCart);
-  const setAlertText = alertTextStore((state) => state.setAlertText);
-  const showAlert = isAlertVisible((state) => state.showAlert);
-  const hideAlert = isAlertVisible((state) => state.hideAlert);
-  const addToWishlist = wishlistStore((state) => state.addToWishlist);
-  const removeFromWishlist = wishlistStore((state) => state.removeFromWishlist);
+  const addToCart = cartStore<any>((state) => state.addToCart);
+  const setAlertText = alertTextStore<any>((state) => state.setAlertText);
+  const showAlert = isAlertVisible<any>((state) => state.showAlert);
+  const hideAlert = isAlertVisible<any>((state) => state.hideAlert);
+  const addToWishlist = wishlistStore<any>((state) => state.addToWishlist);
+  const removeFromWishlist = wishlistStore<any>(
+    (state) => state.removeFromWishlist
+  );
 
   //state
-  const [selectedSize, setSelectedSize] = useState("");
-  const [heartIcon, setHeartIcon] = useState("regular");
+  const [selectedSize, setSelectedSize] = useState<any>("");
+  const [heartIcon, setHeartIcon] = useState<any>("regular");
 
   //product detail item
   const item = {

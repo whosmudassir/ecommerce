@@ -1,5 +1,16 @@
 import React from "react";
 
+interface ISlider {
+  highToLowSort: any;
+  lowToHighSort: any;
+  clearFilters: any;
+  radioValue: any;
+  selectedCategoryItem: any;
+  setSelectedCategoryItem: any;
+  selectedBrandItem: any;
+  setSelectedBrandItem: any;
+}
+
 const Slider = ({
   highToLowSort,
   lowToHighSort,
@@ -9,12 +20,12 @@ const Slider = ({
   setSelectedCategoryItem,
   selectedBrandItem,
   setSelectedBrandItem,
-}) => {
-  const onSelectedCategoryItem = (item) => {
+}: ISlider) => {
+  const onSelectedCategoryItem = (item: any) => {
     setSelectedCategoryItem([...selectedCategoryItem, item]);
   };
 
-  const onSelectedBrandItem = (item) => {
+  const onSelectedBrandItem = (item: any) => {
     setSelectedBrandItem([...selectedBrandItem, item]);
   };
 
@@ -50,7 +61,7 @@ const Slider = ({
                   lowToHighSort();
                 }}
               />
-              <label for="lth" className="label-text">
+              <label htmlFor="lth" className="label-text">
                 Price: Low to High
               </label>
             </div>
@@ -66,7 +77,7 @@ const Slider = ({
                   highToLowSort();
                 }}
               />
-              <label for="htl" className="label-text">
+              <label htmlFor="htl" className="label-text">
                 Price: High to Low
               </label>
             </div>
@@ -84,7 +95,7 @@ const Slider = ({
                 onChange={() => onSelectedCategoryItem("t-shirts")}
                 // checked={todo.completed}
               />
-              <label for="tshirts" className="label-text">
+              <label htmlFor="tshirts" className="label-text">
                 T-shirts
               </label>
             </div>
@@ -96,7 +107,7 @@ const Slider = ({
                 value="hoodies"
                 onChange={() => onSelectedCategoryItem("hoodies")}
               />
-              <label for="hoodies" className="label-text">
+              <label htmlFor="hoodies" className="label-text">
                 Hoodies
               </label>
             </div>
@@ -108,7 +119,7 @@ const Slider = ({
                 value="sweatshirts"
                 onChange={() => onSelectedCategoryItem("sweatshirts")}
               />
-              <label for="sweatshirts" className="label-text">
+              <label htmlFor="sweatshirts" className="label-text">
                 Sweatshirts
               </label>
             </div>
@@ -120,7 +131,7 @@ const Slider = ({
                 value="accessories"
                 onChange={() => onSelectedCategoryItem("accessories")}
               />
-              <label for="accessories" className="label-text">
+              <label htmlFor="accessories" className="label-text">
                 Accessories
               </label>
             </div>
@@ -138,7 +149,7 @@ const Slider = ({
                 value="demons"
                 onChange={() => onSelectedBrandItem("demons")}
               />
-              <label for="demons" className="label-text">
+              <label htmlFor="demons" className="label-text">
                 Demons
               </label>
             </div>
@@ -150,7 +161,7 @@ const Slider = ({
                 value="cavempt"
                 onChange={() => onSelectedBrandItem("cavempt")}
               />
-              <label for="cavempt" className="label-text">
+              <label htmlFor="cavempt" className="label-text">
                 Cavempt
               </label>
             </div>
@@ -162,7 +173,7 @@ const Slider = ({
                 value="vetements"
                 onChange={() => onSelectedBrandItem("vetements")}
               />
-              <label for="vetements" className="label-text">
+              <label htmlFor="vetements" className="label-text">
                 Vetements
               </label>
             </div>
@@ -174,7 +185,7 @@ const Slider = ({
                 value="pleasures"
                 onChange={() => onSelectedBrandItem("pleasures")}
               />
-              <label for="pleasures" className="label-text">
+              <label htmlFor="pleasures" className="label-text">
                 Pleasures
               </label>
             </div>
@@ -186,7 +197,7 @@ const Slider = ({
                 value="bstroy"
                 onChange={() => onSelectedBrandItem("bstroy")}
               />
-              <label for="bstroy" className="label-text">
+              <label htmlFor="bstroy" className="label-text">
                 BStroy
               </label>
             </div>
@@ -198,7 +209,7 @@ const Slider = ({
                 value="numbernine"
                 onChange={() => onSelectedBrandItem("numbernine")}
               />
-              <label for="numbernine" className="label-text">
+              <label htmlFor="numbernine" className="label-text">
                 NumberNine
               </label>
             </div>

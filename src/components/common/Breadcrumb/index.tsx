@@ -8,7 +8,7 @@ const Breadcrumb = () => {
       <Link to={"/"}>
         <p className="breadcrumb-text">Home</p>
       </Link>
-      <i class="fa-solid fa-angle-right breadcrumb-icon"></i>
+      <i className="fa-solid fa-angle-right breadcrumb-icon"></i>
       <Link to={"/shop"}>
         <p className="breadcrumb-text">Shop</p>
       </Link>

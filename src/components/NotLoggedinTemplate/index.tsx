@@ -2,7 +2,11 @@ import React from "react";
 import EmptyScreenTemplate from "../common/EmptyScreenTemplate";
 import "./index.css";
 
-const NotLoggedinTemplate = ({ screenName }) => {
+interface INotLoggedinTemplate {
+  screenName: string;
+}
+
+const NotLoggedinTemplate = ({ screenName }: INotLoggedinTemplate) => {
   return (
     <>
       <EmptyScreenTemplate
