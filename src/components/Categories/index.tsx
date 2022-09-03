@@ -7,6 +7,7 @@ const Categories = () => {
   const [displayCategory, setDisplayCategory] = useState([]);
   const navigate = useNavigate();
   useEffect(() => {
+    //@ts-ignore
     setDisplayCategory(categoriesData);
   }, []);
 
@@ -16,7 +17,7 @@ const Categories = () => {
 
   return (
     <div className="categories-wrapper">
-      {displayCategory.map((category) => (
+      {displayCategory.map((category: any) => (
         <>
           <div className="category-wrapper">
             <div className="img-wrapper">

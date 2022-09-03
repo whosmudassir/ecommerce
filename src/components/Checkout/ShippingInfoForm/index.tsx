@@ -17,7 +17,7 @@ const ShippingInfoForm = () => {
     email: "",
   };
   const [formValue, setFormValue] = useState(initialState);
-  const [formErrors, setFormErrors] = useState({});
+  const [formErrors, setFormErrors] = useState<any>({});
   const [isOrderPlaced, setIsOrderPlaced] = useState(false);
   const navigate = useNavigate();
 
