@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import "./index.css";
 import { Link } from "react-router-dom";
 
-const Carousel = ({ carouselData }) => {
+const Carousel = ({ carouselData }: any) => {
   const [carouselImgSource, setCarouselImgSource] = useState([]);
   const [currentCarousel, setCurrentCarousel] = useState(0);
 
   useEffect(() => {
     setCarouselImgSource(
-      carouselData.map((carousel) => {
+      carouselData.map((carousel: any) => {
         return carousel.img;
       })
     );
@@ -40,7 +40,7 @@ const Carousel = ({ carouselData }) => {
     }
   };
 
-  const dotSlider = (index) => {
+  const dotSlider = (index: any) => {
     setCurrentCarousel(index);
   };
 

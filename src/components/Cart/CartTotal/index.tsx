@@ -23,7 +23,7 @@ const CartTotal = () => {
     Number(calcSgst) +
     Number(calcShipping);
 
-  const calculateTotalWithTaxes = ({ finalTotal }) => {
+  const calculateTotalWithTaxes = ({ finalTotal }: any) => {
     totalWithTaxes(finalTotal);
   };
 

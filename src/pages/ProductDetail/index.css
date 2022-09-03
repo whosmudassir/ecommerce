@@ -1,8 +1,6 @@
 .product-detail-wrapper {
   padding: 30px 26px;
   display: flex;
-  height: calc(100vh - 62px);
-  overflow: auto;
   width: 100%;
   justify-content: center;
 }

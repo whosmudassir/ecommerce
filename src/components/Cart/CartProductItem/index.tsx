@@ -40,16 +40,20 @@ const CartProductItem = ({
 
   const onQuantityIncrease = () => {
     setItemSubTotal(itemSubTotal + price);
+    //@ts-ignore
     increaseCartGrandTotal(price);
   };
 
   const onQuantityDecrease = () => {
     setItemSubTotal(itemSubTotal - price);
+    //@ts-ignore
     decreaseCartGrandTotal(price);
   };
 
-  const removeItem = (id) => {
+  const removeItem = (id: any) => {
+    //@ts-ignore
     removeFromCart(id);
+    //@ts-ignore
     decreaseCartGrandTotal(itemSubTotal);
   };
 
