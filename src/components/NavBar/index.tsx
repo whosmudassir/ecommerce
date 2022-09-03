@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "../../assets/images/logo.jpg";
 import { Link, Outlet } from "react-router-dom";
 import { cartStore } from "../../store/";
 
@@ -14,7 +13,10 @@ const NavBar = () => {
         </button> */}
         <div className="left-content">
           <Link to="/">
-            <img className="logo" src={logo} alt={logo} />
+            <img
+              className="logo"
+              src={require("../../assets/images/logo.jpg")}
+            />
           </Link>
         </div>
         <div className="right-content">

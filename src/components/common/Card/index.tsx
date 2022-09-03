@@ -24,19 +24,23 @@ const Card = ({
   imageUrl,
 }: ICardProps) => {
   //icon
-  const [heartIcon, setHeartIcon] = useState("regular");
+  const [heartIcon, setHeartIcon] = useState<any>("regular");
   //store
-  const addToCart = cartStore((state) => state.addToCart);
-  const showAlert = isAlertVisible((state) => state.showAlert);
-  const hideAlert = isAlertVisible((state) => state.hideAlert);
-  const expandedCardId = setExpandedCard((state) => state.expandedCardId);
-  const setExpandedCardId = setExpandedCard((state) => state.setExpandedCardId);
-  const addToWishlist = wishlistStore((state) => state.addToWishlist);
-  const removeFromWishlist = wishlistStore((state) => state.removeFromWishlist);
-  const setAlertText = alertTextStore((state) => state.setAlertText);
+  const addToCart = cartStore<any>((state) => state.addToCart);
+  const showAlert = isAlertVisible<any>((state) => state.showAlert);
+  const hideAlert = isAlertVisible<any>((state) => state.hideAlert);
+  const expandedCardId = setExpandedCard<any>((state) => state.expandedCardId);
+  const setExpandedCardId = setExpandedCard<any>(
+    (state) => state.setExpandedCardId
+  );
+  const addToWishlist = wishlistStore<any>((state) => state.addToWishlist);
+  const removeFromWishlist = wishlistStore<any>(
+    (state) => state.removeFromWishlist
+  );
+  const setAlertText = alertTextStore<any>((state) => state.setAlertText);
   const wishlist = wishlistStore((state) => state.wishlist);
   //states
-  const [selectedSize, setSelectedSize] = useState("");
+  const [selectedSize, setSelectedSize] = useState<any>("");
 
   const item = {
     id: id,
@@ -49,7 +53,7 @@ const Card = ({
   };
 
   //on add to wishlist
-  const addItemToWishlist = (item) => {
+  const addItemToWishlist = (item: any) => {
     if (heartIcon == "regular") {
       setHeartIcon("solid");
       addToWishlist(item);
@@ -69,7 +73,7 @@ const Card = ({
   };
 
   //on add to cart
-  const addItemToCart = (item) => {
+  const addItemToCart = (item: any) => {
     addToCart(item);
     setExpandedCardId(null);
     setAlertText("Item added to your bag");
@@ -86,7 +90,7 @@ const Card = ({
 
   //filter wishlisted item
   const filterWishlistedItems = () => {
-    wishlist.map((item) => {
+    wishlist.map((item: any) => {
       if (item.id == id) {
         setHeartIcon("solid");
       }

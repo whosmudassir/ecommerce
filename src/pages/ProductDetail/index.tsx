@@ -8,7 +8,7 @@ import SuccessAlert from "../../components/Alerts/SuccessAlert";
 const ProductDetail = () => {
   const { shopitem } = useParams();
   //setting up single product
-  const [itemDetail, setItemDetail] = useState([]);
+  const [itemDetail, setItemDetail] = useState<any>([]);
   useEffect(() => {
     const filteredItem = shopList.find((item) => item.name == shopitem);
     setItemDetail(filteredItem);

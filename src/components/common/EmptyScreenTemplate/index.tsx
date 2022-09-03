@@ -2,7 +2,17 @@ import React from "react";
 import "./index.css";
 import { Link } from "react-router-dom";
 
-const EmptyScreenTemplate = ({ icon, headingText, bodyText }) => {
+interface IEmptyScreenTemplate {
+  icon: string;
+  headingText: string;
+  bodyText: string;
+}
+
+const EmptyScreenTemplate = ({
+  icon,
+  headingText,
+  bodyText,
+}: IEmptyScreenTemplate) => {
   return (
     <>
       <div className="empty-screen-wrapper">

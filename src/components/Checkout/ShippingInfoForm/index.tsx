@@ -5,7 +5,7 @@ import { addressFormStore } from "../../../store";
 import PlaceOrderButton from "../PlaceOrderButton";
 import { useNavigate } from "react-router-dom";
 const ShippingInfoForm = () => {
-  const setFormValues = addressFormStore((state) => state.setFormValues);
+  const setFormValues = addressFormStore<any>((state) => state.setFormValues);
   const formValues = addressFormStore((state) => state.formValues);
   const initialState = {
     firstName: "",
@@ -16,17 +16,17 @@ const ShippingInfoForm = () => {
     phone: "",
     email: "",
   };
-  const [formValue, setFormValue] = useState(initialState);
+  const [formValue, setFormValue] = useState<any>(initialState);
   const [formErrors, setFormErrors] = useState<any>({});
-  const [isOrderPlaced, setIsOrderPlaced] = useState(false);
+  const [isOrderPlaced, setIsOrderPlaced] = useState<any>(false);
   const navigate = useNavigate();
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     const { name, value } = e.target;
     setFormValue({ ...formValue, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     setFormErrors(validate(formValue));
   };
@@ -49,8 +49,8 @@ const ShippingInfoForm = () => {
     }
   }, [isOrderPlaced]);
 
-  const validate = (values) => {
-    const errors = {};
+  const validate = (values: any) => {
+    const errors: any = {};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/i;
     if (!values.firstName) {
       errors.firstName = "First name is required!";
@@ -140,7 +140,7 @@ const ShippingInfoForm = () => {
               name="pinCode"
               value={formValue.pinCode}
               onChange={handleChange}
-              autocomplete="postal-code"
+              autoComplete="postal-code"
             />
           </div>
 

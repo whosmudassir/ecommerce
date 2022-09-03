@@ -1,6 +1,5 @@
 import React from "react";
 import "./index.css";
-import logo from "../../assets/images/logo.jpg";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -8,7 +7,7 @@ const Footer = () => {
     <div className="footer-wrapper">
       <div className="footer-section-one">
         <div className="footer-left-content">
-          <img className="logo" src={logo} alt={logo} />
+          <img className="logo" src={require("../../assets/images/logo.jpg")} />
           <div className="icons-wrapper">
             <button className="icon-wrapper">
               <i className="fa-brands fa-github icon"></i>

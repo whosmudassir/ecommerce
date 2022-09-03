@@ -2,7 +2,13 @@ import React from "react";
 import "./index.css";
 import { Link } from "react-router-dom";
 
-const OrderStatusBar = ({ cart, checkout, confirmation }) => {
+interface IOrderStatusBar {
+  cart: boolean;
+  checkout: boolean;
+  confirmation: boolean;
+}
+
+const OrderStatusBar = ({ cart, checkout, confirmation }: IOrderStatusBar) => {
   return (
     <div>
       <div className="order-status-parent-box">

@@ -3,7 +3,12 @@ import "./index.css";
 import { Link } from "react-router-dom";
 import { addOrderService } from "../../../services/addOrderServices";
 import { useNavigate } from "react-router-dom";
-const PlaceOrderButton = ({ handleOnClick }) => {
+
+interface IPlaceOrderButton {
+  handleOnClick: any;
+}
+
+const PlaceOrderButton = ({ handleOnClick }: IPlaceOrderButton) => {
   const navigate = useNavigate();
 
   // const loadScript = async (url) => {

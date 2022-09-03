@@ -4,7 +4,7 @@ import Tippy from "@tippyjs/react";
 
 import "tippy.js/dist/tippy.css";
 const DashboardCouponCode = () => {
-  const copyToClipboard = (couponCode) => {
+  const copyToClipboard = (couponCode: any) => {
     navigator.clipboard.writeText(couponCode);
   };
 

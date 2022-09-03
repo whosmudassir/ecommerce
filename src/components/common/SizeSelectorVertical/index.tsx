@@ -6,7 +6,7 @@ interface ISizeSelectorVertical {
 }
 
 const SizeSelectorVertical = ({ setSelectedSize }: ISizeSelectorVertical) => {
-  const onSizeChange = (e) => {
+  const onSizeChange = (e: any) => {
     setSelectedSize(e.target.value);
   };
   return (
@@ -23,7 +23,7 @@ const SizeSelectorVertical = ({ setSelectedSize }: ISizeSelectorVertical) => {
                 onSizeChange(e);
               }}
             />
-            <label for="aS" id="aS">
+            <label htmlFor="aS" id="aS">
               S
             </label>
             <input
@@ -35,7 +35,7 @@ const SizeSelectorVertical = ({ setSelectedSize }: ISizeSelectorVertical) => {
                 onSizeChange(e);
               }}
             />
-            <label for="aM" id="aM">
+            <label htmlFor="aM" id="aM">
               M
             </label>
             <input
@@ -47,7 +47,7 @@ const SizeSelectorVertical = ({ setSelectedSize }: ISizeSelectorVertical) => {
                 onSizeChange(e);
               }}
             />
-            <label for="aL" id="aL">
+            <label htmlFor="aL" id="aL">
               L
             </label>
             <input
@@ -59,7 +59,7 @@ const SizeSelectorVertical = ({ setSelectedSize }: ISizeSelectorVertical) => {
                 onSizeChange(e);
               }}
             />
-            <label for="aXL" id="aXL">
+            <label htmlFor="aXL" id="aXL">
               XL
             </label>
             <input
@@ -71,7 +71,7 @@ const SizeSelectorVertical = ({ setSelectedSize }: ISizeSelectorVertical) => {
                 onSizeChange(e);
               }}
             />
-            <label for="aXXL" id="aXXL">
+            <label htmlFor="aXXL" id="aXXL">
               XXL
             </label>
           </div>
