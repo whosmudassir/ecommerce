@@ -3,7 +3,6 @@ import Card from "../../components/common/Card/index";
 import Slider from "../../components/Slider";
 import { shopList } from "../../data/shopList";
 import { useEffect, useState } from "react";
-import { cartStore } from "../../store";
 import SuccessAlert from "../../components/Alerts/SuccessAlert";
 
 const ProductList = () => {
@@ -17,13 +16,14 @@ const ProductList = () => {
     const results = [...shopList];
     //@ts-ignore
     results.sort((firstItem, secondItem) => {
-      if (sortOrder == "high") {
+      if (sortOrder === "high") {
         setRadioValue("high");
         return secondItem.price - firstItem.price;
-      } else if (sortOrder == "low") {
+      } else if (sortOrder === "low") {
         setRadioValue("low");
         return firstItem.price - secondItem.price;
       }
+      return null;
     });
     setCardInfo(results);
   };
@@ -45,6 +45,7 @@ const ProductList = () => {
         if (selectedCategoryItem.includes(item.category)) {
           return item;
         }
+        return null;
       });
       setCardInfo(filteredCategoryResults);
       // }
@@ -59,19 +60,20 @@ const ProductList = () => {
         if (selectedBrandItem.includes(item.brandName)) {
           return item;
         }
+        return null;
       });
       setCardInfo(filteredBrandResults);
     }
   };
 
   useEffect(() => {
-    if (sortOrder == "unsort") {
+    if (sortOrder === "unsort") {
       setRadioValue("");
       setCardInfo(shopList);
-    } else if (sortOrder == "high" || "low") {
+    } else if (sortOrder === "high" || "low") {
       sortItems();
     }
-  }, [sortOrder]);
+  }, [sortOrder]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     if (selectedCategoryItem.length > 0) {
@@ -80,7 +82,7 @@ const ProductList = () => {
     if (selectedBrandItem.length > 0) {
       addBrandFilters();
     }
-  }, [selectedCategoryItem, selectedBrandItem]);
+  }, [selectedCategoryItem, selectedBrandItem]); // eslint-disable-line react-hooks/exhaustive-deps
 
   //sorting
   const lowToHighSort = () => {

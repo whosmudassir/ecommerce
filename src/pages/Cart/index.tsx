@@ -32,7 +32,7 @@ const Cart = () => {
 
   useEffect(() => {
     itemsInCart.length > 0 && calculateGrandTotal();
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <>

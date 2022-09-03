@@ -69,7 +69,7 @@ const SingleProductBody = ({
 
   //on add to wishlist
   const addItemToWishlist = () => {
-    if (heartIcon == "regular") {
+    if (heartIcon === "regular") {
       setHeartIcon("solid");
       addToWishlist(item);
       setAlertText("Item added to wishlist");

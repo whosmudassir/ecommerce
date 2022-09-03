@@ -22,7 +22,11 @@ const Categories = () => {
           <div className="category-wrapper">
             <div className="img-wrapper">
               <Link to="/shop">
-                <img className="responsive-img" src={category.img} />
+                <img
+                  className="responsive-img"
+                  src={category.img}
+                  alt="responsive-img"
+                />
               </Link>
             </div>
 

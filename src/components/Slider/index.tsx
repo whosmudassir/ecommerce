@@ -56,7 +56,7 @@ const Slider = ({
                 type="radio"
                 value={radioValue}
                 name="price"
-                checked={"low" == radioValue}
+                checked={"low" === radioValue}
                 onChange={() => {
                   lowToHighSort();
                 }}
@@ -72,7 +72,7 @@ const Slider = ({
                 type="radio"
                 value={radioValue}
                 name="price"
-                checked={"high" == radioValue}
+                checked={"high" === radioValue}
                 onChange={() => {
                   highToLowSort();
                 }}

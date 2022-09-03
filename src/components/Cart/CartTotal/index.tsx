@@ -1,16 +1,10 @@
-import React, { useEffect } from "react";
-import CheckoutButton from "../CheckoutButton";
+import React from "react";
 import "./index.css";
-import {
-  cartGrandTotalStore,
-  totalWithTaxesStore,
-  cartStore,
-} from "../../../store";
+import { cartGrandTotalStore } from "../../../store";
 
 const CartTotal = () => {
   const cartGrandTotal = cartGrandTotalStore((state) => state.cartGrandTotal);
-  const itemsInCart = cartStore((state) => state.cart);
-  const totalWithTaxes = totalWithTaxesStore((state) => state.totalWithTaxes);
+  // const totalWithTaxes = totalWithTaxesStore((state) => state.totalWithTaxes);
 
   //taxes and shipping price
   const grandTotal = cartGrandTotal.toFixed(2);
@@ -22,10 +16,6 @@ const CartTotal = () => {
     Number(calcCgst) +
     Number(calcSgst) +
     Number(calcShipping);
-
-  const calculateTotalWithTaxes = ({ finalTotal }: any) => {
-    totalWithTaxes(finalTotal);
-  };
 
   return (
     <div className="cart-total-wrapper">
@@ -39,10 +29,10 @@ const CartTotal = () => {
             {Number(cartGrandTotal).toFixed(2)}
           </p>
         </div>
-        <div className="cart-total-items">
+        {/* <div className="cart-total-items">
           <p className="cart-total-item-main-text">Discount</p>
           <p className="cart-total-item-text">566</p>
-        </div>
+        </div> */}
         <div className="cart-total-items">
           <p className="cart-total-item-main-text">Shipping</p>
           <p className="cart-total-item-text">{calcShipping}</p>
