@@ -60,11 +60,13 @@ const SingleProductBody = ({
 
   //on add to cart
   const addItemToCart = () => {
-    addToCart(item);
-    setAlertText("Item added to your bag");
-    showAlert();
-    hideSuccessAlert();
-    setSelectedSize("");
+    if (selectedSize.length > 0) {
+      addToCart(item);
+      setAlertText("Item added to your bag");
+      showAlert();
+      hideSuccessAlert();
+      setSelectedSize("");
+    }
   };
 
   //on add to wishlist

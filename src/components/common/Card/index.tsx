@@ -74,12 +74,14 @@ const Card = ({
 
   //on add to cart
   const addItemToCart = (item: any) => {
-    addToCart(item);
-    setExpandedCardId(null);
-    setAlertText("Item added to your bag");
-    showAlert();
-    hideSuccessAlert();
-    setSelectedSize("");
+    if (selectedSize.length > 0) {
+      addToCart(item);
+      setExpandedCardId(null);
+      setAlertText("Item added to your bag");
+      showAlert();
+      hideSuccessAlert();
+      setSelectedSize("");
+    }
   };
 
   //on close quick view
