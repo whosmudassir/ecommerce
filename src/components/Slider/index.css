@@ -50,7 +50,17 @@ input[type="checkbox"]:checked + label::after {
   background-color: black !important;
 }
 
-.input-color {
+.input-color,
+#sweatshirts,
+#hoodies,
+#tshirts,
+#accessories,
+#demons,
+#numbernine,
+#bstroy,
+#pleasures,
+#vetements,
+#cavempt {
   accent-color: black;
 }
 
