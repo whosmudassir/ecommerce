@@ -46,9 +46,11 @@ const Cart = () => {
                     <p className="cart-heading">Cart</p>
                   </div>
                   <OrderStatusBar
-                    cart={true}
-                    checkout={false}
-                    confirmation={false}
+                    cartSuccess={true}
+                    checkoutSuccess={true}
+                    confirmationSuccess={true}
+                    navToCart={true}
+                    navToCheckout={true}
                   />
                   <CartProductTitle />
                   {itemsInCart.map((item: any) => (

@@ -1,25 +1,52 @@
 import React from "react";
 import "./index.css";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 interface IOrderStatusBar {
-  cart: boolean;
-  checkout: boolean;
-  confirmation: boolean;
+  cartSuccess: boolean;
+  checkoutSuccess: boolean;
+  confirmationSuccess: boolean;
+  navToCart: boolean;
+  navToCheckout: boolean;
 }
 
-const OrderStatusBar = ({ cart, checkout, confirmation }: IOrderStatusBar) => {
+const OrderStatusBar = ({
+  cartSuccess,
+  checkoutSuccess,
+  confirmationSuccess,
+  navToCheckout,
+  navToCart,
+}: IOrderStatusBar) => {
+  const navigate = useNavigate();
+
+  const cartNavigationHandler = () => {
+    if (navToCart) {
+      navigate("/cart");
+    }
+  };
+
+  const checkoutNavigationHandler = () => {
+    if (navToCheckout) {
+      navigate("/checkout");
+    }
+  };
+
   return (
     <div>
       <div className="order-status-parent-box">
+        {/* cart progress */}
         <div
           className={`order-status-child-box first-status-child + ${
-            cart && "active-status"
+            cartSuccess && "active-status"
           } `}
         >
-          <Link to={"/cart"}>
+          <div
+            onClick={cartNavigationHandler}
+            className={` ${navToCart && "status-pointer"} `}
+          >
             <p className="order-status-child-title">
-              {cart && (
+              {cartSuccess && (
                 <i
                   className="fa-regular fa-circle-check"
                   style={{ color: "black" }}
@@ -28,14 +55,21 @@ const OrderStatusBar = ({ cart, checkout, confirmation }: IOrderStatusBar) => {
               Shopping Cart
             </p>
             <p className="order-status-child-body">View your items</p>
-          </Link>
+          </div>
         </div>
+
+        {/* checkout progress */}
         <div
-          className={`order-status-child-box + ${checkout && "active-status"} `}
+          className={`order-status-child-box + ${
+            checkoutSuccess && "active-status"
+          } `}
         >
-          <Link to={"/checkout"}>
+          <div
+            onClick={checkoutNavigationHandler}
+            className={` ${navToCheckout && "status-pointer"} `}
+          >
             <p className="order-status-child-title">
-              {checkout && (
+              {checkoutSuccess && (
                 <i
                   className="fa-regular fa-circle-check"
                   style={{ color: "black" }}
@@ -44,15 +78,17 @@ const OrderStatusBar = ({ cart, checkout, confirmation }: IOrderStatusBar) => {
               Shipping and Checkout
             </p>
             <p className="order-status-child-body">Enter your details</p>
-          </Link>
+          </div>
         </div>
+
+        {/* confirmation progress */}
         <div
           className={`order-status-child-box + ${
-            confirmation && "active-status"
+            confirmationSuccess && "active-status"
           } `}
         >
           <p className="order-status-child-title">
-            {confirmation && (
+            {confirmationSuccess && (
               <i
                 className="fa-regular fa-circle-check"
                 style={{ color: "black" }}
