@@ -10,6 +10,10 @@
   padding-right: 8px;
 }
 
+.status-pointer {
+  cursor: pointer;
+}
+
 .order-status-child-box {
   border-bottom: 3px solid rgba(173, 181, 189, 0.4);
   display: flex;

@@ -11,7 +11,13 @@ const Checkout = () => {
         <div>
           <p className="cart-heading">Checkout</p>
         </div>
-        <OrderStatusBar cart={true} checkout={true} confirmation={false} />
+        <OrderStatusBar
+          cartSuccess={true}
+          checkoutSuccess={true}
+          confirmationSuccess={true}
+          navToCart={true}
+          navToCheckout={true}
+        />
         <div className="checkout-info-wrapper">
           <OrderInfo />
           <ShippingInfoForm />
