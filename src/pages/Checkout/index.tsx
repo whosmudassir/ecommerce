@@ -14,7 +14,7 @@ const Checkout = () => {
         <OrderStatusBar
           cartSuccess={true}
           checkoutSuccess={true}
-          confirmationSuccess={true}
+          confirmationSuccess={false}
           navToCart={true}
           navToCheckout={true}
         />
