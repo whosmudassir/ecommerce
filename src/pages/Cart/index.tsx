@@ -47,8 +47,8 @@ const Cart = () => {
                   </div>
                   <OrderStatusBar
                     cartSuccess={true}
-                    checkoutSuccess={true}
-                    confirmationSuccess={true}
+                    checkoutSuccess={false}
+                    confirmationSuccess={false}
                     navToCart={true}
                     navToCheckout={true}
                   />
