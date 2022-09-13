@@ -141,3 +141,10 @@ export const addressFormStore = create<IAddressFormStore>((set) => ({
       submitIsTriggered: true,
     })),
 }));
+
+//Login sign up trigger
+export const userLogin = create<any>((set) => ({
+  isLoginModalOpen: false,
+  showLoginModal: () => set((state) => ({ isLoginModalOpen: true })),
+  hideLoginModal: () => set((state) => ({ isLoginModalOpen: false })),
+}));
