@@ -3,12 +3,17 @@ import LoginForm from "../../components/Forms/LoginForm";
 import RegisterForm from "../../components/Forms/RegisterForm";
 import "./index.css";
 
+import { userLogin } from "../../store";
+
 const Login = () => {
-  const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [isSignupOpen, setIsSignupOpen] = useState(false);
 
+  //store
+  const isLoginModalOpen = userLogin((state) => state.isLoginModalOpen);
+  const showLoginModal = userLogin((state) => state.showLoginModal);
+
   const triggerLogin = () => {
-    setIsLoginOpen(true);
+    showLoginModal();
   };
 
   const triggerSignup = () => {
@@ -37,7 +42,7 @@ const Login = () => {
           </div>
         </div>
       </div>
-      {isLoginOpen && <LoginForm />}
+      {isLoginModalOpen && <LoginForm />}
       {isSignupOpen && <RegisterForm />}
     </>
   );
