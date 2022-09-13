@@ -1,7 +1,14 @@
 import React from "react";
 import Modal from "../../common/ Modal";
+import { userLogin } from "../../../store";
 
 const RegisterForm = () => {
+  //store
+  const hideSignupModal = userLogin((state) => state.hideSignupModal);
+
+  const triggerSignupModalClose = () => {
+    hideSignupModal();
+  };
   const content = (
     <div>
       <p>form</p>
@@ -11,7 +18,7 @@ const RegisterForm = () => {
   const footer = (
     <div>
       <button>Sign up</button>
-      <button>Cancel</button>
+      <button onClick={triggerSignupModalClose}>Cancel</button>
     </div>
   );
 

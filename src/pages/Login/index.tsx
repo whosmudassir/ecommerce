@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import LoginForm from "../../components/Forms/LoginForm";
 import RegisterForm from "../../components/Forms/RegisterForm";
 import "./index.css";
@@ -6,18 +6,19 @@ import "./index.css";
 import { userLogin } from "../../store";
 
 const Login = () => {
-  const [isSignupOpen, setIsSignupOpen] = useState(false);
-
   //store
   const isLoginModalOpen = userLogin((state) => state.isLoginModalOpen);
   const showLoginModal = userLogin((state) => state.showLoginModal);
+
+  const isSignupModalOpen = userLogin((state) => state.isSignupModalOpen);
+  const showSignupModal = userLogin((state) => state.showSignupModal);
 
   const triggerLogin = () => {
     showLoginModal();
   };
 
   const triggerSignup = () => {
-    setIsSignupOpen(true);
+    showSignupModal();
   };
 
   return (
@@ -43,7 +44,7 @@ const Login = () => {
         </div>
       </div>
       {isLoginModalOpen && <LoginForm />}
-      {isSignupOpen && <RegisterForm />}
+      {isSignupModalOpen && <RegisterForm />}
     </>
   );
 };
