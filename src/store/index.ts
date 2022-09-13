@@ -147,4 +147,7 @@ export const userLogin = create<any>((set) => ({
   isLoginModalOpen: false,
   showLoginModal: () => set((state) => ({ isLoginModalOpen: true })),
   hideLoginModal: () => set((state) => ({ isLoginModalOpen: false })),
+  isSignupModalOpen: false,
+  showSignupModal: () => set((state) => ({ isSignupModalOpen: true })),
+  hideSignupModal: () => set((state) => ({ isSignupModalOpen: false })),
 }));
