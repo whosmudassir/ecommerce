@@ -1,4 +1,4 @@
-.modal-wrapper {
+.modal-wrapper-modal {
   position: fixed;
   z-index: 10;
   left: 0;
@@ -19,7 +19,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
-  padding: 1rem 1.5rem;
-  width: 24rem;
-  border-radius: 0.2rem;
+  /* padding: 1rem 1.5rem; */
+  /* width: 24rem; */
+  /* border-radius: 0.2rem; */
 }
