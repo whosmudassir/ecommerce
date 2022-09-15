@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from "../../common/ Modal";
 import { userLogin } from "../../../store";
-
+import "./index.css";
 const LoginForm = () => {
   //store
   const hideLoginModal = userLogin((state) => state.hideLoginModal);
@@ -26,7 +26,10 @@ const LoginForm = () => {
           <input className="outlined-input" type="password" />
         </div>
         <div className="modal-foot">
-          <button className="secondary-btn" onClick={triggerModalClose}>
+          <button
+            className="secondary-btn cancel-btn"
+            onClick={triggerModalClose}
+          >
             Cancel
           </button>
           <button className="primary-btn">Continue</button>
