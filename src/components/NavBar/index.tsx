@@ -21,10 +21,10 @@ const NavBar = () => {
           </Link>
         </div>
         <div className="right-content">
-          <button className="icon-wrapper">
+          {/* <button className="icon-wrapper">
             {" "}
             <i className="fa-solid fa-magnifying-glass nav-icon"></i>
-          </button>
+          </button> */}
           <button className="icon-wrapper">
             <Link to="/user">
               <i className="fa-solid fa-user nav-icon"></i>
