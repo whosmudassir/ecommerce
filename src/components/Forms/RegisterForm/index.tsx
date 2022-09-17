@@ -1,6 +1,7 @@
 import React from "react";
 import Modal from "../../common/ Modal";
 import { userLogin } from "../../../store";
+import "./index.css";
 
 const RegisterForm = () => {
   //store
@@ -27,7 +28,10 @@ const RegisterForm = () => {
           <input className="outlined-input" type="password" />
         </div>
         <div className="modal-foot">
-          <button className="secondary-btn" onClick={triggerSignupModalClose}>
+          <button
+            className="secondary-btn cancel-btn"
+            onClick={triggerSignupModalClose}
+          >
             Cancel
           </button>
           <button className="primary-btn">Submit</button>
