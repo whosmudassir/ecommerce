@@ -28,6 +28,7 @@ const Login = () => {
           <p className="dashboard-heading">My account</p>
         </div>
         <div className="login-btn-wrapper">
+          <i className={"fa-solid fa-user empty-screen"}></i>
           <div>
             <button className="primary-btn login-btn">Login as guest</button>
           </div>{" "}
