@@ -10,6 +10,7 @@ import OrderConfirmation from "./OrderConfirmation";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import WishList from "./WishList";
 import ProductDetail from "./ProductDetail";
+import NotFound from "./NotFound";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Routes>
+          <Route path="*" element={<NotFound />} />
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<ProductList />} />
           <Route path="/cart" element={<Cart />} />
