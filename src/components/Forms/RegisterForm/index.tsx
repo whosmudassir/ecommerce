@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Modal from "../../common/ Modal";
 import { userLogin } from "../../../store";
 import "./index.css";
@@ -10,6 +10,20 @@ const RegisterForm = () => {
   const triggerSignupModalClose = () => {
     hideSignupModal();
   };
+
+  const initialState = {
+    name: "",
+    email: "",
+    password: "",
+  };
+
+  const [formValue, setFormValue] = useState<any>(initialState);
+
+  const handleChange = (e: any) => {
+    const { name, value } = e.target;
+    setFormValue({ ...formValue, [name]: value });
+  };
+
   const content = (
     <div className="modal-wrapper">
       <div className="modal">
@@ -21,11 +35,31 @@ const RegisterForm = () => {
         </div>
         <div className="modal-body">
           <p className="modal-text">Name</p>
-          <input className="outlined-input" type="text" />
+          <input
+            className="outlined-input"
+            type="text"
+            value={formValue.name}
+            name="name"
+            autoComplete="cc-given-name"
+            onChange={handleChange}
+          />
           <p className="modal-text">Email</p>
-          <input className="outlined-input" type="text" />
+          <input
+            className="outlined-input"
+            type="text"
+            name="email"
+            value={formValue.email}
+            autoComplete="email"
+            onChange={handleChange}
+          />
           <p className="modal-text">Password</p>
-          <input className="outlined-input" type="password" />
+          <input
+            className="outlined-input"
+            type="password"
+            name="password"
+            value={formValue.password}
+            onChange={handleChange}
+          />
         </div>
         <div className="modal-foot">
           <button
