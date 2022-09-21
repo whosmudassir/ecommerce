@@ -9,7 +9,7 @@ const LoginForm = () => {
   };
 
   //store
-  const hideLoginModal = userLogin((state) => state.hideLoginModal);
+  const hideLoginModal = userLogin((state: any) => state.hideLoginModal);
 
   const [formValue, setFormValue] = useState(initialState);
 

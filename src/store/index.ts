@@ -57,6 +57,15 @@ interface IAddressFormStore {
   setSubmitIsTriggered: any;
 }
 
+interface IUserLogin {
+  isLoginModalOpen: any;
+  showLoginModal: any;
+  hideLoginModal: any;
+  isSignupModalOpen: any;
+  showSignupModal: any;
+  hideSignupModal: any;
+}
+
 //backend to store user data of previous order
 export const cartStore = create<ICartStore>((set) => ({
   cart: [],
@@ -143,7 +152,7 @@ export const addressFormStore = create<IAddressFormStore>((set) => ({
 }));
 
 //Login sign up trigger
-export const userLogin = create<any>((set) => ({
+export const userLogin = create<IUserLogin>((set) => ({
   isLoginModalOpen: false,
   showLoginModal: () => set((state) => ({ isLoginModalOpen: true })),
   hideLoginModal: () => set((state) => ({ isLoginModalOpen: false })),

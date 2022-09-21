@@ -5,7 +5,7 @@ import "./index.css";
 
 const RegisterForm = () => {
   //store
-  const hideSignupModal = userLogin((state) => state.hideSignupModal);
+  const hideSignupModal = userLogin((state: any) => state.hideSignupModal);
 
   const triggerSignupModalClose = () => {
     hideSignupModal();
