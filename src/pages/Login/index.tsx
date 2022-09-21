@@ -7,11 +7,11 @@ import { userLogin } from "../../store";
 
 const Login = () => {
   //store
-  const isLoginModalOpen = userLogin((state) => state.isLoginModalOpen);
-  const showLoginModal = userLogin((state) => state.showLoginModal);
+  const isLoginModalOpen = userLogin((state: any) => state.isLoginModalOpen);
+  const showLoginModal = userLogin((state: any) => state.showLoginModal);
 
-  const isSignupModalOpen = userLogin((state) => state.isSignupModalOpen);
-  const showSignupModal = userLogin((state) => state.showSignupModal);
+  const isSignupModalOpen = userLogin((state: any) => state.isSignupModalOpen);
+  const showSignupModal = userLogin((state: any) => state.showSignupModal);
 
   const triggerLogin = () => {
     showLoginModal();
