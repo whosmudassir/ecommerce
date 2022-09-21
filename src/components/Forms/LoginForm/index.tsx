@@ -63,12 +63,6 @@ const LoginForm = () => {
     </div>
   );
 
-  const footer = (
-    <div>
-      <button onClick={triggerModalClose}>ok</button>
-    </div>
-  );
-
   return (
     <>
       <Modal content={content} />
