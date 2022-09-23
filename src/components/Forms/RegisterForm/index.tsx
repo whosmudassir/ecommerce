@@ -30,7 +30,7 @@ const RegisterForm = () => {
         <div className="modal-head">
           <p className="modal-head-text">Sign up</p>
           <button className="icon-wrapper" onClick={triggerSignupModalClose}>
-            <i className="fa-solid fa-xmark close-btn"></i>
+            <i className="fa-solid fa-xmark close-btn form-close-mark"></i>
           </button>
         </div>
         <div className="modal-body">
@@ -61,14 +61,14 @@ const RegisterForm = () => {
             onChange={handleChange}
           />
         </div>
-        <div className="modal-foot">
+        <div className="modal-foot modal-login-footer">
           <button
             className="secondary-btn cancel-btn"
             onClick={triggerSignupModalClose}
           >
             Cancel
           </button>
-          <button className="primary-btn">Submit</button>
+          <button className="primary-btn btn-active">Submit</button>
         </div>
       </div>
     </div>

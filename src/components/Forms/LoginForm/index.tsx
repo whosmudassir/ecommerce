@@ -28,7 +28,7 @@ const LoginForm = () => {
         <div className="modal-head">
           <p className="modal-head-text">Login</p>
           <button className="icon-wrapper" onClick={triggerModalClose}>
-            <i className="fa-solid fa-xmark close-btn"></i>
+            <i className="fa-solid fa-xmark close-btn form-close-mark"></i>
           </button>
         </div>
         <div className="modal-body">
@@ -50,14 +50,14 @@ const LoginForm = () => {
             onChange={handleChange}
           />
         </div>
-        <div className="modal-foot">
+        <div className="modal-foot modal-login-footer">
           <button
             className="secondary-btn cancel-btn"
             onClick={triggerModalClose}
           >
             Cancel
           </button>
-          <button className="primary-btn">Continue</button>
+          <button className="primary-btn btn-active">Continue</button>
         </div>
       </div>
     </div>

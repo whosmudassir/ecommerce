@@ -1,6 +1,29 @@
+@import url("../../../assets/theme/index.css");
+
 .cancel-btn {
   border-color: #b4b4b4;
 
   font-family: Medium;
   border-radius: 0px;
+}
+
+.modal-head-text {
+  font-family: Bold;
+  font-size: 18px;
+  color: #484f56;
+  text-align: center;
+  line-height: -10px;
+  padding-top: 4px;
+  padding-left: 6px;
+  text-transform: uppercase;
+}
+
+.form-close-mark {
+  color: #484f56 !important;
+  padding-right: 6px;
+}
+
+.modal-login-footer {
+  padding-right: 30px;
+  padding-bottom: 18px;
 }
