@@ -71,7 +71,8 @@
   font-size: 14px;
 }
 
-.footer-title-text {
+.footer-title-text,
+.footer-icon {
   color: white;
 }
 
