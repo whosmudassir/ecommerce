@@ -14,13 +14,22 @@ const Footer = () => {
           />
           <div className="icons-wrapper">
             <button className="icon-wrapper">
-              <i className="fa-brands fa-github icon"></i>
+              <a
+                href="https://github.com/whosmudassir/ecommerce"
+                target="_blank"
+              >
+                <i className="fa-brands fa-github icon footer-icon"></i>
+              </a>
             </button>
             <button className="icon-wrapper">
-              <i className="fa-brands fa-instagram icon"></i>
+              <a href="https://instagram.com/whosmudassir/" target="_blank">
+                <i className="fa-brands fa-instagram icon footer-icon"></i>
+              </a>
             </button>
             <button className="icon-wrapper">
-              <i className="fa-brands fa-twitter icon"></i>
+              <a href="https://twitter.com/whosmudassir" target="_blank">
+                <i className="fa-brands fa-twitter icon footer-icon"></i>
+              </a>
             </button>
           </div>
         </div>
@@ -43,9 +52,11 @@ const Footer = () => {
         </div>
 
         <div className="copyright-text">
-          <p className="footer-text">
-            © MsftsRep {currentYear}. All rights reserved.
-          </p>
+          <a href="https://github.com/whosmudassir/ecommerce" target="_blank">
+            <p className="footer-text">
+              © MsftsRep {currentYear}. All rights reserved.
+            </p>
+          </a>
         </div>
       </div>
       <div className="footer-right-content">
