@@ -7,7 +7,7 @@ const RegisterForm = () => {
   //store
   const hideSignupModal = userLogin((state: any) => state.hideSignupModal);
 
-  const triggerSignupModalClose = () => {
+  const triggerModalClose = () => {
     hideSignupModal();
   };
 
@@ -29,7 +29,7 @@ const RegisterForm = () => {
       <div className="modal">
         <div className="modal-head">
           <p className="modal-head-text">Sign up</p>
-          <button className="icon-wrapper" onClick={triggerSignupModalClose}>
+          <button className="icon-wrapper" onClick={triggerModalClose}>
             <i className="fa-solid fa-xmark close-btn form-close-mark"></i>
           </button>
         </div>
@@ -64,7 +64,7 @@ const RegisterForm = () => {
         <div className="modal-foot modal-login-footer">
           <button
             className="secondary-btn cancel-btn"
-            onClick={triggerSignupModalClose}
+            onClick={triggerModalClose}
           >
             Cancel
           </button>
@@ -76,7 +76,7 @@ const RegisterForm = () => {
 
   return (
     <>
-      <Modal content={content} />
+      <Modal content={content} onClose={triggerModalClose} />
     </>
   );
 };

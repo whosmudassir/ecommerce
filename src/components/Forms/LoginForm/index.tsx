@@ -65,7 +65,7 @@ const LoginForm = () => {
 
   return (
     <>
-      <Modal content={content} />
+      <Modal content={content} onClose={triggerModalClose} />
     </>
   );
 };
