@@ -7,10 +7,6 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   overflow: hidden;
-  /* opacity: 0; */
-  /* visibility: hidden; */
-  /* transform: scale(1.1); */
-  /* transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s; */
 }
 
 .modal-content {
@@ -19,7 +15,4 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
-  /* padding: 1rem 1.5rem; */
-  /* width: 24rem; */
-  /* border-radius: 0.2rem; */
 }
