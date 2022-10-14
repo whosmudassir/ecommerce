@@ -9,7 +9,8 @@ interface IModal {
 const Modal = ({ content, onClose }: IModal) => {
   return (
     <>
-      <div className="modal-wrapper-modal" onClick={onClose}>
+      <div className="modal-wrapper-modal">
+        <div className="modal-wrapper-modal" onClick={onClose}></div>
         <div className="modal-content">{content}</div>
       </div>
     </>
