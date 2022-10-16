@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Modal from "../../common/ Modal";
 import { userLogin } from "../../../store";
 import "./index.css";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../../firebase-config";
 
 const RegisterForm = () => {
   //store
@@ -22,6 +24,19 @@ const RegisterForm = () => {
   const handleChange = (e: any) => {
     const { name, value } = e.target;
     setFormValue({ ...formValue, [name]: value });
+  };
+
+  const createUserInFirebase = async () => {
+    try {
+      const user = await createUserWithEmailAndPassword(
+        auth,
+        formValue.email,
+        formValue.password
+      );
+      console.log(":::::fb user", user);
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   const content = (
@@ -68,7 +83,12 @@ const RegisterForm = () => {
           >
             Cancel
           </button>
-          <button className="primary-btn btn-active">Submit</button>
+          <button
+            className="primary-btn btn-active"
+            onClick={createUserInFirebase}
+          >
+            Submit
+          </button>
         </div>
       </div>
     </div>

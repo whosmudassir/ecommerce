@@ -1,7 +1,13 @@
 import React from "react";
 import "./index.css";
+import { auth } from "../../../firebase-config";
+import { signOut } from "firebase/auth";
 
 const DashboardSideBar = () => {
+  const logout = async () => {
+    await signOut(auth);
+  };
+
   return (
     <div className="dashboard-sidebar-wrapper">
       <div className="dashboard-sidebar-text-items">
@@ -20,7 +26,7 @@ const DashboardSideBar = () => {
         <p>Account Details</p>
       </div>
       <div className="dashboard-sidebar-text-items">
-        <p>Log out</p>
+        <button onClick={logout}>Log out</button>
       </div>
     </div>
   );
