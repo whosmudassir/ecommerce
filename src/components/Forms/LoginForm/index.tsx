@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import Modal from "../../common/ Modal";
 import { userLogin } from "../../../store";
 import "./index.css";
+import { auth } from "../../../firebase-config";
+import { signInWithEmailAndPassword } from "firebase/auth";
+
 const LoginForm = () => {
   const initialState = {
     email: "",
@@ -20,6 +23,18 @@ const LoginForm = () => {
   const handleChange = (e: any) => {
     const { name, value } = e.target;
     setFormValue({ ...formValue, [name]: value });
+  };
+
+  const loginUser = async () => {
+    try {
+      const loggedInUser = await signInWithEmailAndPassword(
+        auth,
+        formValue.email,
+        formValue.password
+      );
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   const content = (
@@ -57,7 +72,9 @@ const LoginForm = () => {
           >
             Cancel
           </button>
-          <button className="primary-btn btn-active">Continue</button>
+          <button className="primary-btn btn-active" onClick={loginUser}>
+            Continue
+          </button>
         </div>
       </div>
     </div>
