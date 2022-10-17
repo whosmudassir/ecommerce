@@ -33,9 +33,10 @@ const RegisterForm = () => {
         formValue.email,
         formValue.password
       );
-      console.log(":::::fb user", user);
+      triggerModalClose();
     } catch (e) {
       console.log(e);
+      triggerModalClose();
     }
   };
 
