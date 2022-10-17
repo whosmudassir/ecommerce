@@ -6,13 +6,11 @@ import { auth } from "../../firebase-config";
 import { onAuthStateChanged } from "firebase/auth";
 
 const User = () => {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState<any>({});
 
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
   });
-
-  console.log("::::::user", user);
 
   return (
     <>
