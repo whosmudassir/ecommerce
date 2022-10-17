@@ -2,6 +2,8 @@ import React from "react";
 import LoginForm from "../../components/Forms/LoginForm";
 import RegisterForm from "../../components/Forms/RegisterForm";
 import "./index.css";
+import { auth } from "../../firebase-config";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 import { userLogin } from "../../store";
 
@@ -21,6 +23,19 @@ const Login = () => {
     showSignupModal();
   };
 
+  //login as default user
+  const loginUser = async () => {
+    try {
+      const loggedInUser = await signInWithEmailAndPassword(
+        auth,
+        "default@gmail.com",
+        "123456"
+      );
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
   return (
     <>
       <div>
@@ -30,7 +45,9 @@ const Login = () => {
         <div className="login-btn-wrapper">
           <i className={"fa-solid fa-user empty-screen"}></i>
           <div>
-            <button className="primary-btn login-btn">Login as guest</button>
+            <button className="primary-btn login-btn" onClick={loginUser}>
+              Login as guest
+            </button>
           </div>{" "}
           <div>
             <button className="primary-btn login-btn" onClick={triggerSignup}>
