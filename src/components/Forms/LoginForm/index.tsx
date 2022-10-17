@@ -32,8 +32,10 @@ const LoginForm = () => {
         formValue.email,
         formValue.password
       );
+      triggerModalClose();
     } catch (e) {
       console.log(e);
+      triggerModalClose();
     }
   };
 
