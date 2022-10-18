@@ -28,7 +28,7 @@ const RegisterForm = () => {
 
   const createUserInFirebase = async () => {
     try {
-      const user = await createUserWithEmailAndPassword(
+      await createUserWithEmailAndPassword(
         auth,
         formValue.email,
         formValue.password

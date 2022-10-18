@@ -27,7 +27,7 @@ const LoginForm = () => {
 
   const loginUser = async () => {
     try {
-      const loggedInUser = await signInWithEmailAndPassword(
+      await signInWithEmailAndPassword(
         auth,
         formValue.email,
         formValue.password
