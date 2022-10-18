@@ -17,17 +17,26 @@ const Footer = () => {
               <a
                 href="https://github.com/whosmudassir/ecommerce"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <i className="fa-brands fa-github icon footer-icon"></i>
               </a>
             </button>
             <button className="icon-wrapper">
-              <a href="https://instagram.com/whosmudassir/" target="_blank">
+              <a
+                href="https://instagram.com/whosmudassir/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i className="fa-brands fa-instagram icon footer-icon"></i>
               </a>
             </button>
             <button className="icon-wrapper">
-              <a href="https://twitter.com/whosmudassir" target="_blank">
+              <a
+                href="https://twitter.com/whosmudassir"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i className="fa-brands fa-twitter icon footer-icon"></i>
               </a>
             </button>
@@ -52,7 +61,11 @@ const Footer = () => {
         </div>
 
         <div className="copyright-text">
-          <a href="https://github.com/whosmudassir/ecommerce" target="_blank">
+          <a
+            href="https://github.com/whosmudassir/ecommerce"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <p className="footer-text">
               © MsftsRep {currentYear}. All rights reserved.
             </p>
