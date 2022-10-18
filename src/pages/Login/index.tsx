@@ -26,11 +26,7 @@ const Login = () => {
   //login as default user
   const loginUser = async () => {
     try {
-      const loggedInUser = await signInWithEmailAndPassword(
-        auth,
-        "default@gmail.com",
-        "123456"
-      );
+      await signInWithEmailAndPassword(auth, "default@gmail.com", "123456");
     } catch (e) {
       console.log(e);
     }
