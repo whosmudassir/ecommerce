@@ -1,14 +1,9 @@
 import React from "react";
 
-import DashboardAddressInfo from "../DashboardAddressInfo";
 import "./index.css";
 
 const DashboardBody = () => {
-  return (
-    <div className="dashboard-content-wrapper">
-      <DashboardAddressInfo />
-    </div>
-  );
+  return <div className="dashboard-content-wrapper">Work in progress😁</div>;
 };
 
 export default DashboardBody;

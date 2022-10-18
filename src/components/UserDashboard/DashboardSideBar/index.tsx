@@ -17,9 +17,6 @@ const DashboardSideBar = () => {
         <p>Orders</p>
       </div>
       <div className="dashboard-sidebar-text-items">
-        <p>Addresses</p>
-      </div>
-      <div className="dashboard-sidebar-text-items">
         <p>Coupons</p>
       </div>
       <div className="dashboard-sidebar-text-items">
