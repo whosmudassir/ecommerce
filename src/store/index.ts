@@ -66,6 +66,12 @@ interface IUserLogin {
   hideSignupModal: any;
 }
 
+interface IIsLoading {
+  isAppLoading?: boolean;
+  showIsAppLoading?: any;
+  hideIsAppLoading?: any;
+}
+
 //backend to store user data of previous order
 export const cartStore = create<ICartStore>((set) => ({
   cart: [],
@@ -159,4 +165,11 @@ export const userLogin = create<IUserLogin>((set) => ({
   isSignupModalOpen: false,
   showSignupModal: () => set((state) => ({ isSignupModalOpen: true })),
   hideSignupModal: () => set((state) => ({ isSignupModalOpen: false })),
+}));
+
+//App loading
+export const isLoading = create<IIsLoading>((set) => ({
+  isAppLoading: false,
+  showIsAppLoading: () => set((state) => ({ isAppLoading: true })),
+  hideIsAppLoading: () => set((state) => ({ isAppLoading: false })),
 }));

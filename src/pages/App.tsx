@@ -11,12 +11,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import WishList from "./WishList";
 import ProductDetail from "./ProductDetail";
 import NotFound from "./NotFound";
+import Loading from "../components/common/Loading";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <NavBar />
+        <Loading />
         <Routes>
           <Route path="*" element={<NotFound />} />
           <Route path="/" element={<Home />} />

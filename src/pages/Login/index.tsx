@@ -4,14 +4,15 @@ import RegisterForm from "../../components/Forms/RegisterForm";
 import "./index.css";
 import { auth } from "../../firebase-config";
 import { signInWithEmailAndPassword } from "firebase/auth";
-
+import { isLoading } from "../../store";
 import { userLogin } from "../../store";
 
 const Login = () => {
   //store
   const isLoginModalOpen = userLogin((state: any) => state.isLoginModalOpen);
   const showLoginModal = userLogin((state: any) => state.showLoginModal);
-
+  const showIsAppLoading = isLoading((state) => state.showIsAppLoading);
+  const hideIsAppLoading = isLoading((state) => state.hideIsAppLoading);
   const isSignupModalOpen = userLogin((state: any) => state.isSignupModalOpen);
   const showSignupModal = userLogin((state: any) => state.showSignupModal);
 
@@ -26,7 +27,9 @@ const Login = () => {
   //login as default user
   const loginUser = async () => {
     try {
+      showIsAppLoading();
       await signInWithEmailAndPassword(auth, "default@gmail.com", "123456");
+      hideIsAppLoading();
     } catch (e) {
       console.log(e);
     }
