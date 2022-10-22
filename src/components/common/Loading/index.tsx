@@ -19,7 +19,7 @@ const Loading = () => {
               height: "60vh",
             }}
           >
-            <img src={spinAnimation} />
+            <img src={spinAnimation} alt={spinAnimation} />
           </div>
         </div>
       ) : null}
