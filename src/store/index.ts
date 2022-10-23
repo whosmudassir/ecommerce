@@ -72,6 +72,14 @@ interface IIsLoading {
   hideIsAppLoading?: any;
 }
 
+interface ITriggerErrorModal {
+  isErrorModalOpen: boolean;
+  showErrorModal: any;
+  hideErrorModal: any;
+  errorModalMessage: string;
+  setErrorModalMessage: any;
+}
+
 //backend to store user data of previous order
 export const cartStore = create<ICartStore>((set) => ({
   cart: [],
@@ -172,4 +180,15 @@ export const isLoading = create<IIsLoading>((set) => ({
   isAppLoading: false,
   showIsAppLoading: () => set((state) => ({ isAppLoading: true })),
   hideIsAppLoading: () => set((state) => ({ isAppLoading: false })),
+}));
+
+//Error modal
+export const triggerErrorModal = create<ITriggerErrorModal>((set) => ({
+  isErrorModalOpen: false,
+  showErrorModal: () => set((state) => ({ isErrorModalOpen: true })),
+  hideErrorModal: () => set((state) => ({ isErrorModalOpen: false })),
+  //message in error modal
+  errorModalMessage: "",
+  setErrorModalMessage: (text: string) =>
+    set((state) => ({ errorModalMessage: text })),
 }));

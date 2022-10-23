@@ -4,8 +4,7 @@ import RegisterForm from "../../components/Forms/RegisterForm";
 import "./index.css";
 import { auth } from "../../firebase-config";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { isLoading } from "../../store";
-import { userLogin } from "../../store";
+import { isLoading, userLogin, triggerErrorModal } from "../../store";
 
 const Login = () => {
   //store
@@ -15,6 +14,12 @@ const Login = () => {
   const hideIsAppLoading = isLoading((state) => state.hideIsAppLoading);
   const isSignupModalOpen = userLogin((state: any) => state.isSignupModalOpen);
   const showSignupModal = userLogin((state: any) => state.showSignupModal);
+  const showErrorModal = triggerErrorModal(
+    (state: any) => state.showErrorModal
+  );
+  const setErrorModalMessage = triggerErrorModal(
+    (state: any) => state.setErrorModalMessage
+  );
 
   const triggerLogin = () => {
     showLoginModal();
@@ -31,7 +36,9 @@ const Login = () => {
       await signInWithEmailAndPassword(auth, "default@gmail.com", "123456");
       hideIsAppLoading();
     } catch (e) {
-      console.log(e);
+      hideIsAppLoading();
+      setErrorModalMessage("TODO : Error Message");
+      showErrorModal();
     }
   };
 
