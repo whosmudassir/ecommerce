@@ -12,6 +12,7 @@ import WishList from "./WishList";
 import ProductDetail from "./ProductDetail";
 import NotFound from "./NotFound";
 import Loading from "../components/common/Loading";
+import ErrorModal from "../components/common/ErrorModal";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Loading />
+        <ErrorModal />
         <Routes>
           <Route path="*" element={<NotFound />} />
           <Route path="/" element={<Home />} />
