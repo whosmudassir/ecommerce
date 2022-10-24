@@ -15,6 +15,7 @@ const LoginForm = () => {
   const hideLoginModal = userLogin((state: any) => state.hideLoginModal);
 
   const [formValue, setFormValue] = useState(initialState);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const triggerModalClose = () => {
     hideLoginModal();
@@ -35,7 +36,7 @@ const LoginForm = () => {
       triggerModalClose();
     } catch (e) {
       console.log(e);
-      triggerModalClose();
+      setErrorMessage(e.code);
     }
   };
 
@@ -49,6 +50,13 @@ const LoginForm = () => {
           </button>
         </div>
         <div className="modal-body">
+          {errorMessage.length > 0 && (
+            <div className="error-alert">
+              <i className="fa-solid fa-circle-exclamation"></i>{" "}
+              <p>{errorMessage}</p>
+            </div>
+          )}
+
           <p className="modal-text">Email</p>
           <input
             className="outlined-input"
