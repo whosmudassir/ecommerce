@@ -15,6 +15,9 @@ import Loading from "../components/common/Loading";
 import ErrorModal from "../components/common/ErrorModal";
 import DashboardCouponInfo from "../components/UserDashboard/DashboardCouponInfo";
 import DashboardBody from "../components/UserDashboard/DashboardBody";
+import DashboardInfo from "../components/UserDashboard/DashboardInfo";
+import DashboardOrderInfo from "../components/UserDashboard/DashboardOrderInfo";
+import DashboardAccountDetailsInfo from "../components/UserDashboard/DashboardAccountDetailsInfo";
 
 function App() {
   return (
@@ -32,8 +35,10 @@ function App() {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/order-confirmation" element={<OrderConfirmation />} />
           <Route path="/user" element={<User />}>
-            <Route path="dashboard" element={<DashboardBody />} />
+            <Route path="dashboard" element={<DashboardInfo />} />
             <Route path="couponcode" element={<DashboardCouponInfo />} />
+            <Route path="orders" element={<DashboardOrderInfo />} />
+            <Route path="account" element={<DashboardAccountDetailsInfo />} />
           </Route>
           <Route path="/shop/:shopitem" element={<ProductDetail />} />
         </Routes>
