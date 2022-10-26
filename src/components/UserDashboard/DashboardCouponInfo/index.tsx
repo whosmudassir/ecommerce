@@ -6,8 +6,6 @@ const DashboardCouponInfo = () => {
   return (
     <div className="dashboard-coupon-info-wrapper">
       <DashboardCouponCode />
-      <DashboardCouponCode />
-      <DashboardCouponCode />
     </div>
   );
 };

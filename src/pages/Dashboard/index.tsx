@@ -1,10 +1,12 @@
 import React from "react";
 import DashboardBody from "../../components/UserDashboard/DashboardBody";
+import DashboardCouponInfo from "../../components/UserDashboard/DashboardCouponInfo";
 import DashboardSideBar from "../../components/UserDashboard/DashboardSideBar";
-
+import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import "./index.css";
 
 const Dashboard = () => {
+  // let { path, url } = RouteMatch();
   return (
     <>
       <div>
@@ -13,11 +15,17 @@ const Dashboard = () => {
         </div>
         <div className="dashboard-wrapper">
           <div className="dashboard-sidebar-wrapper">
-            {" "}
-            <DashboardSideBar />{" "}
+            <DashboardSideBar />
+            <Outlet />
           </div>
           <div className="dashboard-body-wrapper">
-            <DashboardBody />
+            {/* <BrowserRouter>
+              <Routes>
+          
+                <Route path="/dashboard" element={<DashboardBody />} />
+                <Route path="/couponcode" element={<DashboardCouponInfo />} />
+              </Routes>
+            </BrowserRouter> */}
           </div>
         </div>
       </div>

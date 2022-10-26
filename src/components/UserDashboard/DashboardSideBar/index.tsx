@@ -2,7 +2,7 @@ import React from "react";
 import "./index.css";
 import { auth } from "../../../firebase-config";
 import { signOut } from "firebase/auth";
-
+import { Link } from "react-router-dom";
 const DashboardSideBar = () => {
   const logout = async () => {
     await signOut(auth);
@@ -11,16 +11,26 @@ const DashboardSideBar = () => {
   return (
     <div className="dashboard-sidebar-wrapper">
       <div className="dashboard-sidebar-text-items">
-        <p>Dashboard</p>
+        <Link to="/user/dashboard">
+          {" "}
+          <p>Dashboard</p>{" "}
+        </Link>
       </div>
       <div className="dashboard-sidebar-text-items">
-        <p>Orders</p>
+        <Link to="/user/orders">
+          <p>Orders</p>
+        </Link>
       </div>
       <div className="dashboard-sidebar-text-items">
-        <p>Coupons</p>
+        <Link to="/user/couponcode">
+          <p>Coupons</p>
+        </Link>
       </div>
       <div className="dashboard-sidebar-text-items">
-        <p>Account Details</p>
+        <Link to="/user/couponcode">
+          {" "}
+          <p>Account Details</p>
+        </Link>
       </div>
       <div className="dashboard-sidebar-text-items">
         <button onClick={logout}>Log out</button>
