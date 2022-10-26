@@ -13,6 +13,8 @@ import ProductDetail from "./ProductDetail";
 import NotFound from "./NotFound";
 import Loading from "../components/common/Loading";
 import ErrorModal from "../components/common/ErrorModal";
+import DashboardCouponInfo from "../components/UserDashboard/DashboardCouponInfo";
+import DashboardBody from "../components/UserDashboard/DashboardBody";
 
 function App() {
   return (
@@ -29,7 +31,10 @@ function App() {
           <Route path="/wish-list" element={<WishList />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/order-confirmation" element={<OrderConfirmation />} />
-          <Route path="/user" element={<User />} />
+          <Route path="/user" element={<User />}>
+            <Route path="dashboard" element={<DashboardBody />} />
+            <Route path="couponcode" element={<DashboardCouponInfo />} />
+          </Route>
           <Route path="/shop/:shopitem" element={<ProductDetail />} />
         </Routes>
       </BrowserRouter>
