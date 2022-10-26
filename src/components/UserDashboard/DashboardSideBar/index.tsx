@@ -27,7 +27,7 @@ const DashboardSideBar = () => {
         </Link>
       </div>
       <div className="dashboard-sidebar-text-items">
-        <Link to="/user/couponcode">
+        <Link to="/user/account">
           {" "}
           <p>Account Details</p>
         </Link>
