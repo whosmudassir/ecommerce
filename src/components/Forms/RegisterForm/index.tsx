@@ -4,7 +4,7 @@ import { userLogin } from "../../../store";
 import "./index.css";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from "../../../firebase-config";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, doc, addDoc, setDoc } from "firebase/firestore";
 
 const RegisterForm = () => {
   //store
@@ -19,6 +19,9 @@ const RegisterForm = () => {
     email: "",
     password: "",
   };
+
+  //firestore db
+  // const collectionRef = doc(db, "users");
 
   const [formValue, setFormValue] = useState<any>(initialState);
 
@@ -40,11 +43,17 @@ const RegisterForm = () => {
 
   const createUserInFirebase = async () => {
     try {
-      await createUserWithEmailAndPassword(
+      const newUser = await createUserWithEmailAndPassword(
         auth,
         formValue.email,
         formValue.password
       );
+      await setDoc(doc(db, "users", newUser.user.uid), {
+        name: formValue.name,
+        email: formValue.email,
+        password: formValue.password,
+        userId: newUser.user.uid,
+      });
       triggerModalClose();
     } catch (e) {
       console.log(e);
