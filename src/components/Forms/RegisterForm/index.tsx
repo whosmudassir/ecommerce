@@ -3,7 +3,8 @@ import Modal from "../../common/ Modal";
 import { userLogin } from "../../../store";
 import "./index.css";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../../firebase-config";
+import { auth, db } from "../../../firebase-config";
+import { collection, addDoc } from "firebase/firestore";
 
 const RegisterForm = () => {
   //store
@@ -25,6 +26,17 @@ const RegisterForm = () => {
     const { name, value } = e.target;
     setFormValue({ ...formValue, [name]: value });
   };
+
+  // try {
+  //   const docRef = await addDoc(collection(db, "users"), {
+  //     first: "Ada",
+  //     last: "Lovelace",
+  //     born: 1815
+  //   });
+  //   console.log("Document written with ID: ", docRef.id);
+  // } catch (e) {
+  //   console.error("Error adding document: ", e);
+  // }
 
   const createUserInFirebase = async () => {
     try {
