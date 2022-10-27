@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Modal from "../../common/ Modal";
-import { userLogin } from "../../../store";
+import { userLogin, isLoading } from "../../../store";
 import "./index.css";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from "../../../firebase-config";
@@ -9,6 +9,8 @@ import { collection, doc, addDoc, setDoc } from "firebase/firestore";
 const RegisterForm = () => {
   //store
   const hideSignupModal = userLogin((state: any) => state.hideSignupModal);
+  const showIsAppLoading = isLoading((state) => state.showIsAppLoading);
+  const hideIsAppLoading = isLoading((state) => state.hideIsAppLoading);
 
   const triggerModalClose = () => {
     hideSignupModal();
@@ -42,6 +44,7 @@ const RegisterForm = () => {
   // }
 
   const createUserInFirebase = async () => {
+    showIsAppLoading();
     try {
       const newUser = await createUserWithEmailAndPassword(
         auth,
@@ -55,8 +58,11 @@ const RegisterForm = () => {
         userId: newUser.user.uid,
       });
       triggerModalClose();
+      hideIsAppLoading();
     } catch (e) {
       console.log(e);
+      hideIsAppLoading();
+
       triggerModalClose();
     }
   };
