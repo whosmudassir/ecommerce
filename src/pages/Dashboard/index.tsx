@@ -18,15 +18,7 @@ const Dashboard = () => {
             <DashboardSideBar />
             <Outlet />
           </div>
-          <div className="dashboard-body-wrapper">
-            {/* <BrowserRouter>
-              <Routes>
-          
-                <Route path="/dashboard" element={<DashboardBody />} />
-                <Route path="/couponcode" element={<DashboardCouponInfo />} />
-              </Routes>
-            </BrowserRouter> */}
-          </div>
+          <div className="dashboard-body-wrapper"></div>
         </div>
       </div>
     </>
