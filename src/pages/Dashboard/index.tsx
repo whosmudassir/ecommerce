@@ -14,10 +14,9 @@ const Dashboard = () => {
           <p className="dashboard-heading">My account</p>
         </div>
         <div className="dashboard-wrapper">
-          <div className="dashboard-sidebar-wrapper">
-            <DashboardSideBar />
-            <Outlet />
-          </div>
+          <DashboardSideBar />
+          <Outlet />
+
           <div className="dashboard-body-wrapper"></div>
         </div>
       </div>

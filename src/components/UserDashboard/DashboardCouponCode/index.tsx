@@ -9,7 +9,7 @@ const DashboardCouponCode = () => {
   };
 
   return (
-    <div>
+    <div className="dashboard-info-wrapper">
       <div className="dashboard-single-coupon">
         <p className="dashboard-coupon-name">20% off on first purchase</p>
         <div className="dashboard-coupon-code-wrapper">
