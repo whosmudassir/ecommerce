@@ -3,7 +3,7 @@ import "./index.css";
 
 const DashboardAccountDetailsInfo = () => {
   return (
-    <div>
+    <div className="dashboard-info-wrapper">
       <div className="shipping-info-form-wrapper account-detail-wrapper">
         <p className="shipping-info-headings-text password-change-title">
           First Name

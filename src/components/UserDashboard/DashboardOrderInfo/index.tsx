@@ -1,7 +1,7 @@
 import React from "react";
 
 const DashboardOrderInfo = () => {
-  return <div>DashboardOrderInfo</div>;
+  return <div className="dashboard-info-wrapper">DashboardOrderInfo</div>;
 };
 
 export default DashboardOrderInfo;

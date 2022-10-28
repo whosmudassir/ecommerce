@@ -1,5 +1,7 @@
 .dashboard-info-wrapper {
   display: flex;
+  margin-top: 46px;
   flex-direction: column;
+  align-self: row;
   gap: 26px;
 }

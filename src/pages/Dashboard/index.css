@@ -6,10 +6,10 @@
 }
 
 .dashboard-wrapper {
-  display: flex;
-  flex-direction: row;
+  display: block;
   height: 100%;
-  flex: 1;
+  flex-wrap: wrap;
+  padding-bottom: 26px;
 }
 
 .dashboard-sidebar-wrapper {
