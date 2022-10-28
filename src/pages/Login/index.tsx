@@ -37,7 +37,8 @@ const Login = () => {
       hideIsAppLoading();
     } catch (e) {
       hideIsAppLoading();
-      setErrorModalMessage("TODO : Error Message");
+      //@ts-ignore
+      setErrorModalMessage(e.message);
       showErrorModal();
     }
   };
