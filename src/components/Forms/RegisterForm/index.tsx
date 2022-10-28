@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Modal from "../../common/ Modal";
-import { userLogin, isLoading } from "../../../store";
+import { userLogin, isLoading, triggerErrorModal } from "../../../store";
 import "./index.css";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from "../../../firebase-config";
@@ -11,6 +11,12 @@ const RegisterForm = () => {
   const hideSignupModal = userLogin((state: any) => state.hideSignupModal);
   const showIsAppLoading = isLoading((state) => state.showIsAppLoading);
   const hideIsAppLoading = isLoading((state) => state.hideIsAppLoading);
+  const showErrorModal = triggerErrorModal(
+    (state: any) => state.showErrorModal
+  );
+  const setErrorModalMessage = triggerErrorModal(
+    (state: any) => state.setErrorModalMessage
+  );
 
   const triggerModalClose = () => {
     hideSignupModal();
@@ -62,8 +68,10 @@ const RegisterForm = () => {
     } catch (e) {
       console.log(e);
       hideIsAppLoading();
-
       triggerModalClose();
+      //@ts-ignore
+      setErrorModalMessage(e.message);
+      showErrorModal();
     }
   };
 
