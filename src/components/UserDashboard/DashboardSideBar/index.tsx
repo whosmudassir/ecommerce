@@ -2,7 +2,7 @@ import React from "react";
 import "./index.css";
 import { auth } from "../../../firebase-config";
 import { signOut } from "firebase/auth";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 const DashboardSideBar = () => {
   const logout = async () => {
     await signOut(auth);

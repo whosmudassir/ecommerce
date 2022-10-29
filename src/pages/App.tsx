@@ -14,7 +14,6 @@ import NotFound from "./NotFound";
 import Loading from "../components/common/Loading";
 import ErrorModal from "../components/common/ErrorModal";
 import DashboardCouponInfo from "../components/UserDashboard/DashboardCouponInfo";
-import DashboardBody from "../components/UserDashboard/DashboardBody";
 import DashboardInfo from "../components/UserDashboard/DashboardInfo";
 import DashboardOrderInfo from "../components/UserDashboard/DashboardOrderInfo";
 import DashboardAccountDetailsInfo from "../components/UserDashboard/DashboardAccountDetailsInfo";
