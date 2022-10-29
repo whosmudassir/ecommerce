@@ -8,7 +8,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     navigate("/user/dashboard");
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <>
