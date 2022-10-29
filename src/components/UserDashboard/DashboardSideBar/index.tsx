@@ -2,7 +2,7 @@ import React from "react";
 import "./index.css";
 import { auth } from "../../../firebase-config";
 import { signOut } from "firebase/auth";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 const DashboardSideBar = () => {
   const logout = async () => {
     await signOut(auth);
@@ -11,29 +11,49 @@ const DashboardSideBar = () => {
   return (
     <div className="dashboard-sidebar-wrapper">
       <div className="dashboard-sidebar-text-items">
-        <Link to="/user/dashboard">
-          {" "}
-          <p>Dashboard</p>{" "}
-        </Link>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "link-active" : "link-inactive"
+          }
+          to="/user/dashboard"
+        >
+          Dashboard
+        </NavLink>
       </div>
       <div className="dashboard-sidebar-text-items">
-        <Link to="/user/orders">
-          <p>Orders</p>
-        </Link>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "link-active" : "link-inactive"
+          }
+          to="/user/orders"
+        >
+          Orders
+        </NavLink>
       </div>
       <div className="dashboard-sidebar-text-items">
-        <Link to="/user/couponcode">
-          <p>Coupons</p>
-        </Link>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "link-active" : "link-inactive"
+          }
+          to="/user/couponcode"
+        >
+          Coupons
+        </NavLink>
       </div>
       <div className="dashboard-sidebar-text-items">
-        <Link to="/user/account">
-          {" "}
-          <p>Account Details</p>
-        </Link>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "link-active" : "link-inactive"
+          }
+          to="/user/account"
+        >
+          Account Details
+        </NavLink>
       </div>
       <div className="dashboard-sidebar-text-items">
-        <button onClick={logout}>Log out</button>
+        <button className="icon-wrapper icon-logout" onClick={logout}>
+          Log out <i className="fa-solid fa-arrow-right-from-bracket"></i>
+        </button>
       </div>
     </div>
   );
