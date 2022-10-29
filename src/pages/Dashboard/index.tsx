@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import DashboardBody from "../../components/UserDashboard/DashboardBody";
 import DashboardCouponInfo from "../../components/UserDashboard/DashboardCouponInfo";
 import DashboardSideBar from "../../components/UserDashboard/DashboardSideBar";
-import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
+import { useNavigate, Outlet } from "react-router-dom";
 import "./index.css";
 
 const Dashboard = () => {
-  // let { path, url } = RouteMatch();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    navigate("/user/dashboard");
+  }, []);
+
   return (
     <>
       <div>
