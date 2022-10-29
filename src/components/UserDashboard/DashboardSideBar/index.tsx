@@ -52,7 +52,7 @@ const DashboardSideBar = () => {
       </div>
       <div className="dashboard-sidebar-text-items">
         <button className="icon-wrapper icon-logout" onClick={logout}>
-          Log out <i className="fa-solid fa-arrow-right-from-bracket"></i>
+          <i className="fa-solid fa-arrow-right-from-bracket"></i> Log out
         </button>
       </div>
     </div>
