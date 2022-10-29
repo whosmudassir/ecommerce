@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import Modal from "../../common/ Modal";
 import { triggerErrorModal } from "../../../store";
 import "./index.css";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../../firebase-config";
 
 const ErrorModal = () => {
   //store

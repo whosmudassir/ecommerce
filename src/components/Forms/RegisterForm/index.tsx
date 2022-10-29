@@ -4,7 +4,7 @@ import { userLogin, isLoading, triggerErrorModal } from "../../../store";
 import "./index.css";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from "../../../firebase-config";
-import { collection, doc, addDoc, setDoc } from "firebase/firestore";
+import { doc, setDoc } from "firebase/firestore";
 
 const RegisterForm = () => {
   //store

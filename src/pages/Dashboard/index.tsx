@@ -1,6 +1,4 @@
 import React, { useEffect } from "react";
-import DashboardBody from "../../components/UserDashboard/DashboardBody";
-import DashboardCouponInfo from "../../components/UserDashboard/DashboardCouponInfo";
 import DashboardSideBar from "../../components/UserDashboard/DashboardSideBar";
 import { useNavigate, Outlet } from "react-router-dom";
 import "./index.css";
