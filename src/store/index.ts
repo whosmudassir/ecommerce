@@ -64,6 +64,9 @@ interface IUserLogin {
   isSignupModalOpen: any;
   showSignupModal: any;
   hideSignupModal: any;
+  isAuthModalOpen: any;
+  showAuthModal: any;
+  hideAuthModal: any;
 }
 
 interface IIsLoading {
@@ -173,6 +176,9 @@ export const userLogin = create<IUserLogin>((set) => ({
   isSignupModalOpen: false,
   showSignupModal: () => set((state) => ({ isSignupModalOpen: true })),
   hideSignupModal: () => set((state) => ({ isSignupModalOpen: false })),
+  isAuthModalOpen: false,
+  showAuthModal: () => set((state) => ({ isAuthModalOpen: true })),
+  hideAuthModal: () => set((state) => ({ isAuthModalOpen: false })),
 }));
 
 //App loading
