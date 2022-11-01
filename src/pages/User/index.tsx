@@ -18,7 +18,7 @@ const User = () => {
         <div className="user-content-wrapper">
           {!user?.email ? (
             <div className="login-wrapper">
-              <Login />
+              <Login showUserTitle={true} />
             </div>
           ) : (
             <>
