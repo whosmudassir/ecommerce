@@ -6,7 +6,11 @@ import { auth } from "../../firebase-config";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { isLoading, userLogin, triggerErrorModal } from "../../store";
 
-const Login = () => {
+interface ILogin {
+  showUserTitle?: boolean;
+}
+
+const Login = ({ showUserTitle }: ILogin) => {
   //store
   const isLoginModalOpen = userLogin((state: any) => state.isLoginModalOpen);
   const showLoginModal = userLogin((state: any) => state.showLoginModal);
@@ -43,12 +47,16 @@ const Login = () => {
     }
   };
 
+  const userTitle = (
+    <div>
+      <p className="dashboard-heading">My account</p>
+    </div>
+  );
+
   return (
     <>
       <div>
-        <div>
-          <p className="dashboard-heading">My account</p>
-        </div>
+        {showUserTitle && userTitle}
         <div className="login-btn-wrapper">
           <i className={"fa-solid fa-user empty-screen"}></i>
           <div>

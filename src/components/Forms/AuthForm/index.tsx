@@ -13,13 +13,13 @@ const AuthForm = () => {
   };
 
   //store
-  const hideLoginModal = userLogin((state: any) => state.hideLoginModal);
+  const hideAuthModal = userLogin((state: any) => state.hideAuthModal);
 
   const [formValue, setFormValue] = useState(initialState);
   const [errorMessage, setErrorMessage] = useState("");
 
   const triggerModalClose = () => {
-    hideLoginModal();
+    hideAuthModal();
   };
 
   const handleChange = (e: any) => {
@@ -46,13 +46,13 @@ const AuthForm = () => {
     <div className="modal-wrapper">
       <div className="modal">
         <div className="modal-head">
-          <p className="modal-head-text">Login</p>
+          <p className="modal-head-text">Login to Proceed</p>
           <button className="icon-wrapper" onClick={triggerModalClose}>
             <i className="fa-solid fa-xmark close-btn form-close-mark"></i>
           </button>
         </div>
         <div className="modal-body">
-          <Login />
+          <Login showUserTitle={false} />
         </div>
         <div className="modal-foot modal-login-footer"></div>
       </div>
