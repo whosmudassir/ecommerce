@@ -47,14 +47,10 @@ const AuthForm = () => {
       <div className="modal auth-modal">
         <div className="modal-head auth-modal-text">
           <p className="modal-head-text ">Login to Proceed</p>
-          {/* <button className="icon-wrapper" onClick={triggerModalClose}>
-            <i className="fa-solid fa-xmark close-btn form-close-mark"></i>
-          </button> */}
         </div>
         <div className="modal-body auth-body">
           <Login showUserTitle={false} />
         </div>
-        <div className="modal-foot modal-login-footer"></div>
       </div>
     </div>
   );
