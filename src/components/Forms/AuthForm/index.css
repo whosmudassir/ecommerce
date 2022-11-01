@@ -1,0 +1,13 @@
+.auth-modal {
+  padding: 10px 40px;
+}
+
+.auth-modal-text {
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.auth-body {
+  padding: 10px 40px;
+}

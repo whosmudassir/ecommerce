@@ -18,6 +18,8 @@ const Login = ({ showUserTitle }: ILogin) => {
   const hideIsAppLoading = isLoading((state) => state.hideIsAppLoading);
   const isSignupModalOpen = userLogin((state: any) => state.isSignupModalOpen);
   const showSignupModal = userLogin((state: any) => state.showSignupModal);
+  const hideAuthModal = userLogin((state: any) => state.hideAuthModal);
+
   const showErrorModal = triggerErrorModal(
     (state: any) => state.showErrorModal
   );
@@ -37,6 +39,7 @@ const Login = ({ showUserTitle }: ILogin) => {
   const loginUser = async () => {
     try {
       showIsAppLoading();
+      hideAuthModal();
       await signInWithEmailAndPassword(auth, "default@gmail.com", "123456");
       hideIsAppLoading();
     } catch (e) {
