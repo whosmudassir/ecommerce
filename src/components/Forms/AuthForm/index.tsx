@@ -43,15 +43,15 @@ const AuthForm = () => {
   };
 
   const content = (
-    <div className="modal-wrapper">
-      <div className="modal">
-        <div className="modal-head">
-          <p className="modal-head-text">Login to Proceed</p>
-          <button className="icon-wrapper" onClick={triggerModalClose}>
+    <div className="modal-wrapper ">
+      <div className="modal auth-modal">
+        <div className="modal-head auth-modal-text">
+          <p className="modal-head-text ">Login to Proceed</p>
+          {/* <button className="icon-wrapper" onClick={triggerModalClose}>
             <i className="fa-solid fa-xmark close-btn form-close-mark"></i>
-          </button>
+          </button> */}
         </div>
-        <div className="modal-body">
+        <div className="modal-body auth-body">
           <Login showUserTitle={false} />
         </div>
         <div className="modal-foot modal-login-footer"></div>
