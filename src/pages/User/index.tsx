@@ -11,7 +11,7 @@ const User = () => {
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
   });
-
+  console.log("::::user", user);
   return (
     <>
       <div className="body-wrapper">

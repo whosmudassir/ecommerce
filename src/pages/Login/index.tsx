@@ -2,9 +2,15 @@ import React from "react";
 import LoginForm from "../../components/Forms/LoginForm";
 import RegisterForm from "../../components/Forms/RegisterForm";
 import "./index.css";
-import { auth } from "../../firebase-config";
+import { auth, db } from "../../firebase-config";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { isLoading, userLogin, triggerErrorModal } from "../../store";
+import {
+  isLoading,
+  userLogin,
+  triggerErrorModal,
+  loggedInUser,
+} from "../../store";
+import { getDocs, collection } from "firebase/firestore";
 
 interface ILogin {
   showUserTitle?: boolean;
@@ -19,6 +25,9 @@ const Login = ({ showUserTitle }: ILogin) => {
   const isSignupModalOpen = userLogin((state: any) => state.isSignupModalOpen);
   const showSignupModal = userLogin((state: any) => state.showSignupModal);
   const hideAuthModal = userLogin((state: any) => state.hideAuthModal);
+  const setLoggedInUserData = loggedInUser(
+    (state: any) => state.setLoggedInUserData
+  );
 
   const showErrorModal = triggerErrorModal(
     (state: any) => state.showErrorModal
@@ -34,6 +43,11 @@ const Login = ({ showUserTitle }: ILogin) => {
   const triggerSignup = () => {
     showSignupModal();
   };
+
+  //firestore
+  const collectionRef = collection(db, "users");
+
+  const setUpLoggedInUserData = () => {};
 
   //login as default user
   const loginUser = async () => {
