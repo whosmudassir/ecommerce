@@ -83,6 +83,11 @@ interface ITriggerErrorModal {
   setErrorModalMessage: any;
 }
 
+interface ILoggedInUser {
+  loggedInUserData: any;
+  setLoggedInUserData: any;
+}
+
 //backend to store user data of previous order
 export const cartStore = create<ICartStore>((set) => ({
   cart: [],
@@ -197,4 +202,11 @@ export const triggerErrorModal = create<ITriggerErrorModal>((set) => ({
   errorModalMessage: "",
   setErrorModalMessage: (text: string) =>
     set((state) => ({ errorModalMessage: text })),
+}));
+
+//logged in user details
+export const loggedInUser = create<ILoggedInUser>((set) => ({
+  loggedInUserData: {},
+  setLoggedInUserData: (loggedInUserData: any) =>
+    set((state) => ({ loggedInUserData: { ...loggedInUserData } })),
 }));
