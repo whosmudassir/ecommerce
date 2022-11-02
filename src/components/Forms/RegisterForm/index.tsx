@@ -66,7 +66,6 @@ const RegisterForm = () => {
       triggerModalClose();
       hideIsAppLoading();
     } catch (e) {
-      console.log(e);
       hideIsAppLoading();
       triggerModalClose();
       //@ts-ignore
