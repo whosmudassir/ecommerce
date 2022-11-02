@@ -35,7 +35,6 @@ const LoginForm = () => {
       );
       triggerModalClose();
     } catch (e) {
-      console.log(e);
       //@ts-ignore
       setErrorMessage(e.code);
     }

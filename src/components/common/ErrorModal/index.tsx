@@ -10,7 +10,6 @@ const ErrorModal = () => {
   );
 
   const triggerModalClose = () => {
-    console.log("clicked");
     hideErrorModal();
   };
 

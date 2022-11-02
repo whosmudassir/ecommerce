@@ -8,9 +8,6 @@ const NavBar = () => {
   return (
     <div>
       <div className="nav-bar-wrapper">
-        {/* <button className="hamburger-icon">
-          <i className="fa fa-bars icon" id="render-icon"></i>
-        </button> */}
         <div className="left-content">
           <Link to="/">
             <img
@@ -21,10 +18,6 @@ const NavBar = () => {
           </Link>
         </div>
         <div className="right-content">
-          {/* <button className="icon-wrapper">
-            {" "}
-            <i className="fa-solid fa-magnifying-glass nav-icon"></i>
-          </button> */}
           <button className="icon-wrapper">
             <Link to="/user">
               <i className="fa-solid fa-user nav-icon"></i>
