@@ -93,8 +93,9 @@ const Login = ({ showUserTitle }: ILogin) => {
           </div>
         </div>
       </div>
-      {isLoginModalOpen && <LoginForm />}
+
       {isSignupModalOpen && <RegisterForm />}
+      {isLoginModalOpen && <LoginForm />}
     </>
   );
 };
