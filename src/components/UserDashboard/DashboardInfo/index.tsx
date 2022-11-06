@@ -1,13 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./index.css";
 import { Link } from "react-router-dom";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth, db } from "../../../firebase-config";
+import { collection, getDocs } from "firebase/firestore";
 
 const DashboardInfo = () => {
+  const [user, setUser] = useState<any>({});
+  const [userName, setUserName] = useState<any>("");
+
+  onAuthStateChanged(auth, (currentUser) => {
+    setUser(currentUser);
+  });
+
+  const getUserName = async () => {
+    try {
+      const usersRef = collection(db, "users");
+      const usersQuerySnapshot = await getDocs(usersRef);
+      usersQuerySnapshot.docs.filter((doc) => {
+        if (doc.id == user.uid) {
+          setUserName(doc.data().name);
+        }
+      });
+    } catch (e) {
+      console.log("error :: :: ::", e);
+    }
+  };
+
+  useEffect(() => {
+    getUserName();
+  }, [user]);
+
   return (
     <div className="dashboard-info-wrapper">
       <p>
-        Hello <span className="bold-text">Mudassir Khan </span>(not
-        <span className="bold-text">Mudassir Khan</span>? Log out)
+        Hello <span className="bold-text"> {userName} </span>
       </p>
       <p>
         From your account dashboard you can view your{" "}
