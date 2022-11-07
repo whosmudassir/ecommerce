@@ -3,21 +3,21 @@ import "./index.css";
 import { addressFormStore, cartStore } from "../../../store";
 import PlaceOrderButton from "../PlaceOrderButton";
 import { useNavigate } from "react-router-dom";
-// import { auth, db } from "../../../firebase-config";
-// import { doc, setDoc } from "firebase/firestore";
-// import { onAuthStateChanged } from "firebase/auth";
+import { auth, db } from "../../../firebase-config";
+import { doc, setDoc } from "firebase/firestore";
+import { onAuthStateChanged } from "firebase/auth";
 
 const ShippingInfoForm = () => {
   //store
   const itemsInCart = cartStore<any>((state) => state.cart);
   const setFormValues = addressFormStore<any>((state) => state.setFormValues);
 
-  //logged in user
-  // const [user, setUser] = useState<any>({});
+  // logged in user
+  const [user, setUser] = useState<any>({});
 
-  // onAuthStateChanged(auth, (currentUser) => {
-  //   setUser(currentUser);
-  // });
+  onAuthStateChanged(auth, (currentUser) => {
+    setUser(currentUser);
+  });
 
   const initialState = {
     firstName: "",
@@ -43,23 +43,29 @@ const ShippingInfoForm = () => {
     setFormValue({ ...formValue, [name]: value });
   };
 
-  // const createOrdersData = async () => {
-  //   try {
-  //     //random id generator
-  //     const randstr = (prefix: any) => {
-  //       return Math.random()
-  //         .toString(36)
-  //         .replace("0.", prefix || "");
-  //     };
-  //     const orderID = randstr("msftsRep");
+  const createOrdersData = async () => {
+    try {
+      //random id generator
+      const randstr = (prefix: any) => {
+        return Math.random()
+          .toString(36)
+          .replace("0.", prefix || "");
+      };
+      const orderID = randstr("msftsRep");
 
-  //     await setDoc(doc(db, "users", user.uid, "orders", orderID), {
-  //       items: itemsInCart,
-  //     });
-  //   } catch (e) {
-  //     console.log(e);
-  //   }
-  // };
+      await setDoc(
+        doc(db, "users", user.uid),
+        {
+          orders: {
+            [orderID]: itemsInCart,
+          },
+        },
+        { merge: true }
+      );
+    } catch (e) {
+      console.log(e);
+    }
+  };
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -74,15 +80,10 @@ const ShippingInfoForm = () => {
       Object.keys(formErrors).length === 0 &&
       formValue.firstName.length > 0
     ) {
-      setIsOrderPlaced(true);
-    }
-  }, [formErrors]); // eslint-disable-line react-hooks/exhaustive-deps
-
-  useEffect(() => {
-    if (isOrderPlaced) {
+      createOrdersData();
       navigate("/order-confirmation");
     }
-  }, [isOrderPlaced]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [formErrors]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const validate = (values: any) => {
     const errors: any = {};
