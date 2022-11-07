@@ -1,10 +1,24 @@
 import React, { useState, useEffect } from "react";
 import "./index.css";
-import { addressFormStore } from "../../../store";
+import { addressFormStore, cartStore } from "../../../store";
 import PlaceOrderButton from "../PlaceOrderButton";
 import { useNavigate } from "react-router-dom";
+// import { auth, db } from "../../../firebase-config";
+// import { doc, setDoc } from "firebase/firestore";
+// import { onAuthStateChanged } from "firebase/auth";
+
 const ShippingInfoForm = () => {
+  //store
+  const itemsInCart = cartStore<any>((state) => state.cart);
   const setFormValues = addressFormStore<any>((state) => state.setFormValues);
+
+  //logged in user
+  // const [user, setUser] = useState<any>({});
+
+  // onAuthStateChanged(auth, (currentUser) => {
+  //   setUser(currentUser);
+  // });
+
   const initialState = {
     firstName: "",
     lastName: "",
@@ -14,15 +28,38 @@ const ShippingInfoForm = () => {
     phone: "",
     email: "",
   };
+
+  //states
   const [formValue, setFormValue] = useState<any>(initialState);
   const [formErrors, setFormErrors] = useState<any>({});
   const [isOrderPlaced, setIsOrderPlaced] = useState<any>(false);
+
   const navigate = useNavigate();
 
+  //functions
   const handleChange = (e: any) => {
     const { name, value } = e.target;
+    // createOrdersData();
     setFormValue({ ...formValue, [name]: value });
   };
+
+  // const createOrdersData = async () => {
+  //   try {
+  //     //random id generator
+  //     const randstr = (prefix: any) => {
+  //       return Math.random()
+  //         .toString(36)
+  //         .replace("0.", prefix || "");
+  //     };
+  //     const orderID = randstr("msftsRep");
+
+  //     await setDoc(doc(db, "users", user.uid, "orders", orderID), {
+  //       items: itemsInCart,
+  //     });
+  //   } catch (e) {
+  //     console.log(e);
+  //   }
+  // };
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -169,7 +206,6 @@ const ShippingInfoForm = () => {
         </div>
       </form>
       <PlaceOrderButton handleOnClick={handleSubmit} />
-      {/* <button onClick={handleSubmit}>Submit</button> */}
     </div>
   );
 };

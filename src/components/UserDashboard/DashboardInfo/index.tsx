@@ -13,6 +13,7 @@ const DashboardInfo = () => {
     setUser(currentUser);
   });
 
+  //setting up data from firestore collection matching user id of auth
   const getUserName = async () => {
     try {
       const usersRef = collection(db, "users");
