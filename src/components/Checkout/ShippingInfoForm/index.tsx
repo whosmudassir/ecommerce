@@ -10,6 +10,7 @@ import { onAuthStateChanged } from "firebase/auth";
 const ShippingInfoForm = () => {
   //store
   const itemsInCart = cartStore<any>((state) => state.cart);
+  const emptyCart = cartStore<any>((state) => state.emptyCart);
   const setFormValues = addressFormStore<any>((state) => state.setFormValues);
 
   // logged in user
@@ -43,6 +44,7 @@ const ShippingInfoForm = () => {
     setFormValue({ ...formValue, [name]: value });
   };
 
+  //saving to firestore
   const createOrdersData = async () => {
     try {
       //random id generator
@@ -81,6 +83,7 @@ const ShippingInfoForm = () => {
       formValue.firstName.length > 0
     ) {
       createOrdersData();
+      emptyCart();
       navigate("/order-confirmation");
     }
   }, [formErrors]); // eslint-disable-line react-hooks/exhaustive-deps
