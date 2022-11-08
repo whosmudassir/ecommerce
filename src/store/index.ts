@@ -15,6 +15,7 @@ interface ICartStore {
   cart: any;
   addToCart: any;
   removeFromCart: any;
+  emptyCart: any;
 }
 
 interface ISelectedSizeStore {
@@ -98,6 +99,7 @@ export const cartStore = create<ICartStore>((set) => ({
         return cartItem.id !== id;
       }),
     })),
+  emptyCart: () => set((state) => ({ cart: [] })),
 }));
 
 //size selection
