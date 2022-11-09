@@ -31,31 +31,31 @@ interface IWishlistStore {
 
 interface ISetExpandedCard {
   expandedCardId: string;
-  setExpandedCardId: any;
+  setExpandedCardId: (param: string) => void;
 }
 
 interface ICartGrandTotalStore {
   cartGrandTotal: any;
-  setCartGrandTotal: any;
-  increaseCartGrandTotal: any;
-  decreaseCartGrandTotal: any;
+  setCartGrandTotal: (param: number) => void;
+  increaseCartGrandTotal: (param: number) => void;
+  decreaseCartGrandTotal: (param: number) => void;
 }
 
 interface ITotalWithTaxesStore {
-  totalWithTaxes: any;
-  setTotalWithTaxes: any;
+  totalWithTaxes: number;
+  setTotalWithTaxes: (param: number) => void;
 }
 
 interface IProductListStore {
-  productList: any;
-  addToProductList: any;
+  productList: Array<object>;
+  addToProductList: (param: object) => void;
 }
 
 interface IAddressFormStore {
   formValues: any;
-  submitIsTriggered: any;
-  setFormValues: any;
-  setSubmitIsTriggered: any;
+  submitIsTriggered: boolean;
+  setFormValues: (param: object) => void;
+  setSubmitIsTriggered: (param: object) => void;
 }
 
 interface IUserLogin {
