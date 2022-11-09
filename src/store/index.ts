@@ -2,20 +2,20 @@ import create from "zustand";
 
 interface IIsAlertVisible {
   alert: boolean;
-  showAlert: any;
-  hideAlert: any;
+  showAlert: () => void;
+  hideAlert: () => void;
 }
 
 interface IAlertTextStore {
   alertText: string;
-  setAlertText: any;
+  setAlertText: (param: string) => void;
 }
 
 interface ICartStore {
-  cart: any;
-  addToCart: any;
-  removeFromCart: any;
-  emptyCart: any;
+  cart: Array<object>;
+  addToCart: (param: object) => void;
+  removeFromCart: (param: object) => void;
+  emptyCart: () => void;
 }
 
 interface ISelectedSizeStore {
@@ -24,9 +24,9 @@ interface ISelectedSizeStore {
 }
 
 interface IWishlistStore {
-  wishlist: any;
-  addToWishlist: any;
-  removeFromWishlist: any;
+  wishlist: Array<object>;
+  addToWishlist: (param: object) => void;
+  removeFromWishlist: (param: string) => void;
 }
 
 interface ISetExpandedCard {
@@ -125,7 +125,7 @@ export const wishlistStore = create<IWishlistStore>((set) => ({
   wishlist: [],
   addToWishlist: (item: any) =>
     set((state) => ({ wishlist: [item, ...state.wishlist] })),
-  removeFromWishlist: (id: any) =>
+  removeFromWishlist: (id: string) =>
     set((state) => ({
       wishlist: state.wishlist.filter((cartItem: any) => {
         return cartItem.id !== id;
