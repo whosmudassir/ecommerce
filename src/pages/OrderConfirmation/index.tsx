@@ -1,9 +1,13 @@
 import React from "react";
 import "./index.css";
 import OrderStatusBar from "../../components/Checkout/OrderStatusBar";
-import { addressFormStore } from "../../store";
+import { addressFormStore, loggedInUser } from "../../store";
+
 const OrderConfirmation = () => {
+  //store
+  const loggedInUserData = loggedInUser((state) => state.loggedInUserData);
   const formValues = addressFormStore((state) => state.formValues);
+
   const randstr = (prefix: any) => {
     return Math.random()
       .toString(36)
