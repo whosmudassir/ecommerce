@@ -4,8 +4,14 @@ import { Link } from "react-router-dom";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth, db } from "../../../firebase-config";
 import { collection, getDocs } from "firebase/firestore";
+import { loggedInUser } from "../../../store";
 
 const DashboardInfo = () => {
+  //store
+  const setLoggedInUserData = loggedInUser(
+    (state) => state.setLoggedInUserData
+  );
+
   const [user, setUser] = useState<any>({});
   const [userName, setUserName] = useState<any>("");
 
@@ -21,6 +27,7 @@ const DashboardInfo = () => {
       usersQuerySnapshot.docs.filter((doc) => {
         if (doc.id == user.uid) {
           setUserName(doc.data().name);
+          setLoggedInUserData(doc.data());
         }
       });
     } catch (e) {
