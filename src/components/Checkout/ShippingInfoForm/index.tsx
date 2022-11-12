@@ -56,11 +56,9 @@ const ShippingInfoForm = () => {
       const orderID = randstr("msftsRep");
 
       await setDoc(
-        doc(db, "users", user.uid),
+        doc(db, "users", user.uid, "orders", orderID),
         {
-          orders: {
-            [orderID]: itemsInCart,
-          },
+          ...itemsInCart,
         },
         { merge: true }
       );
