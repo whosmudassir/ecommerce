@@ -28,35 +28,23 @@ const DashboardOrderInfo = () => {
   //setting up data from firestore collection matching user id of auth
   const getUserName = async () => {
     try {
-      // const usersRef = collection(db, "users", loggedInUserData.userId, "orders" );
-
       const q = query(
         collection(db, "users", loggedInUserData.userId, "orders")
       );
-      const unsubscribe = await onSnapshot(q, (snapshot) => {
-        snapshot.docChanges().forEach((change) => {
-          if (change.type === "added") {
-            console.log("New city: ", change.doc.data());
-          }
-          if (change.type === "modified") {
-            console.log("Modified city: ", change.doc.data());
-          }
-          if (change.type === "removed") {
-            console.log("Removed city: ", change.doc.data());
-          }
-        });
-      });
+      const unsubscribe = await onSnapshot(q, (querySnapshot) => {
+        const orders = [];
 
-      // const usersQuerySnapshot = await getDocs(usersRef);
-      // usersQuerySnapshot.docs.filter((doc) => {
-      // console.log('::::::::::::::::::: snap shot', doc)
-      // });
+        querySnapshot.forEach((doc) => {
+          orders.push(doc.data());
+        });
+        console.log("Current orders in CA: ", orders);
+      });
     } catch (e) {
       console.log("error :: :: ::", e);
     }
   };
 
-  console.log("::::", userOrders);
+  console.log(":::singl;e:", singleOrder);
 
   // var response = {
   //   11791146: {m_serverQuery: "", m_key: 11791146}
