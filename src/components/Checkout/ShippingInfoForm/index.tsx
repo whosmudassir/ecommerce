@@ -33,7 +33,6 @@ const ShippingInfoForm = () => {
   //states
   const [formValue, setFormValue] = useState<any>(initialState);
   const [formErrors, setFormErrors] = useState<any>({});
-  const [isOrderPlaced, setIsOrderPlaced] = useState<any>(false);
 
   const navigate = useNavigate();
 

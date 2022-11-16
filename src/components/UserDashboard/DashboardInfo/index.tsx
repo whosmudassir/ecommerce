@@ -25,10 +25,11 @@ const DashboardInfo = () => {
       const usersRef = collection(db, "users");
       const usersQuerySnapshot = await getDocs(usersRef);
       usersQuerySnapshot.docs.filter((doc) => {
-        if (doc.id == user.uid) {
+        if (doc.id === user.uid) {
           setUserName(doc.data().name);
           setLoggedInUserData(doc.data());
         }
+        return null;
       });
     } catch (e) {
       console.log("error :: :: ::", e);
@@ -37,7 +38,7 @@ const DashboardInfo = () => {
 
   useEffect(() => {
     getUserName();
-  }, [user]);
+  }, [user]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className="dashboard-info-wrapper">
