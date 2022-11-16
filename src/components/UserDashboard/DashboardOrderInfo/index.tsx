@@ -55,6 +55,10 @@ const DashboardOrderInfo = () => {
               <div className="cart-product-item-parent-box">
                 <div className="cart-product-item-child-box">
                   <div>
+                    <p className="order-date">
+                      {/* @ts-ignore */}
+                      Ordered on : {order[0].date ? order[0].date : "Recently"}
+                    </p>
                     <img
                       className="cart-product-item-child-img"
                       //@ts-ignore
@@ -62,6 +66,7 @@ const DashboardOrderInfo = () => {
                       alt=""
                     />
                   </div>
+
                   <div className="cart-product-item-child-img-text remove-btn-wrapper">
                     <p className="cart-product-item-child-item">
                       {/* @ts-ignore */}

@@ -3,3 +3,8 @@
   width: 100%;
   overflow: scroll;
 }
+
+.order-date {
+  padding-bottom: 6px;
+  font-weight: bold;
+}
