@@ -14,8 +14,8 @@ const DashboardOrderInfo = () => {
   //store
   const loggedInUserData = loggedInUser((state) => state.loggedInUserData);
 
-  const [userOrders, setUserOrders] = useState([]);
-  const [singleOrder, setSingleOrder] = useState([]);
+  const [userOrders, setUserOrders] = useState<Array<object>>([]);
+  const [singleOrder, setSingleOrder] = useState<Array<object>>([]);
 
   useEffect(() => {
     setUserOrders(loggedInUserData);
@@ -32,7 +32,7 @@ const DashboardOrderInfo = () => {
         collection(db, "users", loggedInUserData.userId, "orders")
       );
       const unsubscribe = await onSnapshot(q, (querySnapshot) => {
-        var orders = [];
+        var orders: Array<object> = [];
 
         querySnapshot.forEach((doc) => {
           orders.push(doc.data());
@@ -57,12 +57,14 @@ const DashboardOrderInfo = () => {
                   <div>
                     <img
                       className="cart-product-item-child-img"
+                      //@ts-ignore
                       src={order[0].imageUrl}
                       alt=""
                     />
                   </div>
                   <div className="cart-product-item-child-img-text remove-btn-wrapper">
                     <p className="cart-product-item-child-item">
+                      {/* @ts-ignore */}
                       {order[0].name} : {order[0].size}
                     </p>
                   </div>
@@ -70,6 +72,7 @@ const DashboardOrderInfo = () => {
                 <div className="cart-product-item-child-box cart-product-item-child-img-text">
                   <p className="cart-product-item-title">Price</p>
                   <p className="cart-product-item-child-item">
+                    {/* @ts-ignore */}
                     {order[0].price}
                   </p>
                 </div>
