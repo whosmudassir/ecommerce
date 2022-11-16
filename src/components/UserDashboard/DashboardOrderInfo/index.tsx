@@ -1,29 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { loggedInUser } from "../../../store";
-import { auth, db } from "../../../firebase-config";
-import {
-  collection,
-  doc,
-  query,
-  getDocs,
-  onSnapshot,
-} from "firebase/firestore";
+import { db } from "../../../firebase-config";
+import { collection, query, onSnapshot } from "firebase/firestore";
 import "./index.css";
 
 const DashboardOrderInfo = () => {
   //store
   const loggedInUserData = loggedInUser((state) => state.loggedInUserData);
-
-  const [userOrders, setUserOrders] = useState<Array<object>>([]);
   const [singleOrder, setSingleOrder] = useState<Array<object>>([]);
 
   useEffect(() => {
-    setUserOrders(loggedInUserData);
-  }, [loggedInUserData]);
-
-  useEffect(() => {
     getUserName();
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   //setting up data from firestore collection matching user id of auth
   const getUserName = async () => {
@@ -31,7 +19,7 @@ const DashboardOrderInfo = () => {
       const q = query(
         collection(db, "users", loggedInUserData.userId, "orders")
       );
-      const unsubscribe = await onSnapshot(q, (querySnapshot) => {
+      await onSnapshot(q, (querySnapshot) => {
         var orders: Array<object> = [];
 
         querySnapshot.forEach((doc) => {
@@ -39,7 +27,6 @@ const DashboardOrderInfo = () => {
         });
 
         setSingleOrder(orders);
-        console.log("Current orders in CA: ", orders);
       });
     } catch (e) {
       console.log("error :: :: ::", e);
