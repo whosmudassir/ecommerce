@@ -65,7 +65,7 @@ const DashboardOrderInfo = () => {
                   <p className="cart-product-item-title">Price</p>
                   <p className="cart-product-item-child-item">
                     {/* @ts-ignore */}
-                    {order[0].price}
+                    Total: {order[0].price}
                   </p>
                 </div>
               </div>
