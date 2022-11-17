@@ -36,7 +36,7 @@ const DashboardOrderInfo = () => {
   return (
     <div className="dashboard-info-wrapper recent-orders-wrapper">
       <>
-        {singleOrder.length > 1 ? (
+        {singleOrder.length > 0 ? (
           <>
             {singleOrder.map((order) => (
               <div className="cart-product-item-parent-box">
@@ -65,7 +65,7 @@ const DashboardOrderInfo = () => {
                   <p className="cart-product-item-title">Price</p>
                   <p className="cart-product-item-child-item">
                     {/* @ts-ignore */}
-                    {order[0].price}
+                    Total: {order[0].price}
                   </p>
                 </div>
               </div>
