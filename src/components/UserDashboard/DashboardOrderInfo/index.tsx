@@ -36,7 +36,7 @@ const DashboardOrderInfo = () => {
   return (
     <div className="dashboard-info-wrapper recent-orders-wrapper">
       <>
-        {singleOrder.length > 1 ? (
+        {singleOrder.length > 0 ? (
           <>
             {singleOrder.map((order) => (
               <div className="cart-product-item-parent-box">
