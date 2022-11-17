@@ -59,34 +59,34 @@ interface IAddressFormStore {
 }
 
 interface IUserLogin {
-  isLoginModalOpen: any;
-  showLoginModal: any;
-  hideLoginModal: any;
-  isSignupModalOpen: any;
-  showSignupModal: any;
-  hideSignupModal: any;
-  isAuthModalOpen: any;
-  showAuthModal: any;
-  hideAuthModal: any;
+  isLoginModalOpen: boolean;
+  showLoginModal: () => void;
+  hideLoginModal: () => void;
+  isSignupModalOpen: boolean;
+  showSignupModal: () => void;
+  hideSignupModal: () => void;
+  isAuthModalOpen: boolean;
+  showAuthModal: () => void;
+  hideAuthModal: () => void;
 }
 
 interface IIsLoading {
-  isAppLoading?: boolean;
-  showIsAppLoading?: any;
-  hideIsAppLoading?: any;
+  isAppLoading: boolean;
+  showIsAppLoading: () => void;
+  hideIsAppLoading: () => void;
 }
 
 interface ITriggerErrorModal {
   isErrorModalOpen: boolean;
-  showErrorModal: any;
-  hideErrorModal: any;
+  showErrorModal: () => void;
+  hideErrorModal: () => void;
   errorModalMessage: string;
-  setErrorModalMessage: any;
+  setErrorModalMessage: (param: string) => void;
 }
 
 interface ILoggedInUser {
   loggedInUserData: any;
-  setLoggedInUserData: any;
+  setLoggedInUserData: (param: object) => void;
 }
 
 //backend to store user data of previous order
